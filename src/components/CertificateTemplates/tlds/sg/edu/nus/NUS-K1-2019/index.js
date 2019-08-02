@@ -18,9 +18,9 @@ const templates = [
 ];
 
 const Cert = props => (
-  <MultiCertificateRenderer 
-    templates={templates} 
-    whitelist={storeAddresses} 
+  <MultiCertificateRenderer
+    templates={templates}
+    whitelist={storeAddresses}
     {...props}
   />
 );
