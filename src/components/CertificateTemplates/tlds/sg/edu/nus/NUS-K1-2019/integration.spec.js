@@ -30,7 +30,7 @@ test("NUS-K1-2019 degree scroll is rendered correctly", async t => {
     .expect(templates)
     .eql([
       { id: "degree", label: "Certificate", template: undefined },
-      { id: "transcript", label: "Transcript", template: undefined },
+      { id: "transcript", label: "Transcript", template: undefined }
     ]);
 
   // Certificate tab content
