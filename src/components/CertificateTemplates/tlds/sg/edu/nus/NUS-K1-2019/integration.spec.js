@@ -28,7 +28,10 @@ test("NUS-K1-2019 degree scroll is rendered correctly", async t => {
   const templates = await t.eval(() => window.opencerts.getTemplates());
   await t
     .expect(templates)
-    .eql([{ id: "certificate", label: "Certificate", template: undefined }]);
+    .eql([
+      { id: "degree", label: "Certificate", template: undefined },
+      { id: "transcript", label: "Transcript", template: undefined },
+    ]);
 
   // Certificate tab content
   await validateTextContent(t, RenderedCertificate, [
@@ -40,5 +43,18 @@ test("NUS-K1-2019 degree scroll is rendered correctly", async t => {
     "30 June 2013",
     "Chair, Board of Trustees",
     "President"
+  ]);
+
+  // Transcript tab content
+  await t.eval(() => window.opencerts.selectTemplateTab(1));
+  await validateTextContent(t, RenderedCertificate, [
+    "STUDENT NO:",
+    "A0056627Y",
+    "BACHELOR OF ENGINEERING (MECHANICAL ENGINEERING)",
+    "COMPLETED PROGRAMME",
+    "ACADEMIC YEAR 2009/2010 SEMESTER 1",
+    "CUMULATIVE AVERAGE POINT :",
+    "CONFERRED/AWARDED THE DEGREE(S)/DIPLOMA(S) OF:",
+    "CONFERMENT DATE:"
   ]);
 });
