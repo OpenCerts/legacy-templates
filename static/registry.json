@@ -128,6 +128,10 @@
     "0x061aFcFF60b90E0F633F8ef157e01BaB9b2FfDD3": {
       "name:": "ROPSTEN: Republic Polytechnic",
       "displayCard": false
-    }
+    },
+	"0x53e8A05fAC430fc05a2D7ea78a7a416D56a354e0": {
+	  "name": "ROPSTEN: Singapore Management University",
+	  "displayCard": false
+	}
   }
 }
