@@ -33,11 +33,11 @@ test("Transcript is rendered correctly", async t => {
 
   // Certificate tab content
   await validateTextContent(t, RenderedCertificate, [
-    "Name: TEST STUDENT NAME",
+    "Name: AHSUMMUIQAHALLIDAF NIB MIQATSU",
     "Date of Enrolment: 15 Aug 2011",
-    "Date of Birth: 10 Oct 1990",
-    "Student ID No: 0123456789",
-    "Date of Issue: 24 JUL 2019",
-    "Serial Number: 123456789"
+    "Date of Birth: 11 Sep 1989",
+    "Student ID No: 01234851",
+    "Date of Issue: 20 AUG 2019",
+    "Serial Number: 201510926"
   ]);
 });

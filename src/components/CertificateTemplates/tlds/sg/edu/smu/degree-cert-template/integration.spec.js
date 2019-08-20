@@ -33,9 +33,9 @@ test("Certificate is rendered correctly", async t => {
 
   // Certificate tab content
   await validateTextContent(t, RenderedCertificate, [
-    "TEST STUDENT NAME",
-    "Bachelor of Business Management",
-    "23 March 2019",
-    "123456789"
+    "GAT NNG IEAGN HNYUQ",
+    "Bachelor of Social Science",
+    "26 May 2011",
+    "201110806"
   ]);
 });
