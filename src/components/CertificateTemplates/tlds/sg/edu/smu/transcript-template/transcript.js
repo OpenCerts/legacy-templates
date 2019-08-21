@@ -45,8 +45,8 @@ export const getTranscriptLines = (t, lCurrent) => {
 
   let i;
   for (i = lCurrent + 1; i < t.length; i += 1) {
-    if (t[i].bold === "true" || t[i].type === "3") {
-      if (t[i].type === "3") {
+    if (t[i].bold === "true" || t[i].type === 3) {
+      if (t[i].type === 3) {
         lines += i - lCurrent + 7;
       } else {
         lines += i - lCurrent;
@@ -88,7 +88,7 @@ export const renderTranscripts = transcript => {
         </tr>
       );
       current += 1;
-    } else if (transcript[i].type === "1") {
+    } else if (transcript[i].type === 1) {
       if (transcript[i].column1 === "") {
         table.push(
           <tr key={(keyCount += 1).toString()}>
@@ -99,13 +99,13 @@ export const renderTranscripts = transcript => {
           </tr>
         );
       } else {
-        if (transcript[i].tabs === "0") {
+        if (transcript[i].tabs === 0) {
           table.push(
             <tr key={(keyCount += 1).toString()}>
               <td colSpan={5}>{transcript[i].column1}</td>
             </tr>
           );
-        } else if (transcript[i].tabs === "1") {
+        } else if (transcript[i].tabs === 1) {
           table.push(
             <tr key={(keyCount += 1).toString()}>
               <td colSpan={2}>
@@ -118,7 +118,7 @@ export const renderTranscripts = transcript => {
             </tr>
           );
         }
-        if (transcript[i].tabs === "2") {
+        if (transcript[i].tabs === 2) {
           table.push(
             <tr key={(keyCount += 1).toString()}>
               <td colSpan={2}>
@@ -132,7 +132,7 @@ export const renderTranscripts = transcript => {
           );
         }
       }
-    } else if (transcript[i].type === "2") {
+    } else if (transcript[i].type === 2) {
       table.push(
         <tr key={(keyCount += 1).toString()}>
           <td>
@@ -145,10 +145,10 @@ export const renderTranscripts = transcript => {
           <td />
         </tr>
       );
-    } else if (transcript[i].type === "3") {
+    } else if (transcript[i].type === 3) {
       current = i + 1;
       break;
-    } else if (transcript[i].type === "4") {
+    } else if (transcript[i].type === 4) {
       table.push(
         <tr key={(keyCount += 1).toString()}>
           <td colSpan={5}>{transcript[i].column1.replace(/ /g, "\u00a0")}</td>
@@ -264,7 +264,7 @@ export const renderDegree = footer => {
 export const renderFooterContent = certificate => {
   const footerContent = [];
   if (current >= certificate.transcript.length - 1) {
-    const footer = certificate.transcript.filter(t => t.type === "3");
+    const footer = certificate.transcript.filter(t => t.type === 3);
 
     const degree = renderDegree(footer);
 
@@ -307,24 +307,24 @@ const Template = ({ certificate }) => {
   keyCount = 1;
   const parent = [];
 
-  parent.push(
-    <div key={(keyCount += 1).toString()}>
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            "html,body { margin: 0 auto ; padding: 0 !important; height: 100% ; width: 100%; background: #f1f1f1; line-height: 1.25!important; } .transcript { font-family: sans-serif; font-size: 12px; } table { table-layout: fixed !important; margin: 0 auto; } img { -ms-interpolation-mode:bicubic; } p{ color: #000;margin:0;line-height: 1.25;} strong{color:#000000;} th{border-top: 2px solid #000;border-bottom: 2px solid #000;padding:5px 0;text-transform: capitalize;font-size: 12px;} .first-page { width: 950px !important; min-height: 1340px !important; }"
-        }}
-      />
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            "@media print { .first-page { width: 930px !important; min-height: 1310px !important; } * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; } }"
-        }}
-      />
-    </div>
-  );
-
   const pageCount = getTotalPages(certificate.transcript);
+
+  parent.push(
+    <style
+      dangerouslySetInnerHTML={{
+        __html:
+          "html,body { margin: 0 auto ; padding: 0 !important; width: 100%; background: #f1f1f1; line-height: 1.25!important; } .transcript { font-family: sans-serif; font-size: 12px; } table { table-layout: fixed !important; margin: 0 auto; } img { -ms-interpolation-mode:bicubic; } p{ color: #000;margin:0;line-height: 1.25;} strong{color:#000000;} th{border-top: 2px solid #000;border-bottom: 2px solid #000;padding:5px 0;text-transform: capitalize;font-size: 12px;} .first-page { width: 950px !important; min-height: 1340px !important; }"
+      }}
+    />
+  );
+  parent.push(
+    <style
+      dangerouslySetInnerHTML={{
+        __html:
+          "@media print { .first-page { width: 930px !important; min-height: 1310px !important; } * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; } }"
+      }}
+    />
+  );
 
   while (current < certificate.transcript.length - 1) {
     parent.push(
@@ -342,7 +342,8 @@ const Template = ({ certificate }) => {
           padding: "40px 5px",
           minHeight: current === 0 ? "inherit" : "1340px",
           backgroundSize: "cover",
-          backgroundPosition: "canter center"
+          backgroundPosition: "canter center",
+          height: "909px"
         }}
       >
         <table
@@ -421,7 +422,11 @@ const Template = ({ certificate }) => {
     );
   }
 
-  return parent;
+  return (
+    <div className="container-fluid" style={{ height: "909px" }}>
+      <div className="row justify-content-md-center">{parent}</div>
+    </div>
+  );
 };
 
 Template.propTypes = {

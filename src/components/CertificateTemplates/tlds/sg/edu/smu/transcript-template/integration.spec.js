@@ -37,7 +37,7 @@ test("Transcript is rendered correctly", async t => {
     "Date of Enrolment: 15 Aug 2011",
     "Date of Birth: 11 Sep 1989",
     "Student ID No: 01234851",
-    "Date of Issue: 20 AUG 2019",
+    "Date of Issue: 21 AUG 2019",
     "Serial Number: 201510926"
   ]);
 });
