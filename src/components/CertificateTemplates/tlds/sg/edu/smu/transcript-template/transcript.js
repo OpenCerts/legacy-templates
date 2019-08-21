@@ -422,11 +422,7 @@ const Template = ({ certificate }) => {
     );
   }
 
-  return (
-    <div className="container-fluid" style={{ height: "909px" }}>
-      <div className="row justify-content-md-center">{parent}</div>
-    </div>
-  );
+  return parent;
 };
 
 Template.propTypes = {
