@@ -29,7 +29,9 @@ test("NUSTS-GENERAL-2019 certificate is rendered correctly", async t => {
   const templates = await t.eval(() => window.opencerts.getTemplates());
   await t
     .expect(templates)
-    .eql([{ id: "transcript", label: "Transcript", template: undefined }]);
+    .eql([
+        { id: "transcript", label: "Transcript", template: undefined }
+    ]);
 
   await validateTextContent(t, RenderedCertificate, [
     "A0056627Y, NAME",
@@ -40,27 +42,27 @@ test("NUSTS-GENERAL-2019 certificate is rendered correctly", async t => {
     "COMPLETED PROGRAMME",
     "2009/2010 SEMESTER 1",
     "MA1301",
-    "INTRODUCTORY MATHEMATICS",
+    "Introductory Mathematics",
     "2009/2010 SEMESTER 2",
     "MA1505",
-    "MATHEMATICS I",
+    "Mathematics I",
     "2010/2011 SEMESTER 1",
     "MA1505",
-    "MATHEMATICS I",
+    "Mathematics I",
     "2010/2011 SEMESTER 2",
     "ME2114",
-    "MECHANICS OF MATERIALS II",
+    "Mechanics Of Materials II",
     "2011/2012 SEMESTER 1",
     "MA1505",
-    "MATHEMATICS I",
+    "Mathematics I",
     "2011/2012 SEMESTER 2",
     "EG2401",
-    "ENGINEERING PROFESSIONALISM",
+    "Engineering Professionalism",
     "2012/2013 SEMESTER 1",
     "GEK1521",
-    "PHYSICS IN THE LIFE SCIENCES",
+    "Physics in the Life Sciences",
     "2012/2013 SEMESTER 2",
     "LAK1201",
-    "KOREAN 1"
+    "Korean 1"
   ]);
 });

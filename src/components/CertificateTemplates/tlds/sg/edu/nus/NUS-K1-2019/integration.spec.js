@@ -30,8 +30,8 @@ test("NUS-K1-2019 certificate is rendered correctly", async t => {
   await t
     .expect(templates)
     .eql([
-      { id: "certificate", label: "Certificate", template: undefined },
-      { id: "transcript", label: "Transcript", template: undefined }
+        { id: "degree", label: "Certificate", template: undefined },
+        { id: "transcript", label: "Transcript", template: undefined }
     ]);
 
   await validateTextContent(t, RenderedCertificate, [
@@ -40,13 +40,12 @@ test("NUS-K1-2019 certificate is rendered correctly", async t => {
     "OF SINGAPORE",
     "A0058514E, NAME",
     "Bachelor",
-    "of",
     "Business",
     "Administration",
     "30 June 2013"
   ]);
   await validateTextContent(t, RenderedCertificate, [
-    "A0058514E, NAME",
+    "A0058514E, name",
     "A0058514E",
     "01/01/1905",
     "20/08/2019",
@@ -54,27 +53,27 @@ test("NUS-K1-2019 certificate is rendered correctly", async t => {
     "COMPLETED PROGRAMME",
     "2009/2010 SEMESTER 1",
     "ACC1002",
-    "FINANCIAL ACCOUNTING",
+    "Financial Accounting",
     "2009/2010 SEMESTER 2",
     "BSP1005",
-    "MANAGERIAL ECONOMICS",
+    "Managerial Economics",
     "2010/2011 SEMESTER 1",
     "ACC1006",
-    "ACCOUNTING INFORMATION SYSTEMS",
+    "Accounting Information Systems",
     "2010/2011 SEMESTER 2",
     "ACC2002",
-    "MANAGERIAL ACCOUNTING",
+    "Managerial Accounting",
     "2011/2012 SEMESTER 1",
     "BSP2005",
-    "ASIA PACIFIC BUSINESS ENVIRONMENT",
+    "Asia Pacific Business Environment",
     "2011/2012 SEMESTER 2",
     "BSP3001C",
-    "BUSINESS POLICY AND STRATEGY",
+    "Business Policy And Strategy",
     "2012/2013 SEMESTER 1",
     "CH2243",
-    "CHINESE IN SOUTHEAST ASIA",
+    "Chinese in Southeast Asia",
     "2012/2013 SEMESTER 2",
     "CH3226",
-    "MODERN CHINESE LITERATURE"
+    "Modern Chinese Literature"
   ]);
 });
