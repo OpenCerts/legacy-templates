@@ -632,3 +632,4 @@ export class Degree extends Component {
 Degree.propTypes = {
   dataFeeder: PropTypes.object.isRequired
 };
+
