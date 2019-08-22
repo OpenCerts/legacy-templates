@@ -475,8 +475,11 @@ export class DegreeScrollDataFeeder {
     if (lines.length > 1) {
       lastLine = lines[lines.length - 1];
       // specialisation is in degree title (in parenthesis), so not to print specialisation again
-      ignoreMajor = lastLine.endsWith(")") 
-          || this.dsDegreeTitle.toUpperCase().startsWith('Bachelor of Business Administration'.toUpperCase());
+      ignoreMajor =
+        lastLine.endsWith(")") ||
+        this.dsDegreeTitle
+          .toUpperCase()
+          .startsWith("Bachelor of Business Administration".toUpperCase());
       if (!this.dsBreakBefHonours && honorsTitle) {
         lastLine = `${lastLine} ${honorsTitle}`;
         ignoreHonours = true;
