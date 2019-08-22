@@ -30,8 +30,8 @@ test("NUS-K1-2019 certificate is rendered correctly", async t => {
   await t
     .expect(templates)
     .eql([
-        { id: "degree", label: "Certificate", template: undefined },
-        { id: "transcript", label: "Transcript", template: undefined }
+      { id: "degree", label: "Certificate", template: undefined },
+      { id: "transcript", label: "Transcript", template: undefined }
     ]);
 
   await validateTextContent(t, RenderedCertificate, [

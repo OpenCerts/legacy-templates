@@ -29,9 +29,7 @@ test("NUSTS-GENERAL-2019 certificate is rendered correctly", async t => {
   const templates = await t.eval(() => window.opencerts.getTemplates());
   await t
     .expect(templates)
-    .eql([
-        { id: "transcript", label: "Transcript", template: undefined }
-    ]);
+    .eql([{ id: "transcript", label: "Transcript", template: undefined }]);
 
   await validateTextContent(t, RenderedCertificate, [
     "A0056627Y, NAME",
