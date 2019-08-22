@@ -44,6 +44,7 @@ test("NUS-K1-2019 certificate is rendered correctly", async t => {
     "Administration",
     "30 June 2013"
   ]);
+  await t.eval(() => window.opencerts.selectTemplateTab(1));
   await validateTextContent(t, RenderedCertificate, [
     "A0058514E, name",
     "A0058514E",
