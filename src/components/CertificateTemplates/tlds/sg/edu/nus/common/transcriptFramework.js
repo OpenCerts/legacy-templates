@@ -281,7 +281,7 @@ class TranscriptPage extends Component {
               <tbody>
                 <tr>
                   <td
-                    id={`col-${idx}-0`}
+                    id={`col-${idx}0`}
                     width="49.5%"
                     valign="top"
                     className={cls("no-padding")}
@@ -290,7 +290,7 @@ class TranscriptPage extends Component {
                   </td>
                   <td width="1%" />
                   <td
-                    id={`col-${idx}-1`}
+                    id={`col-${idx}1`}
                     width="49.5%"
                     valign="top"
                     className={cls("no-padding")}
@@ -393,6 +393,7 @@ export class Transcript extends Component {
     // delete content in the redundant rows
     this.redundant.forEach(x => {
       const node = this.rowEl(x.page, x.col, x.row);
+      if (!node) return;
       let child = node.lastElementChild;
       while (child) {
         node.removeChild(child);
@@ -420,7 +421,7 @@ export class Transcript extends Component {
           this.dataIdx -= 1; // need to re-render acad year line
           this.keepRedundant(this.page, this.col, this.row - 1);
         }
-        // current row to be removed later as it will rendered in next column
+        // current row to be removed later as it will be rendered in next row
         this.keepRedundant(this.page, this.col, this.row);
         if (this.col === 0) {
           this.col = 1;
