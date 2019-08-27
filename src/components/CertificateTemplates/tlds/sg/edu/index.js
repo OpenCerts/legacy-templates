@@ -16,6 +16,6 @@ export default addDirToTemplatePath("edu", {
   ...ite,
   ...tp,
   ...rp,
-  ...nus
+  ...nus,
   ...ntu
 });
