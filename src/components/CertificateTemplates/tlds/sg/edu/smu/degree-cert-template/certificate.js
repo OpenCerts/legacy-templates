@@ -19,7 +19,6 @@ const Template = ({ certificate }) => {
   if (layout === "1" || layout === "3")
     return (
       <div className="container-fluid">
-        
         <div className="row justify-content-md-center">
           <div
             style={{
