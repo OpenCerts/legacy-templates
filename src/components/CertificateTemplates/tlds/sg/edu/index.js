@@ -6,6 +6,7 @@ import nyp from "./nyp";
 import ite from "./ite";
 import tp from "./tp";
 import rp from "./rp";
+import ntu from "./ntu";
 import smu from "./smu";
 
 export default addDirToTemplatePath("edu", {
@@ -15,5 +16,6 @@ export default addDirToTemplatePath("edu", {
   ...ite,
   ...tp,
   ...rp,
+  ...ntu,
   ...smu
 });

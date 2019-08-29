@@ -1,6 +1,6 @@
-# Certificate Web UI 
-  
-[![Build Status](https://travis-ci.org/OpenCerts/opencerts-website.svg?branch=master)](https://travis-ci.org/OpenCerts/opencerts-website)
+# Legacy Renderer Repository
+
+This application serves up the OpenCert template renderers for SSG Accredited institutions submitted prior to 31st Dec 2019.
 
 See also:
 
@@ -9,19 +9,7 @@ See also:
 * [certificate-contract](https://github.com/OpenCerts/certificate-store-contract)
 * [certificate-cli](https://github.com/OpenCerts/certificate-cli)
 
-
-## Development
-
-We develop primarily on a OS X / Linux environment so please lodge an issue if you are using Windows and find that you cannot successfully set up a local instance of this software.
-
-### Developer CLI
-
-There is a rudimentary interface for adding a new template for organisations that are doing it for the first time. (support for adding templates to existing organisations will come in a later release)
-
-```bash
-npm run dev-cli
-```
-
+## Setup
 
 ### OS X / Linux
 ```bash
@@ -38,20 +26,12 @@ npm install
 npm run dev
 ```
 
-### Environmental Variables
+## Development
 
-`NET` is used for setting the default network, setting it to `mainnet` uses the public Ethereum network. If it is not set it defaults to Ropsten testnet
-
-E.g:
-```bash
-NET=mainnet npm run dev
-```
-
-### Frameless Viewer
-
-For embedded certificate rendering, we have provided a frameless view located at `/frameless-viewer`
-
-More information at [opencerts-documentation](http://docs.opencerts.io/embedded_viewer.html)
+The expected output of running `npm run dev` is a blank screen, as this page is not a standalone application. It expects the caller to inject the certificate that is meant to be rendered.
+For development purposes, there are two methods to effect the rendering of a certificate:
+1) Inject the certificate using the browser developer console, by running the command `window.opencerts.renderDocument(certificate)`, where the `certificate` variable has been initialised with the certificate contents
+2) Run this `legacy-templates` repository using `npm run dev` and keep it running, then run the `opencerts-website` repository concurrently with the `npm run start:local` command. You can then preview rendering using the usual OpenCerts.io UI at http://localhost:3001.
 
 ### Troubleshooting
 

@@ -24,7 +24,8 @@ test("FQ002 certificate is rendered correctly", async t => {
   });
 
   // Check content of window.opencerts.templates
-  await t.wait(500);
+  const container = Selector("#rendered-certificate .container");
+  await container(); // wait for document to be rendered
   const templates = await t.eval(() => window.opencerts.getTemplates());
   await t
     .expect(templates)
