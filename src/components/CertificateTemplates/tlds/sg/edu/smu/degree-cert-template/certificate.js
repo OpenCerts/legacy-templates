@@ -101,7 +101,6 @@ const Template = ({ certificate }) => {
     );
   return (
     <div className="container-fluid">
-      
       <div className="row justify-content-md-center">
         <div
           style={{

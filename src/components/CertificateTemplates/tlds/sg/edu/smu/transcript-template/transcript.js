@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { get } from "lodash";
 import { tz } from "moment-timezone";
-import './transcript.scss';
+import "./transcript.scss";
 
 export const MAX_LINES = 40;
 export const TIMEZONE = "Asia/Singapore";
@@ -316,7 +316,7 @@ const Template = ({ certificate }) => {
         key={(keyCount += 1).toString()}
         className="transcript"
         style={{
-          width: '909px',
+          width: "909px",
           margin: "auto",
           backgroundRepeat: "no-repeat",
           backgroundImage: `url('${certificate.additionalData.bgimg}')`,
@@ -326,7 +326,7 @@ const Template = ({ certificate }) => {
           padding: "40px 5px",
           backgroundSize: "cover",
           backgroundPosition: "canter center",
-          height: "1285px",
+          height: "1285px"
         }}
       >
         <table
