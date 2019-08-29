@@ -101,12 +101,7 @@ const Template = ({ certificate }) => {
     );
   return (
     <div className="container-fluid">
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            "@media print { * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; } }"
-        }}
-      />
+      
       <div className="row justify-content-md-center">
         <div
           style={{

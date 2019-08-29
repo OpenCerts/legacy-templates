@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { get } from "lodash";
 import { tz } from "moment-timezone";
+import './transcript.scss';
 
-export const MAX_LINES = 48;
+export const MAX_LINES = 40;
 export const TIMEZONE = "Asia/Singapore";
 
 export const renderHeader = transcript => {
@@ -309,41 +310,23 @@ const Template = ({ certificate }) => {
 
   const pageCount = getTotalPages(certificate.transcript);
 
-  parent.push(
-    <style
-      dangerouslySetInnerHTML={{
-        __html:
-          "html,body { margin: 0 auto ; padding: 0 !important; width: 100%; background: #f1f1f1; line-height: 1.25!important; } .transcript { font-family: sans-serif; font-size: 12px; } table { table-layout: fixed !important; margin: 0 auto; } img { -ms-interpolation-mode:bicubic; } p{ color: #000;margin:0;line-height: 1.25;} strong{color:#000000;} th{border-top: 2px solid #000;border-bottom: 2px solid #000;padding:5px 0;text-transform: capitalize;font-size: 12px;} .first-page { width: 950px !important; min-height: 1340px !important; }"
-      }}
-    />
-  );
-  parent.push(
-    <style
-      dangerouslySetInnerHTML={{
-        __html:
-          "@media print { .first-page { width: 930px !important; min-height: 1310px !important; } * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; } }"
-      }}
-    />
-  );
-
   while (current < certificate.transcript.length - 1) {
     parent.push(
       <div
         key={(keyCount += 1).toString()}
-        className={`transcript ${current !== 0 ? "" : "first-page"}`}
+        className="transcript"
         style={{
-          width: current === 0 ? "inherit" : "950px",
+          width: '909px',
           margin: "auto",
           backgroundRepeat: "no-repeat",
           backgroundImage: `url('${certificate.additionalData.bgimg}')`,
           pageBreakAfter:
             current >= certificate.transcript.length ? "none" : "always",
-          marginTop: current !== 0 ? "25px" : "",
+          marginTop: "60px",
           padding: "40px 5px",
-          minHeight: current === 0 ? "inherit" : "1340px",
           backgroundSize: "cover",
           backgroundPosition: "canter center",
-          height: "909px"
+          height: "1285px",
         }}
       >
         <table
