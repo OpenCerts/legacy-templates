@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { get } from "lodash";
+import "../common/print.scss";
 
 const Template = ({ certificate }) => {
   // Declaring what variables will be available to the template from the certificate
@@ -18,12 +19,7 @@ const Template = ({ certificate }) => {
   if (layout === "1" || layout === "3")
     return (
       <div className="container-fluid">
-        <style
-          dangerouslySetInnerHTML={{
-            __html:
-              "@media print { * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; } }"
-          }}
-        />
+        
         <div className="row justify-content-md-center">
           <div
             style={{

@@ -30,12 +30,3 @@ th
     padding:5px 0;
     text-transform: capitalize;
 } 
-
-
-@media print 
-{
-    * 
-    { 
-        -webkit-print-color-adjust: exact !important; 
-    } 
-}
