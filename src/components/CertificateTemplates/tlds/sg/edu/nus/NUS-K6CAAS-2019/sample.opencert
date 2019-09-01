@@ -1,0 +1,151 @@
+{
+  "schema": "opencerts/v1.5",
+  "data": {
+    "id": "ec8ec378-f955-4d6c-b102-26c28be2ed3f:string:NUS-A0006190U-G061000-P10182357-9-20081126",
+    "$template": "1788a5be-64b5-4fa6-8b95-fcebae749ea1:string:sg/edu/nus/NUS-K6CAAS-2019",
+    "issuedOn": "2b99471a-8ef9-4249-a9d3-8db07a16ecad:string:2019-08-27T10:07:18+08:00",
+    "name": "c92cb9c2-45ca-4c89-8209-5b9b8b2abbb0:string:NUS Degree",
+    "issuers": [
+      {
+        "name": "06fe7d06-319e-4197-818b-5f334050160f:string:National University of Singapore",
+        "did": "5cee535d-31bd-4cd2-a3d4-a999a8be3c4c:string:DID:SG-UEN:200604346E",
+        "url": "afc70195-5a16-4bd1-bd1a-e3fdcfd9acc8:string:https://www.nus.edu.sg",
+        "email": "86b567f6-4245-4da3-848d-71aedd540bcd:string:registrar@nus.edu.sg",
+        "certificateStore": "8e47e3f4-ba53-45fa-9f6d-cf73b1e3e0f9:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+      }
+    ],
+    "recipient": {
+      "name": "6084d596-9858-4500-afa2-3a31fe6d53f2:string:A0006190U, name",
+      "studentId": "72740583-4337-4fe9-9f9f-09bfea493691:string:A0006190U",
+      "dateOfBirth": "d003b5b0-998c-4186-a184-bcc930eb5b08:string:1905-01-01"
+    },
+    "transcript": [
+      {
+        "name": "e171b418-b32e-414e-a461-c9bf5b9ad8a2:string:AIRPORT ADMINISTRATION, FINANCE & LAW",
+        "courseCode": "452e07b0-2c7a-4af2-8648-8f82f6aa8396:string:AM5011",
+        "grade": "69d5385f-2faa-4df5-8116-477d599d2d2d:string:S",
+        "courseCredit": "856218f6-3510-4b67-a444-102d5f5ca38c:number:4",
+        "gradingBasis": "c9c0747f-2def-45a5-8512-48877015c0a7:string:SNU",
+        "includeInGPA": "9fda3b0a-1250-437b-8eef-0f773f48fc28:boolean:false",
+        "semester": "53d39d78-58f5-49ca-9fb3-0ca74d4d5ab4:string:0730"
+      },
+      {
+        "name": "f1244188-fe83-4a63-9ca0-bee58e10bf52:string:AIRPORT OPERATIONS",
+        "courseCode": "64a29976-4d03-4a8c-8a59-25a17564059a:string:AM5012",
+        "grade": "7f93367b-c078-4269-97ff-0743922fa79f:string:S",
+        "courseCredit": "e64b629f-d65e-4158-8035-dc6f51f765ce:number:4",
+        "gradingBasis": "e4bb7077-4041-437c-8a28-37ae5ac11ff9:string:SNU",
+        "includeInGPA": "289a7fb0-4926-404d-9be2-6f2af1cf4cc1:boolean:false",
+        "semester": "9a1faeee-6a25-485b-9bb5-97452f248835:string:0730"
+      },
+      {
+        "name": "0e9a6d62-a23c-4b6e-8705-922140c97a94:string:AIRPORT PLANNING, DESIGN & ENGINEERING",
+        "courseCode": "7e8bb452-b157-42cc-8ad5-57e60f02fa1f:string:AM5013",
+        "grade": "0ae25957-5dc8-4cb3-a61a-1044c3c432b3:string:S",
+        "courseCredit": "b8e2f598-a27d-43f0-b320-e63aa7abd54c:number:4",
+        "gradingBasis": "6b65f31c-32dd-4c48-a09a-27fda929e6b2:string:SNU",
+        "includeInGPA": "fc697da3-88d6-46d3-bd15-fc654259dcdb:boolean:false",
+        "semester": "507e6d7b-c637-4d18-8832-e2f4ab077163:string:0730"
+      },
+      {
+        "name": "c2267892-6dc8-4172-8e90-a2d70fb81b9a:string:TRANSPORTATION ECONOMICS",
+        "courseCode": "2102ac0f-d056-4615-bd22-07c75651ed1e:string:AM5021",
+        "grade": "de31cfb6-2511-4a5d-b44b-20d5be645625:string:C+",
+        "courseCredit": "811da42d-d2dc-46eb-820a-c7c08b0a513b:number:4",
+        "gradingBasis": "fa27fc0e-93c7-4b2f-9354-4b25f9241faa:string:GRD",
+        "includeInGPA": "3e2ca0de-03ec-4751-856f-75bb4f90a88d:boolean:true",
+        "semester": "97794a37-7798-4b6a-af0f-df2a51222ad9:string:0730"
+      },
+      {
+        "name": "a350edc2-fcea-4f83-b8b1-e70cbad69b60:string:TRANSPORTATION & DEVELOPMENT",
+        "courseCode": "ef2c6579-306e-4b8c-bee8-9865d85f814c:string:AM5022",
+        "grade": "dfb71d7d-7165-4840-a0ee-963631c07c0e:string:B+",
+        "courseCredit": "5030186e-00d6-4f92-b867-5d2cab613fc9:number:4",
+        "gradingBasis": "fdf08f6d-76c7-401f-ac57-9e6e1ea6d52e:string:GRD",
+        "includeInGPA": "e215baac-6159-4056-9a06-7a47793c0717:boolean:true",
+        "semester": "5b28384c-6409-4b85-a292-c571ce6cdf3d:string:0730"
+      },
+      {
+        "name": "d8edeafc-eb05-4ac3-96fe-b4f1d1022f2c:string:MANAGEMENT IN TRANSPORTATION",
+        "courseCode": "618b251d-b739-4aac-937c-20a0dbdddc70:string:AM5023",
+        "grade": "86c4a2ac-61a5-43fc-87b0-30b3a918a82d:string:A-",
+        "courseCredit": "c4400059-6e3b-4061-b432-fb5c0fa0a5d1:number:4",
+        "gradingBasis": "511f2753-513a-4d14-bbcb-b5cf8462fa7f:string:GRD",
+        "includeInGPA": "3c96efed-bbd0-48be-8145-7e173cae35c5:boolean:true",
+        "semester": "63291cdc-80f5-47f3-a2bd-36ee1dede1cf:string:0730"
+      }
+    ],
+    "additionalData": {
+      "degreeScroll": [
+        {
+          "degreeTitle": "bd1ef7a8-c740-4176-becd-cef03af647b3:string:Graduate Diploma in Aviation Management",
+          "dateConferred": "b619648b-87d1-4c1f-b93d-dc27ff62a30c:string:2008-11-26",
+          "degreeCode": "44bc6648-4fc1-401a-8d3e-b576c554f224:string:G061000",
+          "type": "c67d5714-6a41-4265-9d62-110dc499d0c6:string:K6 NUS-CAAS"
+        }
+      ],
+      "images": {
+        "PRESIDENT": {
+          "data": "787d7993-a6d5-4109-b09c-029a5b22e990:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "94157fe1-27ae-4a54-942e-542246dfa4f8:number:240",
+          "height": "ad4b0e16-0e7d-43f1-a947-9285ad609fa7:number:90",
+          "unit": "a6aca252-9906-49de-93d2-18bd6c019185:string:px"
+        },
+        "TRUSTEES": {
+          "data": "136bc177-4875-4f1b-bc37-840ca38a63be:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "a0fe8c74-e092-400f-9f75-dcfd20fed717:number:240",
+          "height": "e1613f75-2d03-44d5-a6b1-7b07a4eb93ea:number:90",
+          "unit": "11e6576d-2def-4d18-9424-da69ca081cc2:string:px"
+        }
+      },
+      "transcriptType": "bdd559e0-3b1d-4a02-81fb-a1eb863d49d8:string:GDOF",
+      "transcriptReq": "aa4c2da2-6b74-4d79-bcd3-89e23eb54763:string:001009529",
+      "transcriptGroup": [
+        {
+          "name": "9506a051-4ef3-4a07-95f1-5e2d71226761:string:0730",
+          "term": "71ce6d6a-f23f-4179-a160-2f94670a9059:string:2007/2008 Special Term (Part1)",
+          "formOfStudy": "267adbf0-f180-434b-8790-9d845f2aaef2:string:ENRL",
+          "fosPrintArea": "10edd626-4ff0-4c0b-b40b-a9f109b125b9:string:ND",
+          "summary": [
+            {
+              "programName": "2594c21f-e794-422d-b19d-f3769fe199c0:string:Graduate Diploma in Aviation Management",
+              "includeInGPA": "491052e3-b569-4a2a-9201-841454ced9eb:boolean:true",
+              "GPAName": "cd008ed2-7f6c-4b0a-9793-f803aaa910ed:string:Cumulative Average Point",
+              "GPA": "0890b430-ad70-432d-9330-67bc808264ed:number:3.67"
+            }
+          ]
+        }
+      ],
+      "programData": [
+        {
+          "programCode": "87b48684-9c94-4333-a239-89ae0dc9b60d:string:G0610",
+          "programName": "430333e2-649d-4752-87ae-95bab101cc82:string:Graduate Diploma in Aviation Management",
+          "statusCode": "c80df6e0-25b1-42df-894e-b09918acc7b6:string:CM",
+          "statusDescription": "7ef7a271-ab16-4b4d-b6a0-09f77dbbd4ab:string:Completed Programme",
+          "effectiveDate": "e6bbb02c-836d-4d13-b400-36ec6b333dbe:string:2008-11-26",
+          "admitTerm": "d574dc4f-3c95-4e0d-990b-c78b1f26f878:string:0720"
+        }
+      ],
+      "degreeData": [
+        {
+          "degreeTitle": "820440aa-a2a8-482f-9de5-dcfc05697810:string:Graduate Diploma in Aviation Management",
+          "dateConferred": "e7c0b836-49aa-4e82-b018-6d86169d3edc:string:2008-11-26"
+        }
+      ]
+    }
+  },
+  "privacy": {},
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "099251da35c565bd67ef88499b3a45fb05a507e0162fb7479a74cae2347cc1d5",
+    "proof": [
+      "3fe118480fe7da8a4426aa90a1d84a3aba037c47fc209fa74f9a9a5c8e6b9c2d",
+      "a66417a7ecd40ebcf5ed694ba520aa200f1cab63f1c87422998ac583145035e2",
+      "169acbc99f0cc36ecf9e96d7842adc5118e12d83a90b77771cd10aff06c7fa4c",
+      "0c27eaf1f6636996259816c9f37d794bb36bae06e78e07cd64fd710955789950",
+      "72f7bf7999b8fe7cde7c2e5d26c8a5abd1e2e435e9c8db2b79c0abbc093cabf8",
+      "227fc50be016b3dd61cd428a63e2f930cd41422d327c9e6a66e87107b4b9a783"
+    ],
+    "merkleRoot": "fc4d413665bef3ad14eb8934319f16a32a4711df60bed1ffd4519441b716629f"
+  }
+}
