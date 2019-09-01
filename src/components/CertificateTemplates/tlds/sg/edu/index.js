@@ -7,6 +7,7 @@ import ite from "./ite";
 import tp from "./tp";
 import rp from "./rp";
 import nus from "./nus";
+import ntu from "./ntu";
 
 export default addDirToTemplatePath("edu", {
   ...singaporetech,
@@ -15,5 +16,6 @@ export default addDirToTemplatePath("edu", {
   ...ite,
   ...tp,
   ...rp,
-  ...nus
+  ...nus,
+  ...ntu
 });
