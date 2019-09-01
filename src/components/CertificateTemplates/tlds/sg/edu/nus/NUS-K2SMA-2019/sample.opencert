@@ -1,249 +1,249 @@
 {
   "schema": "opencerts/v1.5",
   "data": {
-    "id": "ac482cbb-1b62-462e-9068-ccf58ecca78c:string:NUS-A0027642J-M491000-P10182357-10-20110228",
-    "$template": "0daee5bf-7c49-4b7a-97a0-23bff532bc69:string:sg/edu/nus/NUS-K2SMA-2019",
-    "issuedOn": "dfd99b82-adfb-46dd-8ffd-1a401be9d600:string:2019-08-27T10:07:20+08:00",
-    "name": "5035b281-4ef2-42dc-bad0-459e3ca92f4d:string:NUS Degree",
+    "id": "9a2b1dc8-18ea-4fbe-a707-b793afd2f73b:string:NUS-A0027642J-M491000-P10182357-10-20110228",
+    "$template": "4f351da1-992b-4ec5-9a71-9bc9198afacc:string:sg/edu/nus/NUS-K2SMA-2019",
+    "issuedOn": "74874195-cb8e-46d1-944b-24e08e9ed8f5:string:2019-08-27T10:07:20+08:00",
+    "name": "df03054e-871b-44ba-bda8-7c84312a0518:string:NUS Degree",
     "issuers": [
       {
-        "name": "f3c1a182-6db0-4ed9-b198-559e0a26cf1d:string:National University of Singapore",
-        "did": "207540f7-024c-4f37-93ed-855c9294ca5a:string:DID:SG-UEN:200604346E",
-        "url": "f08e3d5d-3bc4-443c-a13c-dc7c6f3ddf2d:string:https://www.nus.edu.sg",
-        "email": "07ab4d02-2e74-4b8d-a0fa-082f4a6b44a9:string:registrar@nus.edu.sg",
-        "certificateStore": "41bb7b43-eec0-4e9b-a3a5-b5d7baf69e6e:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+        "name": "08870d03-ba16-4f9a-80e8-f0c6d1697184:string:National University of Singapore",
+        "did": "695ed727-8bc3-4af8-987d-b87e600e37d4:string:DID:SG-UEN:200604346E",
+        "url": "17b84aa1-72a0-42ba-b3fc-546fee775158:string:https://www.nus.edu.sg",
+        "email": "da55ed07-ad84-45ae-9f51-72b6a5c83b0d:string:registrar@nus.edu.sg",
+        "certificateStore": "dd6b8865-bbfd-46a6-abac-0caa5c1fc7bf:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
       }
     ],
     "recipient": {
-      "name": "b1e9e887-9b32-4578-83b4-64db2dcffce4:string:A0027642J, name",
-      "studentId": "3fadddf8-04d9-45cc-8fb9-74fff46625db:string:A0027642J",
-      "dateOfBirth": "b8fc52e7-f935-4c71-9b40-ac28fab8cc7d:string:1905-01-01"
+      "name": "ceda0bf0-f246-4c78-8734-a62ae665dbeb:string:A0027642J, name",
+      "studentId": "4f928a43-0b32-435c-92c0-2b636ff3c987:string:A0027642J",
+      "dateOfBirth": "8fbcbd90-f283-4aca-8fc3-eeea270df370:string:1905-01-01"
     },
     "transcript": [
       {
-        "name": "f80c4424-c1c2-4b8d-bd46-63c64d0a6025:string:FUNDAMENTALS OF SEMICONDUCTOR DEVICE PHYSICS",
-        "courseCode": "8d8b2665-f504-4f39-8d47-3fd6e3aecb64:string:AMN5120",
-        "grade": "75c4c32e-666c-445f-b113-82586f2fa68e:string:A+",
-        "courseCredit": "565472bc-2670-4330-926d-99554e53a09f:number:4",
-        "gradingBasis": "9053d27f-b92e-4099-8f93-0e2135d86c71:string:GRD",
-        "includeInGPA": "efb5f503-d37b-4f11-a87c-57de1ff18876:boolean:true",
-        "semester": "ebe136b1-191e-4ed8-a30b-ea64f1c4aaa5:string:0913"
+        "name": "97271262-5804-43e4-a352-3ab35c4086b5:string:FUNDAMENTALS OF SEMICONDUCTOR DEVICE PHYSICS",
+        "courseCode": "6bd6cd99-4408-457a-8b52-fc853fdb03d8:string:AMN5120",
+        "grade": "0b296cf5-8326-4f27-a22a-260af7b9cab5:string:A+",
+        "courseCredit": "98147f86-0130-416f-8a74-e40dd1b6a037:number:4",
+        "gradingBasis": "51a3ff5a-7fd9-4907-89db-888a4b4511ab:string:GRD",
+        "includeInGPA": "0434c1c9-bd64-4cca-b4da-9f8be0316dec:boolean:true",
+        "semester": "536595db-f1a6-427f-9ffc-02f11a44ddf4:string:0913"
       },
       {
-        "name": "6ec0f1b4-3eb9-4c9c-83c3-d7391b179066:string:(3.205.)",
-        "courseCode": "2238370f-6a99-4aee-9bef-bbbe417970c5:string:3.205.",
-        "grade": "1840d21c-0102-4557-9d61-efa292d8dd09:string:OVS",
-        "courseCredit": "978db70f-5b41-41b0-82cd-3623da2f8e12:number:4",
-        "status": "2b47a542-bc2a-4b0b-95c4-0fe6e146f694:string:P",
-        "includeInGPA": "d7d1c52f-32c2-4ed7-891b-7d7f06b3fd9f:boolean:false",
-        "semester": "0d0bf58f-11b2-4eff-94e2-db37bdf0ae47:string:0914",
-        "transferSeq": "a514e741-e62b-41e2-88ab-ab4a26738521:number:1"
+        "name": "5b71f2db-70ce-4222-943b-5e42f2cd8d6e:string:(3.205.)",
+        "courseCode": "d93f4b12-54f5-426c-9bb5-89a47397cd72:string:3.205.",
+        "grade": "97b0eece-2595-4d72-955f-47977eba4033:string:OVS",
+        "courseCredit": "bc1783e4-ed5c-4287-916b-54dc5030c655:number:4",
+        "status": "63ef5359-9aef-4f78-83b2-89b16a8e8ab4:string:P",
+        "includeInGPA": "3ec561bc-c6c5-4d39-b717-6bc4b1886142:boolean:false",
+        "semester": "a37eb378-5142-420f-a3a2-50f6a8c03568:string:0914",
+        "transferSeq": "1ce27e24-9822-4b5c-914e-7dc5e85746c2:number:1"
       },
       {
-        "name": "20d7c996-0682-4220-bbe9-e6c32cd76ec1:string:(3.225.)",
-        "courseCode": "c1f701f2-c762-4d09-9058-f21f68958ff0:string:3.225.",
-        "grade": "6437aca5-ca92-4cb3-85fa-f39cbc9767f7:string:OVS",
-        "courseCredit": "db511bba-cf45-4ea9-b97a-b1c88ba430d5:number:4",
-        "status": "bae2db8d-9043-451b-8a12-adb8c2e230e3:string:P",
-        "includeInGPA": "82a0b8db-9d5c-492d-b1fa-555925a35d04:boolean:false",
-        "semester": "dbc61fae-72cd-413a-bf2d-ef8333f8fe18:string:0914",
-        "transferSeq": "21713d91-8fee-41b4-a037-bcb23bfb0e68:number:1"
+        "name": "2161ea39-2d98-4b92-898d-4993d00f49af:string:(3.225.)",
+        "courseCode": "b8745a2a-9f38-4cd2-bdd0-0717b3b55c81:string:3.225.",
+        "grade": "35dd42e4-9dce-4297-9433-8892c313a592:string:OVS",
+        "courseCredit": "285614ed-caec-46d6-b734-57f3035bc635:number:4",
+        "status": "fdfa3795-2459-451a-9284-58e3c2693b8a:string:P",
+        "includeInGPA": "175c7954-b444-4caf-8bff-cfdedd7e8d6a:boolean:false",
+        "semester": "3a07e626-0c01-4da1-807e-b9df3a48b734:string:0914",
+        "transferSeq": "aaab7963-c03e-4041-9749-04fea252f2f9:number:1"
       },
       {
-        "name": "a9db51a0-df9d-4096-bf22-ee87433a867a:string:(3.57.)",
-        "courseCode": "d27d3153-68b9-4269-bc7e-f5a63b6a4fc2:string:3.57.",
-        "grade": "ad071a1c-5da6-4936-8a5f-336c5faf1a97:string:OVS",
-        "courseCredit": "047d7e3d-149b-4583-be85-3138454feb59:number:3",
-        "status": "549215c4-a25a-43d9-88a1-231d91a84517:string:P",
-        "includeInGPA": "09f18187-bada-4c3c-82bf-85688dcc4b29:boolean:false",
-        "semester": "8257b39e-7a74-4ab9-8c30-da3767d781be:string:0914",
-        "transferSeq": "7d4b0a91-2cb3-4c8f-99fe-0ed36be01baa:number:1"
+        "name": "e350e6b7-643b-40e7-9bc1-6965cf9feff0:string:(3.57.)",
+        "courseCode": "dab704da-1bed-4077-8bf8-0bd4bde47644:string:3.57.",
+        "grade": "b16a89ee-a626-4432-86fd-360a904e86d6:string:OVS",
+        "courseCredit": "83b1c440-35da-4779-a974-89a501e27379:number:3",
+        "status": "78631925-bd3d-4a93-a1f6-f6bcbbb2d48f:string:P",
+        "includeInGPA": "3a51f581-2244-4e05-8f5b-2ca1426c4e0d:boolean:false",
+        "semester": "46578530-2a8b-42af-af42-84d7b945fa4b:string:0914",
+        "transferSeq": "2d692561-a911-4d5c-af69-25d1faa53f9c:number:1"
       },
       {
-        "name": "77c9e909-c532-41ac-9f54-b4569389a6e8:string:YIELD, RELIABILITY & FAILURE ANALYSIS OF MICROSYSTEMS",
-        "courseCode": "7bb36a86-1786-4827-8270-65b16c52ed1e:string:AMN5121",
-        "grade": "470b6be0-98f8-4ec6-8941-e351f0627ba7:string:B+",
-        "courseCredit": "556aae69-bd94-4357-8cf7-a0bbf9f5d99c:number:4",
-        "gradingBasis": "4949f1c4-a480-42ec-8dbb-44211e9daed6:string:GRD",
-        "includeInGPA": "442ac359-cfb0-43d4-b293-bd42d0ce3cfc:boolean:true",
-        "semester": "f3c1cbd5-730e-4f9c-8e4d-28433274d735:string:0923"
+        "name": "8fa628f1-d4e0-4cb7-95c1-989c5faed9be:string:YIELD, RELIABILITY & FAILURE ANALYSIS OF MICROSYSTEMS",
+        "courseCode": "751f6e9b-dbb7-4530-a8c9-c54b9ebc2aad:string:AMN5121",
+        "grade": "78e9ba3f-b52c-458a-9be1-8373a68283d8:string:B+",
+        "courseCredit": "5fabdc68-f081-4d95-9017-993dfe9abc00:number:4",
+        "gradingBasis": "9b1dd494-e704-47a9-8397-094d3dfc4557:string:GRD",
+        "includeInGPA": "23628966-da7f-44aa-8427-3ad1b9e1794a:boolean:true",
+        "semester": "abb04ef8-d9ff-4b35-9702-3e13d09d7eed:string:0923"
       },
       {
-        "name": "6dd632d5-fc9f-47da-8574-34ddda6292a4:string:COMPOUND SEMICONDUCTORS AND DEVICES",
-        "courseCode": "d112da15-b677-4699-b4f1-06aa48df744b:string:AMN5122",
-        "grade": "da42d1eb-8e07-4fce-a35d-d1f978f9e91b:string:IP",
-        "courseCredit": "e74ca466-e38d-4a36-84fb-42ea84569a5d:number:4",
-        "gradingBasis": "ca196c81-8fa3-4c1c-85d7-78e8d0a0edab:string:GRD",
-        "includeInGPA": "54ded367-1de6-4e12-b965-b467fcd4b338:boolean:true",
-        "semester": "650fb09b-b0c8-4d75-b3e0-710249759c27:string:0923"
+        "name": "afa5c060-ceca-4dee-b4fb-320259610d27:string:COMPOUND SEMICONDUCTORS AND DEVICES",
+        "courseCode": "85d2f935-7819-4df2-9041-0aa17b68046c:string:AMN5122",
+        "grade": "e55f75c9-7ae6-434f-a47a-5be746020616:string:IP",
+        "courseCredit": "f757780d-9286-4ff1-bc0c-143691fff81c:number:4",
+        "gradingBasis": "d3446185-7f89-449a-9daa-177c063dd813:string:GRD",
+        "includeInGPA": "1aee9966-c676-4895-99b4-23671c47491b:boolean:true",
+        "semester": "b0e152b5-183e-4aa3-8037-371c7afa30ef:string:0923"
       },
       {
-        "name": "28d2922e-66d8-4cf7-85fc-ab7864462800:string:COMPOUND SEMICONDUCTORS AND DEVICES",
-        "courseCode": "57524f3a-ea71-48c0-b25b-2d32e71d3745:string:AMN5122",
-        "grade": "6a78180e-1c04-4b85-a291-e386f74b5322:string:B+",
-        "courseCredit": "b3fc7fd7-5b1a-49bf-8b83-cd0a42f7e246:number:4",
-        "gradingBasis": "a17f6325-17f0-4bbd-980d-d2bfa1ed8e75:string:GRD",
-        "includeInGPA": "ebc41dc0-e3c3-4226-ac5a-b215e61f2a0d:boolean:true",
-        "semester": "275c302a-b685-454d-8fab-79ec08626fb2:string:1013"
+        "name": "e610cebc-dd6f-4f25-a7d2-a36152f263c5:string:COMPOUND SEMICONDUCTORS AND DEVICES",
+        "courseCode": "49e11921-92b8-4d38-ad17-2f5c1b4041cb:string:AMN5122",
+        "grade": "8d84b5ac-ecc0-4c31-bc44-35677db6538d:string:B+",
+        "courseCredit": "1ce8fc2b-9f09-410d-ad13-72c4b37fb73e:number:4",
+        "gradingBasis": "043dd4e4-d211-4736-ba41-14d3df14bec2:string:GRD",
+        "includeInGPA": "fa384523-0de3-4905-91fe-9dd3b87cb756:boolean:true",
+        "semester": "4a1e2c6d-c8ea-4ea6-bb1a-4c395daca5a1:string:1013"
       },
       {
-        "name": "f6dc2838-06b6-46a3-a4f3-3164adb5032c:string:Optical Engineering",
-        "courseCode": "f9121604-d562-4e1a-ad68-4ee13fe45b7a:string:EE5517",
-        "grade": "d9b79749-51ea-48cc-a49b-8337d0cc4ed4:string:A-",
-        "courseCredit": "fd1e61fc-08e9-49cf-a373-5a8e3ae0c83b:number:4",
-        "gradingBasis": "909742ce-e429-43a6-9b15-0ffda0ba1d84:string:GRD",
-        "includeInGPA": "df7336ea-b468-4457-b434-ff9c6f4855eb:boolean:true",
-        "semester": "26f03ee5-6e6d-4c6c-8e13-4c69abc0043f:string:1014"
+        "name": "c3962261-a76f-4f6c-9dff-50c94dfb289d:string:Optical Engineering",
+        "courseCode": "4b2d7932-dff9-4f60-99f2-d5b388357868:string:EE5517",
+        "grade": "bae64cc0-6758-4332-9433-aa30a0bfabae:string:A-",
+        "courseCredit": "199c7f28-a296-43ef-9cc3-472285770304:number:4",
+        "gradingBasis": "a19146da-19bf-44ff-9bad-ac0aef391154:string:GRD",
+        "includeInGPA": "9df650e6-0835-43bf-b3a4-35c627acc876:boolean:true",
+        "semester": "887d326f-9db1-4efd-b520-6ecd5cb2a8df:string:1014"
       },
       {
-        "name": "4742f02e-b337-4de7-bc93-f140599326d0:string:Decision Analysis",
-        "courseCode": "f3a6655a-2af9-4062-b43d-0f4e98458e5b:string:IE5203",
-        "grade": "1792a8ec-d3ed-452f-946c-30acb28c7e4b:string:B+",
-        "courseCredit": "c364d345-1928-4db5-be7e-84af9244ca0e:number:4",
-        "gradingBasis": "d3b21a13-6b8a-4e51-942d-790af365f604:string:GRD",
-        "includeInGPA": "993060b3-7e6b-4a27-8a29-4edefbd6d844:boolean:true",
-        "semester": "1d8d2201-2938-4920-9db1-9ace16a3889b:string:1014"
+        "name": "f5c73729-61aa-4890-bfa9-a4a9cd6ccab5:string:Decision Analysis",
+        "courseCode": "553eaf2a-a4b9-43ae-ba68-29350492c3c2:string:IE5203",
+        "grade": "fd10b7c2-79bf-4b8d-85ae-60e73c60f7fb:string:B+",
+        "courseCredit": "dac21be5-b2c2-4202-be9e-5d7f71efd7ce:number:4",
+        "gradingBasis": "07eeb6a7-85bc-4adc-bfb9-6aee96d74ceb:string:GRD",
+        "includeInGPA": "ee3dccea-bd85-4bdc-b813-46271f08a95e:boolean:true",
+        "semester": "aebe740d-c04c-4395-9226-d80c7a1292d7:string:1014"
       },
       {
-        "name": "68fce7e2-eb08-4242-bc00-afbe377390d1:string:Internship Project",
-        "courseCode": "171a176d-a5db-40d4-bb95-acb7ce1d41f6:string:SMA5199",
-        "grade": "267f6f6e-afa0-4fec-aed4-7451b5f552be:string:B",
-        "courseCredit": "92b1cad2-ab05-45ce-b140-7c2fd04a6473:number:12",
-        "gradingBasis": "e940d243-ce40-45cd-8ce3-1d7b3a7f3c5d:string:GRD",
-        "includeInGPA": "dc5fb03f-07ac-486a-aae5-338e5d12d20f:boolean:true",
-        "semester": "0c2ce4ba-4d66-44bf-8d97-575ed3bf54d8:string:1014"
+        "name": "def8d364-6829-463c-b1e6-257b52aa6c53:string:Internship Project",
+        "courseCode": "df174fe5-cc08-4724-a54d-8ab4fea29dd8:string:SMA5199",
+        "grade": "d737c765-b361-49bb-ad0a-bc730d7956bc:string:B",
+        "courseCredit": "2bf38005-5823-4f32-a3ff-bd07576126cb:number:12",
+        "gradingBasis": "0c90898c-ddad-4e36-a6ba-d53b16944f14:string:GRD",
+        "includeInGPA": "225885fb-2977-45c9-a07f-f351e9cbfbd7:boolean:true",
+        "semester": "53b71064-8339-474d-8f82-335bdf03e14c:string:1014"
       }
     ],
     "additionalData": {
       "degreeScroll": [
         {
-          "degreeTitle": "8c569789-4958-49d9-b92e-04ec44f83bbe:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
-          "dateConferred": "e5ae3c4c-0b0c-45f6-9130-03e63f733097:string:2011-02-28",
-          "degreeCode": "ab247627-b0d8-4612-90ab-ccc4364e91eb:string:M491000",
-          "type": "66194366-84d9-418c-9ebb-c68a0bab9138:string:K2 SMA"
+          "degreeTitle": "43e8a306-ba0e-4d06-83d5-4f5551882cbe:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
+          "dateConferred": "67e4b569-5ca8-481a-b013-88228754478a:string:2011-02-28",
+          "degreeCode": "a62715e3-c312-4c22-a229-03ff82aca3f6:string:M491000",
+          "type": "7ab24be4-3332-4bfb-a906-7e74fd448bca:string:K2 SMA"
         }
       ],
       "images": {
         "PRESIDENT": {
-          "data": "25ec07a2-81ee-45ab-9883-403650232fc6:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
-          "width": "cc0e6abd-0586-46c3-91dd-861d02c6a26e:number:240",
-          "height": "e78dca14-387f-4d4e-b083-97a287afff58:number:90",
-          "unit": "b612584d-3ab3-42be-ba07-59b2724a2be7:string:px"
+          "data": "0006adca-bc1c-4152-a04f-4d095fb61eef:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "2bb6c8a9-8b29-41c6-8c9a-d04c0f9ff99d:number:240",
+          "height": "afaed8df-80a6-4097-96d0-7ed9f50b9f3a:number:90",
+          "unit": "8bacc19c-c564-4354-be83-4589edcd864a:string:px"
         },
         "TRUSTEES": {
-          "data": "4edfee00-663c-472c-822e-1d8da2ac12bc:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
-          "width": "2f002822-ef96-4a7d-92b6-4875735d6113:number:240",
-          "height": "62dacfdd-20ae-4acc-9ac7-16d77d579dbb:number:90",
-          "unit": "71701e9d-23d2-4926-bf36-342789d0c9e5:string:px"
+          "data": "eb20e087-a4a5-47ba-a121-6281c5034ecf:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "25475f99-592d-4ea1-86e3-701018a0ff27:number:240",
+          "height": "2c906218-7fa0-43d7-8e89-9d7d6f6f2639:number:90",
+          "unit": "8648877c-d78b-4784-ab45-6043a8bec258:string:px"
         }
       },
-      "transcriptType": "981ceeef-8c8e-4259-b029-ddc1f8d23a32:string:GDOF",
-      "transcriptReq": "83aa9baa-60fc-4d7f-89fe-d64db84090e3:string:001009530",
+      "transcriptType": "132186c3-9967-4e0f-97ec-0472e565e2e9:string:GDOF",
+      "transcriptReq": "4704d960-6ca5-40b4-b701-905760baa423:string:001009530",
       "transcriptGroup": [
         {
-          "name": "1c8cd0ed-2080-4824-8f55-965bad114958:string:0913",
-          "term": "a8e614f2-ca75-4203-929a-bd1c49390658:string:2009/2010 SMA Semester 1",
-          "formOfStudy": "0e713316-9f39-4279-a75f-8016d1c15091:string:ENRL",
-          "fosPrintArea": "05e0374e-fdd4-4bfe-b5a4-20fb3c413e0c:string:ND",
+          "name": "3a3c784e-3b27-4099-a2c9-b8c44f60fca2:string:0913",
+          "term": "fcf96fd8-66b2-4708-9c01-3814e3d5fe3e:string:2009/2010 SMA Semester 1",
+          "formOfStudy": "4206d4c5-532c-43d7-82be-721e6a239ac3:string:ENRL",
+          "fosPrintArea": "543e49c3-58c6-4473-9db1-f9252f37cf7b:string:ND",
           "summary": [
             {
-              "programName": "7760aa23-f9ce-4b86-ac3d-c4bb5532c12a:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
-              "includeInGPA": "6e13faee-2875-45bc-ae75-a6a1739f8a1b:boolean:true",
-              "GPAName": "afc50e29-fd19-4f1b-b944-dad0f442a5cc:string:Cumulative Average Point",
-              "GPA": "94ed730f-3c34-4a9d-baf1-52dcf0a3f6ed:number:5"
+              "programName": "4eb2f663-2a49-42d4-8db9-fb91d5e9f482:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
+              "includeInGPA": "1f9a076a-cf31-44f3-b511-2c0a3cf7ae98:boolean:true",
+              "GPAName": "061143e9-2fd6-4f87-858e-02ae570b0c54:string:Cumulative Average Point",
+              "GPA": "50fa5e35-4262-49bf-af83-e5d6f8a5effa:number:5"
             }
           ]
         },
         {
-          "name": "81cdeb46-a9bb-4a62-8ec4-a275d5f4b68b:string:0914",
-          "term": "b5f206a7-45ef-442e-a7b2-6ccbfd461ad9:string:2009/2010 SMA Semester 2",
-          "formOfStudy": "f291e495-e041-4339-b510-58e56f541653:string:DDAH",
-          "fosDescription": "fd8e9007-d71f-40f6-8217-3f66a3fc9d19:string:Participated in a Double Degree Programme at",
-          "organization": "d8bdaac7-8be1-4b73-98d7-2232d45e17df:string:Massachusetts Institute of Technology",
-          "fosPrintArea": "afca8649-10e6-421a-b34d-e6f6fe9b4ce0:string:EH",
+          "name": "cd7293da-9ec4-490a-8568-f720bffa0896:string:0914",
+          "term": "4b9f1e0c-a6e6-43f0-a2dd-04deb6bf5775:string:2009/2010 SMA Semester 2",
+          "formOfStudy": "1f2c627d-7511-492b-9ce3-d7c2a795e5b7:string:DDAH",
+          "fosDescription": "05929608-e044-4d97-86bd-28bdbc1dc926:string:Participated in a Double Degree Programme at",
+          "organization": "088c816b-8bf2-49c2-936b-e01691493ef4:string:Massachusetts Institute of Technology",
+          "fosPrintArea": "cb804c19-aa35-4c19-9f34-107b6e632d6e:string:EH",
           "creditTransfer": [
             {
-              "sourceType": "04a5d1bf-4498-403f-9efb-e368364c1424:string:E",
-              "creditsNoGPA": "db87f26e-fda8-407c-b9f7-656efa5e4f92:number:11",
-              "creditsGPA": "e81b2c60-b7d7-431c-8dc4-8c93170f7fbb:number:0",
-              "orgId": "572e2b3a-053c-4663-bcc6-e2370f9915a9:string:Massachusetts Institute of Technology",
-              "orgName": "9530ba79-5f91-4ab4-be4d-e914ba78160b:string:Massachusetts Institute of Technology",
-              "transferSeq": "b4826c4d-e7f2-4d9f-a6df-7fedd8a23e2c:number:1"
+              "sourceType": "a8607f47-0ef2-4102-9d08-1c8a8adda566:string:E",
+              "creditsNoGPA": "9d2861b1-c7a1-4f9e-bf10-082b7bfbc618:number:11",
+              "creditsGPA": "58ab0330-8641-4316-878a-6845a4fe0fc9:number:0",
+              "orgId": "50f0a227-f463-4f78-90a4-3e89bcec1cc6:string:Massachusetts Institute of Technology",
+              "orgName": "9b00e90a-5544-492c-aaf5-21eb8d6501e1:string:Massachusetts Institute of Technology",
+              "transferSeq": "e6b25c6c-d379-4299-8269-584a6a125b5b:number:1"
             }
           ],
           "summary": [
             {
-              "programName": "56bf612b-d2a7-4e8b-b049-1ce92e32201f:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
-              "includeInGPA": "917b653a-96ef-4226-9ac1-97bcef87940e:boolean:true",
-              "GPAName": "c765eb1c-b466-4089-9d1f-15ec1669d68b:string:Cumulative Average Point",
-              "GPA": "a0f57f8a-fef3-401c-9a33-374633bd8cff:number:5"
+              "programName": "48a64cde-bf6b-4673-a65c-4d0bb8369b64:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
+              "includeInGPA": "7dcdc66a-7494-4763-9e09-79252f603822:boolean:true",
+              "GPAName": "47fa5136-e568-4369-9770-d903b08d6d4d:string:Cumulative Average Point",
+              "GPA": "f8e02496-bce2-44ea-b75e-ecaad801c5f0:number:5"
             }
           ]
         },
         {
-          "name": "ec3affbe-cf60-4c17-b7cc-eb0a18d0a1a2:string:0923",
-          "term": "f00d4d8a-31f9-4ede-b3ce-6a095a47619c:string:2009/2010 SMA Semester 3",
-          "formOfStudy": "d0a3c836-62b7-4d07-bb14-11f85393f932:string:ENRL",
-          "fosPrintArea": "015b3f8c-7571-4cab-89ac-481f018a44be:string:ND",
+          "name": "9a002013-ddaf-486a-9c8d-ebae51466790:string:0923",
+          "term": "461919b8-1c28-40a3-9c87-84612c7d6e16:string:2009/2010 SMA Semester 3",
+          "formOfStudy": "e44712b0-0ffa-4679-9215-b39dd25ff275:string:ENRL",
+          "fosPrintArea": "f97fd3f0-6630-4596-85dd-92300a145c0c:string:ND",
           "summary": [
             {
-              "programName": "a570bbd2-bea5-4c5d-9a41-99bcdd347a97:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
-              "includeInGPA": "9481475a-1f1a-4735-b81c-d3b663776963:boolean:true",
-              "GPAName": "33e81e44-e84d-4b11-8801-34fc92f7fa82:string:Cumulative Average Point",
-              "GPA": "ba6e1c13-ce20-473e-a078-a7c295d47d61:number:4.5"
+              "programName": "03b3813b-11e1-4cc8-b681-f0f76df883c7:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
+              "includeInGPA": "560d8944-aa1f-4428-a8c7-334cf5b79221:boolean:true",
+              "GPAName": "6a5967a5-e967-4a14-ac4a-0f5c22abd118:string:Cumulative Average Point",
+              "GPA": "137a5614-4859-4bc1-81a3-678d5b784189:number:4.5"
             }
           ]
         },
         {
-          "name": "3216325c-c07d-42d0-97b9-0c28e1cdae1e:string:1013",
-          "term": "890b5a1a-7888-4425-9e7c-2fffb451dcd0:string:2010/2011 SMA Semester 1",
-          "formOfStudy": "b1a50d76-8c30-4567-b8e9-f0afe6efdd3b:string:ENRL",
-          "fosPrintArea": "7526c1f0-8189-4846-95b5-ecea068e4591:string:ND",
+          "name": "0d1f3db0-b9e7-4939-9e2e-eed664424175:string:1013",
+          "term": "00ca8842-71fc-47b1-8498-00008c88dd70:string:2010/2011 SMA Semester 1",
+          "formOfStudy": "e7695262-c9c5-47c5-b067-84b154d3f918:string:ENRL",
+          "fosPrintArea": "782f372d-3296-4936-88b2-95378b1d94be:string:ND",
           "summary": [
             {
-              "programName": "698ca4bd-bc8f-4be6-9bb1-820555760005:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
-              "includeInGPA": "517d1cbb-0219-4479-af28-f2381fcead3b:boolean:true",
-              "GPAName": "b59ff878-b876-40ab-88cf-78d3c331be8c:string:Cumulative Average Point",
-              "GPA": "9323c5d1-c6fa-456e-8fd4-bb44a80ad8ef:number:4.33"
+              "programName": "a12fde23-36d3-4ac5-a1ed-21e887ccb0f1:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
+              "includeInGPA": "fb7c5713-fc65-40db-86c8-a98f4e16ab68:boolean:true",
+              "GPAName": "b788abe6-f25d-40a0-9b24-1e18e34a1873:string:Cumulative Average Point",
+              "GPA": "1b70da5a-a447-4888-bb84-e65ac8a86dea:number:4.33"
             }
           ]
         },
         {
-          "name": "593e9d7c-cbf0-4377-b505-77b47c3a41fb:string:1014",
-          "term": "c0676c2c-d542-4dbc-a26e-dcbbd57f7cd5:string:2010/2011 SMA Semester 2",
-          "formOfStudy": "92a8bce9-ef68-4c44-9241-09dd1e1b7901:string:ENRL",
-          "fosPrintArea": "1626c8cf-db09-420b-84f8-6f8ce18f79a3:string:ND",
+          "name": "5b8e0e97-29ab-4376-a147-755d94631bad:string:1014",
+          "term": "6692bd40-59ee-4e7b-b89b-e94ff1bf72e1:string:2010/2011 SMA Semester 2",
+          "formOfStudy": "367ddc9f-c18d-428c-818a-1bdbcfd22f7a:string:ENRL",
+          "fosPrintArea": "55bf1053-43bb-454a-940c-b80808232382:string:ND",
           "summary": [
             {
-              "programName": "d7bd4a2f-8e56-49d8-9828-cbcb1a884c62:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
-              "includeInGPA": "42842836-7e0b-42b1-a4f4-17cd7d353321:boolean:true",
-              "GPAName": "c227c2f2-f2f4-496e-af04-8828e5cf80d3:string:Cumulative Average Point",
-              "GPA": "d6dded73-3b23-4578-935f-4fea505ea437:number:4"
+              "programName": "959311f7-71f5-4ff9-abc8-1c540e4c0f3e:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
+              "includeInGPA": "9c0fce05-77f5-44d0-9ebd-b7748c69fedf:boolean:true",
+              "GPAName": "976e4be1-0137-4304-863c-8196ef4f6f7f:string:Cumulative Average Point",
+              "GPA": "7ebedef6-7a08-45e5-90f2-270546c65cf4:number:4"
             }
           ]
         }
       ],
       "programData": [
         {
-          "programCode": "349b4348-4d57-4e84-870d-82621a4d2432:string:M4910",
-          "programName": "a20b6648-a6c6-491f-a0cf-f334cc11ec09:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
-          "statusCode": "f658b422-a3c1-43cc-9f9a-0515d777d8e1:string:CM",
-          "statusDescription": "32b54c38-c9a3-4828-b9d9-cb54da80b3be:string:Completed Programme",
-          "effectiveDate": "76eea7b1-1447-475a-b004-bc6fb1d340f9:string:2011-03-01",
-          "admitTerm": "ebfe7733-f778-41ab-ac66-772278869b1f:string:0913"
+          "programCode": "f9363a4e-76e7-4d0d-b2f2-587a72622271:string:M4910",
+          "programName": "28ad596f-e287-451f-80fd-6046f6dc3580:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
+          "statusCode": "cf7286e7-de54-43ab-b062-a5a912af4b65:string:CM",
+          "statusDescription": "d1e8b1d9-2b79-43b5-a9e1-8a6f622515ba:string:Completed Programme",
+          "effectiveDate": "b6168b84-87ee-491f-bb15-0fd638606757:string:2011-03-01",
+          "admitTerm": "d07dd54c-3903-4785-ab90-ac56631c835e:string:0913"
         }
       ],
       "degreeData": [
         {
-          "degreeTitle": "c5c14995-8b7e-438a-b869-4a2d4839be59:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
-          "dateConferred": "803bf48d-28f0-45b4-ad94-e70c82700d56:string:2011-02-28",
+          "degreeTitle": "62c71be8-4ee4-4298-84b4-97af1e49a4b1:string:Master of Science (Advanced Materials for Micro- and Nano- Systems)",
+          "dateConferred": "b27a30c2-a57b-4517-aadb-41cfe38e4c69:string:2011-02-28",
           "plans": [
             {
-              "specialProgram": "9d6de16e-720c-47ea-a771-731d135ad48f:boolean:true",
-              "type": "b0e39101-0419-4164-91b5-4b02ce1a77f9:string:DDP",
-              "typeName": "26de9460-de7b-4cad-8d16-d99b513236cc:string:Double Degree Programme",
-              "transcriptDescr": "b8dac411-5e6f-485a-9f7a-9d50cdb1903a:string:Completed a Double Degree Programme with Massachusetts Institute of Technology",
-              "planDescr": "8a3aaede-15d6-4562-89a8-4f264bc81a8b:string:Massachusetts Institute of Technology"
+              "specialProgram": "f1217bc9-6c28-4710-ad21-5f4ebc6f638f:boolean:true",
+              "type": "2272df8a-6b6e-4f96-a213-bb0973750c5c:string:DDP",
+              "typeName": "61caddc4-e722-446f-b727-2842bc5ec685:string:Double Degree Programme",
+              "transcriptDescr": "9c7ddf05-113a-4351-98ae-6c4908a85d77:string:Completed a Double Degree Programme with Massachusetts Institute of Technology",
+              "planDescr": "b486a3d3-d41b-47f7-80be-48c58e1b4681:string:Massachusetts Institute of Technology"
             }
           ]
         }
@@ -253,15 +253,15 @@
   "privacy": {},
   "signature": {
     "type": "SHA3MerkleProof",
-    "targetHash": "b4879221a5fede44604df2983ecd50d9e128c78416a70af7ce38d0cb82adecd1",
+    "targetHash": "73c48b429f6eae2e3d8cd672ac6cfe65d6ac17ea6c49e5166d228dc7a17c1f66",
     "proof": [
-      "aca980243b3bd4d670a4ca85221c86ebbbfad0204b913c935e6d13ccea07fadf",
-      "4f6cc75c8ccf7de637fcac55c7a677b483052ab6a9817dcad631d43c1036ff48",
-      "2952da59a5f4d2458c6935d7fb73cae8b31e082c6d4f8e147a505b9804c39e19",
-      "f66ad8aaa814dc04c4e4d36f0a66d5ba79d6498bc5c0a5fd5151c7e865d21573",
-      "72f7bf7999b8fe7cde7c2e5d26c8a5abd1e2e435e9c8db2b79c0abbc093cabf8",
-      "227fc50be016b3dd61cd428a63e2f930cd41422d327c9e6a66e87107b4b9a783"
+      "ff8395be76093568be9f1c28f151461c149cf281e3d76744610e86217fd66a86",
+      "e96d87e27531e98288b385fff25025ed2b0e1f1c7f26def25dad9207449102cf",
+      "431100f94a0b91897b2feb58ae5c0f4e5b379ce8e499e9319a0405e03543c6eb",
+      "5d245fde4d6cca3dc022667a67df5f7a51e6ded96116708c3af2d138100b73c0",
+      "406fc55e036702b9516bb95d7d27f03ffe95072c0b3b43c8a62f8bba65174ea3",
+      "190c249147c865390e90c147670cb3d48256909f14c1943915df4baa9ba235a6"
     ],
-    "merkleRoot": "fc4d413665bef3ad14eb8934319f16a32a4711df60bed1ffd4519441b716629f"
+    "merkleRoot": "261c2237d79a414dcadc8b5ad63944c5d1ed74711ccc3d4816f5e993a3e3e0c6"
   }
 }
