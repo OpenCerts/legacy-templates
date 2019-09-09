@@ -63,9 +63,27 @@ const Template = ({ certificate }) => {
                 marginTop: "80px"
               }}
             >
-              <div style={{width: "40%", textAlign: "right", paddingRight: "25px" }}><img src={signature1} /><br/><img src={signature2} /></div>
-              <div style={{ width: "20%" }}><img src={seal} /></div>
-              <div style={{width: "40%", textAlign: "left", paddingLeft: "25px" }}><img src={signature3} /><br/><img src={signature4} /></div>
+              <div
+                style={{
+                  width: "40%",
+                  textAlign: "right",
+                  paddingRight: "25px"
+                }}
+              >
+                <img src={signature1} />
+                <br />
+                <img src={signature2} />
+              </div>
+              <div style={{ width: "20%" }}>
+                <img src={seal} />
+              </div>
+              <div
+                style={{ width: "40%", textAlign: "left", paddingLeft: "25px" }}
+              >
+                <img src={signature3} />
+                <br />
+                <img src={signature4} />
+              </div>
             </div>
           </div>
           <div
