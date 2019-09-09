@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { get } from "lodash";
 import { tz } from "moment-timezone";
-import "./transcript.scss";
+import "../common/style.scss";
 import "../common/print.scss";
 
 export const MAX_LINES = 40;
