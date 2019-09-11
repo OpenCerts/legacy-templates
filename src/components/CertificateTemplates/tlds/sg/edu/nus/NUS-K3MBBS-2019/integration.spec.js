@@ -25,7 +25,8 @@ test("NUS-K3MBBS-2019 certificate is rendered correctly", async t => {
   });
 
   // Check content of window.opencerts.templates
-  await t.wait(500);
+  const container = Selector("#rendered-certificate .container");
+  await container(); // wait for document to be rendered
   const templates = await t.eval(() => window.opencerts.getTemplates());
   await t
     .expect(templates)
@@ -50,7 +51,7 @@ test("NUS-K3MBBS-2019 certificate is rendered correctly", async t => {
     "A0119114R, name",
     "A0119114R",
     "01/01/1905",
-    "27/08/2019",
+    "11/09/2019",
     "BACHELOR OF MEDICINE AND BACHELOR OF SURGERY",
     "COMPLETED PROGRAMME",
     "2013/2014",

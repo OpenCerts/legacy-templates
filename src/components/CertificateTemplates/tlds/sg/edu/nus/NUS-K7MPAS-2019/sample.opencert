@@ -1,135 +1,145 @@
 {
   "schema": "opencerts/v1.5",
   "data": {
-    "id": "54950abc-f530-4efd-bcad-7a131c1b487e:string:NUS-A0005366L-G061001-P10182357-31-20060908",
-    "$template": "e270646a-be7a-45ba-bddb-7a2b73dc3065:string:sg/edu/nus/NUS-K7MPAS-2019",
-    "issuedOn": "8e0915ca-a576-400a-be20-883555c66f67:string:2019-08-27T10:10:48+08:00",
-    "name": "0718755e-9775-4722-99fe-835aad9cfc39:string:NUS Degree",
+    "id": "5d5e1042-f2f9-4bc7-bcef-0cfed14e4c84:string:NUS-A0005366L-G061001-P10182678-31-20060908",
+    "$template": "4c996e30-d9d3-41f3-8d22-834ea306e6cc:string:sg/edu/nus/NUS-K7MPAS-2019",
+    "issuedOn": "1c7e23c2-dc8b-4784-abb3-6eacd66ad844:string:2019-09-11T17:21:17+08:00",
+    "name": "94ec2dc8-362b-4625-964e-9b7ffe39106f:string:NUS Degree",
     "issuers": [
       {
-        "name": "93788a4c-3ae5-4d9a-86e2-5dbe6129f38e:string:National University of Singapore",
-        "did": "47854cfc-c3ad-4bb3-a2ff-228d7a1cfaa4:string:DID:SG-UEN:200604346E",
-        "url": "3648ccc4-56cd-46de-ad6d-68979da4a27b:string:https://www.nus.edu.sg",
-        "email": "b5d9132b-31c5-46a2-a8ef-4ce954378c11:string:registrar@nus.edu.sg",
-        "certificateStore": "e6cff8d7-5e25-4ea1-82c5-8dfb026782ad:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+        "name": "4bbeb7ab-948d-438c-9332-9ccc23f3a948:string:National University of Singapore",
+        "uen": "6014a371-1539-4d58-8886-a7ad18be0079:string:200604346E",
+        "url": "d927e6ef-f74c-40f1-abe1-2e05ed007b40:string:https://www.nus.edu.sg",
+        "email": "b9242b93-a3f9-40d8-99f8-e075304e1fb0:string:transcript@nus.edu.sg",
+        "certificateStore": "04831b93-83bf-4496-9004-8dfa727ed43a:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
       }
     ],
     "recipient": {
-      "name": "9f88ae14-cabd-4097-b0bb-2d34e90e2b4b:string:A0005366L, name",
-      "studentId": "eb068878-c54c-48d7-a831-1df3660e89ec:string:A0005366L",
-      "dateOfBirth": "8b50043a-1349-4e66-b3b0-3b05fa1d2a57:string:1905-01-01"
+      "name": "8a02361b-546f-4c87-9d6f-47caace27f34:string:A0005366L, name",
+      "studentId": "4e415223-cf0a-40a5-8495-ebf1bed2b077:string:A0005366L",
+      "dateOfBirth": "08fdfe77-7314-4ea1-bff3-cae87c67f51e:string:1905-01-01"
     },
     "transcript": [
       {
-        "name": "95047b9f-187a-40f3-907b-848bf7a1e8a7:string:MARITIME MANAGEMENT & LAW",
-        "courseCode": "f46392b8-6239-48e4-8fb6-251041aab8b3:string:MPA5017",
-        "grade": "bcb21cfa-7a8d-4933-9453-dce306cb00f8:string:S",
-        "courseCredit": "e6c6c980-4e91-4c2f-bb4f-a6f422f87dc2:number:4",
-        "gradingBasis": "cafc160e-8eef-4c27-ba8a-36877885b54a:string:SNU",
-        "includeInGPA": "72474207-5590-45c0-819f-30c36f696396:boolean:false",
-        "semester": "eaae37de-fdef-4404-beec-95cb1691d490:string:0530"
+        "name": "9fd79964-d8ac-4cc9-a81a-28cef943dd8b:string:MARITIME MANAGEMENT & LAW",
+        "courseCode": "dc5908f3-b513-4b00-9508-678bd8200812:string:MPA5017",
+        "grade": "66783bb7-275b-416e-91f4-69eeae3cda71:string:S",
+        "courseCredit": "978c5197-1aed-4c8e-9b5c-c15a1284d028:number:4",
+        "gradingBasis": "9deb5834-ee86-4632-96cf-faebd11bbdbc:string:SNU",
+        "includeInGPA": "b26a19e2-8528-4702-b88b-d1af4b279ad3:boolean:false",
+        "reportNo": "7278c05e-8146-4e9c-8ac5-10ad3ed252a7:number:1",
+        "semester": "c9e3ca65-393e-4cb3-bc49-f7d27951710f:string:0530"
       },
       {
-        "name": "a10b5193-969d-4703-90df-630f9fabcf49:string:PORT TERMINAL MANAGEMENT",
-        "courseCode": "1a90fdb5-c00c-46f7-9311-48b9f66b5d87:string:MPA5018",
-        "grade": "faedcdae-5107-4842-bb59-d38e555a5968:string:S",
-        "courseCredit": "0decdff9-4f16-4f60-b579-85ba187ac3ed:number:4",
-        "gradingBasis": "96682b95-277a-4d84-b562-301df756880e:string:SNU",
-        "includeInGPA": "07f497b9-0d1b-45eb-8886-2d6a17395f2f:boolean:false",
-        "semester": "7ec863e1-47a4-4441-8177-5dc952d3f425:string:0530"
+        "name": "745ea1ed-dfc8-4f22-b7c5-233d6a915fc2:string:PORT TERMINAL MANAGEMENT",
+        "courseCode": "1a9353fc-85d8-4b14-a793-b99ecd0e6dbf:string:MPA5018",
+        "grade": "c9557d39-4219-4d74-a2be-71eae3763cd1:string:S",
+        "courseCredit": "b16cd2f9-4a51-492b-a03d-06ff8b802adf:number:4",
+        "gradingBasis": "d25286a9-20f0-4d52-b5be-3d4f821bbc7b:string:SNU",
+        "includeInGPA": "98826013-19aa-42bb-96f2-be5aeb7dff31:boolean:false",
+        "reportNo": "cd42a6ae-319d-4470-adc0-89bda5f21562:number:1",
+        "semester": "3f6a8498-b818-462c-8201-6ef4487a3e0c:string:0530"
       },
       {
-        "name": "951a8377-2999-4b54-afa5-0b27fae78b67:string:PORT PLANNING AND MARINE OPERATIONS MANAGAMENT",
-        "courseCode": "e0a7374a-fd4e-41e0-ae02-ee4bef416606:string:MPA5019",
-        "grade": "e4ec109b-e3e2-4ea1-bc86-cf9ba0c8de0b:string:S",
-        "courseCredit": "7c44bfd5-f3b5-4523-9c4b-f44556fe207e:number:4",
-        "gradingBasis": "d38e7c8e-6d64-4328-9ac5-857dd8eae721:string:SNU",
-        "includeInGPA": "1f2c9694-dbce-4f25-a285-f40640b87cc2:boolean:false",
-        "semester": "0c652a4c-8822-409e-a2e7-2d71187e37ca:string:0530"
+        "name": "4379b003-f217-4a86-a086-5aea5b7e9ced:string:PORT PLANNING AND MARINE OPERATIONS MANAGAMENT",
+        "courseCode": "b56fbbde-c22f-4f70-90cb-adccef50aba4:string:MPA5019",
+        "grade": "e8a74bef-b075-4cc3-9709-cb2080c07e19:string:S",
+        "courseCredit": "53d353ac-67b7-4401-a34f-349910c1a486:number:4",
+        "gradingBasis": "86e59389-7b85-4ad9-84d6-21dc338f8ca7:string:SNU",
+        "includeInGPA": "53a9b955-d0ea-4327-98ad-2f41f9477714:boolean:false",
+        "reportNo": "e2e590ff-20a0-48a0-a2f0-d8eb28024f1c:number:1",
+        "semester": "163797d6-9fe5-4ae1-9a1f-2494a3275dd0:string:0530"
       },
       {
-        "name": "a813c885-5a07-49f0-aa6d-08e86aab0a63:string:SHIPPING, PORTS AND DEVELOPMENT",
-        "courseCode": "9aa416cc-3042-4ea8-97a3-021a86bd7f6c:string:MPA5027",
-        "grade": "74d0a040-daea-4230-a452-6fdbe19bca31:string:B",
-        "courseCredit": "2af1415b-b61f-439b-83b6-7afc32850bae:number:4",
-        "gradingBasis": "0e496849-d208-46cf-b694-ff31e7e287f1:string:GRD",
-        "includeInGPA": "7fa96b5a-5ee4-436b-a2d8-be9af909f32b:boolean:true",
-        "semester": "3fa2b078-0ae1-4c3d-a401-e28eb30bd1fb:string:0530"
+        "name": "aecbb93f-43fa-4f18-929f-15ae27d392d7:string:SHIPPING, PORTS AND DEVELOPMENT",
+        "courseCode": "cf50f8c5-fbd2-428a-82f0-e9967a6531d9:string:MPA5027",
+        "grade": "1c64999f-55d9-40a8-8381-d59e66f37c97:string:B",
+        "courseCredit": "d8046917-0330-49a6-bbb4-94e14eaa7c6c:number:4",
+        "gradingBasis": "a41e9188-a23d-42b8-8cb4-7d8914400aae:string:GRD",
+        "includeInGPA": "dccdfa19-26a3-4fb3-9c4d-b8adff52b97b:boolean:true",
+        "reportNo": "99b5e64c-4e49-41af-9337-995ef4b5cb86:number:1",
+        "semester": "387e12c3-212e-42d4-8cf2-ef33167eef86:string:0530"
       },
       {
-        "name": "19e9235e-9310-4fbc-92eb-19010456462d:string:PORT MANAGEMENT AND OPERATIONS",
-        "courseCode": "8e8c445a-0bd0-4d04-9b61-2c0508e988da:string:MPA5028",
-        "grade": "7d442ab4-dd9d-42c7-8651-c01f16078635:string:C+",
-        "courseCredit": "d10fdd48-87dd-4f77-9f1e-5e92e7e4a98e:number:4",
-        "gradingBasis": "9641e278-2b31-4d4c-be46-752e370224dd:string:GRD",
-        "includeInGPA": "d37306a9-02af-47dc-be9c-3cc06fabb8b1:boolean:true",
-        "semester": "877fcc6f-9f47-49cc-9c4c-b6e9747595aa:string:0530"
+        "name": "9c0348bc-2950-49c8-adc7-679f8cb432ba:string:PORT MANAGEMENT AND OPERATIONS",
+        "courseCode": "40227a33-a4c5-4e91-838d-e31353363e47:string:MPA5028",
+        "grade": "14898ea8-d293-4884-9323-de328bd2ce24:string:C+",
+        "courseCredit": "09fb45e2-6cc2-4c8d-ab34-2f3170c79b1a:number:4",
+        "gradingBasis": "7755c69f-82bb-4cdd-93ef-0ede1794f84b:string:GRD",
+        "includeInGPA": "aa82b1b5-7f28-4b8d-8fd0-2b14c32cd747:boolean:true",
+        "reportNo": "ddd32141-be1f-44a5-81ad-ebc3fbdca612:number:1",
+        "semester": "a62e51d1-2b6d-41a8-94d9-2b4743f56802:string:0530"
       },
       {
-        "name": "2dd82ec7-99f5-43d8-837e-779bf9a94f04:string:PORT ECONOMICS",
-        "courseCode": "51ff3a78-ee20-4c7b-af6c-d37e7e3ea92e:string:MPA5029",
-        "grade": "16c3dd20-5fe4-4a16-9c6d-23bf17a3b962:string:B+",
-        "courseCredit": "8e8db952-e983-4e4a-b303-0aa80e1e4dc6:number:4",
-        "gradingBasis": "37dea64c-b06a-41cd-abfb-6dd7767b945e:string:GRD",
-        "includeInGPA": "5de6cadd-d025-40fc-b94f-0afe057ed982:boolean:true",
-        "semester": "94eccaf3-faaf-45a0-806a-b77aa239b8fb:string:0530"
+        "name": "4be0db6f-b70b-439b-96af-b7f7675106b8:string:PORT ECONOMICS",
+        "courseCode": "911b3036-cc68-45f5-b5b4-6b219ad0ec13:string:MPA5029",
+        "grade": "546bee9c-6b87-4c5d-92cf-3bb5f11c9676:string:B+",
+        "courseCredit": "082a2f9e-e55e-4556-a85b-bd2d24132d9b:number:4",
+        "gradingBasis": "ecced450-48c9-41cc-b6c0-c821171e1cb9:string:GRD",
+        "includeInGPA": "d6324e99-9119-4bd5-a49f-82edc10ed682:boolean:true",
+        "reportNo": "657f7e50-a8fa-4e47-a441-a11fa85d4cce:number:1",
+        "semester": "dab4a5f1-d09a-4667-b01f-59ff5258518a:string:0530"
       }
     ],
     "additionalData": {
       "degreeScroll": [
         {
-          "degreeTitle": "6c717cc7-b704-4761-90e8-748d0ab22f24:string:Graduate Diploma in Maritime and Port Management",
-          "dateConferred": "f98fed73-119b-4c61-b509-bc12926d3f88:string:2006-09-08",
-          "degreeCode": "c963d2fb-edb7-483a-8670-c019831d079a:string:G061001",
-          "type": "13136427-2c52-4d36-b2bf-82d9e2d5ceaa:string:K7 NUS-MPA"
+          "degreeTitle": "74e7e02e-e9a8-4234-bb1b-708fc547b1aa:string:Graduate Diploma in Maritime and Port Management",
+          "dateConferred": "6ea740ff-2c35-4ff2-a596-bb000bfbd1d9:string:2006-09-08",
+          "degreeCode": "ee3ce05c-bf06-4df8-ab90-244f8acb2514:string:G061001",
+          "type": "c44e5b3d-49fb-462d-9074-9861401f3ab8:string:K7 NUS-MPA"
         }
       ],
       "images": {
         "PRESIDENT": {
-          "data": "9e565386-ebee-425b-a191-37c2ced31d53:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
-          "width": "e93240a6-65b0-4fdb-b2c2-434a2167b905:number:240",
-          "height": "308dbb47-c4ca-47f6-ae4e-e103a050a935:number:90",
-          "unit": "833f4442-81f9-4c2e-88d3-27131a69fba7:string:px"
+          "data": "58d7c6e3-8b59-4a19-861e-16be94bc5877:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "3b1a6e43-6058-49c9-9df9-be6d4b10da19:number:240",
+          "height": "0061b347-9e22-43f7-ae4d-2c2d52336d49:number:90",
+          "unit": "f5b785ad-569f-4a99-b0b2-788128d9ecdd:string:px"
         },
         "TRUSTEES": {
-          "data": "b09976b1-9340-4e0f-9087-fca7973982b9:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
-          "width": "175b4ac5-166c-4621-8961-54fa2671afd9:number:240",
-          "height": "1c1ff65e-07a4-4d78-9a4c-af16d5f1b0b9:number:90",
-          "unit": "13694a9e-951a-452e-b3e1-db8192d821e7:string:px"
+          "data": "88ff989e-9691-4c16-9f80-3403f6a10ae8:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "eb407d0e-245b-4095-940a-9ebcf6d8ab79:number:240",
+          "height": "d1112704-c7c5-4dc5-bb79-fa174009c7a1:number:90",
+          "unit": "441af011-72ea-4d21-9a02-b8a703cda72f:string:px"
         }
       },
-      "transcriptType": "2e3e7467-43a6-4fe3-86d7-873827a532cc:string:GDOF",
-      "transcriptReq": "b6197300-d197-416d-bd61-751d8203c117:string:001009551",
+      "transcriptType": "02b9bd7c-cd5c-47c5-8767-963dbbbb683b:string:GDOF",
+      "transcriptReq": "d7ed3b29-cc43-4fcc-a4cc-a5afa510343c:string:001009874",
       "transcriptGroup": [
         {
-          "name": "f28b80a0-b2fc-46f7-a616-32fd7cd4decb:string:0530",
-          "term": "375935e2-6161-4258-beba-9528357384ab:string:2005/2006 Special Term (Part1)",
-          "formOfStudy": "c344a0e9-c68a-461f-9b71-88c04140e922:string:ENRL",
-          "fosPrintArea": "95c076c9-9bb4-4c91-b4b2-dfd1851e737e:string:ND",
+          "name": "ace93d8d-8fba-4aaa-9685-530941be3580:string:0530",
+          "term": "7c595f4b-4d89-4692-ba3b-4ed05191c626:string:2005/2006 Special Term (Part1)",
+          "formOfStudy": "dfff1abf-168c-43c3-855f-98ca159ad6aa:string:ENRL",
+          "fosPrintArea": "0f8c2a15-4081-4cdf-8686-a9eb21ffdef3:string:ND",
           "summary": [
             {
-              "programName": "34d8165b-320b-44b0-8792-cc59b55e1933:string:Graduate Diploma in Maritime and Port Management",
-              "includeInGPA": "f7699b3a-9877-4f00-b07d-d62cbeb092b0:boolean:true",
-              "GPAName": "9f3ef017-25ca-43cd-a86f-a5f8d8f3e561:string:Cumulative Average Point",
-              "GPA": "cf06fc74-8b19-42bb-a030-ecef379a56b8:number:3.33"
+              "programName": "b930283a-62d2-4b06-bf8f-d782469007f1:string:Graduate Diploma in Maritime and Port Management",
+              "includeInGPA": "76f31fa6-73fe-4295-941c-38ba712c4aa0:boolean:true",
+              "GPAName": "e99861e0-96fe-4858-9f43-f68a1c6f78a5:string:Cumulative Average Point",
+              "GPA": "650254b1-a427-4d17-8c2c-5d76fc4afadd:number:3.33",
+              "reportNo": "774b92b7-b5a3-4709-a60d-5019478cfda3:number:1"
             }
-          ]
+          ],
+          "reportNo": "45500397-19f3-4caf-984c-5abf69ad85ed:number:1"
         }
       ],
       "programData": [
         {
-          "programCode": "73f6d08f-2ab0-41a2-bb69-939d53e18489:string:G0610",
-          "programName": "7b56b6dd-687c-4857-bc3d-7a2f6773d5b0:string:Graduate Diploma in Maritime and Port Management",
-          "statusCode": "a560425c-c890-400a-8f5f-00ba17fedbd4:string:CM",
-          "statusDescription": "6b9aeb14-5059-44db-a5f3-30f419b262df:string:Completed Programme",
-          "effectiveDate": "610ec1f9-ad05-44bc-b853-b860dbfca184:string:2006-09-08",
-          "admitTerm": "a4afb28d-6415-48ae-ba93-d1c1cce74ead:string:0520"
+          "programCode": "abec0028-2ed4-4226-b44f-25505fb80bae:string:G0610",
+          "programName": "f188c8be-146c-4d19-a68d-bbfb834c11b8:string:Graduate Diploma in Maritime and Port Management",
+          "statusCode": "c9392bba-7cef-4dad-88c6-e7ccf26d96b5:string:CM",
+          "statusDescription": "2abe2587-f136-46b2-8228-46f7c23f5abb:string:Completed Programme",
+          "effectiveDate": "8897418b-5513-4b6b-9223-3e5d5c0c9532:string:2006-09-08",
+          "admitTerm": "7f012ac7-9450-4192-9035-b6fb6a354c18:string:0520",
+          "reportNo": "8f574c73-154d-4740-afe2-86e14402b16f:string:1"
         }
       ],
       "degreeData": [
         {
-          "degreeTitle": "cd4d83d1-c8be-4edf-b2f1-d991c68036a5:string:Graduate Diploma in Maritime and Port Management",
-          "dateConferred": "aaf2658d-d427-4c8e-aabc-5f0ac3e761a4:string:2006-09-08"
+          "degreeTitle": "d0bdd094-2107-453b-9326-8db1d8e95e7d:string:Graduate Diploma in Maritime and Port Management",
+          "dateConferred": "192644c3-8e76-4ef4-8e98-0dc14f6ef186:string:2006-09-08",
+          "reportNo": "5d7d10e1-46b2-4e1e-a85b-5fed6687deb7:number:1"
         }
       ]
     }
@@ -137,15 +147,14 @@
   "privacy": {},
   "signature": {
     "type": "SHA3MerkleProof",
-    "targetHash": "485a6f8ecc1c741c2c246d53c8169704b85a840c545150e2561a0075a10226ff",
+    "targetHash": "429c9918f14fd2c1e9f4f661866b4c61b70aed410caa8e9005ab8cae41c75a0a",
     "proof": [
-      "225270ef183b77cb91a91a89235967ec67257b081502b1c77cb605e24cc58aa3",
-      "64e9a34e0cb0f65f79d3d58c2a88719cc9d89c58ff73f2a25f0b0b8e2985e8a1",
-      "c790dab378f211b9e4f4c3c4c753aece32671075907e39ee46896ccb071282f6",
-      "878d827096f6a040cb6b1b70fdb743a2c8bda885b8aa3e7352f43379c2526aa6",
-      "406fc55e036702b9516bb95d7d27f03ffe95072c0b3b43c8a62f8bba65174ea3",
-      "190c249147c865390e90c147670cb3d48256909f14c1943915df4baa9ba235a6"
+      "a29254a3abf612943cf9261f5d641a676342bb0f968ff86ddf3c7f20e562701a",
+      "b4aa27ce253fdb2d91a418362103dcfffad5c9bd1d0ab62a0e2dff208f2ab195",
+      "f2da360adc3432a39eae6b0eae6f681c28b4f418ad6f2425eb5244dd1ef0b419",
+      "75103ba56b5b374b23af500a7f99e717228702641de665ef3b85ca0a0b58f6a6",
+      "3af5b6f98dff18d5895619cf018db316c2736ad31928357b71c174a73963dca7"
     ],
-    "merkleRoot": "261c2237d79a414dcadc8b5ad63944c5d1ed74711ccc3d4816f5e993a3e3e0c6"
+    "merkleRoot": "3862426f819b735c661f7981bfaed07eff1984a447b0406d831c1b15ec75e7c9"
   }
 }

@@ -25,7 +25,8 @@ test("NUS-K7MPAS-2019 certificate is rendered correctly", async t => {
   });
 
   // Check content of window.opencerts.templates
-  await t.wait(500);
+  const container = Selector("#rendered-certificate .container");
+  await container(); // wait for document to be rendered
   const templates = await t.eval(() => window.opencerts.getTemplates());
   await t
     .expect(templates)
@@ -51,7 +52,7 @@ test("NUS-K7MPAS-2019 certificate is rendered correctly", async t => {
     "A0005366L, name",
     "A0005366L",
     "01/01/1905",
-    "27/08/2019",
+    "11/09/2019",
     "GRADUATE DIPLOMA IN MARITIME AND PORT MANAGEMENT",
     "COMPLETED PROGRAMME",
     "2005/2006 SPECIAL TERM (PART1)",
