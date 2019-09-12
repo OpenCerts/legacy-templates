@@ -21,4 +21,3 @@ export { NUS_TS_BACKIMG_YALE } from "./imgNUSTsBackYale";
 export { NUS_TS_LEGEND } from "./imgNUSTsLegend";
 export { NUS_TS_LEGEND_DUKE } from "./imgNUSTsLegendDuke";
 export { NUS_TS_LEGEND_YALE } from "./imgNUSTsLegendYale";
-

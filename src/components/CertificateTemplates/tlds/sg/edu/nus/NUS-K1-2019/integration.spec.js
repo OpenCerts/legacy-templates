@@ -142,4 +142,3 @@ test("NUS-K1-2019 certificate is rendered correctly", async t => {
     "Representing Singapore"
   ]);
 });
-
