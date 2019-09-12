@@ -1,0 +1,246 @@
+{
+  "schema": "opencerts/v1.5",
+  "data": {
+    "id": "03e20407-0718-4126-aebc-98ee0388fbf8:string:NUS-A0036825A-K011000-P10182678-14-20160831",
+    "$template": "e183199c-50b3-4040-be05-832289dc39ff:string:sg/edu/nus/NUS-ANUJDP-BA-2019",
+    "issuedOn": "d057a964-4d25-485d-9210-c49dd15b7c72:string:2019-09-11T17:20:38+08:00",
+    "name": "0c07225f-6371-4fe8-8599-d489683f3b14:string:NUS Degree",
+    "issuers": [
+      {
+        "name": "434e5920-b527-43a9-8ec4-a4d603eff0e8:string:National University of Singapore",
+        "uen": "56452443-2d13-4f07-87c3-1fee857bf5ff:string:200604346E",
+        "url": "e9e1e5cc-26e5-4534-8810-41994d51578c:string:https://www.nus.edu.sg",
+        "email": "5b884f58-9c35-4092-b8d1-4be4f5ad9c4c:string:transcript@nus.edu.sg",
+        "certificateStore": "f1236624-dd21-4a22-9008-d534245e3a2a:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+      }
+    ],
+    "recipient": {
+      "name": "d7240e82-ca51-430c-9f83-490dc9ab8538:string:A0036825A, name",
+      "studentId": "1614e0d1-91b9-440d-8ddd-e59608e95b59:string:A0036825A",
+      "dateOfBirth": "d3af0c1b-b2c3-4792-a939-43a6a0f87cc4:string:1905-01-01"
+    },
+    "transcript": [
+      {
+        "name": "ebcc3c34-8073-42ef-84f5-c7ddd6d09567:string:Majorities and Minorities in SE Asia",
+        "courseCode": "0280510e-72c8-42c3-940e-3ff17df737d2:string:SE4218",
+        "grade": "105f00f2-e83d-4543-9d8f-d92ce049ec8f:string:A-",
+        "courseCredit": "5174b798-a14f-4c96-b603-dcf4605b969c:number:5",
+        "gradingBasis": "44e28531-4407-4099-8ac8-f6b34c2ec0f2:string:GRD",
+        "includeInGPA": "106a01e4-55a5-4a04-bb82-5bdb769429f2:boolean:true",
+        "reportNo": "1b04f815-b6b6-498c-b0ce-de312927541f:number:1",
+        "semester": "ab8a7b97-f789-495b-8636-e41a4b989ba1:string:1510"
+      },
+      {
+        "name": "9411e51a-86b1-4168-a306-31c82adc1448:string:Nationalism in Southeast Asia",
+        "courseCode": "129946f4-f66d-4f85-b94d-c3c2fc725eb2:string:SE4227",
+        "grade": "c93eaff8-fcc0-4811-9c4a-698a51025a2c:string:A-",
+        "courseCredit": "13496991-a17a-411b-a031-9568c6175f1a:number:5",
+        "gradingBasis": "84d9811d-4b19-4513-97d1-d3805bbc7124:string:GRD",
+        "includeInGPA": "c37a7306-270c-4ca5-bf78-13093307fd42:boolean:true",
+        "reportNo": "096c352d-3ea8-41dc-a10c-3b979fe071df:number:1",
+        "semester": "de77d52f-f4bd-40f2-b30d-664211bfc139:string:1510"
+      },
+      {
+        "name": "6d00cf4a-114a-4714-9a14-13b7383c1f08:string:APPROACHES TO THE STUDY OF SOUTHEAST ASIA",
+        "courseCode": "f12e8018-2a93-476f-be7c-cd58880e2480:string:SE5151",
+        "grade": "9699112d-f19e-4872-9908-4344fbb578fb:string:A-",
+        "courseCredit": "e4fd20fb-9028-42e3-a491-cf8d5b0732f5:number:4",
+        "gradingBasis": "38b09b9d-b7a1-4997-9abe-7d5e99f0494e:string:GRD",
+        "includeInGPA": "2a7e53af-9e94-4b9f-90b4-538179b9afbd:boolean:true",
+        "reportNo": "5bed98da-30a7-4fa7-967d-edfaf1c87be5:number:1",
+        "semester": "fc15dfa8-10e6-411f-ac19-31b07116ee9a:string:1510"
+      },
+      {
+        "name": "c8d52f8a-b2ba-486b-bc6d-4913d793c57d:string:REVOLT AND REVOLUTION IN SOUTHEAST ASIA",
+        "courseCode": "7fdf37db-22e1-42d2-a365-6307c9124f73:string:SE5213",
+        "grade": "31c7b6d5-6057-4791-b94e-ff93f1155237:string:A",
+        "courseCredit": "c4269991-ee1e-4dca-8419-f7c85335528f:number:4",
+        "gradingBasis": "20050138-5c6f-4657-b67c-709d555f9800:string:GRD",
+        "includeInGPA": "01ec65a9-204b-4c7a-9e82-eabeb02d8458:boolean:true",
+        "reportNo": "87caa4c4-f8a1-47c8-af6a-c6d8f493e178:number:1",
+        "semester": "2b1cd68f-9744-4452-a0be-87133dfb5db7:string:1510"
+      },
+      {
+        "name": "51580dfe-c9dd-4422-9ead-a9792ad36bbf:string:Country Studies: Thailand",
+        "courseCode": "802cc74e-0e0f-43bf-93f1-d6d99f3f9319:string:SE5242",
+        "grade": "e98f5594-2208-4081-b3ba-7f38263e72bd:string:B+",
+        "courseCredit": "f834dbcf-e8e9-4239-be98-0e386e6f11a3:number:4",
+        "gradingBasis": "b6309dc5-721f-44ad-9e3e-c8a60525f2d3:string:GRD",
+        "includeInGPA": "2b243a4d-3580-4f00-8f29-a9463ebfe4b1:boolean:true",
+        "reportNo": "90411fd6-4f60-4f53-b118-974c6edc0065:number:1",
+        "semester": "ecb0c22a-ae00-4aa5-89e4-80c04c76a2b2:string:1510"
+      },
+      {
+        "name": "0b4a7d51-b0de-408d-ae3d-74e383b38c9e:string:RESEARCH PROJECT",
+        "courseCode": "0294ea47-7daf-4897-9abe-8449443a7c4d:string:SE5101",
+        "grade": "2f25ef14-ec9c-4fcf-a6cf-b41d818a959b:string:IP",
+        "courseCredit": "02f14ae3-aba1-4937-a8c2-73cfd331ffd9:number:16",
+        "gradingBasis": "77dfe9ce-c1bc-419e-985e-c4c09116213b:string:GRD",
+        "includeInGPA": "902fe349-5cb1-4f50-b329-b37aebf107a0:boolean:true",
+        "reportNo": "67309295-d2c9-497c-9abb-384b988c9e33:number:1",
+        "semester": "268eb7da-79f1-4970-8013-86ec9b06d8d2:string:1520"
+      },
+      {
+        "name": "7c6d44eb-ce9b-4e05-86da-c644c2242e8f:string:RESEARCH PROJECT",
+        "courseCode": "e766c2cb-2cae-4a13-b33c-ea82a25baf87:string:SE5101",
+        "grade": "23541046-54f0-45d5-8b02-1f88cb6534cc:string:A-",
+        "courseCredit": "b688a67f-661b-488e-81a1-db3b70b38f2f:number:16",
+        "gradingBasis": "4876ef7e-584f-4352-ba48-4261e96bf80b:string:GRD",
+        "includeInGPA": "3e11d289-08dc-4ed6-b0ff-2d7f8068c4c2:boolean:true",
+        "reportNo": "db1e8afe-fddd-4b83-96e1-c2d34624f260:number:1",
+        "semester": "ebb14ad6-793f-4e34-a7a0-3c7679303b09:string:1530"
+      }
+    ],
+    "additionalData": {
+      "degreeScroll": [
+        {
+          "degreeTitle": "11563c38-dfa2-4202-89a3-582095392c92:string:Master of Arts (Southeast Asian Studies)",
+          "dateConferred": "c1d433f5-38a1-4689-ab50-7b5506a10e2c:string:2016-08-31",
+          "degreeCode": "6b65ea29-c7a2-403c-be4c-baa87c323d99:string:K011000",
+          "type": "3a1331e9-60cc-4bb0-a26b-b28e797987a0:string:K11A NUS-ANU"
+        }
+      ],
+      "images": {
+        "ANU_CHANCELLOR": {
+          "data": "e1d332bf-90ac-4d22-a5e1-2b9669039176:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "99797bfa-ec10-4d08-92f6-62a864696599:number:240",
+          "height": "209c08c8-7fc9-447c-9b76-e3d8009c1b2b:number:90",
+          "unit": "a1db7e89-a979-4c96-b3ac-e1f67ba4c0f3:string:px"
+        },
+        "ANU_VICE_CHANCELLOR": {
+          "data": "752b9196-811e-4b9a-8b3c-14ffe16a06b2:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "8f0cc2ce-56ad-488b-9aab-dac9c0e8da8e:number:240",
+          "height": "a208d812-5a19-4acf-a255-4d076a24857b:number:90",
+          "unit": "77844666-806c-42c2-ab31-5caf3d71e0c0:string:px"
+        },
+        "PRESIDENT": {
+          "data": "c9877569-536e-47b1-a970-078c1c03409f:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "d61f6327-219d-4557-b726-f527331ed4b9:number:240",
+          "height": "1a28aa1c-f73f-4682-850d-dbd8c96924b3:number:90",
+          "unit": "4e2c70b7-4dff-40ac-adf5-a8db57045ec2:string:px"
+        },
+        "TRUSTEES": {
+          "data": "6a915037-fc09-400d-9191-d441160b4145:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "a98f5590-1acd-40d3-8341-285e0b8dc3f0:number:240",
+          "height": "11fbf256-8b93-494b-8574-2a6ed14111d6:number:90",
+          "unit": "ae9f396f-cb2c-43f0-ab77-631335fe9279:string:px"
+        }
+      },
+      "transcriptType": "3007e535-af63-4ecd-8447-b196a2060b41:string:GDOF",
+      "transcriptReq": "f456b494-404e-4096-b646-6da91502e12d:string:001009858",
+      "transcriptGroup": [
+        {
+          "name": "40378672-a92c-467a-b1a6-a9d5218fbf36:string:1510",
+          "term": "7abc5848-4b9a-4353-8aaa-b985fce4ece5:string:2015/2016 Semester 1",
+          "formOfStudy": "ecbc0a9c-d1d0-47d5-806b-53763065c77c:string:ENRL",
+          "fosPrintArea": "a7710f87-db99-428b-8225-7ba22a02012d:string:ND",
+          "summary": [
+            {
+              "programName": "62d192a7-3353-44e9-bfcc-489651cedb78:string:Master of Arts (Southeast Asian Studies)",
+              "includeInGPA": "3b0fe351-e53d-4426-8af9-b71bbf20386f:boolean:true",
+              "GPAName": "75e13b23-5ae1-4d7f-88b4-547e94b0b8ec:string:Cumulative Average Point",
+              "GPA": "5cf320e7-74d4-4bff-bd3b-872b17089245:number:4.5",
+              "reportNo": "40e754c7-9e8d-4a0e-94fd-1f9935560e21:number:1"
+            }
+          ],
+          "reportNo": "be07af9c-4beb-437a-be1f-6a74c959a7ae:number:1"
+        },
+        {
+          "name": "cc9eb007-4d42-47cb-8dea-dae4ed390aee:string:1520",
+          "term": "76bf4136-990e-41b3-837f-e59be2116aed:string:2015/2016 Semester 2",
+          "formOfStudy": "a67de309-63b0-40c0-98bf-f7468850ebe6:string:JDA",
+          "fosDescription": "30b553fd-ff73-4a97-96ce-024dd814909d:string:Participated in a Joint Degree Programme at",
+          "organization": "3a223dc3-37b2-40d1-9de2-e9033e3de038:string:The Australian National University",
+          "fosPrintArea": "5b677d0f-af2a-4e51-b45a-2aae164e1032:string:EH",
+          "summary": [
+            {
+              "programName": "7639ae5d-c68b-4ef9-90d8-fa47bdc9bac3:string:Master of Arts (Southeast Asian Studies)",
+              "includeInGPA": "8384aa67-f685-45fa-bb8c-590d83ddfdda:boolean:true",
+              "GPAName": "d3cdc4ae-06e9-4e6e-a775-8a75a929d561:string:Cumulative Average Point",
+              "GPA": "4c696a0a-a7e8-40b7-aa7e-97c8110fcf22:number:4.5",
+              "reportNo": "f2307027-59ea-4d35-89f4-806c65556686:number:1"
+            }
+          ],
+          "reportNo": "83fdebb7-9a90-4d50-a9a3-50bcdaca13a4:number:1"
+        },
+        {
+          "name": "414b5832-6254-4c2e-ae89-c6a82ac07340:string:1530",
+          "term": "eaaab4e1-11ab-49e5-b984-2d94bef40e45:string:2015/2016 Special Term(Part 1)",
+          "formOfStudy": "08baae26-8e81-4cf4-b363-8948a773e026:string:JDA",
+          "fosDescription": "cb62c8fc-9d43-499b-a8e1-f6ce9746c026:string:Participated in a Joint Degree Programme at",
+          "organization": "5b0d5abe-f9c6-4759-9ef9-5461dae6c6b5:string:The Australian National University",
+          "fosPrintArea": "fd6e700d-0652-47a9-8d37-6b0865b5d046:string:EH",
+          "summary": [
+            {
+              "programName": "ea109862-e4b0-4195-9b8c-6d0cc0e7b351:string:Master of Arts (Southeast Asian Studies)",
+              "includeInGPA": "6e5889a6-50e3-4168-a361-62666775e098:boolean:true",
+              "GPAName": "781d8689-83d8-4d2f-b40b-407861e7580a:string:Cumulative Average Point",
+              "GPA": "c556824d-5d42-4af3-b4bc-142b7cfccf6e:number:4.5",
+              "reportNo": "ce4ced74-bd52-4b15-816f-d6aa190694af:number:1"
+            }
+          ],
+          "reportNo": "8b01b205-8080-4489-835c-801e19ffdb56:number:1"
+        },
+        {
+          "name": "71c09222-6db9-42c5-8a22-f8c663e323fa:string:1540",
+          "term": "b9612779-3e1e-408d-9209-9e57ec0dde95:string:2015/2016 Special Term(Part 2)",
+          "formOfStudy": "f8fb2e31-168d-47a0-9e38-f0b59b351d3a:string:JDA",
+          "fosDescription": "5161bc15-0bf9-4527-9dd9-ebb1a1c32e0a:string:Participated in a Joint Degree Programme at",
+          "organization": "2390ce53-e4b6-414a-9475-16fda5aa372e:string:The Australian National University",
+          "fosPrintArea": "b3c902a2-1e13-4818-9bf0-4187246b8ba0:string:EH",
+          "summary": [
+            {
+              "programName": "746026fd-08f4-4e82-acd0-8818b60eb705:string:Master of Arts (Southeast Asian Studies)",
+              "includeInGPA": "8c7e263f-8770-409f-b5a2-811e6a754065:boolean:true",
+              "GPAName": "5a5605fb-89c9-4a8b-83f3-e418bb60da72:string:Cumulative Average Point",
+              "GPA": "99226349-b68e-4707-b321-99f1fbe5d4af:number:4.5",
+              "reportNo": "f65338bc-ceb2-464c-8211-8e5b03b9e8a0:number:1"
+            }
+          ],
+          "reportNo": "3420cc37-fa23-4cbd-adbb-742b78e6e8db:number:1"
+        }
+      ],
+      "programData": [
+        {
+          "programCode": "bddca590-5d0e-4917-b60c-05dc22c580b7:string:M0110",
+          "programName": "538e0e9a-1faf-44b1-a5c7-3eef30f20c53:string:Master of Arts (Southeast Asian Studies)",
+          "statusCode": "38338fb9-d2eb-434a-af9d-814f228ca833:string:CM",
+          "statusDescription": "6a0fa64f-0d30-42ea-b033-04474d4ec96a:string:Completed Programme",
+          "effectiveDate": "982d36d4-94bc-48e7-85b9-57271a50d27d:string:2016-08-31",
+          "admitTerm": "93a761ad-a29d-4ac7-a5e2-deb5a1c3f893:string:1510",
+          "reportNo": "b6b48a26-9216-4e17-845d-1a0fe15e9341:string:1"
+        }
+      ],
+      "degreeData": [
+        {
+          "degreeTitle": "72cf699a-a4d1-4242-a034-54a360f96e6c:string:Master of Arts (Southeast Asian Studies)",
+          "dateConferred": "b7cd68f8-c734-4bde-8eec-5dd07db62d23:string:2016-08-31",
+          "plans": [
+            {
+              "specialProgram": "83dcc584-8307-4e13-b355-5a0ab524e2d9:boolean:true",
+              "type": "f5c8bd06-f846-4d7b-a6b4-eb1862fbc3f8:string:JDP",
+              "typeName": "20955abd-1c44-4ec9-b0c0-50b76a83da5e:string:Joint Degree Programme",
+              "transcriptDescr": "5893efbb-a246-4deb-8e93-6760f4b5717d:string:Completed a Joint Masters with",
+              "planDescr": "146431d8-7904-46a7-ac45-2ba392fbf897:string:The Australian National University"
+            }
+          ],
+          "reportNo": "94ef7ed4-e9f9-4573-b321-8a0fd09158a2:number:1"
+        }
+      ]
+    }
+  },
+  "privacy": {},
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "d3ac210ccd6ce1d85245beec41281c6a6abc3205702f6031af33436c9abc69ae",
+    "proof": [
+      "144c920216d065d55cff6d0e086deadaaca6adc02a32f6ada00cee646b32603c",
+      "01fef55db663fc533cb85e51cd7774c1b2c321c4f853d4975d032d109c269396",
+      "0364af8e2d131b3a35c65f8af2d2c5ab6f99b7ac10ba3cbfadb83f5a64cf5298",
+      "3b435b5dcaf523c04677794fc9063c1c3095d643b6f8172332fbc40ea954890e",
+      "cff34b7906af4ba56465df60278cd2ab34642e6294b0492249b9bae34d336523",
+      "7bfc29748a38d23ae9ca8d2c7225873287bd0baa0630ada5963b9e61ac9c3806"
+    ],
+    "merkleRoot": "3862426f819b735c661f7981bfaed07eff1984a447b0406d831c1b15ec75e7c9"
+  }
+}

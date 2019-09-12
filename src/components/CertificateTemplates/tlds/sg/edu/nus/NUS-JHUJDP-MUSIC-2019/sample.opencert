@@ -1,0 +1,827 @@
+{
+  "schema": "opencerts/v1.5",
+  "data": {
+    "id": "edb18f58-f9e0-4fc5-ac57-2530f6a16906:string:NUS-A0075196W-J091000-P10182678-34-20140630",
+    "$template": "cb2280cb-b062-475e-85fe-d6cc3a186ff0:string:sg/edu/nus/NUS-JHUJDP-MUSIC-2019",
+    "issuedOn": "2da7bb86-d703-4a49-b44e-dd81a35de22d:string:2019-09-11T17:21:24+08:00",
+    "name": "8acbdd03-aa00-4bb6-90f0-cf2b232c9718:string:NUS Degree",
+    "issuers": [
+      {
+        "name": "a7d54c81-df04-4d18-8e0f-066ebade17fe:string:National University of Singapore",
+        "uen": "644244f9-c2fb-4584-9c1e-49c23fdaef71:string:200604346E",
+        "url": "8b14c7b1-fe36-4d49-9f28-c0457684afb6:string:https://www.nus.edu.sg",
+        "email": "f4e56db3-61fb-428b-8dda-fb1fb4d8228a:string:transcript@nus.edu.sg",
+        "certificateStore": "b6be3c0b-8aea-46db-9f70-d209a4a71410:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+      }
+    ],
+    "recipient": {
+      "name": "0a265b58-f72d-40f2-9382-3ec40e2de736:string:A0075196W, name",
+      "studentId": "d0447eba-7d5a-472d-b940-ff40d784e81d:string:A0075196W",
+      "dateOfBirth": "8fc60202-c022-4f24-9bc0-89c2b2d4d776:string:1905-01-01"
+    },
+    "transcript": [
+      {
+        "name": "2c3c6f34-abc0-43cf-ad60-ee0aa7e0b4ee:string:Desktop Music Production 1",
+        "courseCode": "baef21bb-b8e3-49fd-8de6-c5d736798b19:string:MUA1113",
+        "grade": "e83ed330-aea9-4e0b-97d0-b56138ddbf00:string:B+",
+        "courseCredit": "77424112-5e1e-4683-a2e9-569f25521347:number:2",
+        "gradingBasis": "9bbac1ce-3557-490e-946d-5014acbd63af:string:GRD",
+        "includeInGPA": "b2457a8d-4674-4935-b1a3-92d54c699ac6:boolean:true",
+        "reportNo": "09625bff-098a-42a1-952b-6578539a99bd:number:1",
+        "semester": "af64f932-f86c-4cfa-9594-003ffa20583e:string:1010"
+      },
+      {
+        "name": "de718c01-2814-43c6-ba83-3af6b1746394:string:Noon Recital Series 1A",
+        "courseCode": "ed29cca3-552d-470e-a7a2-1b8a3bc86f52:string:MUA1153",
+        "grade": "9e7f9fd1-87d8-4e91-9af0-a5ec523d2d20:string:CS",
+        "courseCredit": "a9f874ed-36f4-4bdd-b16c-89fa40e53527:number:0",
+        "gradingBasis": "47303213-fd62-4693-bd76-793017e54617:string:CSU",
+        "includeInGPA": "a6acc16e-d6c6-44cd-b858-137ce34624f6:boolean:false",
+        "reportNo": "8281c129-cf5e-45ee-ab30-ff080852f50b:number:1",
+        "semester": "21832f8f-c18a-4119-b3d7-3fe99d4810f5:string:1010"
+      },
+      {
+        "name": "bc12c8a7-281c-4998-be1c-d4d307111956:string:Major Study 1A",
+        "courseCode": "b06100c8-d8ed-49fb-bd46-9235a19c95d5:string:MUA1161",
+        "grade": "fb96ebe1-2eb8-4fc5-9205-f0f0349d3407:string:B+",
+        "courseCredit": "f53fed44-1a95-4dce-b302-6563248bd02b:number:5",
+        "gradingBasis": "71a11ca7-4f54-4e8c-95cf-cf4d61184fe4:string:GRD",
+        "includeInGPA": "d7fb001e-f8c3-44b5-a606-52aba7985e77:boolean:true",
+        "reportNo": "bbefa3a2-cfd5-4355-8f55-d3030d7eab7c:number:1",
+        "semester": "3e9bc320-6e0f-464b-bca4-c9c424395fb6:string:1010"
+      },
+      {
+        "name": "44ffd140-7a14-48e1-b50e-434ad308c670:string:Applied Secondary A",
+        "courseCode": "0d8169e6-f8a7-4cfc-b7b3-e3051b75898f:string:MUA2255",
+        "grade": "c4fa809d-8d18-4a66-bada-3a7102e258f6:string:A",
+        "courseCredit": "d951e6f3-bfff-4480-bac2-52fac6ef6ec5:number:2",
+        "gradingBasis": "0d574fe2-436f-47bf-9a71-f056230e715c:string:GRD",
+        "includeInGPA": "f9be873d-d414-479d-9a1a-59a46ca89f32:boolean:true",
+        "reportNo": "689a6361-8b27-431d-8208-ed5852c77b13:number:1",
+        "semester": "90851c63-2611-4035-941b-26c5ddd891fc:string:1010"
+      },
+      {
+        "name": "2a74b1b0-3211-43bd-9b97-431147528446:string:Communicating About Music I",
+        "courseCode": "f40c56ba-c6d8-4e6f-a434-785514369c88:string:MUH1115",
+        "grade": "aa54a8a9-71bf-4851-bfdd-0237e8093e9d:string:A+",
+        "courseCredit": "6a24de4a-6ca6-4c5c-9649-3a79f6dcecfb:number:2",
+        "gradingBasis": "7c1823c8-ef13-4bd5-aff6-c310f891df5e:string:GRD",
+        "includeInGPA": "d1310fa4-0671-446c-a823-3910e3106c81:boolean:true",
+        "reportNo": "2f19be3a-e1fc-461a-aae7-e3e2d5dd21e5:number:1",
+        "semester": "780db89c-3cd0-4934-916d-a66603793b68:string:1010"
+      },
+      {
+        "name": "0c8fbf15-355b-475f-b854-6d37280b3ecc:string:Musical Concepts and Materials I",
+        "courseCode": "f9db0b8f-9fdc-41ba-8374-22ab06c005a4:string:MUT1121",
+        "grade": "26c1c016-ab97-4506-bc09-04df107a42f4:string:A",
+        "courseCredit": "cde362f9-23e6-435d-a410-7a418f55bbfb:number:6",
+        "gradingBasis": "4f9fa93f-40a9-4e3b-9919-830e376c4d18:string:GRD",
+        "includeInGPA": "bf2e2207-2b6e-48ad-9502-81e3a302b0c6:boolean:true",
+        "reportNo": "1dff3b5b-999a-43b3-820c-8283bd181206:number:1",
+        "semester": "865748a1-1dc3-4446-b51b-0057a1f3ff05:string:1010"
+      },
+      {
+        "name": "17a5f9dc-07bc-44e3-ac57-ac14ec8eb0e0:string:Desktop Music Production 2",
+        "courseCode": "a2fabaf2-bc73-484c-83af-b806bb3b58f0:string:MUA1114",
+        "grade": "2af04cbc-7c94-412f-80ea-f8f95c2f1fb5:string:A-",
+        "courseCredit": "ad593e2d-4a09-4547-96c1-971047b79744:number:2",
+        "gradingBasis": "1e31a026-a771-4af7-b597-e03ecad9c61b:string:GRD",
+        "includeInGPA": "d252227a-7ec8-4217-9d2d-8826576c5aaf:boolean:true",
+        "reportNo": "e0b0cb32-b624-4a29-91ce-c0dd5595ce01:number:1",
+        "semester": "537ee50c-733d-469f-916e-405c2af01cb4:string:1020"
+      },
+      {
+        "name": "5d10c5eb-08ab-4d47-ada6-50534de3b614:string:Noon Recital Series 1B",
+        "courseCode": "35ef3778-ab38-4f99-be58-97107ec925ff:string:MUA1154",
+        "grade": "941d71c1-81cc-4613-a10c-5ca368b3e8e1:string:CS",
+        "courseCredit": "7c369bfd-21ee-47a5-929f-6fd87c8a79ce:number:0",
+        "gradingBasis": "282a66bd-4091-446b-abd8-f1221ea2d941:string:CSU",
+        "includeInGPA": "3738daa5-3123-4506-be91-69fe46379b1e:boolean:false",
+        "reportNo": "40885877-2308-4b11-9291-91aed992c38b:number:1",
+        "semester": "36db4b27-e81f-4f37-9777-f3d69db675a4:string:1020"
+      },
+      {
+        "name": "5b2c6f1f-56f6-48c4-a2e8-9f0c002e58de:string:Major Study 1B",
+        "courseCode": "54d17121-3feb-4a51-aed1-7848f1298793:string:MUA1162",
+        "grade": "f9b12b2b-21de-48bf-8a9a-d0f29fd938d7:string:A-",
+        "courseCredit": "5ac36a49-a670-4564-8b5e-32c76781e946:number:6",
+        "gradingBasis": "b88ebcb2-ba0d-4ac9-a091-ca5c692cd895:string:GRD",
+        "includeInGPA": "c61c1624-3a25-4273-8ea8-0b8c97418953:boolean:true",
+        "reportNo": "864fbabf-db22-44ee-ad36-77f3243249e8:number:1",
+        "semester": "758098e3-a086-4fff-a023-4afe7d3af3ca:string:1020"
+      },
+      {
+        "name": "1c0c43e5-e1b2-4d53-9419-7b753a740874:string:Introduction to Professional Development",
+        "courseCode": "42db1f16-11d5-4b49-85a4-c08914bc6feb:string:MUA1163",
+        "grade": "74c3359c-0b1f-4a9e-aed8-c49c646c32ce:string:B+",
+        "courseCredit": "b925c4cc-d671-4131-be17-072e97a1537e:number:2",
+        "gradingBasis": "120222ef-9195-44b6-b465-b87935d3a1b1:string:GRD",
+        "includeInGPA": "9e1bf87a-dc4f-4fee-9910-4c47c493d6c0:boolean:true",
+        "reportNo": "977188d2-b605-4878-806e-c9b956ab43aa:number:1",
+        "semester": "7a90b85e-3417-4171-9501-568474eceb36:string:1020"
+      },
+      {
+        "name": "7f4fc217-ca91-4d55-91de-3f714d5dfc98:string:Applied Secondary B",
+        "courseCode": "9f133c2f-3222-4fed-93a9-11a0c4836e61:string:MUA2256",
+        "grade": "710d8677-0b96-42be-b5ed-bb76730a3362:string:A",
+        "courseCredit": "c6f210ff-6141-44e7-8b6b-6aab02a658e4:number:2",
+        "gradingBasis": "956e3525-bbd9-4908-98d1-668629811f50:string:GRD",
+        "includeInGPA": "22736c2a-7952-42ac-b19b-bda211572af7:boolean:true",
+        "reportNo": "d7f3d34f-7b5e-44a6-89d9-0880bf965eb7:number:1",
+        "semester": "6dfba945-a173-4319-bd33-5d690f1138bb:string:1020"
+      },
+      {
+        "name": "fa91040a-b3a6-44be-95f8-c4465cf9b32e:string:Communicating About Music II",
+        "courseCode": "db8958a1-bc07-4b28-aac8-0862049ee3e7:string:MUH1116",
+        "grade": "37110cd0-114e-44e0-b00c-57c4f4ca5fc3:string:A",
+        "courseCredit": "bfd27e85-be38-4f9e-bc5d-0552ed58a710:number:2",
+        "gradingBasis": "c68128ae-f124-436d-98e6-d115a7803065:string:GRD",
+        "includeInGPA": "d3c528f1-fa91-409f-91e0-b3ba76faa552:boolean:true",
+        "reportNo": "03bc0e21-9e84-49dd-ae54-482078fdf86c:number:1",
+        "semester": "b41337ed-6b0d-4c87-9b65-5e4391209caa:string:1020"
+      },
+      {
+        "name": "254af5dd-7a40-400b-bb48-fe983402a33e:string:Musical Concepts and Materials II",
+        "courseCode": "15fe192c-dfcd-4c03-aad9-2a791284e338:string:MUT1122",
+        "grade": "8c81e3fe-b982-4a7a-ad82-585e27867160:string:A",
+        "courseCredit": "06706c2c-62e2-492f-aebe-9ecf683d83b8:number:6",
+        "gradingBasis": "c0b87281-faf2-4b2d-af62-4712d5ad6633:string:GRD",
+        "includeInGPA": "cdbdd088-31aa-4a0f-9e46-f622afb61624:boolean:true",
+        "reportNo": "a9ad092b-5090-41e2-83ca-5e952c3337a2:number:1",
+        "semester": "6c6e5b1a-b61a-49af-a434-a181010a5450:string:1020"
+      },
+      {
+        "name": "07ef8c7f-99e3-40f9-94b7-f3cc3fa8d332:string:COMPOSITION 1 HR",
+        "courseCode": "28ae9f78-7645-4891-9a4e-edadb058ac18:string:PY.100.100",
+        "grade": "30091589-5ad3-466a-8d5a-9e18c26ba692:string:A",
+        "courseCredit": "3cab84a1-cefd-4452-b216-2ae234df0fab:number:5",
+        "status": "fd136da6-b1f4-415e-9911-2df6d68644b3:string:P",
+        "includeInGPA": "08de6a21-3e19-4964-80de-ad033f9dd107:boolean:true",
+        "reportNo": "98e1d1f6-e4b2-4b5c-b4a1-7528b75155db:string:1",
+        "semester": "98006745-198a-494d-860e-443abd002625:string:1110",
+        "transferSeq": "eff3b96b-9842-4cc6-9970-79388bcc92da:number:1"
+      },
+      {
+        "name": "714c38ac-7a35-473c-8f46-bb52b50b2da5:string:COMPOSITION SEMINAR- UG",
+        "courseCode": "d2a7ea03-cde3-4d71-af4f-a82ba5f273bd:string:PY.310.545",
+        "grade": "f8846224-25a9-468a-b15c-4ab48b60e682:string:",
+        "courseCredit": "58ea5ed1-33b4-4d81-b909-ad1005f0cba6:number:0",
+        "status": "1b92f7ea-1921-4104-baf6-6b54726f1fa0:string:P",
+        "includeInGPA": "98957a70-20e1-44df-a252-664e641ed531:boolean:false",
+        "reportNo": "dff16ab6-3ee8-4993-a5bc-13136893312c:string:1",
+        "semester": "8a97cb66-550b-4167-81de-98a47386c228:string:1110",
+        "transferSeq": "5de65bd7-6a6f-425d-937e-f4f9b9fe0d0f:number:1"
+      },
+      {
+        "name": "be88334a-3dc4-499d-9a19-b8835b948c4e:string:THEORY 3",
+        "courseCode": "601a181a-b79a-442a-bd51-4bd59449c18a:string:PY.710.211",
+        "grade": "2c9da623-bc58-43c4-ac9f-d8e3f1db1f6b:string:OVS",
+        "courseCredit": "c411c6a9-0201-4d84-9655-287f04b4ae70:number:4",
+        "status": "3cb2dd7a-2254-4928-b104-63bbb9be71f4:string:P",
+        "includeInGPA": "b05600e1-cc55-4ce8-bd36-3f7507e944ef:boolean:false",
+        "reportNo": "8794b584-f39d-4b70-9ded-eddac76478af:string:1",
+        "semester": "8aa1c321-a1f0-4167-8125-f8cc56265866:string:1110",
+        "transferSeq": "7bcf15dc-5a62-444b-bcd9-3ebc652fd317:number:1"
+      },
+      {
+        "name": "faa57f93-1367-4597-8774-ac106956e22d:string:EARTRAINING/SIGHTSINGING",
+        "courseCode": "2046e5d7-6376-4317-9203-34af3c630c32:string:PY.710.223",
+        "grade": "6b5007fc-dfc3-4aba-b77f-74a194720833:string:",
+        "courseCredit": "03e89cdd-5fc1-4e2b-af22-a20c8c977c8d:number:0",
+        "status": "8a4f394c-1c2a-4af2-8b7a-2ae22528c638:string:P",
+        "includeInGPA": "a1c1b3ec-62cf-43cc-96d5-41f380589a7c:boolean:false",
+        "reportNo": "2037e8a3-ae88-4807-ac47-b7fd3e437758:string:1",
+        "semester": "17a94c78-170a-466e-88fa-fba3c5f82cbc:string:1110",
+        "transferSeq": "648a56b5-3716-48b8-a3e2-173f366a5e22:number:1"
+      },
+      {
+        "name": "c97fe31a-dcab-4238-8bc6-bd999f440a08:string:GERMAN  I",
+        "courseCode": "8df734cd-7296-412d-8b42-4c429737cab6:string:PY.240.111",
+        "grade": "848e831f-030d-420d-9876-c38fbf3e0692:string:OVS",
+        "courseCredit": "edbfff8f-9907-4d63-8efa-33981f76a13a:number:3",
+        "status": "2b80912e-b764-471f-a025-10c8605983b5:string:P",
+        "includeInGPA": "ee56be50-4fd0-4bdf-bb6b-dc9d93d49788:boolean:false",
+        "reportNo": "89e143ab-47e1-40a7-8393-325753a8efd9:string:1",
+        "semester": "bba8ee79-5a14-42ec-81f4-43841481eb73:string:1110",
+        "transferSeq": "7319fd03-3c90-4a21-a165-46be063b8c0d:number:1"
+      },
+      {
+        "name": "247fb41d-8297-408a-81d0-89c5f11f44e1:string:HISTORY OF MUSIC I",
+        "courseCode": "ce88e298-2136-4a38-8995-618052d702bc:string:PY.610.311",
+        "grade": "c1eed8f9-727d-47f7-9ef8-961f02057ae4:string:OVS",
+        "courseCredit": "c0fd80c3-3d0d-4b92-a283-b3b1c3998030:number:4",
+        "status": "3ab1b75c-c6fb-463a-94c8-02701f459328:string:P",
+        "includeInGPA": "a8880fb7-b06b-4e3d-a843-9d92b48fd342:boolean:false",
+        "reportNo": "846901b2-5f61-40cc-afaf-12f984ffa613:string:1",
+        "semester": "898d0612-1b5c-453f-935a-2b107e4c49ca:string:1110",
+        "transferSeq": "68a4ac8d-4c16-4a82-b325-a1de00067f7d:number:1"
+      },
+      {
+        "name": "e5937d1c-3cb8-4c2b-be90-6a50d4cdb009:string:DIGITAL MUSIC PROGRAMMING",
+        "courseCode": "4dbfd3fd-8a88-4ed4-aef2-1844c004ca74:string:PY.350.837",
+        "grade": "a4a9598d-05fc-4fe6-96fa-a2a3f3ffedd6:string:OVS",
+        "courseCredit": "3b8a62a3-1abb-44e8-9001-7f3cd975daa8:number:4",
+        "status": "c59f7919-fa43-43e2-8017-491ac9406956:string:P",
+        "includeInGPA": "81887d4d-0c1b-43fb-928d-920976407a67:boolean:false",
+        "reportNo": "97c0cb51-eacf-4218-be9c-f761a0d9af0b:string:1",
+        "semester": "fbe3dbee-3306-4bd8-bbff-0079ddce0227:string:1110",
+        "transferSeq": "734895e4-70a5-493b-8cbe-713b04097eb8:number:1"
+      },
+      {
+        "name": "3d53a263-e4fa-432c-a446-715a082bc5f3:string:SYNTHESIS THEORY",
+        "courseCode": "f7a663b9-9083-49e1-9fc6-e260861f9177:string:PY.350.867",
+        "grade": "1dc83502-1a76-4376-a9bd-7828a290b3ae:string:OVS",
+        "courseCredit": "36262b80-6b11-4ef4-8a39-83244a40e0ce:number:2",
+        "status": "3bdbe1eb-3555-4ba9-9a90-afefc2660184:string:P",
+        "includeInGPA": "b42afb0a-62a9-4171-9133-d6721dc420e1:boolean:false",
+        "reportNo": "b2ddf962-969d-4142-9956-0b67472c368f:string:1",
+        "semester": "f34de949-8e88-47dd-a098-f627364c098b:string:1110",
+        "transferSeq": "17d4f71a-af1d-4438-b9d9-d69a41ebbd08:number:1"
+      },
+      {
+        "name": "828192fd-42e4-4730-aab0-ef138958023e:string:Introduction To Computer Music 2",
+        "courseCode": "2c8c06ec-f125-4dfe-b8b6-7e7e8f1f5f66:string:MUA2106",
+        "grade": "44e08f48-8424-4469-aac4-939241d2595f:string:B+",
+        "courseCredit": "1c3f4e6b-2c73-43cc-9c95-78c648f9e6e3:number:4",
+        "gradingBasis": "694c5787-da05-4c5a-8e53-2c49df90330f:string:GRD",
+        "includeInGPA": "f9e8d386-f79e-478c-af78-a74febfa8ab9:boolean:true",
+        "reportNo": "3ff6f055-fc49-4a5f-8b83-9413a93df81d:number:1",
+        "semester": "d24a749a-a24d-4e27-938e-33bb03195078:string:1120"
+      },
+      {
+        "name": "306e1130-35c9-4615-8c12-054928a907e4:string:Noon Recital Series 2B",
+        "courseCode": "75993141-2241-466d-9f9d-1d61233b9a51:string:MUA2154",
+        "grade": "75486964-a24b-45a5-a59e-b66ebc246c0e:string:CS",
+        "courseCredit": "1171841c-628d-42a4-a2f7-23e94c1efbfe:number:0",
+        "gradingBasis": "accbf444-affc-4489-9a37-9e7caf47c53d:string:CSU",
+        "includeInGPA": "0e9738e3-e95e-4aef-b6f6-48857b2216dc:boolean:false",
+        "reportNo": "17026901-affb-4f10-8fba-f2e9338dcaf3:number:1",
+        "semester": "6f3ae91b-1458-48e0-90dc-4de2670a262a:string:1120"
+      },
+      {
+        "name": "b6fddf84-d7e2-4054-8706-359b160ddd97:string:Major Study 2B",
+        "courseCode": "da175d84-48f1-4deb-abef-c835ab983e09:string:MUA2162",
+        "grade": "f109cf67-ae8f-48c5-8163-72a8e5abc2e1:string:A-",
+        "courseCredit": "d42ec4dd-8d3c-4953-84d7-49754a88a89f:number:6",
+        "gradingBasis": "ce24d522-ebf4-470c-a420-7b52e0707015:string:GRD",
+        "includeInGPA": "7d9456f3-e4cb-42da-9cfc-4153fa9b1c65:boolean:true",
+        "reportNo": "894bafc4-4c21-4874-b3ef-b06e4c85df8d:number:1",
+        "semester": "c1b97d70-626e-408f-832a-c75518cd3205:string:1120"
+      },
+      {
+        "name": "fa3ca592-ee6f-4cfb-bf88-3e0b2a292959:string:Music and Context: After 1800",
+        "courseCode": "2000ec3c-9495-451c-9cdc-2566bc160220:string:MUH2116",
+        "grade": "7732e7c8-366a-4874-95da-a65ba0ab2f96:string:A+",
+        "courseCredit": "f7085ab2-c3a3-42a3-8d8a-e5c90ecb2509:number:4",
+        "gradingBasis": "8e4abb0d-a77f-4647-b3b9-daa65aa260f9:string:GRD",
+        "includeInGPA": "ed913942-4dfd-45b3-80cf-0cd87b63c162:boolean:true",
+        "reportNo": "1f7551cc-ff17-4e18-9c27-8cef27a945b4:number:1",
+        "semester": "8aa3ce29-f639-4f73-b5a4-67c7df2f1d5f:string:1120"
+      },
+      {
+        "name": "0c1dfc51-705f-4445-8522-1def3537b676:string:Musical Concepts and Materials IV",
+        "courseCode": "8215bfea-34a0-4ac4-be6a-b46967bb4a8a:string:MUT2118",
+        "grade": "6a2659fb-5b0a-4868-8c87-4c466f9bf559:string:A",
+        "courseCredit": "e3806be1-cc90-43b4-bdde-3221ab8a815b:number:4",
+        "gradingBasis": "e4c4ddf7-b716-48c7-b18b-6d08cf9ae976:string:GRD",
+        "includeInGPA": "d1a6372d-08c4-450b-9694-6b085d4349bb:boolean:true",
+        "reportNo": "36f14ac2-6508-46f3-a7c0-301d8e7f9813:number:1",
+        "semester": "df96d232-409a-4fe7-822a-7ee5256806ee:string:1120"
+      },
+      {
+        "name": "c352bd8c-62e0-4dc9-ac55-d67b2f61da3f:string:Southeast Asia: A Changing Region",
+        "courseCode": "dbe9eddf-fd1e-4c80-821f-85218c1af874:string:SSA1202",
+        "grade": "ab737cb9-b7f7-4a84-a19e-2721d61a2d24:string:A+",
+        "courseCredit": "234a7f44-e5fa-44a9-afee-3c8abef5959c:number:4",
+        "gradingBasis": "ba5a0d0a-0837-4428-9989-d9aae25745db:string:GRD",
+        "includeInGPA": "42a0092b-6d54-4ccd-9a52-12e30443ef6f:boolean:true",
+        "reportNo": "622397a5-89b1-4b6c-bcac-6ee10b557853:number:1",
+        "semester": "113491e7-e788-4573-9edd-3956532367f0:string:1120"
+      },
+      {
+        "name": "4887586e-e59d-4f99-b9c5-54dc0b55f5d2:string:COMPOSITION 1 HR",
+        "courseCode": "e381a885-8c44-4b01-8737-6b155b535a60:string:PY.100.100",
+        "grade": "964a1ba7-10a0-401c-9a30-eb69d1cb4f16:string:A",
+        "courseCredit": "3f65377b-771d-425c-a681-93b32a088a33:number:5",
+        "status": "1eaf9053-0cda-4d2e-99b0-e3dd85e9bfe6:string:P",
+        "includeInGPA": "20bdd44f-fe62-487e-85ac-cd5152726e1c:boolean:true",
+        "reportNo": "a137ed65-a6de-4fa9-9abb-59b39f3df4b2:string:1",
+        "semester": "b0cf2e83-259b-471d-b7de-c8e7fa4fd5ef:string:1210",
+        "transferSeq": "e8836954-fc8f-4403-bfa5-b5309082dfae:number:1"
+      },
+      {
+        "name": "b1adc75d-b750-42eb-83b1-2764ad3ffd4f:string:COMPOSITION SEMINAR- UG",
+        "courseCode": "73bddf53-db3a-490a-aa04-0e999d101067:string:PY.310.545",
+        "grade": "fd25d6ff-4a77-4fa8-b121-5943b35bc55c:string:",
+        "courseCredit": "f74e18cd-777e-419a-91b9-9ca95c06b490:number:0",
+        "status": "8cfb5fa0-207a-4319-87d3-7bf188c275b4:string:P",
+        "includeInGPA": "ee327ecc-6905-4e10-8244-8a5bab49ffa0:boolean:false",
+        "reportNo": "813ee118-8fc9-40a4-b1ed-e78ac2f32541:string:1",
+        "semester": "06a255da-ebb2-486a-93cc-79a1e35d3302:string:1210",
+        "transferSeq": "f2001b45-6c6e-4ff1-b352-ef11b1796f76:number:1"
+      },
+      {
+        "name": "e5e32a74-3dca-4542-99b8-e3a16b6a4698:string:CLASSICS OF POLITICAL THOUGHT",
+        "courseCode": "d8675b02-8b1e-4656-80c6-e0794af985d3:string:PY.260.343",
+        "grade": "6f424eda-c1b2-4f48-9580-4649783a7de6:string:OVS",
+        "courseCredit": "aae387f8-00e0-46fe-a738-45193021f39a:number:4",
+        "status": "ddb1f879-80ba-4c37-8708-600fbc230a07:string:P",
+        "includeInGPA": "6609da9f-0e61-4f48-9da4-631652bb577f:boolean:false",
+        "reportNo": "cb3a5d84-0aec-4cee-a4e8-466ad735d773:string:1",
+        "semester": "c10c7631-8f07-4ddb-a0e9-1f0252345fc4:string:1210",
+        "transferSeq": "d4c54f21-b2b6-4c40-8f7f-e7b2143b85ed:number:1"
+      },
+      {
+        "name": "ad095d47-8ec0-4263-875d-6e179b9fc066:string:INTRODUCTION TO WEB DESIGN",
+        "courseCode": "bca62303-dd6a-4ab1-a82d-8d0f5523fe50:string:PY.350.465",
+        "grade": "c52d3a4d-2e6c-4be2-9ac8-585c209787cd:string:OVS",
+        "courseCredit": "8223aa67-61ad-44b4-b604-22d5d5b19b5a:number:3",
+        "status": "bcd81104-7104-46e2-ab44-2e8cf8329b05:string:P",
+        "includeInGPA": "4552943f-4d2b-4814-9d5e-79775809b623:boolean:false",
+        "reportNo": "57e4c583-6054-466a-83cb-2fc9654bc74a:string:1",
+        "semester": "73117ba2-6a00-4e07-b9dd-2be472c5c6d4:string:1210",
+        "transferSeq": "c0d5a570-a30a-47ed-ac5b-6bc9465de5a0:number:1"
+      },
+      {
+        "name": "37057e8b-1fd4-417e-a654-db1e85b7d96f:string:ORCHESTRATION",
+        "courseCode": "904a1670-2d2f-4e7d-a90e-16121920635b:string:PY.710.413",
+        "grade": "0615f04b-e8c1-4b84-92ba-317408c4e403:string:OVS",
+        "courseCredit": "7677e48e-7b82-49cb-8c9d-093968e871e1:number:3",
+        "status": "115fe057-ec68-47c1-b735-ca73524f785c:string:P",
+        "includeInGPA": "d4359a1d-2546-4f5d-a709-db6667ed1eca:boolean:false",
+        "reportNo": "90a767cc-1035-4060-9fe3-975aead18888:string:1",
+        "semester": "abc4c560-dc48-4c0d-ab8c-30a06c18fa6c:string:1210",
+        "transferSeq": "1c3d025c-8aba-48fe-a340-bc95251a8135:number:1"
+      },
+      {
+        "name": "f27d7315-03a8-4cee-b4b9-0a205817afbe:string:THURS NOON RECITAL SERIES",
+        "courseCode": "afc8b659-218b-420f-a2cc-64d97b165c20:string:PY.530.501",
+        "grade": "6e0baf70-42a5-4eb5-91c2-9fc0873ecc06:string:OVS",
+        "courseCredit": "613b84e0-8b4b-48cb-9988-e782f74eea48:number:0",
+        "status": "f3bcb6b5-25ea-4971-8117-c46163895262:string:P",
+        "includeInGPA": "c75cc6d7-da53-41d2-bcc3-7b26a61f18b9:boolean:false",
+        "reportNo": "eb7028e8-6545-462d-947c-194992a91481:string:1",
+        "semester": "7d871c9b-2c36-4629-848c-abb14301bbb9:string:1210",
+        "transferSeq": "da12dc85-e9ab-4838-8ba6-bd386561097a:number:1"
+      },
+      {
+        "name": "42f20e2a-8985-4ba4-b4bc-11653d61202e:string:MUSIC NOW",
+        "courseCode": "3e75d1c0-aa84-47da-bc83-2ab7b3ea926b:string:PY.310.517",
+        "grade": "917a93dd-ca10-4e91-90d5-27d9702e06bc:string:OVS",
+        "courseCredit": "9a06524e-5096-466f-b31f-0242ff8b9aee:number:2",
+        "status": "688c3db9-7989-47bb-9ecb-da717de51e7d:string:P",
+        "includeInGPA": "78015e7d-0dfe-4196-a5ea-87cae528d911:boolean:false",
+        "reportNo": "ab07e231-4a42-426b-b699-f0460d322a4d:string:1",
+        "semester": "b88e665a-cf9f-4f5d-9261-a6b091d8249f:string:1210",
+        "transferSeq": "81c076b7-4389-448f-b42b-76f624860858:number:1"
+      },
+      {
+        "name": "d1841dd4-b0f8-429b-bd64-67430cc7b529:string:BUSINESS OF MUSIC",
+        "courseCode": "7b642fec-4349-43fa-b3dc-e2b89c727970:string:PY.360.421",
+        "grade": "fd541064-a930-4e21-b4bb-63e73bd1d1dd:string:OVS",
+        "courseCredit": "28aff9a2-ad00-4e4d-8a30-0f0b26f2b739:number:3",
+        "status": "5845929f-b055-41be-892d-b176e2b37e6a:string:P",
+        "includeInGPA": "92bc4a33-0b58-4ceb-87ff-4138101339a2:boolean:false",
+        "reportNo": "b1fa81f9-0816-4518-a4e1-7c2033301ebc:string:1",
+        "semester": "319e6883-a025-48cd-b162-4a7ef3cd27ad:string:1210",
+        "transferSeq": "49ecb569-7bed-4eb5-9314-ffe359f5fa6a:number:1"
+      },
+      {
+        "name": "c6f5a9bf-e687-47b3-86c3-cf24e35e9baa:string:COMPOSITION 1 HR",
+        "courseCode": "64c8d588-6c77-4f89-b941-ec1f4f44f392:string:PY.100.100-1",
+        "grade": "f023e196-f43f-40ca-bf6a-7f9709420fb7:string:A",
+        "courseCredit": "1fad8608-f421-4a1b-8470-6cf088f338a2:number:8",
+        "status": "51546c32-7625-4873-9fb4-dfa6d1d68b81:string:P",
+        "includeInGPA": "7e3e563d-5622-4173-adff-ab3023525b3e:boolean:true",
+        "reportNo": "aa07a9be-dd90-4ab8-a6fd-0708bf0c7640:string:1",
+        "semester": "27659eb5-51dc-464d-aa97-87f3143e3a47:string:1220",
+        "transferSeq": "bdb1478b-ca71-4550-b727-aa8df6fd7cd1:number:1"
+      },
+      {
+        "name": "eaf446c4-f4b7-42ae-a145-cbaa954771cf:string:COMPOSITION SEMINAR- UG",
+        "courseCode": "fd95d823-741e-4ab8-963b-ca2229e9c23f:string:PY.310.546",
+        "grade": "aaddb8dd-b209-4b91-9751-c75626b49dc8:string:",
+        "courseCredit": "e0629e8a-b871-4d3a-8ac5-122c8fef7f0b:number:0",
+        "status": "b5fedd14-9f03-4594-bf11-fc52d4962ee2:string:P",
+        "includeInGPA": "442100c7-dcd6-4a3a-82b4-7844fe2cd3f6:boolean:false",
+        "reportNo": "89b30111-59b3-4d9e-a552-035ca8edafdd:string:1",
+        "semester": "e90bf87f-f410-406e-a363-e1406ef438e6:string:1220",
+        "transferSeq": "0a65f7ed-aa80-4841-bd57-fe428e92744c:number:1"
+      },
+      {
+        "name": "b9a12f34-2ff7-4986-9bbf-9b5a5ca52678:string:ART AND CENSORSHIP",
+        "courseCode": "1de0250a-65ad-4c18-8c46-8622df2170fa:string:PY.260.214",
+        "grade": "f5e86181-1eb6-404b-97f2-5ac4fbc19661:string:OVS",
+        "courseCredit": "9325b17e-9cac-4b3a-8216-45f2eedff4d3:number:4",
+        "status": "1925a06f-987c-4a77-8135-fcd26e2c273e:string:P",
+        "includeInGPA": "eed0f179-5b3a-42e2-b6e9-d441af8a3a22:boolean:false",
+        "reportNo": "f0db1b02-2a67-490e-9c0e-306b58895ae7:string:1",
+        "semester": "25611424-291f-46e7-9c57-f97b12aecb3f:string:1220",
+        "transferSeq": "def9d196-a55d-4d48-a37d-8af4314caa8a:number:1"
+      },
+      {
+        "name": "4fd6c12d-724c-4514-b404-7b7249ac7621:string:MUSIC NOW II",
+        "courseCode": "ae059620-fdc9-45e4-be0a-e912c83ab351:string:PY.310.518",
+        "grade": "ebf2b069-6c2e-412b-93f0-65563ba9adb0:string:OVS",
+        "courseCredit": "eb8079f7-77e7-47b6-908d-50b1442ea2c1:number:2",
+        "status": "72d8f16a-055b-4da9-9cc7-4b0e5c240e71:string:P",
+        "includeInGPA": "3e704141-5b2a-4ad2-b279-30b5d708cd95:boolean:false",
+        "reportNo": "c1d142c0-6b7f-41a0-aae1-3c2297b0aa82:string:1",
+        "semester": "ec7ed375-da02-4ae2-8f26-a442760515c1:string:1220",
+        "transferSeq": "b7b2d11b-a914-41c7-9bce-50a21ef2abbe:number:1"
+      },
+      {
+        "name": "fe235898-3b30-412d-8da8-71e23b3bab20:string:HONORS SEM: MUSIC LEARNING",
+        "courseCode": "0ba658a6-dd53-4f1c-b7cb-fc01ed22176f:string:PY.610.412",
+        "grade": "f537d362-7d28-40fd-8daf-cedab5dc7728:string:OVS",
+        "courseCredit": "db16bd0f-8931-44f5-9b1f-8ec33527adc0:number:3",
+        "status": "b6ccde39-5136-4e48-b1dc-502ba071cf74:string:P",
+        "includeInGPA": "c4f3f646-99f2-41cd-a577-5464c0c671c2:boolean:false",
+        "reportNo": "2c6d62ca-be7d-4ad8-a73a-c9db111a566e:string:1",
+        "semester": "4a473e6e-b7b0-4a43-a863-1d1fc5c90422:string:1220",
+        "transferSeq": "97b4c062-aa6e-4d7e-8800-fa28f7022518:number:1"
+      },
+      {
+        "name": "c677182a-965e-44a1-909b-3147a9989dd1:string:THURS NOON RECITAL SERIES",
+        "courseCode": "7542f8f4-7102-4048-ac13-eb8fcbb3f234:string:PY.530.502",
+        "grade": "86f9d9fa-c02e-4ea2-a787-974d74a36483:string:OVS",
+        "courseCredit": "145234d7-a31b-4b42-a74d-5dcef464573c:number:0",
+        "status": "68cbe5f9-cfa3-4463-862a-bb28fecf7a95:string:P",
+        "includeInGPA": "53a5e4f6-f99f-404b-ab88-d1f9262c757f:boolean:false",
+        "reportNo": "a7fe1828-cc9a-4df2-8eb4-0bbd97e4d9f2:string:1",
+        "semester": "3ad91f59-45ab-4ef3-af1a-7ee1af22348d:string:1220",
+        "transferSeq": "63e0c0ce-209d-459a-b359-0e82f266b2e7:number:1"
+      },
+      {
+        "name": "e32fe384-0bf2-4632-8b62-1d2845addb7a:string:ORCHESTRATION",
+        "courseCode": "e4477541-a7b1-42b6-8f86-33b8e388d89c:string:PY.710.414",
+        "grade": "baa4e84b-a749-4f3d-b058-097d5c537947:string:OVS",
+        "courseCredit": "97b79a09-a0a6-45a7-a122-a76cafe4df14:number:3",
+        "status": "e4274502-66e0-42fb-8e2c-60ff7f0c6889:string:P",
+        "includeInGPA": "c1f73839-96c1-4d42-975e-db5296722360:boolean:false",
+        "reportNo": "b7ce2e8e-764d-4cce-8cba-ffcf8a04d276:string:1",
+        "semester": "c18c62d5-8096-4ce2-86be-cb6a0b96cc5f:string:1220",
+        "transferSeq": "f6df5e7c-4161-4cb7-82ee-703a1488404c:number:1"
+      },
+      {
+        "name": "640809ba-b5ce-4253-86ef-286b42e6b083:string:Conducting",
+        "courseCode": "141f9352-fca8-4714-87ea-d97828f7d8b9:string:MUA3105",
+        "grade": "702b45bc-5b22-4122-bb96-12b819d5d563:string:B-",
+        "courseCredit": "6bf00f5b-4b4f-4f22-9897-b2c8f6a15a77:number:2",
+        "gradingBasis": "4f4414ae-a6bf-43aa-a2cf-7a78282d3402:string:GRD",
+        "includeInGPA": "af49f50f-e8bb-4748-af00-b7efc08406c2:boolean:true",
+        "reportNo": "cad24d92-4d44-49f2-a67a-292ad66cff17:number:1",
+        "semester": "849160b8-ddcf-4adb-a26b-58083541088a:string:1310"
+      },
+      {
+        "name": "365dfd68-3341-4c5f-b604-0f3c5032cda3:string:Noon Recital Series 4A",
+        "courseCode": "189533ce-0f99-43bb-a6f3-7b2ce8de536b:string:MUA4153",
+        "grade": "f5c7bf74-0a0e-4293-b97c-ec02eddf0a60:string:CS",
+        "courseCredit": "f0bcd392-66fb-4fcb-a583-ea2a1f2299d3:number:0",
+        "gradingBasis": "a9d37721-84a7-494e-98e6-35514d55a3e1:string:CSU",
+        "includeInGPA": "6615e737-2aba-4f7d-88e4-c81a451fc942:boolean:false",
+        "reportNo": "a62bd1cd-bc7f-4844-b7b3-6358f034a3c0:number:1",
+        "semester": "bc6f1bb4-8f5b-4d47-94df-5fe150ebc652:string:1310"
+      },
+      {
+        "name": "7d2dfd25-2e6e-49eb-ba19-375b95b3ff47:string:Major Study 4A",
+        "courseCode": "5870d926-a796-4005-a4d0-e6cfacda51cc:string:MUA4161",
+        "grade": "4c818b26-683a-42e7-94f2-90dc8b540cb9:string:A-",
+        "courseCredit": "45374e8c-ce60-4956-bb95-15d41b11bf7e:number:5",
+        "gradingBasis": "062eb56a-cf0f-4409-a29a-87053cb35c7d:string:GRD",
+        "includeInGPA": "30286465-1855-4081-b087-6a0f7c2c1a58:boolean:true",
+        "reportNo": "997842b7-618e-4cbc-b2b1-94434e8410c3:number:1",
+        "semester": "f2ac540b-452c-4aa6-8824-d3f764b037fd:string:1310"
+      },
+      {
+        "name": "09db815b-c058-49dc-8cec-f26521023f08:string:Chamber Music Since 1700",
+        "courseCode": "7b2c5a70-608a-4a7b-b21a-6bc095b7ccf2:string:MUH3205",
+        "grade": "962a4b4a-1ae6-4894-8e86-af65366c166a:string:A-",
+        "courseCredit": "bd3aec57-59cf-4ab0-88db-67aff3527c38:number:3",
+        "gradingBasis": "a677ba05-0acd-464b-bf26-cddf320a71a1:string:GRD",
+        "includeInGPA": "ec74d663-b191-4943-9a25-c0fd1150bb8b:boolean:true",
+        "reportNo": "c8e4a019-38de-4746-becd-d3d95adf4345:number:1",
+        "semester": "ae7314cc-b82c-4239-8538-3bb21abd75ee:string:1310"
+      },
+      {
+        "name": "a8db1a30-83bb-43dc-8b1c-a10916e5516f:string:Patrons of the Arts",
+        "courseCode": "0fb12b22-0e46-4f93-b9b4-523f26df2eea:string:MUL2102",
+        "grade": "795a94fc-55f0-4de2-adf9-5e01bac8bb77:string:B-",
+        "courseCredit": "38f79347-b287-4de1-a1d6-7488abda1ae0:number:4",
+        "gradingBasis": "6963b2f4-a1c6-4446-a277-699c6040deb1:string:GRD",
+        "includeInGPA": "3f5b6244-9993-41ba-859f-bfc92e00521b:boolean:true",
+        "reportNo": "b6390fbd-cc2c-41d7-bbf2-b02c0b16b3f5:number:1",
+        "semester": "23142369-5cea-46e8-ad77-ee6273594ada:string:1310"
+      },
+      {
+        "name": "cc490179-edd0-4bba-84cb-12a0cedc9b98:string:Compositional Approaches since WWII",
+        "courseCode": "6bc0c6b2-a010-4bcb-a815-076502a202b1:string:MUT3201C",
+        "grade": "5d565aff-0290-4219-9d1e-df0db2c81c8b:string:B",
+        "courseCredit": "614c1e00-1c18-4d87-a7ff-aa1fd6b214f9:number:4",
+        "gradingBasis": "0fad0c3a-6f13-4a89-a527-aca254c8d313:string:GRD",
+        "includeInGPA": "76383297-605e-4d8d-8069-6a4144eec8ef:boolean:true",
+        "reportNo": "30e166a6-327c-49c7-a54d-ca74a134b8d7:number:1",
+        "semester": "c68a40ac-13ff-4622-a777-f4396f84df11:string:1310"
+      },
+      {
+        "name": "f976c2df-3d29-454a-85bd-75115c3e0613:string:Late Beethoven Style",
+        "courseCode": "be86f1d3-7a83-4ac8-a1b1-96f28cfbaf39:string:MUT3210",
+        "grade": "d9a43c2f-9136-43f4-9fa6-dfdc90be7eb6:string:A+",
+        "courseCredit": "f89412f1-415d-4eae-9399-33edc46d721a:number:3",
+        "gradingBasis": "7ed14d98-d942-4d9e-b1fb-ac00f639eb9f:string:GRD",
+        "includeInGPA": "2e23ed7b-f0b9-4c0a-aee9-645b6038dd73:boolean:true",
+        "reportNo": "965b8373-17ff-417a-b43d-4b5a87deb57e:number:1",
+        "semester": "680eb89b-2e0c-47e6-b589-d5dceecec51d:string:1310"
+      },
+      {
+        "name": "4711ce23-4b09-48ee-8933-c20074fbc26b:string:Politics, Music and Society",
+        "courseCode": "900dab57-807d-482f-8991-b11e57bf774c:string:GEK3007",
+        "grade": "f5abd497-b94f-4edb-aa06-42bf7948c5c2:string:A",
+        "courseCredit": "07df1c84-ad20-45cc-8e94-bdbd35277c61:number:4",
+        "gradingBasis": "a20a3a19-484f-43d1-a68d-791865c9ae3b:string:GRD",
+        "includeInGPA": "2e9883f1-8e7f-43e5-8076-86455a56f2dd:boolean:true",
+        "reportNo": "77e8672b-7f20-4daf-a7ca-b6dfd32eb0f3:number:1",
+        "semester": "be17ef6e-956d-459c-9d15-8e94632d9f8c:string:1320"
+      },
+      {
+        "name": "e377a437-6eaf-45e3-8e96-4cbab161d4ae:string:Chamber Singers 1",
+        "courseCode": "a8e707ec-03ec-4fe8-9a06-c482f734b9ef:string:MUA3210",
+        "grade": "b817ccfd-79f5-49df-8e2c-0c8f4cc0feef:string:B",
+        "courseCredit": "eba0d537-83ba-4ade-b61b-8b51850c1922:number:2",
+        "gradingBasis": "a8e0c920-470b-4873-bc62-3625d34783d3:string:GRD",
+        "includeInGPA": "d3c0feec-bb26-40c7-b5c7-855d5ef8c770:boolean:true",
+        "reportNo": "497dabb4-3267-4141-aa08-9561fae5c3d9:number:1",
+        "semester": "bbbed271-3d46-45be-855c-5f9baaf5d2b0:string:1320"
+      },
+      {
+        "name": "73b3ccf8-5560-4c53-b2ea-a3169ccc2e91:string:Major Study 4B",
+        "courseCode": "d7ff0ba7-22e3-47ba-96d4-8d61376a3c99:string:MUA4162",
+        "grade": "3b554577-e850-4f5c-84e8-f680a8d832c1:string:A-",
+        "courseCredit": "f53630b3-d9b5-4cb1-a2eb-d83e6ca7b586:number:12",
+        "gradingBasis": "bc4099ac-eb2d-418a-9fd9-e0474c96ec27:string:GRD",
+        "includeInGPA": "202b5041-e7e1-4fe7-ba5e-13b4cc1ea7cb:boolean:true",
+        "reportNo": "0c19c677-ba4d-4b4b-908f-39ea59f32dc2:number:1",
+        "semester": "68ea134c-2488-4030-b99e-9562fd7e7d65:string:1320"
+      },
+      {
+        "name": "a2db4b9d-5024-4fec-b94c-c3973abc2d51:string:Musical Intertextuality:Mozart to Tippett",
+        "courseCode": "ad8cf906-1ff2-42c6-b511-bdfafbfa9a0a:string:MUH4202",
+        "grade": "15a6e66d-45e5-4f5f-a9a2-47aa4c824680:string:A+",
+        "courseCredit": "5bb54d32-3905-47b1-9e12-3dec9990b947:number:3",
+        "gradingBasis": "5088938b-4b0a-4e1b-a0fb-25957489320d:string:GRD",
+        "includeInGPA": "8cb7798f-5083-4314-a02a-9c2b6f94ff09:boolean:true",
+        "reportNo": "062cc182-c6a3-4a9f-8a2e-68db0b83e358:number:1",
+        "semester": "01b10a2c-222a-4f4d-8845-b645a0c0dc63:string:1320"
+      }
+    ],
+    "additionalData": {
+      "degreeScroll": [
+        {
+          "degreeTitle": "388b3c73-356c-42bb-b1cd-f6f433c78139:string:Bachelor of Music",
+          "dateConferred": "22b9350c-9197-4610-818a-0586f59ccbe9:string:2014-06-30",
+          "honours": "2717f72e-196b-4728-9a5c-a3839b2428e5:string:1st Class Honours",
+          "degreeCode": "7d35803a-0b66-4890-a14d-94feacebb1fa:string:J091000",
+          "type": "f634394c-afc4-4d1b-9d89-458ad59c48d3:string:K9 NUS-JHU"
+        }
+      ],
+      "images": {
+        "JHU_PRESIDENT": {
+          "data": "b1778aef-197a-4de0-a7e6-ac3800e4f0f9:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "d2c0e3b1-db04-4db3-8434-abb0d6e67c72:number:240",
+          "height": "84e8415a-0cd9-4fd9-81ba-160331d28964:number:90",
+          "unit": "6a7c72ba-d390-4aff-8d74-80003646bac4:string:px"
+        },
+        "JHU_TRUSTEES": {
+          "data": "06fbee90-9ef0-4114-b4e8-9c57e186be5b:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "688ed8ef-97e2-42a0-9b15-8a24afa4f7ca:number:240",
+          "height": "4f7dad1a-6905-4b6f-b93c-69c661aa9daa:number:90",
+          "unit": "095786d8-afc1-4567-8c94-9d46a845eec1:string:px"
+        },
+        "PRESIDENT": {
+          "data": "ff5ea9bb-32ae-43ac-a519-dc4b4c5276c9:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "ab132384-ea7f-4440-be4c-a5c5a06eb117:number:240",
+          "height": "066bf735-7255-44b6-9337-da6900bde3ce:number:90",
+          "unit": "513a5d6a-ba99-44fd-944c-98fda623b8dc:string:px"
+        },
+        "TRUSTEES": {
+          "data": "e2bfb68d-68c3-47bb-9640-151472c6d46e:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "dc42e990-1393-4e01-aae5-2bbb1bfd898a:number:240",
+          "height": "282dcb6c-9ce1-49d8-b642-13b9136e2953:number:90",
+          "unit": "76394305-a87d-4ba9-9539-ef9cf2f39cb7:string:px"
+        }
+      },
+      "transcriptType": "55e81a09-34ca-4854-b5f3-5270a52ec8a4:string:UGOF",
+      "transcriptReq": "a17a5dca-d5cf-4a0d-b0fa-51ab550815f9:string:001009877",
+      "transcriptGroup": [
+        {
+          "name": "f58ff025-d6c9-443d-8736-c1f4d45a6615:string:1010",
+          "term": "b4564e3e-a56f-4c14-ab25-427f451eec83:string:2010/2011 Semester 1",
+          "formOfStudy": "c42a135a-42f5-468d-9b17-fdbb66e47b05:string:ENRL",
+          "fosPrintArea": "444545fd-94b7-4bb3-9f9c-3190f7293c88:string:ND",
+          "summary": [
+            {
+              "programName": "1955e596-ec7c-4ba0-acbe-b7c208db0352:string:Bachelor of Music",
+              "includeInGPA": "6b565a4d-9543-443e-906f-d8879ece184c:boolean:true",
+              "GPAName": "1570883f-e287-4fd6-a092-9d4cd64d77ab:string:Cumulative Average Point",
+              "GPA": "853f180e-cda8-4470-bbb8-da3458655fd4:number:4.59",
+              "reportNo": "b910b1ef-32a2-4722-8e9f-6476fd082d1b:number:1"
+            }
+          ],
+          "reportNo": "60adee93-7811-4fad-8a99-c7f5f644064b:number:1"
+        },
+        {
+          "name": "898a96e6-eb0d-4aca-bbf2-b200b717c3ec:string:1020",
+          "term": "f21ac0d0-44d2-4b17-996d-a5c3ab5d650e:string:2010/2011 Semester 2",
+          "formOfStudy": "48a26089-0ccd-4910-b6cd-78b4a7aed0a1:string:ENRL",
+          "fosPrintArea": "19af7218-6a32-4e1d-b511-6ffda1cfdb51:string:ND",
+          "summary": [
+            {
+              "programName": "32f7eb6f-22ca-4091-b905-358f927febf7:string:Bachelor of Music",
+              "includeInGPA": "5f2b725f-0df4-4a75-8ebe-fa6aeaa47983:boolean:true",
+              "GPAName": "98d952ed-cb80-4d03-aeaf-052a9482a8b5:string:Cumulative Average Point",
+              "GPA": "58350fc5-a00b-4c46-8c74-13f6e1982b0a:number:4.65",
+              "reportNo": "bcb05e70-606b-41a3-af9c-9285ed7eaa14:number:1"
+            }
+          ],
+          "reportNo": "98b129e5-1bf2-44e9-bff7-1c2477aeb269:number:1"
+        },
+        {
+          "name": "d36145c5-e9ba-4308-9fd6-6940e1600676:string:1110",
+          "term": "638400e2-095d-46bf-adb7-62e46112ee28:string:2011/2012 Semester 1",
+          "formOfStudy": "50149f72-41df-4cb8-a3b5-3452c93b3df2:string:JDA",
+          "fosDescription": "52eb44cb-f5cd-4df4-890d-cec2193d7e82:string:Participated in a Joint Degree Programme at",
+          "organization": "95ff6c96-4701-49da-9656-710b0603574e:string:Peabody Conservatory of Music, Johns Hopkins University",
+          "fosPrintArea": "83edad9b-291a-48a0-ba40-b2cd1083b769:string:EH",
+          "creditTransfer": [
+            {
+              "sourceType": "1cc7f6df-e1ec-4c3b-98b5-75a2ea22f7b8:string:E",
+              "creditsNoGPA": "f746f94d-e769-4506-af75-f58bfdf5c8cb:number:17",
+              "creditsGPA": "66561d59-eb20-4e17-953e-ad9154149289:number:5",
+              "orgId": "ba4871b8-9027-4de5-af93-84899069a34b:string:Peabody Conservatory of Music, Johns Hopkins Univ.",
+              "orgName": "fbdc9d95-0d8d-4086-bdea-9974d5e32a7b:string:Peabody Conservatory of Music, Johns Hopkins University",
+              "reportNo": "ed6ad289-e532-4146-8b74-92383957f65f:number:1",
+              "transferSeq": "1115460f-7af3-4778-b0a0-557cdc21b6cc:number:1"
+            }
+          ],
+          "summary": [
+            {
+              "programName": "400f8597-a8ca-4b90-a9f9-030dcb974a2c:string:Bachelor of Music",
+              "includeInGPA": "1a8b3e6b-b89b-43fe-922d-bca34cdedf83:boolean:true",
+              "GPAName": "9cf1f65c-47af-4470-bdb2-062fc0ee1864:string:Cumulative Average Point",
+              "GPA": "fca776a0-c682-44bc-81a0-f18ed139ad50:number:4.69",
+              "reportNo": "b7f7f8f5-9e8b-429b-9183-2eb9b774f5e5:number:1"
+            }
+          ],
+          "reportNo": "a4f90a45-6a89-4822-8af2-32041940e7a5:number:1"
+        },
+        {
+          "name": "b4d5ba33-899a-489d-85a1-78ad9ce6724a:string:1120",
+          "term": "0971fc00-b5de-459d-bc1d-67a54b647a5a:string:2011/2012 Semester 2",
+          "formOfStudy": "1eb27119-31d2-45c4-9b0c-a15b1ef6f030:string:ENRL",
+          "fosPrintArea": "7ab134c5-e54f-4733-b1ad-5bff51b9bbf3:string:ND",
+          "summary": [
+            {
+              "programName": "d4130453-c247-4288-9ffe-690cd77f1f7d:string:Bachelor of Music",
+              "includeInGPA": "3b7d79ca-5493-4cb1-a6e2-b2baa028ba90:boolean:true",
+              "GPAName": "2238bdb9-dee7-41b5-ad38-38923bd5a562:string:Cumulative Average Point",
+              "GPA": "2fb0ab9f-3e84-4159-937d-c35575a27981:number:4.69",
+              "reportNo": "933def0a-38c6-4452-a585-f74364ab391f:number:1"
+            }
+          ],
+          "reportNo": "a990aa66-26a9-4ee3-b7f6-be03d4107cc6:number:1"
+        },
+        {
+          "name": "35c88b35-ceaa-4b8a-a35a-f18bdd638cf8:string:1210",
+          "term": "82bc3d46-26ca-4d8d-8f40-44f70f5ad8e9:string:2012/2013 Semester 1",
+          "formOfStudy": "fcfb61c7-ec9a-4421-ab7e-2efb797ec55a:string:JDA",
+          "fosDescription": "333b260a-1617-4ae6-8f68-3f912187f4bd:string:Participated in a Joint Degree Programme at",
+          "organization": "51f9f3a4-8a34-4933-a98f-d84676d1164c:string:Peabody Conservatory of Music, Johns Hopkins University",
+          "fosPrintArea": "1f09f264-b782-4359-a30c-4bb3156e865e:string:EH",
+          "creditTransfer": [
+            {
+              "sourceType": "4943989f-2e8f-4102-a428-779d0ddafb85:string:E",
+              "creditsNoGPA": "d7726087-41be-4292-9361-762a31f34db8:number:15",
+              "creditsGPA": "c6550c46-3fba-4335-a989-a9b8250c605e:number:5",
+              "orgId": "90192155-b99e-4613-9d28-00585e24dd14:string:Peabody Conservatory of Music, Johns Hopkins Univ.",
+              "orgName": "4c02a0c5-9943-4a22-83b9-aacf9b62d474:string:Peabody Conservatory of Music, Johns Hopkins University",
+              "reportNo": "fe5afdd1-4276-4e33-9910-8c224e333bb6:number:1",
+              "transferSeq": "0ace105b-4152-4f30-83c6-3eb7f323fa6c:number:1"
+            }
+          ],
+          "summary": [
+            {
+              "programName": "0467a2be-07e1-4bff-bf6d-f0c89f8b4acb:string:Bachelor of Music",
+              "includeInGPA": "4628bac1-9846-4c01-9b2d-1a9e3ced5a07:boolean:true",
+              "GPAName": "34cfe1b2-c792-407a-ae70-6e2bd68b9422:string:Cumulative Average Point",
+              "GPA": "e35db331-a715-4502-bb82-b438d234d3d1:number:4.71",
+              "reportNo": "0d5a6f98-d377-4cf1-9c8d-1926de0934ae:number:1"
+            }
+          ],
+          "reportNo": "2cbbdece-4e56-475c-9c38-e794c86f4cc1:number:1"
+        },
+        {
+          "name": "72ec559f-e2dd-4568-b0be-b3733ff91e24:string:1220",
+          "term": "b6d39206-1603-444b-bc5c-4bd1932df9e2:string:2012/2013 Semester 2",
+          "formOfStudy": "75d757d4-79d2-4661-a642-74da6ec0240a:string:JDA",
+          "fosDescription": "d1413dcd-91eb-46e7-b108-9cffff37fd69:string:Participated in a Joint Degree Programme at",
+          "organization": "81ae4323-36d6-44f8-8a63-70e6a83dc479:string:Peabody Conservatory of Music, Johns Hopkins University",
+          "fosPrintArea": "779433f4-0211-457c-87a2-ed49f60d649a:string:EH",
+          "creditTransfer": [
+            {
+              "sourceType": "2b2edc4b-3736-400b-adf5-edd1177bdd05:string:E",
+              "creditsNoGPA": "12649330-b03c-46c9-93a0-35847d28d527:number:12",
+              "creditsGPA": "8cebddab-d834-405c-a8af-d28e37b40f2e:number:8",
+              "orgId": "0b27565c-0ed3-4d91-ba61-91e8337c4601:string:Peabody Conservatory of Music, Johns Hopkins Univ.",
+              "orgName": "0369eb7b-5226-4c9b-ab59-3fa226af1990:string:Peabody Conservatory of Music, Johns Hopkins University",
+              "reportNo": "af0543bf-9c24-442a-9927-37ef3b48fdc1:number:1",
+              "transferSeq": "c4d1632c-ca92-44d2-a8ad-803dac7c6550:number:1"
+            }
+          ],
+          "summary": [
+            {
+              "programName": "37a628be-3354-4bbf-8e8b-de6c8c5bc2f0:string:Bachelor of Music",
+              "includeInGPA": "c3076358-bfdd-4371-8260-2b62169dd837:boolean:true",
+              "GPAName": "f7b62fd0-4cdc-44ea-a796-6adaf0464b55:string:Cumulative Average Point",
+              "GPA": "c461aba9-60d0-4cf0-a130-95a41fbab771:number:4.74",
+              "reportNo": "c4b82f98-6c9d-4d02-a3fa-f02183bf5d39:number:1"
+            }
+          ],
+          "reportNo": "f33f7692-05a6-42d6-9a17-b5ff81ea4464:number:1"
+        },
+        {
+          "name": "583075f6-4aeb-4c23-a1fa-acffb03fb38f:string:1310",
+          "term": "df48bf26-f6f3-488c-877b-d8761c8b349f:string:2013/2014 Semester 1",
+          "formOfStudy": "4efab33c-0ecd-4706-9d47-90751aa462f1:string:ENRL",
+          "fosPrintArea": "1b68b771-ca51-4fef-a416-90c9cdcb68a8:string:ND",
+          "summary": [
+            {
+              "programName": "c21900b7-0241-4c3e-9421-2d92dd487a1c:string:Bachelor of Music",
+              "includeInGPA": "220d8999-5cba-49ef-b5f5-a81c5492d8f8:boolean:true",
+              "GPAName": "ff414c31-1a60-4aad-9eec-7ab7ab8d4404:string:Cumulative Average Point",
+              "GPA": "f38e47b5-0e1d-4cbd-a87f-92063a26c407:number:4.57",
+              "reportNo": "3b0c44b8-3354-4b2c-a916-ce6ea36ff8f5:number:1"
+            }
+          ],
+          "reportNo": "8c63b280-f131-4e1b-b363-509c6385eb5f:number:1"
+        },
+        {
+          "name": "287d25b6-b447-442d-aa50-2185e76b2c1e:string:1320",
+          "term": "6159b389-164f-466e-8036-ea6ab7b032c4:string:2013/2014 Semester 2",
+          "formOfStudy": "b7ba68ef-a04e-4597-8886-59d885bca363:string:ENRL",
+          "fosPrintArea": "a214be29-504b-4b65-a167-93c6af97ae54:string:ND",
+          "summary": [
+            {
+              "programName": "ee2a74dc-ebfd-4715-9bd6-b2c536cd0904:string:Bachelor of Music",
+              "includeInGPA": "87ff4d9f-27d1-443d-8fc2-cb4dfd494d19:boolean:true",
+              "GPAName": "a2ad246c-2277-4c9a-ba71-429848be25a9:string:Cumulative Average Point",
+              "GPA": "4d2d8e7e-8abe-43c3-bffc-6bed4c8c3d1a:number:4.57",
+              "reportNo": "664cdd6f-3d99-402e-8c6d-90c763324dbd:number:1"
+            }
+          ],
+          "reportNo": "09c5400e-b031-4f2d-a5c9-c0d80d19a849:number:1"
+        }
+      ],
+      "programData": [
+        {
+          "programCode": "48b50393-ea7e-4b50-9924-eddcf27ce2e8:string:B0910",
+          "programName": "49d1c496-b838-4c42-92b8-20fe827ee599:string:Bachelor of Music",
+          "statusCode": "dfae738a-73e5-40f3-91a6-8924cab0d44c:string:CM",
+          "statusDescription": "570454fb-4ec1-4407-b032-746fe63cb558:string:Completed Programme",
+          "effectiveDate": "f3e1b6b3-6579-4454-936d-e7dccf02c49e:string:2014-06-23",
+          "admitTerm": "5671375e-65a4-47f1-bbb8-3848104c6fa2:string:1010",
+          "reportNo": "4954bd6d-e3f4-4d7b-9ffa-4f00bf87ac87:string:1"
+        }
+      ],
+      "degreeData": [
+        {
+          "degreeTitle": "94ef30ca-57c9-4af8-8628-442a7b6b237f:string:Bachelor of Music",
+          "dateConferred": "47416337-22a4-4011-977a-3309a698ad43:string:2014-06-30",
+          "honours": "f22944be-245c-4e77-8c84-35f5b11e0517:string:1st Class Honours",
+          "plans": [
+            {
+              "specialProgram": "b92652af-050d-4da1-98de-e389010d5e12:boolean:true",
+              "type": "ab857f71-1693-4646-a2aa-61692237b94d:string:JDP",
+              "typeName": "fbfe4b32-2fe9-4c0a-8910-04c447ef772f:string:Joint Degree Programme",
+              "transcriptDescr": "392c17ec-38ff-4d8b-bc16-d29abd592e05:string:Completed a Joint Degree Programme in Composition with",
+              "planDescr": "b0e4f29f-8a0e-4d45-88f1-99161f6ad04e:string:Peabody Conservatory of Music, Johns Hopkins University"
+            }
+          ],
+          "reportNo": "a9043693-30a2-4b59-ae92-def63aac72b4:number:1"
+        }
+      ]
+    }
+  },
+  "privacy": {},
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "bd49b8105d9eca061eff75bf64ab85001c40f595aecbea93431e00f7998f0dbb",
+    "proof": [
+      "75d3ca2aeecc5bacfc7be299f1d6834a8f695615ab4ab298fe2d121a961182ba",
+      "46bd75115072dbd65dcfa4fa3b3baf736b2116501146173860db778ff6421516",
+      "f2da360adc3432a39eae6b0eae6f681c28b4f418ad6f2425eb5244dd1ef0b419",
+      "75103ba56b5b374b23af500a7f99e717228702641de665ef3b85ca0a0b58f6a6",
+      "3af5b6f98dff18d5895619cf018db316c2736ad31928357b71c174a73963dca7"
+    ],
+    "merkleRoot": "3862426f819b735c661f7981bfaed07eff1984a447b0406d831c1b15ec75e7c9"
+  }
+}
