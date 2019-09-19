@@ -20,7 +20,8 @@ import {
   SOR_30_WIDTH,
   SOR_50_WIDTH,
   SOR_PSLE_NAME_1979,
-  SOR_PSLE_GRADE_1979
+  SOR_PSLE_GRADE_1979,
+  SOR_MERIT_MARGIN
 } from "./style";
 
 import { RENDEREXPLANATORYNOTES_NA } from "./explnotes_na_detail";
@@ -807,6 +808,15 @@ export const PAPERGRADE = (
       </div>
     );
   }
+  if (examlvltype === "O" && papergrade === "(WITH MERIT)") {
+    return (
+      <div className="row">
+        <div className="col-md-8" style={SOR_MERIT_MARGIN}>
+          {papergrade}
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="row">
       <div className="col-md-3">
@@ -1184,7 +1194,7 @@ export const RENDER_TRANSCRIPT = ({ certificate }, examlvl, examlvltype) => {
           </div>
         </div>
       </div>
-      {trn.subTranscript !== undefined ? (
+      {trn.subTranscript !== undefined || trn.paperGrade === "(WITH MERIT)" ? (
         <div className="col-md-12">
           <div className="row">
             <div className="col-md-4">
