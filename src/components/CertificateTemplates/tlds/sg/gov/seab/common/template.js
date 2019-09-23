@@ -808,7 +808,10 @@ export const PAPERGRADE = (
       </div>
     );
   }
-  if (examlvltype === "O" && papergrade === "(WITH MERIT)") {
+  if (
+    examlvltype === "O" &&
+    (papergrade === "(WITH MERIT)" || papergrade === "(WITH DIST)")
+  ) {
     return (
       <div className="row">
         <div className="col-md-8" style={SOR_MERIT_MARGIN}>
@@ -1194,7 +1197,10 @@ export const RENDER_TRANSCRIPT = ({ certificate }, examlvl, examlvltype) => {
           </div>
         </div>
       </div>
-      {trn.subTranscript !== undefined || trn.paperGrade === "(WITH MERIT)" ? (
+      {trn.subTranscript !== undefined ||
+      (examlvl === "GCEO" &&
+        (trn.paperGrade === "(WITH MERIT)" ||
+          trn.paperGrade === "(WITH DIST)")) ? (
         <div className="col-md-12">
           <div className="row">
             <div className="col-md-4">
