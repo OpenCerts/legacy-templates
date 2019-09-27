@@ -1,0 +1,275 @@
+{
+  "schema": "opencerts/v1.5",
+  "data": {
+    "id": "659870a8-de74-4ef5-b144-cb4ee0f80cf9:string:NUS-A0090502U-D136000-P10182678-30-20180731",
+    "$template": "a183e259-06ab-43b3-8b54-ac58edd60bad:string:sg/edu/nus/NUS-DUKEPHD-2019",
+    "issuedOn": "8772672c-c6c2-4d87-9b88-1eceaee94da9:string:2019-09-11T17:21:15+08:00",
+    "name": "69aff301-b60f-4f82-b02b-2e2da814177a:string:NUS Degree",
+    "issuers": [
+      {
+        "name": "aaecca69-e684-4a7b-be25-0280b8f57213:string:National University of Singapore",
+        "uen": "7ed8eeaa-f82d-4765-8090-fa1a108a7487:string:200604346E",
+        "url": "f2d0f643-92c2-4e22-95a4-2da548da950d:string:https://www.nus.edu.sg",
+        "email": "9d0a139c-b89f-49ee-a5dd-1500f6eec504:string:transcript@nus.edu.sg",
+        "certificateStore": "fb706322-6506-4b5c-ae8d-71c1943c2ed4:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+      }
+    ],
+    "recipient": {
+      "name": "22c672d6-8a05-45a6-998e-441bd5ea248e:string:A0090502U, name",
+      "studentId": "a6152520-8767-4bae-ae1b-6b768f02ec17:string:A0090502U",
+      "dateOfBirth": "c7e4aa67-e899-4101-9d30-6c5472f60693:string:1905-01-01"
+    },
+    "transcript": [
+      {
+        "name": "0f552744-3253-4d49-b3e4-d5997d7622b7:string:Student Research Seminars",
+        "courseCode": "6a046c56-0521-4b77-a2bb-c11b4c2b02f6:string:GMS6900",
+        "grade": "940e69b7-92f1-4f44-b81c-06b60d04c93b:string:IP",
+        "courseCredit": "0250d906-fff5-4800-971e-6e226bc2e509:number:3",
+        "gradingBasis": "3cbeea96-ba3d-4c4b-a96e-e206ec78de4f:string:GRD",
+        "includeInGPA": "e0ed9c03-9fb6-4caa-92c9-e744e8b59e4e:boolean:true",
+        "reportNo": "fb45714e-fabb-43d9-9d4e-8e8e9405fb93:number:1",
+        "semester": "cf14c672-2150-462c-9d56-1f3bf1771817:string:1300"
+      },
+      {
+        "name": "2ae3283f-dc38-45e1-9ba4-a0e28bd420b2:string:Molecules to Medicines",
+        "courseCode": "50e23241-f73f-4891-b2b6-8f979d5cdd36:string:GMS6901",
+        "grade": "6bd694a8-dc64-4d49-9742-3c5e75800625:string:P",
+        "courseCredit": "f5bbc1cc-99da-4f6a-b0ed-5eb376ee26dd:number:4",
+        "gradingBasis": "8025f08c-3265-461b-8367-1ae6698f7ec6:string:GRD",
+        "includeInGPA": "3ab08ace-3637-4ba0-b492-a761bca7952e:boolean:true",
+        "reportNo": "d273126c-12aa-4a2f-903e-4f3291efe04f:number:1",
+        "semester": "e4f71994-5fcf-4766-81d1-cc1f5be85f6f:string:1300"
+      },
+      {
+        "name": "7267d6d7-6a7d-4c3c-b2e4-bd9d7667ae43:string:Laboratory Rotation 1",
+        "courseCode": "a89eca14-501c-47ca-9c05-c92998ce1ba8:string:GMS6902",
+        "grade": "ed25341f-084c-4bb7-807d-3b45604126b9:string:P",
+        "courseCredit": "32085721-e1e9-4828-bbcc-85b4e7c9cbac:number:3",
+        "gradingBasis": "52156bb1-f044-4c7c-baa2-62a797173956:string:GRD",
+        "includeInGPA": "ef655890-31b6-44c3-885e-c8b80907e38c:boolean:true",
+        "reportNo": "b0d0d0a6-1e50-4d6d-b3aa-5001653a4b02:number:1",
+        "semester": "86306e98-e655-4e6c-9ddb-8f436c1d1ada:string:1300"
+      },
+      {
+        "name": "8ba5ac0f-906b-4576-a3a9-da52e48e5151:string:Laboratory Rotation 2",
+        "courseCode": "8e0bf263-965d-43a6-be4c-a1aecd554182:string:GMS6903",
+        "grade": "d96bb83b-bd4e-40d6-b90e-f0469b04e18b:string:P",
+        "courseCredit": "4869ae9e-3f05-48de-9295-a3fd0a04c560:number:3",
+        "gradingBasis": "f1aface7-13da-4d93-8549-0a1e4abe2d01:string:GRD",
+        "includeInGPA": "00b3a980-b25c-45d1-aab9-5536e24ecd04:boolean:true",
+        "reportNo": "877522df-4003-4cbb-a232-4ba67af35755:number:1",
+        "semester": "2887fe40-48b5-417b-b7c7-46a299cc958a:string:1300"
+      },
+      {
+        "name": "1986d558-fb7d-4509-aeb5-f0fb3d25a1f6:string:Principles of Infectious Diseases",
+        "courseCode": "b7b59a3d-e13b-46fd-963f-883f60ac6fc0:string:GMS6904",
+        "grade": "64fa3760-7efa-46d1-9a20-57924f067951:string:B",
+        "courseCredit": "aabb01ff-f365-40bd-80d9-4eb17470c014:number:4",
+        "gradingBasis": "c436c753-f0ff-43d6-a4d3-e753d250d4f9:string:GRD",
+        "includeInGPA": "2bc073a0-2d65-44bd-8475-a24b36caa17a:boolean:true",
+        "reportNo": "5ceaad88-c52b-4eda-bedf-8fc94a0fd043:number:1",
+        "semester": "7b49edbe-c6b2-4055-8643-f1192f8f44d9:string:1300"
+      },
+      {
+        "name": "b10b0e86-af7c-42cc-80ce-7a04aaef4c4a:string:Student Research Seminars",
+        "courseCode": "25f3c708-7bfb-43b4-8632-93b6eed6134e:string:GMS6900",
+        "grade": "3893a4f7-b353-4d25-844c-0394750b11c9:string:IP",
+        "courseCredit": "3e464639-8051-4332-a965-a1f84899c4d4:number:3",
+        "gradingBasis": "98c1dc00-a78d-418c-b7fc-cf1e8a6b35ba:string:GRD",
+        "includeInGPA": "e756809a-fb7a-4f3b-b9af-e9fb9859a505:boolean:true",
+        "reportNo": "e232724d-cf06-4d8c-b143-62281a3bced3:number:1",
+        "semester": "93429b50-4963-41d0-8f41-302636df913e:string:1400"
+      },
+      {
+        "name": "2cacc2d5-91c5-4693-8763-42fe7355d224:string:Evolutionary Genetics",
+        "courseCode": "07ff971a-9d46-4496-a2b8-7e41b8e99e02:string:GMS6910",
+        "grade": "63aaf9eb-7954-4bc9-a9ce-31dfc6b98c41:string:A+",
+        "courseCredit": "2d1681c4-ad8e-4a42-8769-ef048743ca56:number:4",
+        "gradingBasis": "8b0f4d5a-2f34-43cd-9228-60e1c3599b3d:string:GRD",
+        "includeInGPA": "3d4cb344-2abe-4da1-995b-bbddd89ab67d:boolean:true",
+        "reportNo": "03927067-9376-4555-a83f-311def0561a2:number:1",
+        "semester": "b61a12c6-0df7-4f5f-a30b-3c06a1ed9aef:string:1400"
+      },
+      {
+        "name": "d8c03585-f175-4f5c-a64f-718e056b7e35:string:Student Research Seminars",
+        "courseCode": "29110b98-7182-415b-81f3-8cac74cd6830:string:GMS6900",
+        "grade": "f80b6c25-1842-4501-ad37-79bb9e49b674:string:IP",
+        "courseCredit": "f6fa1c06-1984-4dda-a78f-c853c58805fe:number:3",
+        "gradingBasis": "3f905f2f-fada-4b46-a7ed-b369d90eee2c:string:GRD",
+        "includeInGPA": "8fb03be6-84c0-4dc6-89f4-50cd118645aa:boolean:true",
+        "reportNo": "321fcbcb-125d-4078-8e44-afeccfc4d39e:number:1",
+        "semester": "12f16aa1-74b1-4742-a0d4-99495d8a96e4:string:1500"
+      },
+      {
+        "name": "3f0804e3-3fda-48a2-b3cd-69bb88bc97fb:string:Student Research Seminars",
+        "courseCode": "e280f470-0e01-4089-8180-44e7e6f573a2:string:GMS6900",
+        "grade": "53547baa-e08d-43f5-8beb-55992f5c5a7d:string:P",
+        "courseCredit": "106e3d8c-703d-44fd-b8c9-fdc9e855b119:number:3",
+        "gradingBasis": "865bda85-634c-4f27-8076-db2b5532ce9e:string:GRD",
+        "includeInGPA": "b4cde3b5-8224-436a-90ef-c098ef472fb4:boolean:true",
+        "reportNo": "83c24c2e-5d8c-4f57-bad0-13be2b399197:number:1",
+        "semester": "4246ec0b-0a1e-4435-beae-9f6deb2304cf:string:1610"
+      },
+      {
+        "name": "1961f1e8-87ce-424b-ad6c-08796f895cab:string:Thesis",
+        "courseCode": "44749bc7-2ca9-46c0-ba8b-f358dbb85946:string:GMS6991",
+        "grade": "73adc2b4-f8d7-44b8-9e37-3e1b082417a4:string:P",
+        "courseCredit": "01a66cee-4e55-4ab8-bc07-91150b7f9483:number:40",
+        "gradingBasis": "d21e8cdd-f097-4c17-bbff-10b270f9abd8:string:GRD",
+        "includeInGPA": "517deb41-3ebc-48fa-a972-2b5826eae052:boolean:true",
+        "reportNo": "8fb8b649-9096-41db-8dea-997ef43f841d:number:1",
+        "semester": "8be75841-e2bf-4344-b114-ef883285c0bf:string:1720"
+      }
+    ],
+    "additionalData": {
+      "degreeScroll": [
+        {
+          "degreeTitle": "1da3128e-0252-4b66-9cf1-be6957db048e:string:Doctor of Philosophy",
+          "dateConferred": "00471ca6-6748-4a0c-88c9-919b58dc8359:string:2018-07-31",
+          "degreeCode": "7a4fd4ae-c5b3-4592-be0b-d321fb6efa53:string:D136000",
+          "type": "e4bacb80-2bf2-4c71-bb4a-38fdc0e74011:string:K12A NUS-DUKE (PhD)"
+        }
+      ],
+      "images": {
+        "PRESIDENT": {
+          "data": "6e619a03-93a6-409a-b3d6-fc54d8e33f94:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "de6144a3-ed93-475d-8b3c-969dfbf22a3f:number:240",
+          "height": "bc3251df-fea0-45e1-a401-ce98fbe3ea90:number:90",
+          "unit": "1993ce22-440f-46ce-ad62-efa6181a4597:string:px"
+        },
+        "TRUSTEES": {
+          "data": "c78f05d8-679d-4ebc-b5b6-b76da5eb71ae:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "22677b97-36ef-4a14-a6cb-4f607d263c98:number:240",
+          "height": "d8257ab0-d957-405e-a733-996d6feee253:number:90",
+          "unit": "789d95ab-2e5d-424f-830a-a8d006872d84:string:px"
+        }
+      },
+      "transcriptType": "37da2e37-c377-416c-9dce-68ff50abfa2f:string:DKOF",
+      "transcriptReq": "9f31a6ee-5a6f-4678-82b0-0a7742b8529c:string:001009873",
+      "transcriptGroup": [
+        {
+          "name": "94eb4e36-3059-4d0d-ae2c-91f04dafe932:string:1300",
+          "term": "e674489c-c376-4692-94a6-ce35136dcb18:string:2013/2014",
+          "formOfStudy": "944be032-d232-436d-85d0-eee8743b980c:string:ENRL",
+          "fosPrintArea": "5b3f0600-6746-417f-b69d-55ab258d8074:string:ND",
+          "summary": [
+            {
+              "programName": "763c137e-7ce4-4a9f-9b34-7520db2d7272:string:Doctor of Philosophy",
+              "GPAName": "ab549610-922e-4c2f-9814-602c346c327d:string:Cumulative Credits",
+              "GPA": "a86f5654-3a19-4de0-b955-b15bedd5b929:number:14",
+              "reportNo": "eda0b0e8-5894-4dc8-ab4f-67740221d1f3:number:1"
+            }
+          ],
+          "reportNo": "ac5f519e-6c42-45a4-ac61-020ee95b0a8d:number:1"
+        },
+        {
+          "name": "a7f88cf9-1b5f-497e-ab3d-cde1278dc24a:string:1400",
+          "term": "b662bb68-70d9-44e0-9313-d926560a425f:string:2014/2015",
+          "formOfStudy": "013299d1-6b18-4f92-a9cb-080b016523fc:string:ENRL",
+          "fosPrintArea": "0380d12f-306b-403f-b6f2-930493bab0a8:string:ND",
+          "summary": [
+            {
+              "programName": "ea9a9c4e-09ea-43fc-975e-4e7adf09b397:string:Doctor of Philosophy",
+              "GPAName": "912143e3-f898-40e9-b346-59713a3a4a5a:string:Cumulative Credits",
+              "GPA": "9c1f03b6-da84-4af0-91c4-ceaf56cb858c:number:18",
+              "reportNo": "051b237b-bbeb-464d-95c6-634ef4bcaae3:number:1"
+            }
+          ],
+          "reportNo": "2ad79b6a-e8a8-4149-b0b7-ce4241e061c9:number:1"
+        },
+        {
+          "name": "549383bf-c67a-46b0-afab-0b4d84c6b3a7:string:1500",
+          "term": "289a37eb-1f4d-49cb-b32e-f4896d5ea525:string:2015/2016",
+          "formOfStudy": "8a3cb644-0f5f-4cba-b19a-d7fcab247b48:string:ENRL",
+          "fosPrintArea": "461b495a-ffe4-421d-b38b-8f1d7ded8c8b:string:ND",
+          "summary": [
+            {
+              "programName": "3ec1150f-5521-4b6e-83f3-eff11c27ca5d:string:Doctor of Philosophy",
+              "GPAName": "4162b4f5-a797-41f2-9991-4c5cfc52a885:string:Cumulative Credits",
+              "GPA": "0633c5f5-5e32-4a5e-8d46-4642eceed0f6:number:18",
+              "reportNo": "efd78054-e2d6-423f-a30a-e98b93206365:number:1"
+            }
+          ],
+          "reportNo": "a5da6786-dd8e-4b94-82c8-f4e40f631a9e:number:1"
+        },
+        {
+          "name": "79cad054-ecac-4e69-8ea9-ec4dedcf1f8f:string:1610",
+          "term": "1409666d-8da5-4d58-8f7b-8104a598b97d:string:2016/2017 Semester 1",
+          "formOfStudy": "b9b6cef6-112f-41cb-88fc-d3b3f5527712:string:ENRL",
+          "fosPrintArea": "ac97817d-8716-4ae3-ab3d-fa816d44b258:string:ND",
+          "summary": [
+            {
+              "programName": "a0d102bf-0b05-4a13-976c-fd853924b821:string:Doctor of Philosophy",
+              "GPAName": "93630c77-5b0e-4801-ae37-c495763650ad:string:Cumulative Credits",
+              "GPA": "3e7a87ff-1a61-4333-a632-8759701ba478:number:21",
+              "reportNo": "33109d4e-81b0-421e-869a-1d9f9ea76032:number:1"
+            }
+          ],
+          "reportNo": "f16b1501-ce5e-46f7-83d4-17356757f808:number:1"
+        },
+        {
+          "name": "c675b6e1-35d4-4eaa-811f-6d227e022eb0:string:1720",
+          "term": "4be4d530-37ac-4673-bfe4-c3072b05a052:string:2017/2018 Semester 2",
+          "formOfStudy": "dee6cdfe-623e-4197-9966-5baef9fff4bc:string:ENRL",
+          "fosPrintArea": "044758b0-fe9b-4b57-8e0f-5abb450ac8ac:string:ND",
+          "summary": [
+            {
+              "programName": "64b1f167-976f-425a-ab78-1b827428f992:string:Doctor of Philosophy",
+              "GPAName": "893c05b8-f615-425a-bd4f-5ebdc3b557f1:string:Cumulative Credits",
+              "GPA": "d7394653-77bb-41a9-9add-04c1eaaeefd3:number:61",
+              "reportNo": "5705e40f-8f2c-49ea-bf16-dd729e504128:number:1"
+            }
+          ],
+          "reportNo": "d61a9f58-7e61-4924-8a86-02e57abe0c80:number:1"
+        }
+      ],
+      "programData": [
+        {
+          "programCode": "b4aa863f-801c-49cc-9748-a004f3aecc0c:string:D1360",
+          "programName": "5978f133-3b1f-4087-8f68-9240961cf0d3:string:Doctor of Philosophy",
+          "statusCode": "55ca964e-a624-4f8c-b9d4-b4deeb6bb8b6:string:CM",
+          "statusDescription": "f648019a-bc96-4de2-bcd9-ef1b7b25fd55:string:Completed Programme",
+          "effectiveDate": "2f285923-3537-4d5d-a724-8032481c2e5e:string:2018-07-31",
+          "admitTerm": "92c9c1fc-7852-4fdb-9733-9ce5c6bb7d2d:string:1300",
+          "reportNo": "53a4c39d-42cd-49d9-a757-b84e6be708e0:string:1"
+        }
+      ],
+      "degreeData": [
+        {
+          "degreeTitle": "8ed45726-57ad-40ce-9260-d1c215d82d55:string:Doctor of Philosophy",
+          "dateConferred": "31110b61-9ac6-40b3-9695-52dc464a3d03:string:2018-07-31",
+          "plans": [
+            {
+              "specialProgram": "98bc5c59-b8e0-4a5b-baa0-023b14033bf3:boolean:false",
+              "type": "69a3a48e-3ad6-4604-97dd-918eee51dd1d:string:GDR",
+              "typeName": "e0c4a3e7-2e7f-43bf-b976-37be79670129:string:Area of Study",
+              "transcriptDescr": "0a507302-a753-440c-ac01-cf72e3aaa9b3:string:Integrated Biology and Medicine"
+            }
+          ],
+          "reportNo": "96643a8c-1359-47b7-8e38-dc7d5844b57b:number:1"
+        }
+      ],
+      "milestoneData": [
+        {
+          "milestoneTitle": "656cac52-ed5d-4b56-ac15-818f00a66673:string:THESIS TITLE:",
+          "thesisTitle": "e0fb2b73-96e8-462b-bc97-9eac2da47379:string:SUPPRESSION OF INFLAMMASOME ACTIVATION IN BATS",
+          "reportNo": "4f3b2128-e1df-4794-9d83-7f93637ec73c:string:1"
+        }
+      ]
+    }
+  },
+  "privacy": {},
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "33a97c3c8250d90ae04948a981471902b0dcfcf654e54f23079a80000920b997",
+    "proof": [
+      "99b3194a185f179abe7cd37863a02c9077c9fce3c4d608b08a632e7cc09a7336",
+      "9e441c9972ccb1fbf8284d0522281aee0d61a89741ebdf6302763bc365ab4147",
+      "6b6ab4351466c81221c49c34257e60c37c6ca0f200ae4340b2aaaf85a9b52698",
+      "ca2569416b5b4ef1476285adb8206009240f33141d1f30ad33496a1e11b21ac7",
+      "cff34b7906af4ba56465df60278cd2ab34642e6294b0492249b9bae34d336523",
+      "7bfc29748a38d23ae9ca8d2c7225873287bd0baa0630ada5963b9e61ac9c3806"
+    ],
+    "merkleRoot": "3862426f819b735c661f7981bfaed07eff1984a447b0406d831c1b15ec75e7c9"
+  }
+}
