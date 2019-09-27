@@ -1,62 +1,22 @@
 /* eslint-disable class-methods-use-this */
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import {
   DegreeScrollDataFeeder,
   Degree
 } from "../common/degreeScrollFramework";
-import { renderVoid, renderNUSLogo, NUS_CHN_NAME } from "../common";
-
-// custom NUS title
-const renderCustomNUSTitle = () => {
-  const styleEnglish = {
-    display: "block",
-    fontSize: "26pt",
-    lineHeight: "30pt",
-    textAlign: "center",
-    fontFamily: "'Times New Roman', Serif",
-    fontWeight: "bold",
-    marginLeft: "auto",
-    marginRight: "auto"
-  };
-  const styleChinese = {
-    display: "block",
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: "320px"
-  };
-  return (
-    <div style={styleEnglish}>
-      NATIONAL UNIVERSITY
-      <br />
-      OF SINGAPORE
-      <img src={NUS_CHN_NAME} style={styleChinese} />
-    </div>
-  );
-};
-
-// custom logo
-const renderLogo = () => (
-  <Fragment>
-    {renderVoid("2.13cm")}
-    {renderCustomNUSTitle()}
-    {renderVoid("0.59cm")}
-    {renderNUSLogo()}
-  </Fragment>
-);
 
 // data feeder
 const getDataFeeder = dataSource => {
   // data feeder
   const dataFeeder = new DegreeScrollDataFeeder();
-  dataFeeder.logo = renderLogo();
+  // logo is default
   dataFeeder.studentName = dataSource.recipient.name.toUpperCase();
-  dataFeeder.namePadding = "20px 0 15px";
-  // text is default
+  dataFeeder.postNameText =
+    "having fulfilled the requirements prescribed\nby the University and the Duke-NUS Medical\nSchool Singapore, conferred the degree of";
   dataFeeder.degreeCode = dataSource.additionalData.degreeScroll[0].degreeCode;
-  // this template (K4MBACN) is only for MBA conducted in Chinese, hence directly allocate the literal degree title
   dataFeeder.degreeTitle =
-    "Master of Business Administration (Conducted in Chinese)";
+    dataSource.additionalData.degreeScroll[0].degreeTitle;
   dataFeeder.honours = dataSource.additionalData.degreeScroll[0].honours;
   dataFeeder.major = dataSource.additionalData.degreeScroll[0].major;
   dataFeeder.conferDate =
@@ -67,7 +27,6 @@ const getDataFeeder = dataSource => {
       dataSource.additionalData.images.PRESIDENT
     );
   }
-  dataFeeder.spaceBeforeSig = "2cm";
   return dataFeeder;
 };
 

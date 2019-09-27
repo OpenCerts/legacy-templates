@@ -21,7 +21,7 @@ const cls = names => sassClassNames(names, scss);
 // not necessary to be exported
 const renderDefaultNUSLogo = () => (
   <Fragment>
-    {renderVoid("2.13cm")}
+    {renderVoid("1.9cm")}
     {renderNUSTitle()}
     {renderVoid("0.59cm")}
     {renderNUSLogo()}
@@ -325,14 +325,35 @@ const preprocMajor = major =>
     : "";
 
 // degree scroll data feeder class
+// What can be customised:
+//   - Logo(s): use addLogo or logo setter, value to be HTML
+//   - Space between logo and 1st line of text: use spaceAfterLogo, value to be "num + unit", e.g. 1cm
+//   - Student name: use studentName, value to be a string
+//   - Padding above and below student name: use namePadding, value to be "num + unit"
+//   - Text above student name: use preNameText, value to be a string
+//   - Text below student name: use postNameText, value to be a string
+//   - Fully customised student name + pre-/post- name text: use nameAndText, value to be HTML
+//   - Space before rendering of degree title: use spaceBeforeDegree, value to be "num + unit"
+//   - Degree code: use degreeCode, value to be a string. This is not to rendered on the degree scroll, but used to determine rendering of other content
+//   - Degree title: use degreeTitle, value to be a string
+//   - Honours: use honours, value to be a string
+//   - Whether to have a link break before rendering honours: use breakBeforeHonours, value to be a boolean
+//   - Major/Specialisation title: use major, value to be a string
+//   - Whether to have a link break before rendering major: use breakBeforeMajor, value to be a boolean
+//   - Height of degree title, honours (if any) and major (if any): use heightTitleDisplay, value to be "num + unit"
+//   - Conferment date: use conferDate, value to be a string in format of ISO date
+//   - Space between conferment date and signatures: use spaceBeforeSig, value to be "num + unit"
+//   - Signatures: use useDefaultSignature (value to be base64-encoded signature images), or sig setter (value to be HTML)
 export class DegreeScrollDataFeeder {
   constructor() {
     this.dsLogo = [];
+    this.dsSpaceAfterLogo = ".23cm"; // default, height
     this.dsName = null;
-    this.dsNamePadding = "20px 0"; // default
+    this.dsNamePadding = "20px 0 15px"; // default, top, left & right, bottom
     this.dsPreNameText = "This is to certify that"; // default
     this.dsPostNameText =
-      "having fulfilled the requirements prescribed\nby the University was conferred the degrees of"; // default
+      "having fulfilled the requirements prescribed\nby the University was conferred the degree of"; // default
+    this.dsSpaceBeforeDegree = "5px"; // default, height
     this.dsDegreeCode = null;
     this.dsDegreeTitle = null;
     this.dsHonours = null;
@@ -355,6 +376,11 @@ export class DegreeScrollDataFeeder {
   // custom logo(s) with style
   set logo(value) {
     this.dsCustomLogo = value;
+  }
+
+  // setter: spacing after logo(s)
+  set spaceAfterLogo(value) {
+    this.dsSpaceAfterLogo = value;
   }
 
   // setter: student name
@@ -380,6 +406,11 @@ export class DegreeScrollDataFeeder {
   // setter: custom name and text with style
   set nameAndText(value) {
     this.dsCustomNameAndText = value;
+  }
+
+  // setter: space before rendering of degree title
+  set spaceBeforeDegree(value) {
+    this.dsSpaceBeforeDegree = value;
   }
 
   // setter: degree code
@@ -457,6 +488,12 @@ export class DegreeScrollDataFeeder {
     );
   }
 
+  // render spacing after logo(s)
+  get spaceAfterLogo() {
+    if (this.dsSpaceAfterLogo) return renderVoid(this.dsSpaceAfterLogo);
+    return "";
+  }
+
   // render text and name
   get nameAndText() {
     if (this.dsCustomNameAndText) return this.dsCustomNameAndText;
@@ -466,6 +503,12 @@ export class DegreeScrollDataFeeder {
       this.dsPostNameText,
       this.dsNamePadding
     );
+  }
+
+  // render spacing before degree title
+  get spaceBeforeDegree() {
+    if (this.dsSpaceBeforeDegree) return renderVoid(this.dsSpaceBeforeDegree);
+    return "";
   }
 
   // render degree title, honours (if any) and major (if any)
@@ -605,7 +648,13 @@ export class Degree extends Component {
                 <td>{this.dataFeeder.logo}</td>
               </tr>
               <tr>
+                <td>{this.dataFeeder.spaceAfterLogo}</td>
+              </tr>
+              <tr>
                 <td>{this.dataFeeder.nameAndText}</td>
+              </tr>
+              <tr>
+                <td>{this.dataFeeder.spaceBeforeDegree}</td>
               </tr>
               <tr>
                 <td style={{ height: this.dataFeeder.heightTitleDisplay }}>
