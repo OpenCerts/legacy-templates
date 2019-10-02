@@ -10,6 +10,9 @@ const NUSK1NOTS2019 = dynamic(() =>
 const NUSK3MBBS2019 = dynamic(() =>
   import("./NUS-K3MBBS-2019" /* webpackChunkName: "NUSTemplates" */)
 );
+const NUSDUKEPHD2019 = dynamic(() =>
+  import("./NUS-DUKEPHD-2019" /* webpackChunkName: "NUSTemplates" */)
+);
 const NUSANUJDPBA2019 = dynamic(() =>
   import("./NUS-ANUJDP-BA-2019" /* webpackChunkName: "NUSTemplates" */)
 );
@@ -48,6 +51,7 @@ const templates = {
   "NUS-K1-2019": NUSK12019,
   "NUS-K1NOTS-2019": NUSK1NOTS2019,
   "NUS-K3MBBS-2019": NUSK3MBBS2019,
+  "NUS-DUKEPHD-2019": NUSDUKEPHD2019,
   "NUS-MUSIC-2019": NUSMUSIC2019,
   "NUS-ICLJDP-2019": NUSICLJDP2019,
   "NUS-JHUJDP-MUSIC-2019": NUSJHUJDPMUSIC2019,
