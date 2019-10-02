@@ -18,7 +18,7 @@ const renderLogos = () => {
     <table width="100%">
       <tbody>
         <tr>
-          <td>{renderVoid("1.2cm")}</td>
+          <td>{renderVoid("1.1cm")}</td>
         </tr>
         <tr>
           <td width="30%">{renderSmallNUSLogo()}</td>
