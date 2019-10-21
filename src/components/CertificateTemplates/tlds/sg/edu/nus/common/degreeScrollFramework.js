@@ -21,7 +21,6 @@ const cls = names => sassClassNames(names, scss);
 // not necessary to be exported
 const renderDefaultNUSLogo = () => (
   <Fragment>
-    {renderVoid("1.9cm")}
     {renderNUSTitle()}
     {renderVoid("0.59cm")}
     {renderNUSLogo()}
@@ -301,31 +300,58 @@ const preprocHonours = (honours, degreeTitle) => {
   if (/^Honours/i.test(text)) return `with ${text}`;
   // 'pass with merit'
   if (
-    text.toUpperCase() === "PASS WITH MERIT" &&
-    (degreeTitle.toUpperCase() === "Bachelor of Science".toUpperCase() ||
-      degreeTitle.toUpperCase() ===
-        "Bachelor of Applied Science".toUpperCase() ||
-      degreeTitle.toUpperCase() ===
-        "Bachelor of Business Administration".toUpperCase() ||
-      degreeTitle.toUpperCase() ===
-        "Bachelor of Business Administration (Accountancy)".toUpperCase() ||
-      degreeTitle.toUpperCase() ===
-        "Bachelor of Science (Nursing)".toUpperCase())
+    (text.toUpperCase() === "PASS WITH MERIT" &&
+      (degreeTitle.toUpperCase() === "Bachelor of Science".toUpperCase() ||
+        degreeTitle.toUpperCase() ===
+          "Bachelor of Applied Science".toUpperCase() ||
+        degreeTitle.toUpperCase() ===
+          "Bachelor of Science (Computational Biology)".toUpperCase() ||
+        degreeTitle.toUpperCase() ===
+          "Bachelor of Science (Business Analytics)".toUpperCase() ||
+        degreeTitle.toUpperCase() ===
+          "Bachelor of Business Administration".toUpperCase() ||
+        degreeTitle.toUpperCase() ===
+          "Bachelor of Business Administration (Accountancy)".toUpperCase() ||
+        degreeTitle.toUpperCase() ===
+          "Bachelor of Science (Nursing)".toUpperCase())) ||
+    degreeTitle.toUpperCase() === "Bachelor of Technology".toUpperCase() ||
+    degreeTitle.toUpperCase() ===
+      "Bachelor of Engineering (Computer Engineering)".toUpperCase() ||
+    degreeTitle.toUpperCase() ===
+      "Bachelor of Arts (Architecture)".toUpperCase() ||
+    degreeTitle.toUpperCase() ===
+      "Bachelor of Arts (Industrial Design)".toUpperCase() ||
+    degreeTitle.toUpperCase() ===
+      "Bachelor of Science (Building)".toUpperCase() ||
+    degreeTitle.toUpperCase() ===
+      "Bachelor of Science (Project and Facilities Management)".toUpperCase() ||
+    degreeTitle.toUpperCase() ===
+      "Bachelor of Science (Real Estate)".toUpperCase()
   )
     return "with Merit";
   return text;
 };
 
 // pre-process major - removal of trailing (Hons) or Hons, and capitalization
-const preprocMajor = major =>
-  major
+const preprocMajor = (rawMajor, degreeCode) => {
+  // do not print major for Bachelor of Laws
+  if (degreeCode === "B071000") return "";
+  let major = rawMajor
     ? `in ${capitalizedText(
-        major.replace(/( \(HONS\)| HONS)$/i, "").toLowerCase()
+        rawMajor.replace(/( \(HONS\)| HONS)$/i, "").toLowerCase()
       )}`
     : "";
+  if (major.toUpperCase() === "ENGLISH LIT") major = "English Literature";
+  else if (major.toUpperCase() === "COMMS & NEW MEDIA")
+    major = "Communications & New Media";
+  else if (major.toUpperCase() === "FOOD SCIENCE & TECH")
+    major = "Food Science & Technology";
+  return major;
+};
 
 // degree scroll data feeder class
 // What can be customised:
+//   - Space above the logo: use spaceBeforeLogo, value to be "num + unit", e.g. 1.2cm
 //   - Logo(s): use addLogo or logo setter, value to be HTML
 //   - Space between logo and 1st line of text: use spaceAfterLogo, value to be "num + unit", e.g. 1cm
 //   - Student name: use studentName, value to be a string
@@ -347,6 +373,7 @@ const preprocMajor = major =>
 export class DegreeScrollDataFeeder {
   constructor() {
     this.dsLogo = [];
+    this.dsSpaceBeforeLogo = "1.2cm"; // default, height
     this.dsSpaceAfterLogo = ".23cm"; // default, height
     this.dsName = null;
     this.dsNamePadding = "20px 0 15px"; // default, top, left & right, bottom
@@ -366,6 +393,11 @@ export class DegreeScrollDataFeeder {
     this.dsCustomLogo = null;
     this.dsCustomNameAndText = null;
     this.dsHeightTitleDisplay = "3.56cm"; // default
+  }
+
+  // setter: spacing before logo(s)
+  set spaceBeforeLogo(value) {
+    this.dsSpaceBeforeLogo = value;
   }
 
   // add logo
@@ -488,6 +520,12 @@ export class DegreeScrollDataFeeder {
     );
   }
 
+  // render spacing before logo(s)
+  get spaceBeforeLogo() {
+    if (this.dsSpaceBeforeLogo) return renderVoid(this.dsSpaceBeforeLogo);
+    return "";
+  }
+
   // render spacing after logo(s)
   get spaceAfterLogo() {
     if (this.dsSpaceAfterLogo) return renderVoid(this.dsSpaceAfterLogo);
@@ -514,7 +552,7 @@ export class DegreeScrollDataFeeder {
   // render degree title, honours (if any) and major (if any)
   get titleDisplay() {
     const honorsTitle = preprocHonours(this.dsHonours, this.dsDegreeTitle);
-    const majorTitle = preprocMajor(this.dsMajor);
+    const majorTitle = preprocMajor(this.dsMajor, this.dsDegreeCode);
     let ignoreHonours = false;
     let ignoreMajor = false;
     let lastLine;
@@ -644,6 +682,9 @@ export class Degree extends Component {
         <article>
           <table width="100%">
             <tbody>
+              <tr>
+                <td>{this.dataFeeder.spaceBeforeLogo}</td>
+              </tr>
               <tr>
                 <td>{this.dataFeeder.logo}</td>
               </tr>

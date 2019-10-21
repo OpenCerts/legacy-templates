@@ -12,13 +12,11 @@ const getDataFeeder = dataSource => {
   const dataFeeder = new DegreeScrollDataFeeder();
   // logo is default
   dataFeeder.studentName = dataSource.recipient.name.toUpperCase();
-  // post name text is different for graduate diploma (K5)
-  const degreeTitle = dataSource.additionalData.degreeScroll[0].degreeTitle;
-  if (/^Graduate Diploma/i.test(degreeTitle))
-    dataFeeder.postNameText =
-      "having fulfilled the requirements prescribed\nby the University was awarded the";
+  dataFeeder.postNameText =
+    "having completed the requirements\nfor the Joint Programme of the National\nUniversity of Singapore and the University\nof Basel was conferred the degree of";
   dataFeeder.degreeCode = dataSource.additionalData.degreeScroll[0].degreeCode;
-  dataFeeder.degreeTitle = degreeTitle;
+  dataFeeder.degreeTitle =
+    dataSource.additionalData.degreeScroll[0].degreeTitle;
   dataFeeder.honours = dataSource.additionalData.degreeScroll[0].honours;
   dataFeeder.major = dataSource.additionalData.degreeScroll[0].major;
   dataFeeder.conferDate =
@@ -28,6 +26,7 @@ const getDataFeeder = dataSource => {
       dataSource.additionalData.images.TRUSTEES,
       dataSource.additionalData.images.PRESIDENT
     );
+    dataFeeder.spaceBeforeSig = "2.5cm";
   }
   return dataFeeder;
 };

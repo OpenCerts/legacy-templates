@@ -6,7 +6,7 @@ import {
   Degree,
   renderSmallNUSLogo
 } from "../common/degreeScrollFramework";
-import { renderNUSSeal, renderImage, renderVoid, UOE_LOGO } from "../common";
+import { renderNUSSeal, renderImage, UOE_LOGO } from "../common";
 
 // custom logos
 const renderLogos = () => {
@@ -17,9 +17,6 @@ const renderLogos = () => {
   return (
     <table width="100%">
       <tbody>
-        <tr>
-          <td>{renderVoid("1.2cm")}</td>
-        </tr>
         <tr>
           <td width="50%">{renderSmallNUSLogo()}</td>
           <td width="50%" align="center" valign="top">
