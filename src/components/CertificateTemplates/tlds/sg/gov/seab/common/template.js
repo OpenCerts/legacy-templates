@@ -363,7 +363,10 @@ export const GETSUBJGRADE = (subjgrade, examyr, examlvltype) => {
   } else if (subjgrade === "BAND4" && examlvltype === "A2") {
     alphaRender = "BAND";
     numericRender = "FOUR";
-  } else if (subjgrade === "E*" && (examlvltype === "A2" || examlvltype === "N")) {
+  } else if (
+    subjgrade === "E*" &&
+    (examlvltype === "A2" || examlvltype === "N")
+  ) {
     alphaRender = "E*";
     numericRender = "-";
   } else if (
@@ -489,8 +492,7 @@ export const GETPAPERGRADE = (papergrade, examyr, examlvl, examlvltype) => {
       papernumericRender = "UNGRADED";
     }
   }
-  
-  
+
   if (examlvltype === "A3") {
     return (
       <div className="row">
@@ -499,7 +501,7 @@ export const GETPAPERGRADE = (papergrade, examyr, examlvl, examlvltype) => {
       </div>
     );
   }
-  
+
   return (
     <div className="row">
       <div className="col-md-6" style={SOR_CENTER_ALIGN}>
