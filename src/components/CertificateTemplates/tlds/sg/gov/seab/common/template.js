@@ -363,7 +363,7 @@ export const GETSUBJGRADE = (subjgrade, examyr, examlvltype) => {
   } else if (subjgrade === "BAND4" && examlvltype === "A2") {
     alphaRender = "BAND";
     numericRender = "FOUR";
-  } else if (subjgrade === "E*" && examlvltype === "A2") {
+  } else if (subjgrade === "E*" && (examlvltype === "A2" || examlvltype === "N")) {
     alphaRender = "E*";
     numericRender = "-";
   } else if (
@@ -403,7 +403,7 @@ export const GETSUBJGRADE = (subjgrade, examyr, examlvltype) => {
   );
 };
 
-export const GETPAPERGRADE = (papergrade, examyr, examlvl) => {
+export const GETPAPERGRADE = (papergrade, examyr, examlvl, examlvltype) => {
   let paperalphaRender;
   let papernumericRender;
 
@@ -489,8 +489,9 @@ export const GETPAPERGRADE = (papergrade, examyr, examlvl) => {
       papernumericRender = "UNGRADED";
     }
   }
-
-  if (examlvl === "GCEA" && examyr >= 2006) {
+  
+  
+  if (examlvltype === "A3") {
     return (
       <div className="row">
         <div className="col-md-6">{papernumericRender}</div>
@@ -498,6 +499,7 @@ export const GETPAPERGRADE = (papergrade, examyr, examlvl) => {
       </div>
     );
   }
+  
   return (
     <div className="row">
       <div className="col-md-6" style={SOR_CENTER_ALIGN}>
@@ -794,7 +796,7 @@ export const PAPERGRADE = (
     return (
       <div className="row">
         <div className="col-md-6">
-          {GETPAPERGRADE(papergrade, examyr, examlvl)}
+          {GETPAPERGRADE(papergrade, examyr, examlvl, examlvltype)}
         </div>
 
         <div className="col-md-2">
@@ -823,7 +825,7 @@ export const PAPERGRADE = (
   return (
     <div className="row">
       <div className="col-md-3">
-        {GETPAPERGRADE(papergrade, examyr, examlvl)}
+        {GETPAPERGRADE(papergrade, examyr, examlvl, examlvltype)}
       </div>
       <div className="col-md-3" style={SOR_30_WIDTH}>
         -
