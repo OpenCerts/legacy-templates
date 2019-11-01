@@ -1,8 +1,5 @@
-import {
-  SIT_CERT_BORDER,
-  SIT_CERT_BG
-} from "../common/images";
- 
+import { SIT_CERT_BORDER, SIT_CERT_BG } from "./images";
+
 export const arial18PtRed = {
   fontFamily: "Arial",
   fontSize: "24px",
@@ -24,7 +21,7 @@ export const garamondItalic18Pt = {
   fontStyle: "italic",
   textAlign: "center",
   color: "black"
-}; 
+};
 
 export const helvetica12Pt = {
   fontFamily: "Helvetica",
@@ -47,7 +44,7 @@ export const timesNewRoman18PtRed = {
   fontWeight: "bold",
   textAlign: "center",
   color: "red"
-}; 
+};
 
 export const bgImgStyle = {
   backgroundRepeat: "repeat",
@@ -68,7 +65,7 @@ export const logoImgStyle = {
   width: "268px",
   height: "130px"
 };
- 
+
 export const dpLogoImgStyle = {
   height: "130px",
   margin: "0px -15px 0px 0px"
@@ -80,8 +77,8 @@ export const muLogoImgStyle = {
 };
 
 export const nuLogoImgStyle = {
-  height: "140px",
-}; 
+  height: "140px"
+};
 
 export const sitLogoImgStyle = {
   width: "268px",
@@ -89,18 +86,18 @@ export const sitLogoImgStyle = {
 };
 
 export const uogLogoImgStyle = {
-  height: "130px",
+  height: "130px"
 };
- 
+
 export const sealImgStyle = {
   width: "180px",
   height: "180px"
-}; 
- 
+};
+
 export const dpSealImgStyle = {
   width: "180px",
   height: "180px"
-}; 
+};
 
 export const muSealImgStyle = {
   width: "180px",
@@ -121,11 +118,11 @@ export const uogSealImgStyle = {
   width: "180px",
   height: "180px"
 };
- 
+
 export const presidentStyle = {
   width: "192px",
   height: "62px"
-};   
+};
 
 export const depPresidentStyle = {
   width: "174px",
@@ -150,7 +147,7 @@ export const dpPresidentStyle = {
 export const dpDeanStyle = {
   width: "174px",
   height: "82px"
-};  
+};
 
 export const chancellorStyle = {
   width: "192px",
@@ -162,13 +159,11 @@ export const vicePresidentStyle = {
   height: "62px"
 };
 
-
-
 export const viceChancellorStyle = {
   width: "174px",
   height: "82px"
-}; 
- 
+};
+
 export const principalStyle = {
   width: "192px",
   height: "62px"
@@ -178,10 +173,3 @@ export const clerkSenteStyle = {
   width: "174px",
   height: "82px"
 };
-
-
-
-
-  
-
- 

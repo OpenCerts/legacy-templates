@@ -1,6 +1,6 @@
 import MultiCertificateRenderer from "template-utils/MultiCertificateRenderer";
 import Certificate from "./certificate";
-import  SITAddress from "../common/address";
+import SITAddress from "../common/address";
 
 const templates = [
   {
@@ -8,8 +8,8 @@ const templates = [
     label: "Certificate",
     template: Certificate
   }
-]; 
- 
+];
+
 const SITCert = props => (
   <MultiCertificateRenderer
     templates={templates}
@@ -17,6 +17,5 @@ const SITCert = props => (
     {...props}
   />
 );
-
 
 export default SITCert;
