@@ -29,6 +29,10 @@ let isMedDen;
 let isCDP;
 let isYaleNUS;
 
+// check whether a term is first term
+const firstTermIdxes = [];
+const isFirstTerm = termIdx => firstTermIdxes.indexOf(termIdx) >= 0;
+
 // transcript content - program info
 class TranscriptProgram {
   constructor(dataSource, dataFeeder) {
@@ -102,7 +106,7 @@ class TranscriptCreditTransfer {
         else if (transferData.sourceType === "I") internal = true;
         if (internal && external) break;
       }
-      if (this.termIdx === 0) {
+      if (isFirstTerm(this.termIdx)) {
         // only print in 1st term
         if (external) {
           // external transfer title
@@ -113,13 +117,14 @@ class TranscriptCreditTransfer {
           // internal APC
           this.renderIntAPC();
         }
-      } else {
+      }
+      if (isCDP || !isFirstTerm(this.termIdx)) {
         // only print for 2nd term onward
         this.renderIntTrfSummary();
       }
       this.renderIntTrfDetail();
       if (isMedDen) this.renderFormOfStudy();
-      if (this.termIdx !== 0) {
+      if (!isFirstTerm(this.termIdx)) {
         // from 2nd term onward
         this.renderTrfFromExtOrg();
       }
@@ -196,8 +201,9 @@ class TranscriptCreditTransfer {
           title =
             "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
         } else if (!isNUSAPCTest && !isAPC) {
-          title =
-            "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
+          if (!isCDP || transferData.reportNo === 1)
+            title =
+              "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
         } else if (isNUSAPCTest) {
           title =
             "AWARDED ADVANCED PLACEMENT CREDITS FOR PASSING THE PLACEMENT TEST(S) CONDUCTED BY NUS";
@@ -205,21 +211,23 @@ class TranscriptCreditTransfer {
           // isAPC === true
           title = "AWARDED ADVANCED PLACEMENT CREDITS";
         }
-        const grade = isNUSAPCTest || isAPC ? "-" : "";
-        const credits =
-          transferData.creditsNoGPA !== 0
-            ? transferData.creditsNoGPA.toFixed(2)
-            : "";
-        this.dataFeeder.push(
-          "ts-term-trf-intapc",
-          <Fragment>
-            <td colSpan="2" className={cls("ts-termrem")}>
-              {title}
-            </td>
-            <td className={cls("ts-grade")}>{grade}</td>
-            <td className={cls("ts-credits")}>{credits}</td>
-          </Fragment>
-        );
+        if (title) {
+          const grade = isNUSAPCTest || isAPC ? "-" : "";
+          const credits =
+            transferData.creditsNoGPA !== 0
+              ? transferData.creditsNoGPA.toFixed(2)
+              : "";
+          this.dataFeeder.push(
+            "ts-term-trf-intapc",
+            <Fragment>
+              <td colSpan="2" className={cls("ts-termrem")}>
+                {title}
+              </td>
+              <td className={cls("ts-grade")}>{grade}</td>
+              <td className={cls("ts-credits")}>{credits}</td>
+            </Fragment>
+          );
+        }
       }
     });
   }
@@ -231,13 +239,11 @@ class TranscriptCreditTransfer {
       const isAPC = transferData.orgId === "E0000002430";
       if (
         transferData.sourceType === "I" &&
-        (!isCDP || (isCDP && isNUSAPCTest && isAPC))
+        (!isCDP || (isCDP && !isNUSAPCTest && !isAPC))
       ) {
         let title;
         if (transferData.sourceCareer) {
-          title = `CREDITS RECOGNISED (COMPLETED MODULES FROM ${
-            transferData.sourceCareer
-          } CAREER)`;
+          title = `CREDITS RECOGNISED (COMPLETED MODULES FROM ${transferData.sourceCareer.toUpperCase()} CAREER)`;
         } else if (!isMedDen) {
           title = "CREDITS RECOGNISED (COMPLETED MODULES FROM OTHER PROGRAMME)";
         }
@@ -322,7 +328,7 @@ class TranscriptCreditTransfer {
           "ts-term-trf-eqnus",
           <td colSpan="4" className={cls("ts-termrem")}>
             CREDITS TRANSFERRED (WITH EQUIVALENT NUS GRADE) FROM
-            {transferData.orgName.toUpperCase()}:
+            {` ${transferData.orgName.toUpperCase()}`}:
           </td>
         );
         transferData.details.forEach(detail => {
@@ -776,7 +782,14 @@ const getEnrolmentModules = (transcriptData, semester, reportNo) => {
 const translateTranscriptTermData = dataSource => {
   if (!dataSource.transcriptRaw)
     dataSource.transcriptRaw = dataSource.transcript;
-  dataSource.additionalData.transcriptGroup.forEach(term => {
+  // find first term(s). Two for CDP and one for others
+  let currentReportNo = 0;
+  dataSource.additionalData.transcriptGroup.forEach((term, termIdx) => {
+    if (currentReportNo !== term.reportNo) {
+      currentReportNo = term.reportNo;
+      firstTermIdxes.push(termIdx);
+    }
+    // group credit transfers by term
     if (term.creditTransfer)
       term.creditTransfer.forEach(transfer => {
         transfer.details = getCreditTransferDetails(
@@ -786,6 +799,7 @@ const translateTranscriptTermData = dataSource => {
           transfer.transferSeq
         );
       });
+    // group enrolmet data by term
     const enrolmentModules = getEnrolmentModules(
       dataSource.transcriptRaw,
       term.name,
@@ -1248,6 +1262,7 @@ const Template = ({ certificate }) => {
   // translate
   if (jsonData.additionalData.transcriptGroup)
     translateTranscriptTermData(jsonData);
+  if (firstTermIdxes.length === 0) firstTermIdxes.push(0);
   // to be used in rendering
   isDuke = jsonData.additionalData.transcriptType.startsWith("DK");
   isCDP = jsonData.additionalData.transcriptType.startsWith("CDP");
@@ -1286,7 +1301,7 @@ const Template = ({ certificate }) => {
     backgroundImage: backImgUrl,
     backgroundSize: "1140px 806px", // width height
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center top" // horizontal vertical
+    backgroundPosition: "center center" // horizontal vertical
   };
   const html = (
     <div style={scale}>

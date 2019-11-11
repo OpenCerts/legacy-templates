@@ -46,8 +46,8 @@ class Degree extends Component {
     const html = (
       <div className={cls("cert-degree-title")}>
         {degreeTitleCase}
-        {honorsTitle ? ` with Honours ${honorsTitle}` : ""}
-        (NUS)
+        {honorsTitle ? ` with ${honorsTitle}` : ""}
+        {" (NUS)"}
       </div>
     );
     return html;
@@ -136,7 +136,7 @@ class Degree extends Component {
             <td>{renderVoid("0.5cm")}</td>
           </tr>
           <tr>
-            <td>has been conferred the degree with all the rights, honors,</td>
+            <td>has been conferred the degrees with all the rights, honors,</td>
           </tr>
           <tr>
             <td>responsibilities, and privileges pertaining thereunto.</td>

@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 /* eslint-disable default-case */
+/* eslint-disable class-methods-use-this */
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import {
@@ -99,7 +100,11 @@ const renderNameAndText = (preNameText, name, postNameText, namePadding) => {
     <table width="100%">
       {preNameHtml}
       <tr>
-        <td className={cls("cert-name")} style={{ padding: namePadding }}>
+        <td
+          id="nus-student-name"
+          className={cls("cert-name")}
+          style={{ padding: namePadding }}
+        >
           {name}
         </td>
       </tr>
@@ -119,7 +124,7 @@ const renderDefaultSigs = (trusteesSig, presidentSig) => {
           <td rowSpan="2" width="50%" style={{ textAlign: "center" }}>
             {renderNUSSeal()}
           </td>
-          <td align="center">
+          <td width="50%" align="center">
             <div className={cls("cert-sig")}>
               {sig1}
               <br />
@@ -675,6 +680,18 @@ export class Degree extends Component {
     if (!this.dataFeeder) this.dataFeeder = new DegreeScrollDataFeeder();
   }
 
+  // adjust layout for long name
+  componentDidMount() {
+    const nameEl = document.getElementById("nus-student-name");
+    if (nameEl) {
+      const nameHeight = nameEl.getBoundingClientRect().height;
+      if (nameHeight > 70) {
+        const sigsEl = document.getElementById("nus-degree-sigs");
+        if (sigsEl) sigsEl.style.marginTop = "-36px";
+      }
+    }
+  }
+
   // main render
   render = () => (
     <div className={cls("nus-degree")}>
@@ -709,7 +726,9 @@ export class Degree extends Component {
                 <td>{this.dataFeeder.spaceBeforeSig}</td>
               </tr>
               <tr>
-                <td>{this.dataFeeder.signature}</td>
+                <td>
+                  <div id="nus-degree-sigs">{this.dataFeeder.signature}</div>
+                </td>
               </tr>
             </tbody>
           </table>
