@@ -74,6 +74,6 @@ it("should create MutationObserver observe changes on current node", () => {
   expect(global.MutationObserver.mock.calls.length).toBe(1);
   expect(mockObserve.mock.calls[0]).toEqual([
     "current node",
-    { attributes: true, childList: true, subtree: true }
+    { attributes: true, childList: true, subtree: true, characterData: true }
   ]);
 });
