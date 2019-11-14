@@ -6,6 +6,8 @@ import FramelessCertificateViewer from "./FramelessCertificateViewer";
 import { inIframe, formatTemplate } from "./utils";
 
 class FramelessViewerContainer extends Component {
+  observer = null;
+
   constructor(props) {
     super(props);
 
@@ -48,11 +50,22 @@ class FramelessViewerContainer extends Component {
       this.setState({ parentFrameConnection });
     }
 
-    const config = { attributes: true, childList: true, subtree: true };
+    const config = {
+      attributes: true,
+      childList: true,
+      subtree: true,
+      characterData: true
+    };
     // eslint-disable-next-line no-undef
-    const observer = new MutationObserver(this.updateParentHeight);
+    this.observer = new MutationObserver(this.updateParentHeight);
     // eslint-disable-next-line react/no-find-dom-node
-    observer.observe(ReactDOM.findDOMNode(this), config);
+    this.observer.observe(ReactDOM.findDOMNode(this), config);
+    window.addEventListener("resize", this.updateParentHeight);
+  }
+
+  componentWillUnmount() {
+    if (this.observer) this.observer.disconnect();
+    window.removeEventListener("resize", this.updateParentHeight);
   }
 
   async selectTemplateTab(tabIndex) {
