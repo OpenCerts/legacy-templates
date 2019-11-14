@@ -17,7 +17,7 @@ beforeEach(() => {
   ReactDom.findDOMNode.mockClear();
 });
 
-it("returns false because of certificateContentsString", () => {
+it("returns not render when there is no certificate", () => {
   const component = shallow(<FramelessViewerPageContainer />);
   expect(component.isEmptyRender()).toBe(false);
 });

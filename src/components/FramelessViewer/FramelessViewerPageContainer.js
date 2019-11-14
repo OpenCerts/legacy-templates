@@ -83,6 +83,7 @@ class FramelessViewerContainer extends Component {
     this.setState({ tabIndex });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   print() {
     window.print();
   }

@@ -6,8 +6,8 @@
     "test:watch": "jest --watchAll",
     "test:update": "jest -u",
     "dev": "next",
-    "lint": "eslint . --ext .js --max-warnings 0",
-    "lint:fix": "eslint . --ext .js --fix",
+    "lint": "eslint ./src ./pages --ext .js --max-warnings 0",
+    "lint:fix": "eslint ./src ./pages --ext .js --fix",
     "build": "next build",
     "build:static": "next build && next export",
     "start": "next build && next start",
@@ -22,6 +22,7 @@
     "integration:watch": "nodemon --exec \"npm run integration\" --watch src"
   },
   "dependencies": {
+    "@govtechsg/open-attestation": "^1.1.30",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-sass": "^1.0.1",
     "date-fns": "^1.29.0",
@@ -38,7 +39,6 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@govtechsg/open-attestation": "^1.1.30",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
