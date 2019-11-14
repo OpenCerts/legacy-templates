@@ -17,6 +17,7 @@ class FramelessViewerContainer extends Component {
     this.updateParentTemplates = this.updateParentTemplates.bind(this);
     this.obfuscateDocument = this.obfuscateDocument.bind(this);
     this.getTemplates = this.getTemplates.bind(this);
+    this.print = this.print.bind(this);
     this.state = {
       parentFrameConnection: null,
       document: null,
@@ -33,18 +34,21 @@ class FramelessViewerContainer extends Component {
     const selectTemplateTab = this.selectTemplateTab;
     const renderDocument = this.handleDocumentChange;
     const getTemplates = this.getTemplates;
+    const print = this.print;
 
     window.opencerts = {
       renderDocument,
       selectTemplateTab,
-      getTemplates
+      getTemplates,
+      print
     };
 
     if (inIframe()) {
       const parentFrameConnection = connectToParent({
         methods: {
           renderDocument,
-          selectTemplateTab
+          selectTemplateTab,
+          print
         }
       }).promise;
       this.setState({ parentFrameConnection });
@@ -77,6 +81,10 @@ class FramelessViewerContainer extends Component {
       }
     }
     this.setState({ tabIndex });
+  }
+
+  print() {
+    window.print();
   }
 
   handleDocumentChange(document) {
