@@ -428,7 +428,7 @@ export const formatAttainmentDate = certificate => {
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
   if (intDate < 20190401) {
-    return <img style={styles.footerLogoStyle} src={NEA_LOGO} />;
+    return <img style={styles.sfaFooterLogoStyle} src={NEA_LOGO} />;
   }
   return <img style={styles.footerLogoStyle} src={SFA_LOGO} />;
 };

@@ -90,6 +90,11 @@ export const footerLogoStyle = {
   height: "auto"
 };
 
+export const sfaFooterLogoStyle = {
+  width: "100%",
+  height: "auto"
+};
+
 export const transFooterLogoStyle = {
   width: "80%",
   height: "auto"
