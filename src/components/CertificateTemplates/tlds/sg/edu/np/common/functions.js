@@ -24,6 +24,12 @@ export const formatDateFullMonthProper = dateString => {
   return tz(date, TIMEZONE).format("MMMM YYYY");
 };
 
+export const formatDateFullMonthProperDay = dateString => {
+  if (!dateString) return null;
+  const date = new Date(dateString);
+  return tz(date, TIMEZONE).format("DD MMMM YYYY");
+};
+
 export const formatNRIC = nricFin => {
   if (!nricFin) return null;
   const arrayNric = nricFin.split(":");
@@ -57,7 +63,7 @@ export const formatDatePrefix = dateString => {
   );
 };
 
-const getCertType = certId => {
+export const getCertType = certId => {
   let certType = "";
 
   const arrayCertId = certId.split(":");
@@ -66,12 +72,39 @@ const getCertType = certId => {
   return certType;
 };
 
-const splitStringTo2 = (string, delimiter) => {
+export const splitStringTo2 = (string, delimiter) => {
   const parts = string.split(delimiter);
   if (parts.length > 1)
     return [parts[0], parts.splice(1, parts.length).join(delimiter)];
   return ["", parts[0]];
 };
+
+export const certNameDisplay = (certPrefix, certDescr, delimiter) => {
+  if (certPrefix) {
+    return (
+      <p>
+        {certPrefix}
+        <br />
+        {certPrefix ? delimiter : ""}
+        <br />
+        {// split cert description with "(" and keep the separator.
+        certDescr.length > 30
+          ? certDescr.split(/(?=\()/g).map(i => <p key={i}> {i} </p>)
+          : certDescr}
+      </p>
+    );
+  }
+
+  return (
+    <p>
+      {// split cert description with "(" and keep the separator.
+      certDescr.length > 30
+        ? certDescr.split(/(?=\()/g).map(i => <p key={i}> {i} </p>)
+        : certDescr}
+    </p>
+  );
+};
+
 export const formatCertName = (certId, certName, meritFlag) => {
   let [certPrefix, certDescr] = ["", ""];
 
@@ -92,18 +125,9 @@ export const formatCertName = (certId, certName, meritFlag) => {
     certPrefix = meritFlag === "Y" ? `${certPrefix} with Merit` : certPrefix;
   }
 
-  return (
-    <p>
-      {certPrefix}
-      <br />
-      in
-      <br />
-      {// split cert description with "(" and keep the separator.
-      certDescr.length > 30
-        ? certDescr.split(/(?=\()/g).map(i => <p key={i}> {i} </p>)
-        : certDescr}
-    </p>
-  );
+  const renderedCertName = certNameDisplay(certPrefix, certDescr, "in");
+
+  return <p>{renderedCertName}</p>;
 };
 
 export const formatCertID = certId => {

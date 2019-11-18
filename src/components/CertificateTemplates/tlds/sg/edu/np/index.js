@@ -49,6 +49,9 @@ const NPAA2017BMSCLT = dynamic(() =>
 const NPAA2017PHARM = dynamic(() =>
   import("./NP-AA2017-PHARM" /* webpackChunkName: "NgeeAnnTemplates" */)
 );
+const NP2019NONACAD = dynamic(() =>
+  import("./NP-2019-NONACAD" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
 const templates = {
   "2018-main": NPAA2018MAIN,
   "2018-option": NPAA2018OPTION,
@@ -65,7 +68,8 @@ const templates = {
   "NP-AA2019-OPT-NIEC": NPAA2019OPTNIEC,
   "NP-AA1996-MAIN": NPAA1996MAIN,
   "NP-AA2017-BMS(CLT)": NPAA2017BMSCLT,
-  "NP-AA2017-PHARM": NPAA2017PHARM
+  "NP-AA2017-PHARM": NPAA2017PHARM,
+  "NP-2019-NONACAD": NP2019NONACAD
 };
 
 export default addDirToTemplatePath("np", templates);

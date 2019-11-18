@@ -31,9 +31,6 @@ const renderLogos = () => {
     <table width="100%">
       <tbody>
         <tr>
-          <td>{renderVoid("1cm")}</td>
-        </tr>
-        <tr>
           <td width="50%">{renderSmallNUSLogo()}</td>
           <td width="50%" align="center">
             <div style={styleHeader}>
@@ -57,6 +54,13 @@ const constructPreNameText = degreeTitle => {
     return "This is to certify that following completion of\nthe Bachelor of Science (Honours) / Bachelor of\nPhilosophy (Honours) Joint Degree Programme\nof the National University of Singapore\nand The Australian National University";
   return "This is to certify that";
 };
+
+// custom space before signature
+const getMarginTopOfSigs = degreeTitle =>
+  degreeTitle.toUpperCase() === "Bachelor of Arts".toUpperCase() ||
+  degreeTitle.toUpperCase() === "Bachelor of Science".toUpperCase()
+    ? "-1.7cm"
+    : "";
 
 // custom post-name text
 const constructPostNameText = degreeTitle => {
@@ -100,57 +104,62 @@ const renderSigs = dataSource => {
       90
     );
   }
+  const marginTop = getMarginTopOfSigs(
+    dataSource.additionalData.degreeScroll[0].degreeTitle
+  );
   const html = (
-    <table style={styleSig}>
-      <tbody>
-        <tr>
-          <td width="5%" />
-          <td width="55%">{sig1}</td>
-          <td>{sig3}</td>
-        </tr>
-        <tr>
-          <td />
-          <td>
-            Chair, Board of Trustees
-            <br />
-            National University of Singapore
-          </td>
-          <td>
-            Chancellor
-            <br />
-            The Australian National University
-          </td>
-        </tr>
-        <tr>
-          <td />
-          <td>{sig2}</td>
-          <td>{sig4}</td>
-        </tr>
-        <tr>
-          <td />
-          <td>
-            President
-            <br />
-            National University of Singapore
-          </td>
-          <td>
-            Vice-Chancellor
-            <br />
-            The Australian National University
-          </td>
-        </tr>
-        <tr>
-          <td>{renderVoid("0.3cm")}</td>
-        </tr>
-        <tr>
-          <td />
-          <td>{renderNUSSeal()}</td>
-          <td>
-            <img src={ANU_SEAL} style={styleSeal} />;
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div style={{ marginTop }}>
+      <table style={styleSig}>
+        <tbody>
+          <tr>
+            <td width="5%" />
+            <td width="55%">{sig1}</td>
+            <td>{sig3}</td>
+          </tr>
+          <tr>
+            <td />
+            <td>
+              Chair, Board of Trustees
+              <br />
+              National University of Singapore
+            </td>
+            <td>
+              Chancellor
+              <br />
+              The Australian National University
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>{sig2}</td>
+            <td>{sig4}</td>
+          </tr>
+          <tr>
+            <td />
+            <td>
+              President
+              <br />
+              National University of Singapore
+            </td>
+            <td>
+              Vice-Chancellor
+              <br />
+              The Australian National University
+            </td>
+          </tr>
+          <tr>
+            <td>{renderVoid("0.3cm")}</td>
+          </tr>
+          <tr>
+            <td />
+            <td>{renderNUSSeal()}</td>
+            <td>
+              <img src={ANU_SEAL} style={styleSeal} />;
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 
   return html;
@@ -160,6 +169,7 @@ const renderSigs = dataSource => {
 const getDataFeeder = dataSource => {
   // data feeder
   const dataFeeder = new DegreeScrollDataFeeder();
+  dataFeeder.spaceBeforeLogo = "1cm";
   dataFeeder.logo = renderLogos();
   dataFeeder.studentName = dataSource.recipient.name.toUpperCase();
   dataFeeder.namePadding = "10px 0 5px";
