@@ -331,9 +331,10 @@ const preprocHonours = (honours, degreeTitle) => {
     degreeTitle.toUpperCase() ===
       "Bachelor of Science (Project and Facilities Management)".toUpperCase() ||
     degreeTitle.toUpperCase() ===
-      "Bachelor of Science (Real Estate)".toUpperCase()
+      "Bachelor of Science (Real Estate)".toUpperCase() ||
+    degreeTitle.toUpperCase() === "Bachelor of Arts".toUpperCase()
   )
-    return "with Merit";
+    return "With Merit";
   return text;
 };
 
@@ -569,7 +570,9 @@ export class DegreeScrollDataFeeder {
         lastLine.endsWith(")") ||
         this.dsDegreeTitle
           .toUpperCase()
-          .startsWith("Bachelor of Business Administration".toUpperCase());
+          .startsWith("Bachelor of Business Administration".toUpperCase()) ||
+        this.dsDegreeTitle.toUpperCase() ===
+          "Bachelor of Environmental Studies".toUpperCase();
       if (!this.dsBreakBefHonours && honorsTitle) {
         lastLine = `${lastLine} ${honorsTitle}`;
         ignoreHonours = true;
