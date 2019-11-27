@@ -10,7 +10,8 @@ export const sealWidthStyle = {
 
 export const signatureWidthStyle = {
   width: "80%",
-  height: "auto"
+  height: "auto",
+  marginBottom: "1rem"
 };
 
 export const printTextStyle = {
