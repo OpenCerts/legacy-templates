@@ -190,7 +190,10 @@ export const renderSignature = certificate => (
         <p style={{ fontWeight: "bold", color: "#FF0000" }}>Certified Copy</p>
       </div>
     ) : (
-      <div className="col-lg-4 col-12" style={{ textAlign: "right" }}>
+      <div
+        className="col-lg-4 col-12"
+        style={{ textAlign: "right", padding: "5px" }}
+      >
         <img
           style={styles.signatureWidthStyle}
           src={get(certificate, "additionalData.certSignatories[0].signature")}
