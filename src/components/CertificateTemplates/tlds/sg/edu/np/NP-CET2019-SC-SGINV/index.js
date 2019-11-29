@@ -10,7 +10,7 @@ const templates = [
   }
 ];
 
-const NP2019NONACAD = props => (
+const NPCET2019SGINV = props => (
   <MultiCertificateRenderer
     templates={templates}
     whitelist={approvedAddresses}
@@ -18,6 +18,6 @@ const NP2019NONACAD = props => (
   />
 );
 
-NP2019NONACAD.displayName = "NP-2019-NONACAD Template";
+NPCET2019SGINV.displayName = "NP-CET2019-SC-SGINV Template";
 
-export default NP2019NONACAD;
+export default NPCET2019SGINV;

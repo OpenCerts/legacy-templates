@@ -536,9 +536,15 @@ class TranscriptSummary {
   renderGPA(sumData) {
     let gpa;
     let gpaName;
+    let gpa1;
+    let gpaName1;
     if (sumData.includeInGPA || isDuke) {
       gpa = sumData.GPA.toFixed(2);
       gpaName = sumData.GPAName.toUpperCase();
+      if (sumData.GPAName1) {
+        gpa1 = sumData.GPA1.toFixed(2);
+        gpaName1 = sumData.GPAName1.toUpperCase();
+      }
     } else {
       gpa = "NOT APPLICABLE";
       gpaName = "CUMULATIVE AVERAGE POINT";
@@ -549,12 +555,19 @@ class TranscriptSummary {
         {`${gpaName} : ${gpa}`}
       </td>
     );
+    if (gpaName1)
+      this.dataFeeder.push(
+        "ts-term-gpa",
+        <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
+          {`${gpaName1} : ${gpa1}`}
+        </td>
+      );
   }
 
   // render special GPA
   renderSpecialGPA(sumData) {
     sumData.specialGPA.forEach(data => {
-      const name = data.type === "FCAP" ? "*" : `${data.name}`;
+      const name = data.type === "FCAP" ? `${data.name}*` : `${data.name}`;
       this.dataFeeder.push(
         "ts-term-sgpa",
         <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
