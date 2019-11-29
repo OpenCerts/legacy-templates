@@ -17,10 +17,7 @@ export const renderSignatureSFSOA = certificate => (
       <img style={styles.sealWidthStyle} src={IMG_SEAL} />
     </div>
     <div className="col-lg-7">
-      <div
-        className="col-12"
-        style={{ padding: "5px" }}
-      >
+      <div className="col-12" style={{ padding: "5px" }}>
         <img
           style={styles.signatureWidthStyle}
           src={get(certificate, "additionalData.certSignatories[0].signature")}

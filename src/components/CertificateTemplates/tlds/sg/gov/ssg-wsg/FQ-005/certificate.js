@@ -23,10 +23,7 @@ export const renderSignature = certificate => (
     </div>
     <div className="col-lg-10 col-12 row d-flex justify-content-center">
       <div className="col-lg-8">
-        <div
-          className="col-12"
-          style={{  padding: "5px" }}
-        >
+        <div className="col-12" style={{ padding: "5px" }}>
           <img
             style={styles.signatureWidthStyle}
             src={get(
