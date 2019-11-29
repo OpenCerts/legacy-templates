@@ -35,6 +35,8 @@ const renderAwardText = certificate => (
       className="row d-flex justify-content-center"
       style={{ marginTop: "3rem" }}
     >
+      <br />
+      <br />
       <p style={printTextStyle}>This is to certify that</p>
     </div>
     <div className="row d-flex justify-content-center">
@@ -58,12 +60,14 @@ const renderAwardText = certificate => (
         {formatCertName(certificate.id, certificate.name)}
       </p>
       <br />
-      <br />
     </div>
     <div className="row d-flex justify-content-center">
       <p style={printTextStyle}>
         {get(certificate, "additionalData.certContent3")}
       </p>
+      <br />
+      <br />
+      <br />
     </div>
     <div className="row d-flex justify-content-center">
       <p style={printTextStyle}>
@@ -286,6 +290,9 @@ const renderTwoSignatures = certificate => (
         <div className="text-center">
           {get(certificate, "additionalData.certSignatories[0].position")}
         </div>
+        <div className="text-center">
+          {get(certificate, "additionalData.certSignatories[0].organisation")}
+        </div>
       </div>
       <div className="col-5">
         <div className="px-5">
@@ -303,6 +310,9 @@ const renderTwoSignatures = certificate => (
         </div>
         <div className="text-center">
           {get(certificate, "additionalData.certSignatories[1].position")}
+        </div>
+        <div className="text-center">
+          {get(certificate, "additionalData.certSignatories[1].organisation")}
         </div>
       </div>
       <div className="col-1" />
@@ -330,6 +340,9 @@ const renderSignatures = certificate => (
       </div>
       <div className="text-center">
         {get(certificate, "additionalData.certSignatories[0].position")}
+      </div>
+      <div className="text-center">
+        {get(certificate, "additionalData.certSignatories[0].organisation")}
       </div>
     </div>
     <div className="col-4" />
