@@ -9,7 +9,7 @@ export const sealWidthStyle = {
 };
 
 export const signatureWidthStyle = {
-  width: "80%",
+  width: "30%",
   height: "auto",
   marginBottom: "1rem"
 };

@@ -29,8 +29,8 @@ export const renderSignature = certificate => (
       <div className="row">
         <div className="col-lg-6 col-12">
           <div
-            className="col-lg-4 col-12"
-            style={{ textAlign: "right", padding: "5px" }}
+            className="col-12"
+            style={{ padding: "5px" }}
           >
             <img
               style={styles.signatureWidthStyle}
@@ -49,7 +49,7 @@ export const renderSignature = certificate => (
           </div>
         </div>
         <div className="col-lg-6 col-12">
-          <div className="col-lg-4 col-12">
+          <div className="col-12">
             <img
               style={styles.signatureWidthStyle}
               src={get(

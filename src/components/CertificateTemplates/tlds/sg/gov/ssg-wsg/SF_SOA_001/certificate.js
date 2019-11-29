@@ -18,8 +18,8 @@ export const renderSignatureSFSOA = certificate => (
     </div>
     <div className="col-lg-7">
       <div
-        className="col-lg-3 col-12"
-        style={{ textAlign: "right", padding: "5px" }}
+        className="col-12"
+        style={{ padding: "5px" }}
       >
         <img
           style={styles.signatureWidthStyle}
