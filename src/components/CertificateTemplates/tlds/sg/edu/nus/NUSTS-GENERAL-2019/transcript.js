@@ -583,7 +583,7 @@ class TranscriptSummary {
       this.dataFeeder.push(
         "ts-term-standing",
         <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
-          {`RESULT : ${sumData.standing}`}
+          {`RESULT : ${sumData.standing.toUpperCase()}`}
         </td>
       );
   }
