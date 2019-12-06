@@ -859,15 +859,15 @@ class TranscriptTermData {
 
   // render form of study description
   renderFormOfStudy() {
-    if (
-      this.fosPrintArea !== "ND" &&
-      this.termData.fosDescription &&
-      this.termData.organization
-    ) {
+    if (this.fosPrintArea !== "ND" && this.termData.fosDescription) {
       this.dataFeeder.push(
         "ts-term-fos",
         <td colSpan="4" className={cls("ts-termrem")}>
-          {`${this.termData.fosDescription.toUpperCase()} ${this.termData.organization.toUpperCase()}`}
+          {`${this.termData.fosDescription.toUpperCase()} ${
+            this.termData.organization
+              ? this.termData.organization.toUpperCase()
+              : ""
+          }`}
         </td>
       );
     }
