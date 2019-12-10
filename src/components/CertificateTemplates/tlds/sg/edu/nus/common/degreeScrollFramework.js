@@ -11,7 +11,8 @@ import {
   renderVoid,
   renderNUSTitle,
   renderNUSLogo,
-  renderNUSSeal
+  renderNUSSeal,
+  renderPrintWatermark
 } from ".";
 import scss from "./degreeScrollFramework.scss";
 
@@ -698,6 +699,7 @@ export class Degree extends Component {
   // main render
   render = () => (
     <div className={cls("nus-degree")}>
+      {renderPrintWatermark(cls("print-only"))}
       <div className={cls("a4-portrait")}>
         <article>
           <table width="100%">

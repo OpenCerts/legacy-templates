@@ -7,6 +7,7 @@ import {
   renderImage,
   renderNUSLogo,
   renderNUSSeal,
+  renderPrintWatermark,
   DUKE_LOGO,
   DUKE_SEAL,
   dateToWords
@@ -325,6 +326,7 @@ class Degree extends Component {
       <div className={cls("nus-degree")}>
         <div className={cls("a4-portrait")}>
           <article>
+            {renderPrintWatermark(cls("print-only"), "30%")}
             <div style={{ height: "auto", border: "0px solid" }}>
               {renderVoid("0.63cm")}
               {this.renderHeader()}

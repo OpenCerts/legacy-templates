@@ -6,6 +6,7 @@ import {
   sassClassNames,
   renderImage,
   renderVoid,
+  renderPrintWatermark,
   UNC_SEAL,
   NUS_SEAL
 } from "../common";
@@ -275,6 +276,7 @@ class Degree extends Component {
       <div className={cls("nus-degree")}>
         <div className={cls("ncch-custom")}>
           <article>
+            {renderPrintWatermark(cls("print-only"), "35%")}
             <div
               style={{
                 border: "0px solid",

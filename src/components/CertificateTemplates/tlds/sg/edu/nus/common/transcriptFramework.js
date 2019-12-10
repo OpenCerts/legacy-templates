@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import PropTypes from "prop-types";
-import { isoDateToLocal, sassClassNames } from ".";
+import { isoDateToLocal, sassClassNames, renderPrintWatermarkTs } from ".";
 import scss from "./transcriptFramework.scss";
 
 // constants
@@ -171,7 +171,7 @@ class TranscriptHeader extends Component {
           <tbody key="pers-info-tbody">
             <tr key="ts-unoff-title">
               <td colSpan="8" className={cls("header-unoff")}>
-                {/* unofficial transcript name */}
+                {renderPrintWatermarkTs(cls("print-only"))}
                 &nbsp;
               </td>
             </tr>
