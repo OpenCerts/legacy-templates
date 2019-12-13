@@ -1193,6 +1193,8 @@ class TranscriptData {
     this.dataSource.transcript.forEach((termData, termIdx) => {
       new TranscriptTermData(termData, termIdx, this.dataFeeder).render();
     });
+    // render disciplinary remarks
+    this.renderDisciplinaryRemarks();
     // render LOA data
     new TranscriptLeave(
       this.dataSource.additionalData.leaveData,
@@ -1233,6 +1235,35 @@ class TranscriptData {
         "ts-confdt",
         <td colSpan="4" className={cls("ts-title ts-highlight")}>
           CONFERMENT DATE: {date}
+        </td>
+      );
+    }
+  }
+
+  // render disciplinary remarks
+  renderDisciplinaryRemarks() {
+    const remarksData = this.dataSource.additionalData.disciplinaryRemarks;
+    if (remarksData) {
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4">
+          <hr />
+        </td>
+      );
+      remarksData.forEach(line => {
+        this.dataFeeder.push(
+          "ts-degrem",
+          <td colSpan="4" className={cls("ts-title ts-highlight")}>
+            {line.trim()}
+          </td>
+        );
+      });
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4" className={cls("ts-title")}>
+          {
+            "(STUDENT RECORDS ARE AVAILABLE UPON REQUEST AND WITH STUDENT'S CONSENT)"
+          }
         </td>
       );
     }
