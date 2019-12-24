@@ -15,7 +15,7 @@ const validateTextContent = async (t, component, texts) =>
     Promise.resolve()
   );
 
-test("NP-NONACAD 2019 certificate is rendered correctly", async t => {
+test("NP-CET-NONACAD 2019 certificate is rendered correctly", async t => {
   // Inject javascript and execute window.opencerts.renderDocument
   const certificateContent = getData(
     JSON.parse(readFileSync(join(__dirname, Certificate)).toString())
@@ -39,9 +39,11 @@ test("NP-NONACAD 2019 certificate is rendered correctly", async t => {
     "of the 14-hour course",
     "Certificate of Participation",
     "Travel and Learn Programme",
+    "(Cambodia, Siam Reap)",
     "CPD Code (CPD/102/A1B/033) and 14 SDU points",
-    "DIRECTOR, ELECTRONIC & COMPUTER ENGINEERING DIVISION SCHOOL OF ENGINEERING",
-    "DIRECTOR, CET ACADEMY",
+    "DIRECTOR",
+    "SCHOOL OF ENGINEERING",
+    "CET ACADEMY",
     "30 May 2019",
     "NPCET12597"
   ]);
