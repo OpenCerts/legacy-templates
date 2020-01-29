@@ -29,6 +29,10 @@ let isMedDen;
 let isCDP;
 let isYaleNUS;
 
+// Yale-NUS specific attributes
+let lastTermYaleNUS;
+let progNameYaleNUS;
+
 // check whether a term is first term
 const firstTermIdxes = [];
 const isFirstTerm = termIdx => firstTermIdxes.indexOf(termIdx) >= 0;
@@ -508,12 +512,17 @@ class TranscriptSummary {
 
   // main render
   render() {
+    const isLastYNCTerm =
+      isYaleNUS && lastTermYaleNUS && lastTermYaleNUS === this.termData.name;
     this.termData.summary.forEach(data => {
       // degree name
       if (!isMedDen) this.renderTermDegree(data);
       // GPA
       if (data.specialGPA) this.renderSpecialGPA(data);
       else if (!isMedDen) this.renderGPA(data);
+      // render special remarks for Yale-NUS
+      if (isLastYNCTerm && progNameYaleNUS === data.programName)
+        this.renderYNCRemarks(data);
       // acad standing
       if (isMedDen) this.renderAcadStanding(data);
       // term honours
@@ -541,6 +550,7 @@ class TranscriptSummary {
     if (sumData.includeInGPA || isDuke) {
       gpa = sumData.GPA.toFixed(2);
       gpaName = sumData.GPAName.toUpperCase();
+      // gpa1 and gpaName1 are only for TDSI programs
       if (sumData.GPAName1) {
         gpa1 = sumData.GPA1.toFixed(2);
         gpaName1 = sumData.GPAName1.toUpperCase();
@@ -563,6 +573,28 @@ class TranscriptSummary {
         </td>
       );
   }
+
+  // render Yale-NUS remarks
+  renderYNCRemarks = sumData => {
+    if (isYaleNUS && sumData.includeInGPA) {
+      const gpa = sumData.GPA.toFixed(2);
+      let remarks;
+      if (gpa >= 4.5)
+        remarks =
+          "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (HIGHEST DISTINCTION))";
+      else if (gpa >= 4)
+        remarks = "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (DISTINCTION))";
+      else if (gpa >= 3.5)
+        remarks = "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (MERIT))";
+      if (remarks)
+        this.dataFeeder.push(
+          "ts-term-gpa",
+          <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
+            {`${remarks}`}
+          </td>
+        );
+    }
+  };
 
   // render special GPA
   renderSpecialGPA(sumData) {
@@ -1313,12 +1345,36 @@ const Template = ({ certificate }) => {
   isMedDen =
     jsonData.additionalData.transcriptType.startsWith("UM") ||
     jsonData.additionalData.transcriptType.startsWith("UD");
-  isYaleNUS = (transcriptData => {
+  [isYaleNUS, progNameYaleNUS] = (transcriptData => {
     const programData = transcriptData.additionalData.programData;
     if (programData)
       for (let i = 0; i < programData.length; i += 1)
-        if (programData[i].programCode.substring(1, 3) === "17") return true;
-    return false;
+        if (programData[i].programCode.substring(1, 3) === "17")
+          return [true, programData[i].programName];
+    return [false, null];
+  })(jsonData);
+  // to be used for Yale-NUS last term remarks, only applicable when conferred
+  lastTermYaleNUS = (transcriptData => {
+    let lastTerm = null;
+    if (isYaleNUS) {
+      let isConferred = false;
+      const degreeData = transcriptData.additionalData.degreeData;
+      // find Yale-NUS program name and last term
+      if (degreeData)
+        for (let i = 0; i < degreeData.length; i += 1)
+          if (degreeData[i].isYNC) {
+            isConferred = true;
+            break;
+          }
+      if (isConferred)
+        transcriptData.additionalData.transcriptGroup.forEach(term => {
+          if (term.summary)
+            term.summary.forEach(summary => {
+              if (summary.programName === progNameYaleNUS) lastTerm = term.name;
+            });
+        });
+    }
+    return lastTerm;
   })(jsonData);
   // prepare data
   const dataFeeder = new TranscriptDataFeeder();
