@@ -40,19 +40,21 @@ export const formatDatePrefix = dateString => {
   if (!dateString) return null;
   const date = new Date(dateString);
   const day = Number(tz(date, TIMEZONE).format("DD"));
-  let daySup = "";
-  switch (day % 10) {
-    case 1:
-      daySup = "st";
-      break;
-    case 2:
-      daySup = "nd";
-      break;
-    case 3:
-      daySup = "rd";
-      break;
-    default:
-      daySup = "th";
+  let daySup = "th";
+  if (day < 10) {
+    switch (day % 10) {
+      case 1:
+        daySup = "st";
+        break;
+      case 2:
+        daySup = "nd";
+        break;
+      case 3:
+        daySup = "rd";
+        break;
+      default:
+        daySup = "th";
+    }
   }
 
   return (
