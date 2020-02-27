@@ -1254,6 +1254,8 @@ class TranscriptData {
       this.dataSource.additionalData.awardData,
       this.dataFeeder
     ).render();
+    // render disciplinary remarks
+    this.renderDismissalRemarks();
     // end of transcript
     this.renderTranscriptEnd();
   }
@@ -1286,7 +1288,7 @@ class TranscriptData {
         this.dataFeeder.push(
           "ts-degrem",
           <td colSpan="4" className={cls("ts-title ts-highlight")}>
-            {line.trim()}
+            {line.trim().toUpperCase()}
           </td>
         );
       });
@@ -1298,6 +1300,27 @@ class TranscriptData {
           }
         </td>
       );
+    }
+  }
+
+  // render dismissal remarks
+  renderDismissalRemarks() {
+    const remarksData = this.dataSource.additionalData.dismissalRemarks;
+    if (remarksData) {
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4">
+          <hr />
+        </td>
+      );
+      remarksData.forEach(line => {
+        this.dataFeeder.push(
+          "ts-degrem",
+          <td colSpan="4" className={cls("ts-title ts-highlight")}>
+            {line.trim().toUpperCase()}
+          </td>
+        );
+      });
     }
   }
 
