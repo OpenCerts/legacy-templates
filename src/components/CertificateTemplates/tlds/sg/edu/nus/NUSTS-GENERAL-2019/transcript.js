@@ -29,6 +29,14 @@ let isMedDen;
 let isCDP;
 let isYaleNUS;
 
+// Yale-NUS specific attributes
+let lastTermYaleNUS;
+let progNameYaleNUS;
+
+// check whether a term is first term
+const firstTermIdxes = [];
+const isFirstTerm = termIdx => firstTermIdxes.indexOf(termIdx) >= 0;
+
 // transcript content - program info
 class TranscriptProgram {
   constructor(dataSource, dataFeeder) {
@@ -57,35 +65,24 @@ class TranscriptProgram {
     this.dataFeeder.push(
       "ts-prog",
       <td colSpan="4">
-        <div className={cls("prog-row1 ts-title")}>
-          <div className={cls("prog-key prog-col0")}>PROGRAMME:</div>
-          <div className={cls("prog-col1")}>
-            {data.programName.toUpperCase()}
-          </div>
-        </div>
-      </td>
-    );
-    if (isDuke) {
-      // print DUKE school name under program name
-      this.dataFeeder.push(
-        "ts-prog",
-        <td colSpan="4">
-          <div className={cls("prog-row2 ts-title")}>
-            <div className={cls("prog-key prog-col0")} />
-            <div className={cls("prog-col1")}>DUKE-NUS MEDICAL SCHOOL</div>
-          </div>
-        </td>
-      );
-    }
-    this.dataFeeder.push(
-      "ts-prog",
-      <td colSpan="4">
-        <div className={cls("prog-row2 ts-title")}>
-          <div className={cls("prog-key prog-col0")}>PROGRAMME STATUS:</div>
-          <div className={cls("prog-col1")}>
-            {data.statusDescription.toUpperCase()}
-          </div>
-        </div>
+        <table width="100%">
+          <tr>
+            <td width="30%" valign="top" className={cls("ts-title prog-key")}>
+              PROGRAMME:
+            </td>
+            <td wdith="70%" valign="top" className={cls("ts-title")}>
+              {data.programName.toUpperCase()}
+              <br />
+              {isDuke ? "DUKE-NUS MEDICAL SCHOOL" : null}
+            </td>
+          </tr>
+          <tr>
+            <td className={cls("ts-title prog-key")}>PROGRAMME STATUS:</td>
+            <td className={cls("ts-title")}>
+              {data.statusDescription.toUpperCase()}
+            </td>
+          </tr>
+        </table>
       </td>
     );
   }
@@ -113,7 +110,7 @@ class TranscriptCreditTransfer {
         else if (transferData.sourceType === "I") internal = true;
         if (internal && external) break;
       }
-      if (this.termIdx === 0) {
+      if (isFirstTerm(this.termIdx)) {
         // only print in 1st term
         if (external) {
           // external transfer title
@@ -124,13 +121,14 @@ class TranscriptCreditTransfer {
           // internal APC
           this.renderIntAPC();
         }
-      } else {
+      }
+      if (isCDP || !isFirstTerm(this.termIdx)) {
         // only print for 2nd term onward
         this.renderIntTrfSummary();
       }
       this.renderIntTrfDetail();
       if (isMedDen) this.renderFormOfStudy();
-      if (this.termIdx !== 0) {
+      if (!isFirstTerm(this.termIdx)) {
         // from 2nd term onward
         this.renderTrfFromExtOrg();
       }
@@ -207,8 +205,9 @@ class TranscriptCreditTransfer {
           title =
             "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
         } else if (!isNUSAPCTest && !isAPC) {
-          title =
-            "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
+          if (!isCDP || transferData.reportNo === 1)
+            title =
+              "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
         } else if (isNUSAPCTest) {
           title =
             "AWARDED ADVANCED PLACEMENT CREDITS FOR PASSING THE PLACEMENT TEST(S) CONDUCTED BY NUS";
@@ -216,21 +215,23 @@ class TranscriptCreditTransfer {
           // isAPC === true
           title = "AWARDED ADVANCED PLACEMENT CREDITS";
         }
-        const grade = isNUSAPCTest || isAPC ? "-" : "";
-        const credits =
-          transferData.creditsNoGPA !== 0
-            ? transferData.creditsNoGPA.toFixed(2)
-            : "";
-        this.dataFeeder.push(
-          "ts-term-trf-intapc",
-          <Fragment>
-            <td colSpan="2" className={cls("ts-termrem")}>
-              {title}
-            </td>
-            <td className={cls("ts-grade")}>{grade}</td>
-            <td className={cls("ts-credits")}>{credits}</td>
-          </Fragment>
-        );
+        if (title) {
+          const grade = isNUSAPCTest || isAPC ? "-" : "";
+          const credits =
+            transferData.creditsNoGPA !== 0
+              ? transferData.creditsNoGPA.toFixed(2)
+              : "";
+          this.dataFeeder.push(
+            "ts-term-trf-intapc",
+            <Fragment>
+              <td colSpan="2" className={cls("ts-termrem")}>
+                {title}
+              </td>
+              <td className={cls("ts-grade")}>{grade}</td>
+              <td className={cls("ts-credits")}>{credits}</td>
+            </Fragment>
+          );
+        }
       }
     });
   }
@@ -242,13 +243,11 @@ class TranscriptCreditTransfer {
       const isAPC = transferData.orgId === "E0000002430";
       if (
         transferData.sourceType === "I" &&
-        (!isCDP || (isCDP && isNUSAPCTest && isAPC))
+        (!isCDP || (isCDP && !isNUSAPCTest && !isAPC))
       ) {
         let title;
         if (transferData.sourceCareer) {
-          title = `CREDITS RECOGNISED (COMPLETED MODULES FROM ${
-            transferData.sourceCareer
-          } CAREER)`;
+          title = `CREDITS RECOGNISED (COMPLETED MODULES FROM ${transferData.sourceCareer.toUpperCase()} CAREER)`;
         } else if (!isMedDen) {
           title = "CREDITS RECOGNISED (COMPLETED MODULES FROM OTHER PROGRAMME)";
         }
@@ -333,7 +332,7 @@ class TranscriptCreditTransfer {
           "ts-term-trf-eqnus",
           <td colSpan="4" className={cls("ts-termrem")}>
             CREDITS TRANSFERRED (WITH EQUIVALENT NUS GRADE) FROM
-            {transferData.orgName.toUpperCase()}:
+            {` ${transferData.orgName.toUpperCase()}`}:
           </td>
         );
         transferData.details.forEach(detail => {
@@ -513,12 +512,17 @@ class TranscriptSummary {
 
   // main render
   render() {
+    const isLastYNCTerm =
+      isYaleNUS && lastTermYaleNUS && lastTermYaleNUS === this.termData.name;
     this.termData.summary.forEach(data => {
       // degree name
       if (!isMedDen) this.renderTermDegree(data);
       // GPA
       if (data.specialGPA) this.renderSpecialGPA(data);
       else if (!isMedDen) this.renderGPA(data);
+      // render special remarks for Yale-NUS
+      if (isLastYNCTerm && progNameYaleNUS === data.programName)
+        this.renderYNCRemarks(data);
       // acad standing
       if (isMedDen) this.renderAcadStanding(data);
       // term honours
@@ -541,9 +545,16 @@ class TranscriptSummary {
   renderGPA(sumData) {
     let gpa;
     let gpaName;
+    let gpa1;
+    let gpaName1;
     if (sumData.includeInGPA || isDuke) {
       gpa = sumData.GPA.toFixed(2);
       gpaName = sumData.GPAName.toUpperCase();
+      // gpa1 and gpaName1 are only for TDSI programs
+      if (sumData.GPAName1) {
+        gpa1 = sumData.GPA1.toFixed(2);
+        gpaName1 = sumData.GPAName1.toUpperCase();
+      }
     } else {
       gpa = "NOT APPLICABLE";
       gpaName = "CUMULATIVE AVERAGE POINT";
@@ -554,12 +565,41 @@ class TranscriptSummary {
         {`${gpaName} : ${gpa}`}
       </td>
     );
+    if (gpaName1)
+      this.dataFeeder.push(
+        "ts-term-gpa",
+        <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
+          {`${gpaName1} : ${gpa1}`}
+        </td>
+      );
   }
+
+  // render Yale-NUS remarks
+  renderYNCRemarks = sumData => {
+    if (isYaleNUS && sumData.includeInGPA) {
+      const gpa = sumData.GPA.toFixed(2);
+      let remarks;
+      if (gpa >= 4.5)
+        remarks =
+          "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (HIGHEST DISTINCTION))";
+      else if (gpa >= 4)
+        remarks = "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (DISTINCTION))";
+      else if (gpa >= 3.5)
+        remarks = "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (MERIT))";
+      if (remarks)
+        this.dataFeeder.push(
+          "ts-term-gpa",
+          <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
+            {`${remarks}`}
+          </td>
+        );
+    }
+  };
 
   // render special GPA
   renderSpecialGPA(sumData) {
     sumData.specialGPA.forEach(data => {
-      const name = data.type === "FCAP" ? "*" : `${data.name}`;
+      const name = data.type === "FCAP" ? `${data.name}*` : `${data.name}`;
       this.dataFeeder.push(
         "ts-term-sgpa",
         <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
@@ -575,7 +615,7 @@ class TranscriptSummary {
       this.dataFeeder.push(
         "ts-term-standing",
         <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
-          {`RESULT : ${sumData.standing}`}
+          {`RESULT : ${sumData.standing.toUpperCase()}`}
         </td>
       );
   }
@@ -787,7 +827,14 @@ const getEnrolmentModules = (transcriptData, semester, reportNo) => {
 const translateTranscriptTermData = dataSource => {
   if (!dataSource.transcriptRaw)
     dataSource.transcriptRaw = dataSource.transcript;
-  dataSource.additionalData.transcriptGroup.forEach(term => {
+  // find first term(s). Two for CDP and one for others
+  let currentReportNo = 0;
+  dataSource.additionalData.transcriptGroup.forEach((term, termIdx) => {
+    if (currentReportNo !== term.reportNo) {
+      currentReportNo = term.reportNo;
+      firstTermIdxes.push(termIdx);
+    }
+    // group credit transfers by term
     if (term.creditTransfer)
       term.creditTransfer.forEach(transfer => {
         transfer.details = getCreditTransferDetails(
@@ -797,6 +844,7 @@ const translateTranscriptTermData = dataSource => {
           transfer.transferSeq
         );
       });
+    // group enrolmet data by term
     const enrolmentModules = getEnrolmentModules(
       dataSource.transcriptRaw,
       term.name,
@@ -843,15 +891,15 @@ class TranscriptTermData {
 
   // render form of study description
   renderFormOfStudy() {
-    if (
-      this.fosPrintArea !== "ND" &&
-      this.termData.fosDescription &&
-      this.termData.organization
-    ) {
+    if (this.fosPrintArea !== "ND" && this.termData.fosDescription) {
       this.dataFeeder.push(
         "ts-term-fos",
         <td colSpan="4" className={cls("ts-termrem")}>
-          {`${this.termData.fosDescription.toUpperCase()} ${this.termData.organization.toUpperCase()}`}
+          {`${this.termData.fosDescription.toUpperCase()} ${
+            this.termData.organization
+              ? this.termData.organization.toUpperCase()
+              : ""
+          }`}
         </td>
       );
     }
@@ -1177,6 +1225,8 @@ class TranscriptData {
     this.dataSource.transcript.forEach((termData, termIdx) => {
       new TranscriptTermData(termData, termIdx, this.dataFeeder).render();
     });
+    // render disciplinary remarks
+    this.renderDisciplinaryRemarks();
     // render LOA data
     new TranscriptLeave(
       this.dataSource.additionalData.leaveData,
@@ -1204,6 +1254,8 @@ class TranscriptData {
       this.dataSource.additionalData.awardData,
       this.dataFeeder
     ).render();
+    // render disciplinary remarks
+    this.renderDismissalRemarks();
     // end of transcript
     this.renderTranscriptEnd();
   }
@@ -1219,6 +1271,56 @@ class TranscriptData {
           CONFERMENT DATE: {date}
         </td>
       );
+    }
+  }
+
+  // render disciplinary remarks
+  renderDisciplinaryRemarks() {
+    const remarksData = this.dataSource.additionalData.disciplinaryRemarks;
+    if (remarksData) {
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4">
+          <hr />
+        </td>
+      );
+      remarksData.forEach(line => {
+        this.dataFeeder.push(
+          "ts-degrem",
+          <td colSpan="4" className={cls("ts-title ts-highlight")}>
+            {line.trim().toUpperCase()}
+          </td>
+        );
+      });
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4" className={cls("ts-title")}>
+          {
+            "(STUDENT RECORDS ARE AVAILABLE UPON REQUEST AND WITH STUDENT'S CONSENT)"
+          }
+        </td>
+      );
+    }
+  }
+
+  // render dismissal remarks
+  renderDismissalRemarks() {
+    const remarksData = this.dataSource.additionalData.dismissalRemarks;
+    if (remarksData) {
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4">
+          <hr />
+        </td>
+      );
+      remarksData.forEach(line => {
+        this.dataFeeder.push(
+          "ts-degrem",
+          <td colSpan="4" className={cls("ts-title ts-highlight")}>
+            {line.trim().toUpperCase()}
+          </td>
+        );
+      });
     }
   }
 
@@ -1259,18 +1361,43 @@ const Template = ({ certificate }) => {
   // translate
   if (jsonData.additionalData.transcriptGroup)
     translateTranscriptTermData(jsonData);
+  if (firstTermIdxes.length === 0) firstTermIdxes.push(0);
   // to be used in rendering
   isDuke = jsonData.additionalData.transcriptType.startsWith("DK");
   isCDP = jsonData.additionalData.transcriptType.startsWith("CDP");
   isMedDen =
     jsonData.additionalData.transcriptType.startsWith("UM") ||
     jsonData.additionalData.transcriptType.startsWith("UD");
-  isYaleNUS = (transcriptData => {
+  [isYaleNUS, progNameYaleNUS] = (transcriptData => {
     const programData = transcriptData.additionalData.programData;
     if (programData)
       for (let i = 0; i < programData.length; i += 1)
-        if (programData[i].programCode.substring(1, 3) === "17") return true;
-    return false;
+        if (programData[i].programCode.substring(1, 3) === "17")
+          return [true, programData[i].programName];
+    return [false, null];
+  })(jsonData);
+  // to be used for Yale-NUS last term remarks, only applicable when conferred
+  lastTermYaleNUS = (transcriptData => {
+    let lastTerm = null;
+    if (isYaleNUS) {
+      let isConferred = false;
+      const degreeData = transcriptData.additionalData.degreeData;
+      // find Yale-NUS program name and last term
+      if (degreeData)
+        for (let i = 0; i < degreeData.length; i += 1)
+          if (degreeData[i].isYNC) {
+            isConferred = true;
+            break;
+          }
+      if (isConferred)
+        transcriptData.additionalData.transcriptGroup.forEach(term => {
+          if (term.summary)
+            term.summary.forEach(summary => {
+              if (summary.programName === progNameYaleNUS) lastTerm = term.name;
+            });
+        });
+    }
+    return lastTerm;
   })(jsonData);
   // prepare data
   const dataFeeder = new TranscriptDataFeeder();
@@ -1292,13 +1419,20 @@ const Template = ({ certificate }) => {
   if (isDuke) legend = NUS_TS_LEGEND_DUKE;
   else if (isYaleNUS) legend = NUS_TS_LEGEND_YALE;
   else legend = NUS_TS_LEGEND;
+  const backImgUrl = `url(${isYaleNUS ? NUS_TS_BACKIMG_YALE : NUS_TS_BACKIMG})`;
+  const backgroundImg = {
+    backgroundImage: backImgUrl,
+    backgroundSize: "1140px 806px", // width height
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center" // horizontal vertical
+  };
   const html = (
     <div style={scale}>
       <Transcript
         maxPages="8"
         maxRows="50"
         dataFeeder={dataFeeder}
-        backImgUrl={`url(${isYaleNUS ? NUS_TS_BACKIMG_YALE : NUS_TS_BACKIMG})`}
+        background={backgroundImg}
         legendPage={legend}
         legendRatio="0.95"
       />

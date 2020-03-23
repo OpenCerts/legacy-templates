@@ -1,6 +1,6 @@
 import React from "react";
 import { tz } from "moment-timezone";
-import { toWordsOrdinal } from "number-to-words";
+import { toWordsOrdinal, toWords } from "number-to-words";
 import { NUS_LOGO } from "./imgNUSLogo";
 import { NUS_SEAL } from "./imgNUSSeal";
 
@@ -74,7 +74,7 @@ export const dateToWords = isoDate => {
   const dateValue = tz(isoDate, TIMEZONE);
   const day = toWordsOrdinal(dateValue.date()); // lower case
   const month = dateValue.format("MMMM");
-  const year = toWordsOrdinal(dateValue.year()).replace(",", " and ");
+  const year = toWords(dateValue.year()).replace(",", " and ");
   // return a date/month string and a year string;
   return {
     year,
@@ -160,3 +160,34 @@ const defaultSealStyle = {
 export const renderNUSSeal = (names, styles = defaultSealStyle) => (
   <img src={NUS_SEAL} className={names} style={styles} />
 );
+// render watermark upon printing for degree scroll
+export const renderPrintWatermark = (
+  printOnlyClass,
+  top = "50%",
+  marginLeft = "auto"
+) => {
+  const style = {};
+  if (top) style.top = top;
+  if (marginLeft) style.marginLeft = marginLeft;
+  return (
+    <div className={printOnlyClass} style={style}>
+      <p>Printed OpenCerts certificate cannot be verified.</p>
+      <p>Please ask the certificate holder for the .opencert file.</p>
+      <p>Visit opencerts.io for more information.</p>
+    </div>
+  );
+};
+// render watermark upon printing for transcript
+export const renderPrintWatermarkTs = (printOnlyClass, marginLeft = "auto") => {
+  const style = {};
+  if (marginLeft) style.marginLeft = marginLeft;
+  return (
+    <div className={printOnlyClass} style={style}>
+      Printed OpenCerts certificate cannot be verified.
+      <br />
+      Please ask the certificate holder for the .opencert file.
+      <br />
+      Visit opencerts.io for more information.
+    </div>
+  );
+};

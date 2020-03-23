@@ -20,7 +20,8 @@ import {
   SOR_30_WIDTH,
   SOR_50_WIDTH,
   SOR_PSLE_NAME_1979,
-  SOR_PSLE_GRADE_1979
+  SOR_PSLE_GRADE_1979,
+  SOR_MERIT_MARGIN
 } from "./style";
 
 import { RENDEREXPLANATORYNOTES_NA } from "./explnotes_na_detail";
@@ -362,7 +363,10 @@ export const GETSUBJGRADE = (subjgrade, examyr, examlvltype) => {
   } else if (subjgrade === "BAND4" && examlvltype === "A2") {
     alphaRender = "BAND";
     numericRender = "FOUR";
-  } else if (subjgrade === "E*" && examlvltype === "A2") {
+  } else if (
+    subjgrade === "E*" &&
+    (examlvltype === "A2" || examlvltype === "N")
+  ) {
     alphaRender = "E*";
     numericRender = "-";
   } else if (
@@ -402,7 +406,7 @@ export const GETSUBJGRADE = (subjgrade, examyr, examlvltype) => {
   );
 };
 
-export const GETPAPERGRADE = (papergrade, examyr, examlvl) => {
+export const GETPAPERGRADE = (papergrade, examyr, examlvl, examlvltype) => {
   let paperalphaRender;
   let papernumericRender;
 
@@ -489,7 +493,7 @@ export const GETPAPERGRADE = (papergrade, examyr, examlvl) => {
     }
   }
 
-  if (examlvl === "GCEA" && examyr >= 2006) {
+  if (examlvltype === "A3") {
     return (
       <div className="row">
         <div className="col-md-6">{papernumericRender}</div>
@@ -497,6 +501,7 @@ export const GETPAPERGRADE = (papergrade, examyr, examlvl) => {
       </div>
     );
   }
+
   return (
     <div className="row">
       <div className="col-md-6" style={SOR_CENTER_ALIGN}>
@@ -793,7 +798,7 @@ export const PAPERGRADE = (
     return (
       <div className="row">
         <div className="col-md-6">
-          {GETPAPERGRADE(papergrade, examyr, examlvl)}
+          {GETPAPERGRADE(papergrade, examyr, examlvl, examlvltype)}
         </div>
 
         <div className="col-md-2">
@@ -807,10 +812,22 @@ export const PAPERGRADE = (
       </div>
     );
   }
+  if (
+    examlvltype === "O" &&
+    (papergrade === "(WITH MERIT)" || papergrade === "(WITH DIST)")
+  ) {
+    return (
+      <div className="row">
+        <div className="col-md-8" style={SOR_MERIT_MARGIN}>
+          {papergrade}
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="row">
       <div className="col-md-3">
-        {GETPAPERGRADE(papergrade, examyr, examlvl)}
+        {GETPAPERGRADE(papergrade, examyr, examlvl, examlvltype)}
       </div>
       <div className="col-md-3" style={SOR_30_WIDTH}>
         -
@@ -1184,7 +1201,10 @@ export const RENDER_TRANSCRIPT = ({ certificate }, examlvl, examlvltype) => {
           </div>
         </div>
       </div>
-      {trn.subTranscript !== undefined ? (
+      {trn.subTranscript !== undefined ||
+      (examlvl === "GCEO" &&
+        (trn.paperGrade === "(WITH MERIT)" ||
+          trn.paperGrade === "(WITH DIST)")) ? (
         <div className="col-md-12">
           <div className="row">
             <div className="col-md-4">
