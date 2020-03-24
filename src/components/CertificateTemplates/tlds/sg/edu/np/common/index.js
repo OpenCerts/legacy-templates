@@ -1,7 +1,6 @@
 export * from "./images";
 export { default as Certificate } from "./certificate";
 export { default as OptionCertificate } from "./optioncertificate";
-export { default as NonAcadCertificate } from "./nonacadcertificate";
 export { default as Transcript } from "./transcript";
 
 export const approvedAddresses = [

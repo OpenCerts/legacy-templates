@@ -40,7 +40,7 @@ $debug: false;
     .header-unoff {
         font-size: 18pt; 
         text-align: center; 
-        padding: 45px;
+        padding: 40px;
     }
     
     .header-pers-info { 
@@ -61,6 +61,27 @@ $debug: false;
     .prog-key {
         text-align: left;
         font-weight: bold;
+    }
+    
+    .prog-row1 {
+        height: 0.5cm;
+    }
+    
+    .prog-row2 {
+        height: 0.3cm;
+    }
+    
+    .prog-col0 {
+        width: 3.6cm;
+        height: 0.3cm;
+    }
+    
+    .prog-col1 {
+        width: 9.31cm;
+        display: block;
+        position: relative;
+        left: 3.7cm;
+        top : -0.3cm;
     }
     
     .ts-col0 {
@@ -153,21 +174,9 @@ $debug: false;
         box-sizing: border-box; 
     }
 
-    .print-only {
-        display: none;
-    }
-    @media only print {
-        .print-only {
-            width: 100%;
-            opacity: 0.6;
-            display: block;
-            font-size: 15px; 
-            font-family: "Time New Roman", Serif; 
-            margin-top: 20px;
-        }
-        .header-unoff {
-            text-align: left; 
-            padding: 5px;
-        }
+    .ts-background { 
+        background-size: 24.04cm 17cm; /* width height */
+        background-repeat: no-repeat;
+        background-position: center top; /* horizontal vertical */
     }
 }

@@ -1,23 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ReactDom from "react-dom";
 import FramelessViewerPageContainer from "../FramelessViewerPageContainer";
 
-const mockObserve = jest.fn();
-global.MutationObserver = jest
-  .fn()
-  .mockImplementation(() => ({ observe: mockObserve }));
-
-jest.mock("react-dom");
 jest.mock("../FramelessCertificateViewer", () => jest.fn());
 
-beforeEach(() => {
-  mockObserve.mockClear();
-  global.MutationObserver.mockClear();
-  ReactDom.findDOMNode.mockClear();
-});
-
-it("returns not render when there is no certificate", () => {
+it("returns false because of certificateContentsString", () => {
   const component = shallow(<FramelessViewerPageContainer />);
   expect(component.isEmptyRender()).toBe(false);
 });
@@ -65,15 +52,4 @@ it("does not crash when updateParentTemplates is called when not in iframe", () 
 it("does not crash when obfuscateDocument is called when not in iframe", () => {
   const component = shallow(<FramelessViewerPageContainer />);
   component.instance().obfuscateDocument();
-});
-
-it("should create MutationObserver observe changes on current node", () => {
-  ReactDom.findDOMNode.mockReturnValue("current node");
-  shallow(<FramelessViewerPageContainer />);
-
-  expect(global.MutationObserver.mock.calls.length).toBe(1);
-  expect(mockObserve.mock.calls[0]).toEqual([
-    "current node",
-    { attributes: true, childList: true, subtree: true, characterData: true }
-  ]);
 });

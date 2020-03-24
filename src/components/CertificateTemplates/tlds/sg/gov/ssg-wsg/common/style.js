@@ -9,9 +9,8 @@ export const sealWidthStyle = {
 };
 
 export const signatureWidthStyle = {
-  width: "30%",
-  height: "auto",
-  marginBottom: "1rem"
+  width: "80%",
+  height: "auto"
 };
 
 export const printTextStyle = {
@@ -88,11 +87,6 @@ export const certCodeStyle = {
 
 export const footerLogoStyle = {
   width: "75%",
-  height: "auto"
-};
-
-export const sfaFooterLogoStyle = {
-  width: "100%",
   height: "auto"
 };
 

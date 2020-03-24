@@ -25,9 +25,6 @@ const RPAA2018CMCJP = dynamic(() =>
 const RPAA2018CMCSU = dynamic(() =>
   import("./2018-C-MCSU" /* webpackChunkName: "RPTemplates" */)
 );
-const RPAA2019CSCA = dynamic(() =>
-  import("./2019-C-SCA" /* webpackChunkName: "RPTemplates" */)
-);
 const templates = {
   "2018-P-MAIN": RPAA2018PMAIN,
   "2018-C-DPLUS": RPAA2018CDPLUS,
@@ -36,8 +33,7 @@ const templates = {
   "2018-C-MCJP": RPAA2018CMCJP,
   "2018-C-DCJP": RPAA2018CDCJP,
   "2018-C-MCSU": RPAA2018CMCSU,
-  "2018-C-DCSU": RPAA2018CDCSU,
-  "2019-C-SCA": RPAA2019CSCA
+  "2018-C-DCSU": RPAA2018CDCSU
 };
 
 export default addDirToTemplatePath("rp", templates);

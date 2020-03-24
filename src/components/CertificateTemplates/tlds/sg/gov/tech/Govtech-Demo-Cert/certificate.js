@@ -118,6 +118,7 @@ const Template = ({ certificate }) => (
 );
 
 Template.propTypes = {
-  certificate: PropTypes.object.isRequired
+  certificate: PropTypes.object.isRequired,
+  updateParentHeight: PropTypes.func
 };
 export default Template;

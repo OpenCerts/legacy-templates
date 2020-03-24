@@ -34,10 +34,13 @@ const storeCanRenderTemplate = ({ whitelist, document }) => {
  */
 class MultiCertificateRenderer extends Component {
   componentDidMount() {
-    const { templates, updateParentTemplates } = this.props;
+    const { templates, updateParentHeight, updateParentTemplates } = this.props;
 
     // Templates
     updateParentTemplates(templates);
+
+    // Update Height
+    updateParentHeight();
   }
 
   render() {
@@ -46,7 +49,8 @@ class MultiCertificateRenderer extends Component {
       whitelist,
       templates,
       tabIndex,
-      obfuscateDocument
+      obfuscateDocument,
+      updateParentHeight
     } = this.props;
     const SelectedTemplateTab = templates[tabIndex].template;
     const allowedToRender = storeCanRenderTemplate({
@@ -58,6 +62,7 @@ class MultiCertificateRenderer extends Component {
         <SelectedTemplateTab
           certificate={document}
           handleObfuscation={obfuscateDocument}
+          updateParentHeight={updateParentHeight}
         />
       );
     }
@@ -70,6 +75,7 @@ MultiCertificateRenderer.propTypes = {
   templates: PropTypes.array.isRequired,
   document: PropTypes.object.isRequired,
   tabIndex: PropTypes.number.isRequired,
+  updateParentHeight: PropTypes.func,
   updateParentTemplates: PropTypes.func,
   obfuscateDocument: PropTypes.func
 };

@@ -59,8 +59,9 @@ $debug: false;
         font-family: "Times New Roman", Serif; 
         font-style: italic;
         text-align: center;
+        /* color: rgb(83, 86, 90); */
+        /* padding: 37px 0; */
         border: 0px solid;
-        line-height: normal;
     }
     
     .cert-degree {
@@ -86,27 +87,12 @@ $debug: false;
     
     .cert-sig {
         display: block;
-        /* width: 80%; */
-        margin-right: 60pt;
+        width: 80%;
         font-size: 12pt; 
         font-family: "Times New Roman", Serif; 
         font-style: italic;
+        /* color: rgb(83, 86, 90); */
         text-align: right;
         border: 0px solid;
     }
-
-    .print-only {
-        display: none;
-    }
-    @media only print {
-        .print-only {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            opacity: 0.6;
-            display: block;
-            font-size: 15pt; 
-            font-family: "Time New Roman", Serif; 
-        }
-   }
 }
