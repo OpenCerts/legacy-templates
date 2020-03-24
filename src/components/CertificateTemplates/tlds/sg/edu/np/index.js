@@ -49,6 +49,48 @@ const NPAA2017BMSCLT = dynamic(() =>
 const NPAA2017PHARM = dynamic(() =>
   import("./NP-AA2017-PHARM" /* webpackChunkName: "NgeeAnnTemplates" */)
 );
+const NPAA2009ECH = dynamic(() =>
+  import("./NP-AA2009-ECH" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPAA2010ECH = dynamic(() =>
+  import("./NP-AA2010-ECH" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPAA2011ECH = dynamic(() =>
+  import("./NP-AA2011-ECH" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPAA2009LDH = dynamic(() =>
+  import("./NP-AA2009-2012-LDH" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPAA2020BMSCLT = dynamic(() =>
+  import("./NP-AA2020-BMS(CLT)" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPAA2020PHARM = dynamic(() =>
+  import("./NP-AA2020-PHARM" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPCET2019NONACAD = dynamic(() =>
+  import("./NP-CET2019-NONACAD" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPCET2019SCDF = dynamic(() =>
+  import("./NP-CET2019-SCDF" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPCET2019ASMI = dynamic(() =>
+  import("./NP-CET2019-SC-ASMI" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPCET2019NEA = dynamic(() =>
+  import("./NP-CET2019-SC-NEA" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPCET2019MAGES = dynamic(() =>
+  import("./NP-CET2019-SC-MAGES" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPCET2019SGINV = dynamic(() =>
+  import("./NP-CET2019-SC-SGINV" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPCET2020SDFT = dynamic(() =>
+  import("./NP-CET2020-SDFT" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPAA2020LDH = dynamic(() =>
+  import("./NP-AA2020-LDH" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
 const templates = {
   "2018-main": NPAA2018MAIN,
   "2018-option": NPAA2018OPTION,
@@ -65,7 +107,21 @@ const templates = {
   "NP-AA2019-OPT-NIEC": NPAA2019OPTNIEC,
   "NP-AA1996-MAIN": NPAA1996MAIN,
   "NP-AA2017-BMS(CLT)": NPAA2017BMSCLT,
-  "NP-AA2017-PHARM": NPAA2017PHARM
+  "NP-AA2017-PHARM": NPAA2017PHARM,
+  "NP-AA2009-ECH": NPAA2009ECH,
+  "NP-AA2010-ECH": NPAA2010ECH,
+  "NP-AA2011-ECH": NPAA2011ECH,
+  "NP-AA2009-2012-LDH": NPAA2009LDH,
+  "NP-AA2020-BMS(CLT)": NPAA2020BMSCLT,
+  "NP-AA2020-PHARM": NPAA2020PHARM,
+  "NP-CET2019-NONACAD": NPCET2019NONACAD,
+  "NP-CET2019-SCDF": NPCET2019SCDF,
+  "NP-CET2019-SC-ASMI": NPCET2019ASMI,
+  "NP-CET2019-SC-NEA": NPCET2019NEA,
+  "NP-CET2019-SC-MAGES": NPCET2019MAGES,
+  "NP-CET2019-SC-SGINV": NPCET2019SGINV,
+  "NP-CET2020-SDFT": NPCET2020SDFT,
+  "NP-AA2020-LDH": NPAA2020LDH
 };
 
 export default addDirToTemplatePath("np", templates);

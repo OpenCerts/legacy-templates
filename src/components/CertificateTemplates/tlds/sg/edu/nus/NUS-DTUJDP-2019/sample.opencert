@@ -1,0 +1,319 @@
+{
+  "schema": "opencerts/v1.5",
+  "data": {
+    "id": "9c4a0d04-d137-4685-a5fe-5c97bcce3fed:string:NUS-A0080715J-K056000-P10182678-12-20150930",
+    "$template": "c72fad64-0a61-4a2a-aaf0-1f59d87e18c4:string:sg/edu/nus/NUS-DTUJDP-2019",
+    "issuedOn": "1bdd699f-df57-4535-8743-1c63e792bd16:string:2019-09-11T17:20:34+08:00",
+    "name": "1af60148-c2e9-413e-b6a8-8406873c3ca4:string:NUS Degree",
+    "issuers": [
+      {
+        "name": "6baf2d8e-d491-41a6-82e6-1887c4c3ce0b:string:National University of Singapore",
+        "uen": "213d6fb9-9b1c-45a4-893b-3f3edee81263:string:200604346E",
+        "url": "22051029-2d3b-44bd-bd31-8dc6537b2797:string:https://www.nus.edu.sg",
+        "email": "c1bec459-4078-4ac6-a44e-a4c0eb69d3b0:string:transcript@nus.edu.sg",
+        "certificateStore": "fa67ede5-5bbe-41ef-b65e-4b1c560b233d:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+      }
+    ],
+    "recipient": {
+      "name": "a9449b6f-d03b-4758-aa5f-ac3d355ce051:string:A0080715J, name",
+      "studentId": "c5a59933-ec0e-47f9-9a5c-cae94fa2c267:string:A0080715J",
+      "dateOfBirth": "16719198-abcb-45aa-aefe-8339b000346c:string:1905-01-01"
+    },
+    "transcript": [
+      {
+        "name": "8ed95b34-5b9b-49c4-a886-3c72fa405f46:string:Climate Change and the Built Environment",
+        "courseCode": "769baf83-f908-4f2f-a609-eb167e41d936:string:BPS5102",
+        "grade": "7f13e3f2-323b-4f56-a201-bdaaff5e8383:string:B",
+        "courseCredit": "ab772d37-5fca-473d-bc93-bc5e455a40f2:number:4",
+        "gradingBasis": "f6d58eab-0a5e-468b-b90b-11ac333e0322:string:GRD",
+        "includeInGPA": "c0c3f625-c87b-4995-b780-31d84d362493:boolean:true",
+        "reportNo": "f3327dbb-62d0-4101-87ed-238ad0febf1d:number:1",
+        "semester": "64ac1edb-0778-44b9-bae1-5723bbb580cf:string:1020"
+      },
+      {
+        "name": "a1a81ad8-159c-4f91-871d-c2f4234269a9:string:Energy Efficiency and Renewable Energy in Buildings",
+        "courseCode": "204ca0ce-9d18-440d-8206-150b13a9418e:string:BPS5204",
+        "grade": "2a83139b-dac5-4c50-8296-075f6474941a:string:A",
+        "courseCredit": "19d6db7b-08f8-401c-864a-1c8db8234b40:number:4",
+        "gradingBasis": "5d456506-a6bd-4b9d-b954-33a33ba7b2fe:string:GRD",
+        "includeInGPA": "87786660-8610-4e6f-92e2-21bfe2be9d29:boolean:true",
+        "reportNo": "59e7d987-ed7c-4964-b3ca-620c468a50cd:number:1",
+        "semester": "1a5f549d-3bcd-4129-b100-4bd01e82979a:string:1020"
+      },
+      {
+        "name": "4e8c3047-ec06-4674-94ec-39c8672ee2f2:string:Green Building Integration and Evaluation Studio",
+        "courseCode": "c61a38e2-82d9-4ef2-9919-6a5c2fcdbfba:string:BPS5103",
+        "grade": "5d9ac31e-3eaa-4397-a1c2-ae748f0ca009:string:IP",
+        "courseCredit": "46167988-c0e2-498f-b1ca-4ae6f3461340:number:8",
+        "gradingBasis": "5ba5e4e0-33ea-4b50-befb-07bab37879bf:string:GRD",
+        "includeInGPA": "742f4c30-b9f2-4ac9-8a3b-7f295b1b87cb:boolean:true",
+        "reportNo": "c6756662-ac05-43c2-b1e0-32a4624e1126:number:1",
+        "semester": "6493ebb1-15d7-4ba0-9e21-e006a277d658:string:1110"
+      },
+      {
+        "name": "abc38760-37d9-4c25-bc14-e5b37dc0f086:string:Topics in Building Performance and Sustainability",
+        "courseCode": "02420ea5-77be-4ac8-a461-9d8e8f2886a3:string:BPS5300",
+        "grade": "16246aaa-1270-4490-bd39-0e2cc1f57012:string:A",
+        "courseCredit": "124dd079-9591-4894-b7d5-9ea9ad0c8d04:number:4",
+        "gradingBasis": "69fdc101-c15d-47b9-a58a-406fcd3cf67c:string:GRD",
+        "includeInGPA": "f543746a-2620-4e43-b296-210b93b2fb89:boolean:true",
+        "reportNo": "cdfade4c-abbb-433b-8c99-66effd806853:number:1",
+        "semester": "10c523f5-4e0b-4079-a2ff-18971fe43ae5:string:1110"
+      },
+      {
+        "name": "6d8aa39b-9548-45c0-adaf-57bafcc30eba:string:RESEARCH METHODS",
+        "courseCode": "f46b8500-0fd5-44c3-82be-b1d60a9ffe0b:string:PM5112",
+        "grade": "0e3e2af0-3a03-43a1-80e0-02af140a2bf7:string:A",
+        "courseCredit": "c0cfd146-47d6-43b3-a61a-350fb693f430:number:4",
+        "gradingBasis": "5cfbaaba-e559-47d1-816a-53ede2ce6ff5:string:GRD",
+        "includeInGPA": "8dc81b19-9bd1-4189-89d0-b6014926a857:boolean:true",
+        "reportNo": "eed3f17a-167f-49a8-97d4-0577554a4f21:number:1",
+        "semester": "5f400109-aa7e-4576-b0fb-962f5a5843bd:string:1110"
+      },
+      {
+        "name": "07856449-82e9-4f02-afb3-334528b56b87:string:Green Building Integration and Evaluation Studio",
+        "courseCode": "8b228769-28e8-4834-8de5-4655d57d3c20:string:BPS5103",
+        "grade": "13cef067-8322-4378-9c31-93b325a16cbe:string:A",
+        "courseCredit": "ecdf6a53-8d00-4469-8145-11c99cc977d0:number:8",
+        "gradingBasis": "a6af1a0c-36e9-4fb7-97f5-372a024a1345:string:GRD",
+        "includeInGPA": "1d06f432-44ac-4972-a9ed-f2e10ac97881:boolean:true",
+        "reportNo": "13af96ac-a2e4-4acb-9c9a-1a20acbe8776:number:1",
+        "semester": "fbec90aa-628d-4e7b-8931-2592326c5a45:string:1120"
+      },
+      {
+        "name": "d428161f-779b-418b-b6ee-7fa50cda8832:string:GRADUATE ENGLISH COURSE (INTERMEDIATE LEVEL)",
+        "courseCode": "cd1c115e-7de2-4f56-94f7-6e109213069e:string:ES5001A",
+        "grade": "669d934b-1234-477e-850b-649b2b1617a2:string:B-",
+        "courseCredit": "d45ddeef-6f5a-477e-968a-8d9d976e8ec2:number:0",
+        "gradingBasis": "59bfcd4b-c59f-4b7f-871e-69c4cc5cc02c:string:GRD",
+        "includeInGPA": "37c190b1-5e58-4b63-afc6-7c962d80e4bf:boolean:true",
+        "reportNo": "be11ed4b-789c-4e6c-b305-449963db4e3f:number:1",
+        "semester": "5a666a7e-4927-472d-9e41-6b721fe86b3a:string:1120"
+      },
+      {
+        "name": "c5b1e857-f040-47e0-8a30-0763ba68e3c8:string:PHD SEMINAR",
+        "courseCode": "668fa58e-2ebc-4e7c-aff0-912b83199d98:string:BS6770",
+        "grade": "3d547645-baa8-47a0-a8b2-45a5c10ac01c:string:IP",
+        "courseCredit": "0a23a938-0a72-4b63-96e4-a0ae11313c0e:number:4",
+        "gradingBasis": "684178e5-9cd5-4c5d-8b00-f48dd548a5c5:string:SNU",
+        "includeInGPA": "67b820f1-e763-4406-b6a8-5ee6bfce3dfc:boolean:false",
+        "reportNo": "022bedc6-4dd9-4cbc-99de-545f9fad69e9:number:1",
+        "semester": "a9521714-cb33-4fd0-b300-01fb2fb53c8e:string:1210"
+      },
+      {
+        "name": "a3d82aed-def4-47ab-83cd-7c5de9901a76:string:PHD SEMINAR",
+        "courseCode": "f7666e97-baff-4357-a15c-6e65cdd3a8b0:string:BS6770",
+        "grade": "c368cd1c-d88c-4634-a87f-a8a4054fa349:string:S",
+        "courseCredit": "327b465f-f20f-4f63-a657-d1a0f8564d2b:number:4",
+        "gradingBasis": "057fe6b4-e1ce-4775-ae2e-a19fef62354b:string:SNU",
+        "includeInGPA": "e3c038cf-7d05-43c3-b007-ffef96342c88:boolean:false",
+        "reportNo": "ad1b79a3-eb84-4d44-9613-9f9674ca13c9:number:1",
+        "semester": "83c0db73-f3c3-44d6-974b-746a57bbdd70:string:1220"
+      }
+    ],
+    "additionalData": {
+      "degreeScroll": [
+        {
+          "degreeTitle": "5329beed-24e2-4a01-9555-07341c779e22:string:Doctor of Philosophy",
+          "dateConferred": "dd571bd6-ba70-441c-9345-e62ed85079cc:string:2015-09-30",
+          "degreeCode": "8eaa108c-cab4-4676-9f20-c4eb52218cf2:string:K056000",
+          "type": "e2bdd7e4-24b4-4e47-a03a-e19236558286:string:K13 NUS-DTU"
+        }
+      ],
+      "images": {
+        "DTU_DEAN": {
+          "data": "679d5b80-0aae-4d0c-95dd-cf9f438eba89:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "c1e1a3b3-391b-4039-af79-e72d6c2422ba:number:240",
+          "height": "c03da621-bac8-4e27-b431-fb6bc6c65310:number:90",
+          "unit": "ffd7c565-031b-4fb9-a770-6695f731cdfc:string:px"
+        },
+        "DTU_RECTOR": {
+          "data": "1f34a814-ed73-4acb-b7af-3a91130e73cb:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "7018949c-5d53-4ff5-abb5-2dfbf1057b7c:number:240",
+          "height": "8e2acbad-89d5-4f90-a3ec-bc9bf27713be:number:90",
+          "unit": "87f3ca7a-99c9-405a-91e0-0a28799f954b:string:px"
+        },
+        "PRESIDENT": {
+          "data": "258fb9b2-1b40-4e11-9713-08954ec154ed:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "2b6dd7c2-7c85-446f-9bad-aabd6551559a:number:240",
+          "height": "afe35889-18d2-48ae-8468-18b92ef5edb2:number:90",
+          "unit": "0800f54a-ded3-4046-87f1-d5c6a0dda172:string:px"
+        },
+        "TRUSTEES": {
+          "data": "90aae480-fb30-4e03-935a-c335aae834d6:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "7aed8415-e515-4b6a-be86-13833e4a2a2c:number:240",
+          "height": "5017d89a-a1ba-403f-ab87-b770aa103bfa:number:90",
+          "unit": "f045ad23-8f46-4820-9730-cabfae09a735:string:px"
+        }
+      },
+      "transcriptType": "a0ddb4d6-4fdb-44ce-b709-95021c877578:string:GDOF",
+      "transcriptReq": "c6eb6030-c541-4b5f-8930-0c5d503de739:string:001009856",
+      "transcriptGroup": [
+        {
+          "name": "f93cb57f-2723-4005-9355-e95ece6884a4:string:1020",
+          "term": "b3b8cc4e-550e-4fd5-a4e0-0aff8b8575e9:string:2010/2011 Semester 2",
+          "formOfStudy": "550bda2a-dd6e-4d12-b909-c3d0fcbbd4ba:string:ENRL",
+          "fosPrintArea": "d3ed2fd2-0a95-40fd-a2f5-6e6df8da6ed9:string:ND",
+          "summary": [
+            {
+              "programName": "eb9e2748-d631-4c14-8431-21c23641079a:string:Doctor of Philosophy",
+              "includeInGPA": "4b8c52c6-7401-4b51-9206-081da70a0c17:boolean:true",
+              "GPAName": "141b1188-5941-4410-ad84-fb5471d46758:string:Cumulative Average Point",
+              "GPA": "388c03e6-e689-4adb-a41d-e7893314643d:number:4.25",
+              "reportNo": "a17761d7-07d3-4770-adb1-ac371c845597:number:1"
+            }
+          ],
+          "reportNo": "704913e1-8593-4fcf-9595-2cc0a43f9026:number:1"
+        },
+        {
+          "name": "b01dd003-a0e3-4a41-bd1f-661712150c37:string:1110",
+          "term": "be6208de-bb36-47fe-9683-142c26281a62:string:2011/2012 Semester 1",
+          "formOfStudy": "5f0ca739-fe09-454a-a32f-39b2b28e838a:string:ENRL",
+          "fosPrintArea": "f7ff1858-ef45-4859-8d1e-2688e8ca649d:string:ND",
+          "summary": [
+            {
+              "programName": "b9652045-27a1-4703-8e3e-a7f05239402b:string:Doctor of Philosophy",
+              "includeInGPA": "259e4356-d8a9-49b6-a17e-bca87338ca56:boolean:true",
+              "GPAName": "6f44f622-afe6-48f7-8dd3-c08bbb50680f:string:Cumulative Average Point",
+              "GPA": "39cd3b25-ae31-4588-94cc-9468b1a0b1bc:number:4.63",
+              "reportNo": "cc52e874-e243-4803-b123-ad451505e7b1:number:1"
+            }
+          ],
+          "reportNo": "6411156b-54a1-4a2c-ab0e-be1cf15de961:number:1"
+        },
+        {
+          "name": "142bc4c0-fec3-40c8-a730-2491a2c93a5b:string:1120",
+          "term": "f9a572da-60f5-4647-adfd-de13d22997d7:string:2011/2012 Semester 2",
+          "formOfStudy": "2e5cc962-6ec0-48cf-ba0e-14f1fe77bc18:string:ENRL",
+          "fosPrintArea": "a401a6f6-1f27-4ddd-b41f-9549fa9af09b:string:ND",
+          "summary": [
+            {
+              "programName": "af605c9b-621c-4490-bc30-7627459614dc:string:Doctor of Philosophy",
+              "includeInGPA": "e5db738e-69a2-4e3a-9785-347b0a29733c:boolean:true",
+              "GPAName": "24217dbc-63c7-44f4-9098-0deefa3333b2:string:Cumulative Average Point",
+              "GPA": "c44844e8-1b3f-41e0-9d24-aa7294d7b6ce:number:4.75",
+              "reportNo": "cfa28592-6a9e-43aa-86a8-673dc144071c:number:1"
+            }
+          ],
+          "reportNo": "b60d5c4a-84b0-48b8-89b5-336bfe2f37a6:number:1"
+        },
+        {
+          "name": "868c5611-1d0d-4c4c-adb2-0d03da7a55f0:string:1210",
+          "term": "c0ba17c5-2f86-4289-b4f8-b2d5884804f7:string:2012/2013 Semester 1",
+          "formOfStudy": "4943cae8-b139-4b0e-abad-c117a2816e50:string:ENRL",
+          "fosPrintArea": "56453f81-12d3-40c8-9fc0-1648633e4528:string:ND",
+          "summary": [
+            {
+              "programName": "1b68848b-76b4-4edf-a01b-4787eda4f5f6:string:Doctor of Philosophy",
+              "includeInGPA": "b17aa19c-54cf-4ad3-b45c-30b28f2374d8:boolean:true",
+              "GPAName": "a2e3b344-57c1-43f7-b234-b866b95575ac:string:Cumulative Average Point",
+              "GPA": "2ee22f75-0096-41f4-bd13-5d3df93ad879:number:4.75",
+              "reportNo": "e06679bc-753a-4c1e-9bbf-8453dd2b9202:number:1"
+            }
+          ],
+          "reportNo": "c23d7351-2532-472b-993b-541dd9b492ef:number:1"
+        },
+        {
+          "name": "9850f29f-2eb5-4866-abda-6f0064e98f20:string:1220",
+          "term": "bccbe5e9-c371-4144-ad49-4e7f4324e1a1:string:2012/2013 Semester 2",
+          "formOfStudy": "ee1dcd3f-831f-43a8-a881-3d73e57e5497:string:ENRL",
+          "fosPrintArea": "c616614e-dd18-4543-94a1-cb73ebf67c57:string:ND",
+          "summary": [
+            {
+              "programName": "bd94e0b9-41e6-4ed5-8cf6-331e9e3a0686:string:Doctor of Philosophy",
+              "includeInGPA": "3c243f31-c4d9-481d-a579-cf0d1167adf7:boolean:true",
+              "GPAName": "e6626e87-b6c9-4018-a301-4663f501d958:string:Cumulative Average Point",
+              "GPA": "39d70db2-de56-4aa1-8805-dd405bbfbb21:number:4.75",
+              "reportNo": "c057aeea-1bd0-4e5e-a476-ff008105b6db:number:1"
+            }
+          ],
+          "reportNo": "4694e014-5b23-4489-98ab-9938c127fee2:number:1"
+        },
+        {
+          "name": "7855d332-dc04-4b8e-9944-425f48c1e060:string:1310",
+          "term": "145e456b-21e2-4c98-9f22-66ab23eff9fc:string:2013/2014 Semester 1",
+          "formOfStudy": "4696dbf0-d63b-4893-a81a-9bf9b27d4352:string:JDA",
+          "fosDescription": "0bc26abd-70fa-4a92-af34-3515a49aa219:string:Participated in a Joint Degree Programme at",
+          "organization": "ffd64548-04ec-43e2-b6b5-808baa6c0e95:string:Technical University of Denmark",
+          "fosPrintArea": "8189143b-ac87-4f42-a10d-6d9826f2a8ae:string:EH",
+          "summary": [
+            {
+              "programName": "52224d60-ae8a-4300-811c-f4c25bbcf5d7:string:Doctor of Philosophy",
+              "includeInGPA": "9ba616b0-ca03-4c41-848f-b3eb75573f9d:boolean:true",
+              "GPAName": "cb76593f-4a3d-4730-9e14-83e1e2a73f71:string:Cumulative Average Point",
+              "GPA": "7134319e-e459-4bbf-aa81-2f71ab7a7e81:number:4.75",
+              "reportNo": "b499acec-393d-4310-a310-1550f5246a12:number:1"
+            }
+          ],
+          "reportNo": "af965f54-0022-49f2-a33b-0e6a78fbb3bd:number:1"
+        },
+        {
+          "name": "7af15703-cf5e-4e38-afb8-7637ab8e1751:string:1320",
+          "term": "b4ff9f5e-c14d-4d48-a643-cc4999919893:string:2013/2014 Semester 2",
+          "formOfStudy": "c5a00178-9911-49db-9f9d-c3731489c621:string:JDA",
+          "fosDescription": "cbac9ae3-4f79-4fbd-9d47-f016564d1934:string:Participated in a Joint Degree Programme at",
+          "organization": "200f6c78-ddbe-4010-a0ec-5e1cfac30c04:string:Technical University of Denmark",
+          "fosPrintArea": "527e80e4-0d4e-4c86-94e2-b8ab9495788f:string:EH",
+          "summary": [
+            {
+              "programName": "71fe2b56-3ff1-4f08-86b2-8bae664015a6:string:Doctor of Philosophy",
+              "includeInGPA": "1959cb3d-65a6-4c98-bbcf-db84ad567623:boolean:true",
+              "GPAName": "c0fd3e84-e489-422b-9dc9-56ca685046d9:string:Cumulative Average Point",
+              "GPA": "08cc7b14-95fd-41e2-9d98-c6b9f695906d:number:4.75",
+              "reportNo": "af3bc85a-0964-47af-b407-7e25b0d43ce9:number:1"
+            }
+          ],
+          "reportNo": "1cdc4207-03fe-469a-a7d4-44a23f886c95:number:1"
+        }
+      ],
+      "programData": [
+        {
+          "programCode": "9aa92a78-9a79-473b-84e8-d299b6194396:string:D0560",
+          "programName": "8891be09-f5f2-4222-b801-78a7ccc50785:string:Doctor of Philosophy",
+          "statusCode": "3d80920e-b479-4ff4-9961-48151bc6debb:string:CM",
+          "statusDescription": "49b4d5f7-c14d-4c5f-8478-5490038ab39f:string:Completed Programme",
+          "effectiveDate": "299e5c91-57ef-4c50-a298-6262e473b28f:string:2015-09-30",
+          "admitTerm": "8f9f8c86-73ce-40da-8bf6-86e73c8e37c8:string:1020",
+          "reportNo": "07bf1907-0ecd-411a-bc93-8771e47f1f57:string:1"
+        }
+      ],
+      "degreeData": [
+        {
+          "degreeTitle": "c7c0346b-2ca4-48ce-bfbf-8abb118d9812:string:Doctor of Philosophy",
+          "dateConferred": "d3daf5c8-7139-486b-b2ff-cd6f9c7e8cbe:string:2015-09-30",
+          "plans": [
+            {
+              "specialProgram": "01ecd37c-993c-48c3-b102-4f6e10bba760:boolean:true",
+              "type": "3131779a-479a-4f78-9189-96678f1b8c76:string:JDP",
+              "typeName": "e7c5a4d2-7509-4982-8d0f-fce84516607c:string:Joint Degree Programme",
+              "transcriptDescr": "8783d45c-6c5c-477a-8463-39c850c4f21b:string:Completed a Joint PhD with",
+              "planDescr": "a9c0d911-3ebf-49de-bc89-d634889b74d3:string:Technical University of Denmark"
+            }
+          ],
+          "reportNo": "193b9423-70dd-4616-8df0-e46ee8ab93c3:number:1"
+        }
+      ],
+      "milestoneData": [
+        {
+          "milestoneTitle": "887de11d-cb63-444b-8e98-864866936a15:string:THESIS TITLE:",
+          "thesisTitle": "65e0b29c-261b-4b6c-9faf-012bbbbc02c0:string:HUMAN CONVECTIVE BOUNDARY LAYER AND ITS IMPACT ON PERSONAL EXPOSURE",
+          "reportNo": "d44811e2-e259-49f2-884f-181e275c9539:string:1"
+        }
+      ]
+    }
+  },
+  "privacy": {},
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "f317de827bc50179eb6d90ab21e1abe2b76f7700d82223708e31e78fe76e81ef",
+    "proof": [
+      "0ec2a158be3b252e09727e7833bc0e61b192f92a74c77e377dbcca54cb8648fd",
+      "5306cb783b23f048a88a656263d7c8b87ca471f790cab4e9d76211e545b59876",
+      "6b6ab4351466c81221c49c34257e60c37c6ca0f200ae4340b2aaaf85a9b52698",
+      "ca2569416b5b4ef1476285adb8206009240f33141d1f30ad33496a1e11b21ac7",
+      "cff34b7906af4ba56465df60278cd2ab34642e6294b0492249b9bae34d336523",
+      "7bfc29748a38d23ae9ca8d2c7225873287bd0baa0630ada5963b9e61ac9c3806"
+    ],
+    "merkleRoot": "3862426f819b735c661f7981bfaed07eff1984a447b0406d831c1b15ec75e7c9"
+  }
+}

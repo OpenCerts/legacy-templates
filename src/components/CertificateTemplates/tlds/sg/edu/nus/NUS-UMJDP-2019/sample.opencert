@@ -1,0 +1,520 @@
+{
+  "schema": "opencerts/v1.5",
+  "data": {
+    "id": "ddd527be-b3c5-41fe-91f9-c3af1e9f126a:string:NUS-A0045456A-J061001-P10182678-32-20120630",
+    "$template": "389a6d52-58e4-4b28-b301-dfc10b017007:string:sg/edu/nus/NUS-UMJDP-2019",
+    "issuedOn": "19a08d14-586b-4fcb-b753-dbeb024e1490:string:2019-09-11T17:21:19+08:00",
+    "name": "9ebe319b-efaa-4c1d-be09-7b6df2a7b267:string:NUS Degree",
+    "issuers": [
+      {
+        "name": "b991c024-6c75-48cf-ae5e-bc9bda2f6123:string:National University of Singapore",
+        "uen": "32af001d-76f8-4d61-a46d-50b28d0a2ce1:string:200604346E",
+        "url": "2a535e6b-19b2-42a9-bfbb-5148083f7f2e:string:https://www.nus.edu.sg",
+        "email": "1eec0168-6b48-4614-85da-0d120b9f2f84:string:transcript@nus.edu.sg",
+        "certificateStore": "151c25ff-2b04-4332-8c1f-14076c4de3b2:string:0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+      }
+    ],
+    "recipient": {
+      "name": "9310d8ef-2aed-48ce-855d-1d38bca0a624:string:A0045456A, name",
+      "studentId": "e9b8c0f7-b67a-4408-9e6d-6330b81f41c9:string:A0045456A",
+      "dateOfBirth": "345a92ff-2a0b-432c-aa15-c0707302e884:string:1905-01-01"
+    },
+    "transcript": [
+      {
+        "name": "f4122aac-08ff-49c8-9646-9b2c76bebc5a:string:Programming Methodology",
+        "courseCode": "7e023e22-6973-459b-9388-a3a539279cc4:string:CS1101C",
+        "grade": "fcce311c-4d61-442d-a0ef-033585cc4468:string:B+",
+        "courseCredit": "a041f15e-c68d-429b-ae70-b29dbd5b4945:number:4",
+        "gradingBasis": "667fc6ec-a91b-48e8-b854-51429b3b17cc:string:GRD",
+        "includeInGPA": "4c2778c9-67cd-4f4d-b61b-322edb4c1c80:boolean:true",
+        "reportNo": "82f08413-b4ed-41d1-9230-5535d1db2f4c:number:1",
+        "semester": "7ca0dabd-adf0-4edb-a87d-8d081dcf071c:string:0810"
+      },
+      {
+        "name": "cfd4f761-1a56-4c8d-b460-516030fbfcb0:string:Electrical Engineering",
+        "courseCode": "e5e338c1-9b5b-4972-8664-c945cc9027be:string:EG1108",
+        "grade": "d9d74634-c6d4-4bb1-9ca6-68a5fea06258:string:B+",
+        "courseCredit": "65bd38a7-9ea4-45e3-829d-1b7aa62d1d5f:number:3",
+        "gradingBasis": "cb8ac396-b049-4d1e-9f7e-b1eaf7caa6c8:string:GRD",
+        "includeInGPA": "14ac4570-e377-4beb-968b-42129ce6e728:boolean:true",
+        "reportNo": "15dcfa3a-f750-44fa-b4eb-a9d1a56412e3:number:1",
+        "semester": "f4654547-b897-4d69-bca0-7b73d0aa964f:string:0810"
+      },
+      {
+        "name": "58bfde89-a285-482c-a674-b1e260702bfb:string:Mathematics I",
+        "courseCode": "2ff773f6-2e6a-412d-8fbf-af252c811055:string:MA1505",
+        "grade": "74c96607-e654-4d36-9df5-2e9b009c5f50:string:B+",
+        "courseCredit": "c399cd93-3674-4569-9c32-871451beca21:number:4",
+        "gradingBasis": "44e704ac-6362-4f8c-a144-5d458dbf46bb:string:GRD",
+        "includeInGPA": "6fd81e51-0c55-49b5-8f9e-619c1e97f26d:boolean:true",
+        "reportNo": "624b9d6a-584e-4ee1-9139-8bb74cd2ad8e:number:1",
+        "semester": "2911314a-654b-4e85-ad97-0b860e7392d0:string:0810"
+      },
+      {
+        "name": "5bcd5180-18e6-42f6-abc3-d6a382c08d68:string:Introductory Materials Science And Engineering",
+        "courseCode": "ef6a4028-37a8-4e19-8db4-64f0603fdc93:string:MLE1101",
+        "grade": "cc7d5b1b-6df2-437b-8eac-ea48e4ce976d:string:A",
+        "courseCredit": "f00f87c1-eca6-49a2-b425-6d01c6025bf3:number:4",
+        "gradingBasis": "870ea9cb-c689-439a-9e3f-ffe74d5e78b5:string:GRD",
+        "includeInGPA": "7df52bff-2271-41b1-a9fc-de555431f3d2:boolean:true",
+        "reportNo": "069cf986-2875-47a2-a9c3-e6cb38798b06:number:1",
+        "semester": "d0f51a46-25b3-4b8d-baff-c4e33f571f8e:string:0810"
+      },
+      {
+        "name": "98d38fbf-8249-42a1-887c-d43db01d60bc:string:Physics IE",
+        "courseCode": "97307d24-8db4-4f95-a4f6-d5c017337a1c:string:PC1431",
+        "grade": "33951886-4104-49ff-b7f5-0ade881a4695:string:A-",
+        "courseCredit": "064129ee-f17a-4793-b5ad-a72de44f4e75:number:4",
+        "gradingBasis": "a4f1139b-59c4-4997-841d-40cfba32baa5:string:GRD",
+        "includeInGPA": "1a8c1223-a713-4b3a-afd2-862a871f24dc:boolean:true",
+        "reportNo": "af06efc9-554b-472b-8370-c81db5915220:number:1",
+        "semester": "0f482ac0-fccc-4d83-8aaf-da68587d2998:string:0810"
+      },
+      {
+        "name": "908be9eb-c6e8-4f93-8f63-5f2a453da78b:string:Statics And Mechanics Of Materials",
+        "courseCode": "adedc35e-d1a4-44c7-8c43-64863dd3fcaa:string:EG1109",
+        "grade": "75f86ba1-3ccb-42c1-9d80-efbf4fdbe893:string:B+",
+        "courseCredit": "e0b83bf6-b393-469d-8405-5c4bea046fc9:number:3",
+        "gradingBasis": "3b272b16-6f8c-4cd5-b226-b70691394879:string:GRD",
+        "includeInGPA": "905a862e-b8fa-436b-a0dd-c30bd285e088:boolean:true",
+        "reportNo": "9a958032-4c6e-4d85-aaa5-bcaaa9bdf0d0:number:1",
+        "semester": "43774ee5-bd0d-45b7-82fa-2b9ea968d72c:string:0820"
+      },
+      {
+        "name": "c1c23a00-e97b-4c6e-820d-b13a1f757da1:string:Critical Thinking And Writing",
+        "courseCode": "d45ea171-54fa-480f-aafc-ca75a9bf52f8:string:EG1413",
+        "grade": "d24117e0-f792-4699-9f03-d343a1de9c20:string:B+",
+        "courseCredit": "5a86fa1b-36b7-42ba-bce9-2c30eccb70e5:number:4",
+        "gradingBasis": "9a4e55f6-d745-4f60-bfea-bae8472366cb:string:GRD",
+        "includeInGPA": "0855923b-ed06-4029-aa79-fcb87ee2d8a8:boolean:true",
+        "reportNo": "61e31e6a-69c5-4c9d-9f2d-ad55e224ed4b:number:1",
+        "semester": "522b6f3c-085f-4c85-9566-9d3e677f9f12:string:0820"
+      },
+      {
+        "name": "a0e26e46-b9c9-4b76-bde2-591750c292b0:string:Mathematics II",
+        "courseCode": "e175d7b4-82b5-40ff-9014-48e33418f9f3:string:MA1506",
+        "grade": "a070ba15-58de-4013-abe6-a95b4f0f2301:string:A",
+        "courseCredit": "fc70ebee-8c6f-4549-810b-440c1e465d97:number:4",
+        "gradingBasis": "4333935f-6d52-4a85-9532-8266e47dcff9:string:GRD",
+        "includeInGPA": "22da9350-0423-42e8-8eb3-561029b3f286:boolean:true",
+        "reportNo": "60cd7c9e-b61f-4584-aa50-d5d10d53ddff:number:1",
+        "semester": "e45ec159-f966-4a75-ab52-a4559ce6390d:string:0820"
+      },
+      {
+        "name": "71f71f3c-a519-4874-8c5f-a489ce1ef062:string:Management And Organisation",
+        "courseCode": "05f4131f-14a5-40a3-a7d0-4b336e549ebd:string:MNO1001",
+        "grade": "bb7b2da9-c336-4002-906c-47d57cc53cc7:string:B+",
+        "courseCredit": "8e89da89-d352-4090-907c-3bc2772541ad:number:4",
+        "gradingBasis": "1c8c1c41-bb45-4be6-ba94-fae7afebd19c:string:GRD",
+        "includeInGPA": "aca12d4a-a26d-45af-8589-b15c94ac8e2c:boolean:true",
+        "reportNo": "78b9523e-4936-4272-8cf1-1b2e917cd2af:number:1",
+        "semester": "7ec7b8f1-8faf-406e-bc00-37e6e48fb2db:string:0820"
+      },
+      {
+        "name": "db8aa4be-ff7e-4e23-87d1-be56418a6851:string:Physics IIE",
+        "courseCode": "5e54ea9c-6ba3-41a5-acc4-e8884b1c93ca:string:PC1432",
+        "grade": "6a0515e3-0165-44ae-a199-283cec657715:string:B+",
+        "courseCredit": "c67734d6-db71-4eb9-909a-d50f017245ab:number:4",
+        "gradingBasis": "5856b9ab-a9bb-415b-8dfa-3b58019e951e:string:GRD",
+        "includeInGPA": "bae3e47c-c0b6-4699-9c0c-08a67c89822c:boolean:true",
+        "reportNo": "368684b4-5671-4c74-b090-d60161a95f75:number:1",
+        "semester": "20e02887-c748-4efd-ac87-dc4c1db3ee55:string:0820"
+      },
+      {
+        "name": "e101716f-3da4-4285-b27b-a256388c2c0a:string:Hydraulics",
+        "courseCode": "1a912d2c-871a-4695-a18a-cb486112f95a:string:CE2134",
+        "grade": "e202cbb0-b804-415e-8ac4-6687660bfdda:string:A",
+        "courseCredit": "46f6b04e-85ff-43d7-a5cd-42a24e29dec3:number:4",
+        "gradingBasis": "5138c28f-7874-49fd-8f1d-c54268f1ea73:string:GRD",
+        "includeInGPA": "cc50e0a9-cca8-4bdc-9b52-db064abf05f3:boolean:true",
+        "reportNo": "11a843e8-114f-4307-9c93-c9aee50addd0:number:1",
+        "semester": "c84c414d-d9b4-4d3c-9b33-cad31c8518d6:string:0910"
+      },
+      {
+        "name": "bbefb8de-17cf-45a8-a5c5-bfd25a3b42c7:string:Structural Mechanics and Materials",
+        "courseCode": "920d54ff-3c21-4619-8ad0-2b5d774d7a66:string:CE2155",
+        "grade": "46606460-2966-4dc9-bf12-90cb02a56178:string:A",
+        "courseCredit": "8362ed62-8a9a-4d97-955b-0fc6ce310537:number:4",
+        "gradingBasis": "15080015-7c7e-43ca-ade1-56d47a0dcb0f:string:GRD",
+        "includeInGPA": "a299cf6e-d800-4346-b01e-61d89e9f727d:boolean:true",
+        "reportNo": "7456d44c-e178-49c6-8d4c-73906819065e:number:1",
+        "semester": "a1365bd0-85a3-41cf-8e03-df8d7735e34a:string:0910"
+      },
+      {
+        "name": "ad9064f7-1e33-4168-ae3d-69facb7a424a:string:Infrastructure & The Environment",
+        "courseCode": "d50ca53e-d57b-4903-b510-59d6bda9eb6f:string:CE2184",
+        "grade": "9f8e4fab-1db7-46a3-aea9-a0f591da3c86:string:A-",
+        "courseCredit": "552272df-a419-47a5-ac19-beafba309c0d:number:4",
+        "gradingBasis": "b82caa0e-0110-4c35-be32-1f51811c3e37:string:GRD",
+        "includeInGPA": "212d6f71-30ea-4b43-9b70-fe55b828ee04:boolean:true",
+        "reportNo": "52740b58-3d39-4de3-8fec-30bc69f59255:number:1",
+        "semester": "7d87f9b2-054c-4e7a-abde-695e6bc45401:string:0910"
+      },
+      {
+        "name": "a3beda8a-852f-4d8b-92c1-4db10103d7eb:string:Engineering & Uncertainty Analyses",
+        "courseCode": "ca37c0de-5b1d-4a21-bdae-eed2083cb56f:string:CE2407",
+        "grade": "0d7c6d43-2ff9-4378-b4d8-483f975dd03d:string:A",
+        "courseCredit": "8b28903d-a7e2-4c21-821a-590c4f59d4c7:number:4",
+        "gradingBasis": "38bdffa5-208d-4c7d-b17d-e0dcfbe395ee:string:GRD",
+        "includeInGPA": "3304a3bc-5bd3-493b-bc03-14c6bd17990d:boolean:true",
+        "reportNo": "78086cb7-1245-43de-bc6f-c7bfb91bea5f:number:1",
+        "semester": "4059b25e-5814-4845-8612-3b0b7bc9d347:string:0910"
+      },
+      {
+        "name": "40312826-c24d-4351-b052-6c57cc825095:string:Changing Landscapes of Singapore",
+        "courseCode": "9fa0529f-5d15-4414-9877-b4ad16880e26:string:GEK2001",
+        "grade": "3fd52f28-dff8-41b8-a830-ce1b68e61fa5:string:A-",
+        "courseCredit": "bce26b38-36a0-433a-9989-62a1d4db25a3:number:4",
+        "gradingBasis": "3677d696-8790-4db2-931b-aabed0b342ef:string:GRD",
+        "includeInGPA": "419263f1-c147-4675-9d23-59929a74afe6:boolean:true",
+        "reportNo": "88d9a641-343b-4f82-ac10-8aa69d776a49:number:1",
+        "semester": "b13fa127-305c-4cde-941d-dd650430a029:string:0910"
+      },
+      {
+        "name": "9f971139-b86d-4651-9c35-5ba09bf9043b:string:Soil Mechanics",
+        "courseCode": "affaef60-b342-4a44-bf80-965a8a0826ac:string:CE2112",
+        "grade": "2b3cefdb-08f2-4f9e-8626-daab2d0956df:string:B",
+        "courseCredit": "eafd565c-2c21-41f2-b929-d2aec482d1f3:number:4",
+        "gradingBasis": "643f2778-8fa5-4bc1-a0b1-e6568b50239c:string:GRD",
+        "includeInGPA": "c9871b02-78b8-46ef-88b7-5b806dea3787:boolean:true",
+        "reportNo": "9de6c862-de26-4946-a2a8-d1215afa02d7:number:1",
+        "semester": "ed750933-60e8-4ca5-9849-d98f9c52cce6:string:0920"
+      },
+      {
+        "name": "08d37f2b-521f-48fb-bdd3-0f21d16533dd:string:Construction Project Management",
+        "courseCode": "3981d674-e833-4053-9f9e-87976da2464b:string:CE2183",
+        "grade": "5efd386b-9c11-4927-aaa5-a9a361b5ae3e:string:A",
+        "courseCredit": "c3ef3e7f-970a-4f30-891b-0cad20e44bd8:number:4",
+        "gradingBasis": "68aef9b9-8842-455a-8e5a-60a4ec5a1046:string:GRD",
+        "includeInGPA": "96ac9bcb-2c81-40e7-a0c8-d7b351d792eb:boolean:true",
+        "reportNo": "575452f0-9985-42f6-b73e-813ac344853c:number:1",
+        "semester": "15a5f421-694e-43bb-88bd-3f5ced14047b:string:0920"
+      },
+      {
+        "name": "07232709-c8b3-4d6c-abe7-a4d832da82a0:string:Water Resources Engineering",
+        "courseCode": "b1a5d6bf-7f84-4831-a51f-f6db8868abb0:string:CE3132",
+        "grade": "5efbc40e-997b-4972-be7d-1372a2a44d4f:string:B+",
+        "courseCredit": "8ddf2d40-20a1-4756-80aa-3fe18ba638c3:number:4",
+        "gradingBasis": "198067c0-eb83-4dfb-bfed-241e9cd9b1d4:string:GRD",
+        "includeInGPA": "05b4eee7-9c3b-412e-a04f-449d91cce5bd:boolean:true",
+        "reportNo": "ad475d2b-6e6f-47c8-a5e8-62b88e8b909a:number:1",
+        "semester": "b5cf0d5f-b4f9-4d6f-a099-412de8adf9bc:string:0920"
+      },
+      {
+        "name": "23554840-5488-424b-80d4-3ffd176cd15c:string:Water Quality Engineering",
+        "courseCode": "05b33b83-1b31-4ec2-aa4d-59e3ca04501b:string:ESE3001",
+        "grade": "22b5802c-4145-4d3d-954e-376f2c198699:string:B+",
+        "courseCredit": "79e98422-3d15-4f46-bb77-125dcd0d81e0:number:4",
+        "gradingBasis": "7ec95cdf-39fa-462d-afd6-fe10573612e5:string:GRD",
+        "includeInGPA": "ddd28d21-c0c7-47c8-9c56-f0fa4af487b0:boolean:true",
+        "reportNo": "6c3be56f-9e91-4aa5-ae71-217b7b43abe6:number:1",
+        "semester": "cb8a3559-0387-4217-a781-2df73799b0cc:string:0920"
+      },
+      {
+        "name": "b733694f-6761-4761-868a-3732c5e0b199:string:Nation-Building in Singapore",
+        "courseCode": "85cf4a92-d302-4e0d-9910-be85abf1101e:string:SSA2204",
+        "grade": "5256a7c9-cd04-4b6c-9ca3-818ba1094518:string:S",
+        "courseCredit": "768ea929-21e4-4d5b-990d-dc307181eae3:number:4",
+        "gradingBasis": "c42016b7-63aa-46ec-a749-d4b08d9b28d1:string:SNU",
+        "includeInGPA": "54f7e0b0-2c7c-4fcc-a4f8-7a7c81ace027:boolean:false",
+        "reportNo": "4ade53a2-4253-4d32-854d-0ad5dc386aae:number:1",
+        "semester": "62893d2a-738f-4d8e-8de9-14185d01b4b8:string:0920"
+      },
+      {
+        "name": "12f4cfdb-47fe-4c49-a240-9d843412ca4d:string:Living with Mathematics",
+        "courseCode": "8b5a123f-69de-435b-b88a-e90c18074cd8:string:GEK1505",
+        "grade": "39c99ec2-7eed-4267-b238-cc9b967b23ca:string:A+",
+        "courseCredit": "e9e010f0-5451-4174-b3ac-46fdefe12fef:number:4",
+        "gradingBasis": "745499f5-28be-4e2c-9c28-8334f1b7f417:string:GRD",
+        "includeInGPA": "703d6af9-c9d9-4cee-99cc-be82bd6f5f28:boolean:true",
+        "reportNo": "e63bf41c-449b-454f-8131-5587aac5d09c:number:1",
+        "semester": "25b7ce80-4751-47d1-bdd2-d7f7f81dc4e1:string:0930"
+      },
+      {
+        "name": "3d5e7eea-d9b5-4fe1-ab43-264433df33ca:string:B. Eng. Dissertation",
+        "courseCode": "09b0d453-8dd0-4e52-ae7f-541a7e0b47bb:string:CE4104",
+        "grade": "43fa5414-6282-4c33-97d1-b4a16842aeb8:string:A-",
+        "courseCredit": "c746ae9a-0874-454c-8701-1b2920b214b1:number:8",
+        "gradingBasis": "aafffdfc-83e5-4c63-b5a5-67897f71827c:string:GRD",
+        "includeInGPA": "598ff126-567c-449c-86c2-adc76bd5e795:boolean:true",
+        "reportNo": "0f93234a-e496-4008-9f40-2c128bef037f:number:1",
+        "semester": "c0589f32-d9b4-44fe-a94e-d1bc6863a185:string:1120"
+      },
+      {
+        "name": "03cee53c-69d9-400c-a61c-eefa4d0ee215:string:Engineering Economics & Project Evaluation",
+        "courseCode": "458df039-b751-46e7-a545-64de19ff6dbd:string:CE5603",
+        "grade": "e92dd593-1363-42b3-ae94-0ea84ed47068:string:A-",
+        "courseCredit": "ddf6815d-f9e4-43b0-a106-e93605c97187:number:4",
+        "gradingBasis": "e9272d26-6b76-429a-9457-b11026e077b6:string:GRD",
+        "includeInGPA": "66c7760c-b95a-438b-9d5c-816f1e310759:boolean:true",
+        "reportNo": "409be87c-7cfe-4555-a78b-59669fdeaf02:number:1",
+        "semester": "a43882c0-8a1a-42ce-8a92-f8110cc4428e:string:1120"
+      },
+      {
+        "name": "573b4f26-7ca0-4d4d-907e-04ab9a9e897e:string:Engineering Professionalism",
+        "courseCode": "95b67b56-0abf-43df-a9ab-01271149294f:string:EG2401",
+        "grade": "4e3126d1-8f2a-4b56-beb7-f0c48d77d223:string:A-",
+        "courseCredit": "8a8a5ce5-82b1-4220-9906-bdd539e58507:number:3",
+        "gradingBasis": "d54d63b0-eb64-401a-bdc8-abb029bb4dad:string:GRD",
+        "includeInGPA": "f8266f7b-9a49-48ce-8ea7-be077e496f96:boolean:true",
+        "reportNo": "e2627539-6535-4d1b-8f90-9427e3b5df69:number:1",
+        "semester": "131669c9-9c42-4fd9-a103-ead821e63b75:string:1120"
+      },
+      {
+        "name": "3358176f-b668-4f6f-9184-653818eb09e0:string:Human Capital in Organizations",
+        "courseCode": "b3cde08d-dbd9-4da9-b934-6f77ba46f410:string:HR2002",
+        "grade": "adbf213a-4c73-40e8-ba5b-a114981de8d2:string:B+",
+        "courseCredit": "23282bfc-62ed-4598-825b-748a3c6520c1:number:3",
+        "gradingBasis": "1a4cb567-73a1-4113-8f36-188ea40b09ec:string:GRD",
+        "includeInGPA": "54b5da4f-3953-43fe-8554-4628d6e8c6f9:boolean:true",
+        "reportNo": "8dc29330-bc10-4319-af46-1faa9a259969:number:1",
+        "semester": "e4653e79-0519-4e4e-a8a6-9eae18ef2b6f:string:1120"
+      }
+    ],
+    "additionalData": {
+      "degreeScroll": [
+        {
+          "degreeTitle": "466f009b-5dd9-4490-9506-6f23df6bd743:string:Bachelor of Engineering (Civil Engineering)",
+          "dateConferred": "7c9cc198-60b0-4258-a4ec-cf99f847acd5:string:2012-06-30",
+          "honours": "bae6766b-f982-41bb-aa06-a40db2bbae7a:string:1st Class Honours",
+          "degreeCode": "14686310-7678-4fee-928a-4dd67baf202c:string:J061001",
+          "type": "9d00735e-28d4-46eb-b83a-3396502e60af:string:K20 NUS-UM"
+        }
+      ],
+      "images": {
+        "PRESIDENT": {
+          "data": "40802cb2-8582-48d7-b89a-af7f744ae611:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "80111989-5286-4b2f-a5d6-f29cc1920365:number:240",
+          "height": "6ccc111e-b91c-474d-8be2-6fc48a74b6db:number:90",
+          "unit": "d15daafe-5df0-463b-9fe1-cf6c5b23a6ff:string:px"
+        },
+        "TRUSTEES": {
+          "data": "9bcce113-e7c2-4f63-9092-fbbb751a74f2:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "2f5974b9-ed08-4cbb-8da7-dc4e88698e9a:number:240",
+          "height": "19bf3676-c85e-49f4-b565-1272c78f9fbb:number:90",
+          "unit": "359d9eb5-80f7-4dc0-acf0-b6302e37264c:string:px"
+        },
+        "UM_SECRETARY": {
+          "data": "a84cea88-ee7c-4723-b378-d6a8cb14fd13:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "e36e9ed7-ee7a-47ed-8ccb-028ba156c83a:number:240",
+          "height": "60eb939a-99fb-4d52-a786-f614a88297bb:number:90",
+          "unit": "e86ebcfc-36b6-4aa6-9e27-97d413eea450:string:px"
+        },
+        "UM_VICE_CHANCELLOR": {
+          "data": "70d58235-e8c8-42e5-a3df-07f4d2d3bfa0:string:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABaCAIAAAAJsExNAAAEy0lEQVR42u2aPVbrOhRGnY4RQE9BB9TMgA6YBTOAir8KZsAsgI4ZUAMdBT3p6NLx/J7e0jpIsqw4tuP73b2LLIhtRTralo5kz25vbxeLRQUgwezq6ur8/Hzd1QDogXp0/lfoy8vLddcEoAeur68RGnRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEBikQGqRAaJACoUEKhAYpEBqkQGiQAqFBCoQGKRAapEBokAKhQQqEHpvHx8fX11f398XFxWw2W3eNpOgi9NfX1/39ffz9/v7+9vb27u7uX9tJPz8/7+/vn5+fXtk4Jgg9KH0K7Tk5Odnb21t308bm7e3t4eGh6aiPydSEttUWmKgHEbr6b2Q6Pj5ed+vGI29zNeGbHKF/CX16erq1tRV/X024C3unzjRubm78v2dnZxsbG+7vxWLx/PxcD8mTjQZCNwpdRV3rp1Q/z9qR25bjJQjOTJ7jLami26bz5bbmwfRSn393d5dsb2tAfAkfHx9xymHD7vJvO8zX1fBnlsQn+Gn3o5mEPugsiwtLea8Fd0XyNrZhd2UeHh76O78vehY6aJs/2k3o+tO3359Wd1IwuduorXJ5U3ZrW5TMeq3x1e8ROiYpdMatpeKTDEWM65eBhK6vtX/HsbX0npr2L7TtXV/dDkIvRTwVdLi8aSSuY5SPfpMZdXfu7OwEcieFbq12eXwKy6ybXH8OIXS+nKOjo0yoV6d/oZNzdzeh3ZeBLvGo3+Plsbs29JmhN78otFGKhW4a4LvFx97bwY6hrWRTtmCr3U3oOPPxrbPzW7Lw1Zmu0PbMZDIwxOVxdlG+Zspv/iQnX1dgkw3lDUya6vpiPp/X5dhMOtPkXoQOCmk6NNBidLopR1OHdRC6/HJ7N7qm+TG7cGaMl2Ie99N5oe0YVt7ApdKAzGlDCF2SBPa4H9+/0Mmjf4rQQQn1Mjw5XRaSzCXGEdp+U08OLvFIpk8IvdK2nW3wNIUOZpiSPK8uqv5Mjt/xT+eFtjVZReikYZ2Fbu21DinHQIz0YCW5lHl6emrdZ23SYqn+XkroyiwNPfmdOF9UHY3NzU0/2AQjtAtybImtid8HqBpELxQ6ueRtXRQGzSzvtYy1wQDhW1eZrfcJ5dBNBENa65PhSQkd13aV5aAjubvii41voaXikx+h8wUmK+8Go/JC8sNw+Vbj6oz0clJyp7bkSZg7OrLQQW1bn1q3BiS/bVdSwrJClz+pSZ7pmlzea615Rd7piQqdf33UzlZu6pnP5xPMoeMOKFmyuA2yl5cX2211HQ4ODmwSUjUIXf1+MuzWo9/f376GHV4iCNID95QnuacenFmZO7Cw10oS5eDRd1N8VoQX/BNk3usYsw5WMjqoEIROkHnuNRD5lGOcOmiA0AnsEm2cyGSE/tveLF8RhA4JHkmM8xJznF9Wg71gqQ1CgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1S/C/0uqsB0Bv/AEwL5dNeBrk9AAAAAElFTkSuQmCC",
+          "width": "a1c2294e-30e3-4ba8-86d8-8d64a121b9b1:number:240",
+          "height": "f36f0d72-e157-4138-90ca-0161551e5675:number:90",
+          "unit": "fdddaa0c-43e2-4ab5-8866-0d1b0673bcb3:string:px"
+        }
+      },
+      "transcriptType": "530fedd5-2840-4297-bcdb-12e128b0b34c:string:UGOF",
+      "transcriptReq": "a507f72f-9aa3-41f6-b3e3-0110ab661e79:string:001009875",
+      "transcriptGroup": [
+        {
+          "name": "b79e2cfe-8f31-4394-bb53-abd8e7b5c839:string:0810",
+          "term": "dd698f15-62bc-4b59-b326-f124826c0ffc:string:2008/2009 Semester 1",
+          "formOfStudy": "38bbf7d7-b98e-4550-82fb-db0463b467a0:string:ENRL",
+          "fosPrintArea": "58c1f936-d255-4b99-beb3-aa0e62858f09:string:ND",
+          "summary": [
+            {
+              "programName": "9a48eb35-e9a3-4e65-a4ef-c980206474b3:string:Bachelor of Engineering (Civil Engineering)",
+              "includeInGPA": "a26490a7-3340-4291-a0f0-a45b10114465:boolean:true",
+              "GPAName": "6e4a7985-57af-48ea-9df0-e31e474a0b70:string:Cumulative Average Point",
+              "GPA": "c85e56df-03aa-43dc-9df7-36244800fbe7:number:4.32",
+              "reportNo": "b2021acb-7b6a-4af5-bd82-31bd688fe2dd:number:1"
+            }
+          ],
+          "reportNo": "c674ef9a-1cee-4c04-bfc4-a3b2d600b22b:number:1"
+        },
+        {
+          "name": "26a302f2-6633-4ed6-a5b1-bf750890d798:string:0820",
+          "term": "2104bf66-c611-4140-821c-422406965f8e:string:2008/2009 Semester 2",
+          "formOfStudy": "53239136-72e1-4f9d-8419-a2b6176d5d94:string:ENRL",
+          "fosPrintArea": "17a3220f-c31a-434e-a007-3b50c0c2fa55:string:ND",
+          "summary": [
+            {
+              "programName": "3a14ae21-54be-43f9-8762-025ee49c8dea:string:Bachelor of Engineering (Civil Engineering)",
+              "includeInGPA": "00d1185c-9aa3-42b4-a05d-e54e6a92ba12:boolean:true",
+              "GPAName": "51bf44d9-3298-40f9-875d-cbe62aa4c31c:string:Cumulative Average Point",
+              "GPA": "8bfc094c-7c68-4766-b0fa-76c6cd93384c:number:4.26",
+              "reportNo": "f7cb0bbf-2a1f-4a3f-8c77-eba4c6819f64:number:1"
+            }
+          ],
+          "reportNo": "b202faf0-ec22-48e6-93b7-d45bb088a009:number:1"
+        },
+        {
+          "name": "e80a5611-1dc2-4fc2-84ea-5160204fd69c:string:0910",
+          "term": "211e157c-c978-4537-b240-eb67bd39508b:string:2009/2010 Semester 1",
+          "formOfStudy": "f11c9b88-9a53-461c-97ec-7d8e3a5abb3c:string:ENRL",
+          "fosPrintArea": "10f6351c-acf9-4d11-ac84-2e0efc46ba9a:string:ND",
+          "summary": [
+            {
+              "programName": "671d999d-456f-4938-91a5-b84462e82eac:string:Bachelor of Engineering (Civil Engineering)",
+              "includeInGPA": "36ea14d7-17ba-4314-bf9d-d8b724c3691c:boolean:true",
+              "GPAName": "a96f3203-a733-47e7-9238-942b431cdd2a:string:Cumulative Average Point",
+              "GPA": "d2add135-c4a5-4b22-b4c2-9b1032de3b31:number:4.45",
+              "awards": [
+                {
+                  "awardCode": "e261378e-0e37-4c78-b60a-1dc5c8d491e6:string:DEANL",
+                  "awardName": "75f7a745-166d-480c-ab0b-6afd0436ab4e:string:Dean's List",
+                  "reportNo": "f9001d7f-9c20-4afe-921b-17adcadb1da6:string:1"
+                }
+              ],
+              "reportNo": "f9f4d2be-1a10-4759-9327-1e263d0f8212:number:1"
+            }
+          ],
+          "reportNo": "fbb172a7-1abd-4f40-902b-8bbd4d69a114:number:1"
+        },
+        {
+          "name": "a70cb716-dc6c-4c69-8427-90b86a008ee6:string:0920",
+          "term": "eadc38d4-7275-447f-830a-00715947eb01:string:2009/2010 Semester 2",
+          "formOfStudy": "221d865a-33d8-4d2e-8351-59f5a13e0ff6:string:ENRL",
+          "fosPrintArea": "b88f27f3-23a4-413c-ac68-7b42e35d6f9b:string:ND",
+          "summary": [
+            {
+              "programName": "0cb2c96f-7d08-4036-bf0f-b0cf77a6eae0:string:Bachelor of Engineering (Civil Engineering)",
+              "includeInGPA": "ab6bcff6-6904-4bb7-9f1b-d7e6cf8b2bf8:boolean:true",
+              "GPAName": "0f2aa748-1d39-41bd-9721-94a9a4c89ae8:string:Cumulative Average Point",
+              "GPA": "c48d52c8-0e4a-4606-a184-d9634d5260a9:number:4.38",
+              "reportNo": "e282eed7-ce50-4bfe-bef1-3dd19e0e7e8c:number:1"
+            }
+          ],
+          "reportNo": "2732b7ea-ec6a-4203-b576-56f60bdb181d:number:1"
+        },
+        {
+          "name": "35be4dd6-e8ac-4c0a-b11e-a8ca29394f00:string:0930",
+          "term": "9494ef35-6263-464b-8ab2-00ccc6c9e92b:string:2009/2010 Special Term (Part1)",
+          "formOfStudy": "4d6e9e01-20c6-479c-ad9f-837973696617:string:ENRL",
+          "fosPrintArea": "849aa842-1647-4048-ad8e-df5cac802ca0:string:ND",
+          "summary": [
+            {
+              "programName": "ab6d2ec5-c709-4aef-8641-70203733c5d4:string:Bachelor of Engineering (Civil Engineering)",
+              "includeInGPA": "ceec5f42-e078-44db-9cb5-f821d2b4cf20:boolean:true",
+              "GPAName": "1b03d2d0-a950-4c20-900c-88da2237b753:string:Cumulative Average Point",
+              "GPA": "2210646a-5ae1-47a7-8554-866a83628c89:number:4.41",
+              "reportNo": "db31863d-c929-4a89-8a5a-2715d2ed0004:number:1"
+            }
+          ],
+          "reportNo": "c06da674-a5f5-4d32-a020-889d13b11b84:number:1"
+        },
+        {
+          "name": "04fab4d7-ee61-49ee-b71a-f1bc7a21c3ee:string:1010",
+          "term": "d4c6f9fe-d15d-4e88-8ba3-5b032bb265c1:string:2010/2011 Semester 1",
+          "formOfStudy": "9b6ef7fd-7aa2-4940-8325-34eb1f6f16bc:string:JDA",
+          "fosDescription": "6a61cf7d-3ea6-4a0b-bbe8-dbc8d440d5e4:string:Participated in a Joint Degree Programme at",
+          "organization": "cc114500-8d84-4194-8a23-03270475e73f:string:University of Melbourne",
+          "fosPrintArea": "0d0e40e7-8335-4748-a466-cdf5ea5be741:string:EH",
+          "summary": [
+            {
+              "programName": "f24bf57b-1366-4495-937f-1f43fa04cb19:string:Bachelor of Engineering (Civil Engineering)",
+              "includeInGPA": "687dd3bb-9059-4d9e-b028-6d18de5852ee:boolean:true",
+              "GPAName": "80bef5fc-0443-45f5-a940-ad2723ce750a:string:Cumulative Average Point",
+              "GPA": "c26bc031-9be8-4f89-bd31-670d75c9ed39:number:4.41",
+              "reportNo": "a6dd04c3-8e05-4990-8a60-a99e6758ea3b:number:1"
+            }
+          ],
+          "reportNo": "e10c942e-30a4-450b-9619-b0221c64d386:number:1"
+        },
+        {
+          "name": "36358131-7e0a-48d5-97ca-232c024fc64e:string:1020",
+          "term": "90db3aee-b6a2-4e1f-acd8-26177d0d2cb9:string:2010/2011 Semester 2",
+          "formOfStudy": "11792f16-fb89-4f43-9f1f-2244fb3ed97c:string:JDA",
+          "fosDescription": "768ef949-4006-4bb1-b0ce-3d3bbbc10560:string:Participated in a Joint Degree Programme at",
+          "organization": "49d370af-c576-4fa3-8e42-0dec93accf98:string:University of Melbourne",
+          "fosPrintArea": "bb966ac6-4586-48fd-9548-b66c58ebd662:string:EH",
+          "summary": [
+            {
+              "programName": "f034cb86-b4bf-4963-ae71-dbb05432cba7:string:Bachelor of Engineering (Civil Engineering)",
+              "includeInGPA": "6972be1b-1f1a-46ab-94c7-484b43788e14:boolean:true",
+              "GPAName": "af691acf-aa9d-48e2-8657-82a17365f24b:string:Cumulative Average Point",
+              "GPA": "e86099ff-127b-400b-b8a2-b22294b6cd04:number:4.41",
+              "reportNo": "8b755d9b-6ab6-463a-87bc-891c7284ed85:number:1"
+            }
+          ],
+          "reportNo": "5bed3806-9c4c-4b18-ac2e-37cc1425d255:number:1"
+        },
+        {
+          "name": "556e122a-89ea-4558-9a7d-9b03308817c4:string:1110",
+          "term": "f69fa3d2-3633-4f4d-a736-1ab78379e03e:string:2011/2012 Semester 1",
+          "formOfStudy": "9e6f35b8-9555-4db1-bbd7-90e58c2cfa2c:string:JDA",
+          "fosDescription": "566788a6-5e84-4c83-be6b-7015deaf8b8d:string:Participated in a Joint Degree Programme at",
+          "organization": "acfab3a9-c2a2-43d8-a56e-764df33a45d2:string:University of Melbourne",
+          "fosPrintArea": "d5206525-c451-487b-9c4c-e92f59cf9167:string:EH",
+          "summary": [
+            {
+              "programName": "cfa90fae-19e4-4374-a6b1-4fc17191da14:string:Bachelor of Engineering (Civil Engineering)",
+              "includeInGPA": "8f082a4c-2137-47f3-b9a3-552ffcb6f4d9:boolean:true",
+              "GPAName": "23659c1c-c741-41af-9013-a8de1eac15dc:string:Cumulative Average Point",
+              "GPA": "f12996a4-d5a8-4477-bd2d-dd534a1959a3:number:4.41",
+              "reportNo": "2b3f4ddb-1b2e-4343-a931-d2b8c6627ede:number:1"
+            }
+          ],
+          "reportNo": "5f0de839-0416-498d-be06-37ae8828d277:number:1"
+        },
+        {
+          "name": "8d5df407-b9e0-4332-9b9d-1b242ddc12f4:string:1120",
+          "term": "afe3d6f2-a2d5-4bf3-8ec4-223cad503348:string:2011/2012 Semester 2",
+          "formOfStudy": "ad02d7a2-1c89-4802-a1e3-676f3a3f851b:string:ENRL",
+          "fosPrintArea": "7dea5bec-c9d6-44ef-80c3-b6ace8e3de33:string:ND",
+          "summary": [
+            {
+              "programName": "9c45f2da-a32d-4e38-86b3-3af5faf9c7ff:string:Bachelor of Engineering (Civil Engineering)",
+              "specialGPA": [
+                {
+                  "type": "67944cf7-83c1-4431-986e-c4300fe9ca49:string:FCAP",
+                  "name": "db3d6fa6-f182-4671-810c-371499367841:string:Final Cumulative Average Point",
+                  "GPA": "71030e8c-e5c9-4bcc-a779-65cbf9ec7da3:number:4.65",
+                  "reportNo": "a0083f78-dba0-4e26-b00c-6beebee0c907:string:1"
+                }
+              ],
+              "reportNo": "d28e7db1-d2f4-4a75-8291-ac35cb112006:number:1"
+            }
+          ],
+          "reportNo": "391f7572-c855-4472-b4e4-f9e649f69069:number:1"
+        }
+      ],
+      "programData": [
+        {
+          "programCode": "efd93b0d-98ef-4a58-a39f-6b61e10343fe:string:B0610",
+          "programName": "0e223def-d2a9-47a2-b25b-1cd6e50cf337:string:Bachelor of Engineering (Civil Engineering)",
+          "statusCode": "9e594dd8-2ed3-4e6d-85d6-62dc05db4f17:string:CM",
+          "statusDescription": "55e61ae3-c1bd-4fc7-8d63-5049c781f1ac:string:Completed Programme",
+          "effectiveDate": "da94d1d4-91f7-452f-bcdc-edc68034f6b5:string:2012-06-22",
+          "admitTerm": "e4e7c63c-fc5d-4f87-abe4-9f5466e1a93f:string:0810",
+          "reportNo": "e3a5108f-2f68-4447-ad62-9b6cbbfea930:string:1"
+        }
+      ],
+      "degreeData": [
+        {
+          "degreeTitle": "272ee33d-5a51-4af9-91d6-88254385ede2:string:Bachelor of Engineering (Civil Engineering)",
+          "dateConferred": "3adb6c03-37b1-47fd-a1cf-86b9af6e10e9:string:2012-06-30",
+          "honours": "f7a75a04-c178-4c3e-9b1d-e8ca528f1543:string:1st Class Honours",
+          "plans": [
+            {
+              "specialProgram": "2af72858-6fbc-4c6f-96d8-24bfbfd7c776:boolean:true",
+              "type": "a48470e0-54d9-4ab2-97dd-1ea962a61fd0:string:JDP",
+              "typeName": "30043cbd-16ef-4c07-aad2-3156a0aa94c1:string:Joint Degree Programme",
+              "transcriptDescr": "d3bba9f0-ef17-4359-9f0f-ea49f752ad5c:string:Completed a Joint Degree Program with",
+              "planDescr": "f4c15915-0f9d-410b-a132-2f19321d20f3:string:University of Melbourne"
+            }
+          ],
+          "reportNo": "c0489c1d-6eae-48c7-9483-c740b81d434b:number:1"
+        }
+      ]
+    }
+  },
+  "privacy": {},
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "167d5447f6ef377cbe456ece49678021420bd54c96513f9b181a68ed7a873a3c",
+    "proof": [
+      "d8b4cacc92eabe3533a11d71fc2ed21a0937d0efad3de1c5d93344ade581ac05",
+      "3817df4c2638a02a4f8a5bf9a8bcf197f187a01c54efd7c512c245ea9b3f0101",
+      "ad0202e2288c26738a8054c374fca3ec77da39f708a29bd2a04e3e5fd4c0e2da",
+      "8b1d40f50be2eb496a872b232ed088fdff2f73937e9951a87a2794b4e9ba6c1d",
+      "2e52e2e8d34cc0127b4557fe9727f55e642bcf21219bf6d06c71932af4dc4926",
+      "7bfc29748a38d23ae9ca8d2c7225873287bd0baa0630ada5963b9e61ac9c3806"
+    ],
+    "merkleRoot": "3862426f819b735c661f7981bfaed07eff1984a447b0406d831c1b15ec75e7c9"
+  }
+}

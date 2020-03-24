@@ -21,9 +21,6 @@ const renderLogos = () => {
     <table width="100%">
       <tbody>
         <tr>
-          <td>{renderVoid("1.27cm")}</td>
-        </tr>
-        <tr>
           <td width="45%">{renderSmallNUSLogo(1)}</td>
           <td width="55%">
             <img src={CAAS_LOGO} style={styleLogo} />
@@ -124,7 +121,7 @@ const getDataFeeder = dataSource => {
   const dataFeeder = new DegreeScrollDataFeeder();
   dataFeeder.logo = renderLogos();
   dataFeeder.studentName = dataSource.recipient.name.toUpperCase();
-  dataFeeder.namePadding = "20px 0";
+  dataFeeder.namePadding = "20px 0 15px";
   dataFeeder.postNameText =
     "having completed the requirements prescribed\nfor the Joint Programme of the National\nUniversity of Singapore and the Civil Aviation\nAuthority of Singapore was awarded the";
   dataFeeder.degreeCode = dataSource.additionalData.degreeScroll[0].degreeCode;
