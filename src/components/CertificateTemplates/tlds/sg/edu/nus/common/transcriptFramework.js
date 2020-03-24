@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import PropTypes from "prop-types";
-import { isoDateToLocal, sassClassNames, renderPrintWatermarkTs } from ".";
+import { isoDateToLocal, sassClassNames } from ".";
 import scss from "./transcriptFramework.scss";
 
 // constants
@@ -171,7 +171,7 @@ class TranscriptHeader extends Component {
           <tbody key="pers-info-tbody">
             <tr key="ts-unoff-title">
               <td colSpan="8" className={cls("header-unoff")}>
-                {renderPrintWatermarkTs(cls("print-only"))}
+                {/* unofficial transcript name */}
                 &nbsp;
               </td>
             </tr>
@@ -261,9 +261,13 @@ class TranscriptPage extends Component {
 
   // main render
   render() {
+    // cannot put background image into css file because loading image may fail
+    const backgroundImg = this.props.backImgUrl
+      ? { backgroundImage: this.props.backImgUrl }
+      : {};
     const idx = this.props.pageIdx;
     const html = (
-      <div className={cls("a4-landscape")} style={this.props.background}>
+      <div className={cls("a4-landscape ts-background")} style={backgroundImg}>
         <header key="ts-header">
           <TranscriptHeader headerData={this.props.headerData} />
         </header>
@@ -311,7 +315,7 @@ TranscriptPage.propTypes = {
   rowsPerCol: PropTypes.number.isRequired,
   pageIdx: PropTypes.number.isRequired,
   headerData: PropTypes.object.isRequired,
-  background: PropTypes.object
+  backImgUrl: PropTypes.string
 };
 
 // transcript data row
@@ -517,7 +521,7 @@ export class Transcript extends Component {
         pageIdx={idx}
         rowsPerCol={this.maxRows}
         headerData={this.feeder.headerData}
-        background={this.props.background}
+        backImgUrl={this.props.backImgUrl}
       />
     );
     return html;
@@ -550,7 +554,7 @@ Transcript.propTypes = {
   maxPages: PropTypes.string,
   maxRows: PropTypes.string,
   dataFeeder: PropTypes.object,
-  background: PropTypes.object,
+  backImgUrl: PropTypes.string,
   legendPage: PropTypes.string,
   legendRatio: PropTypes.string
 };

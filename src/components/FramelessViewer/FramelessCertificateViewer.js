@@ -10,6 +10,7 @@ const FramelessCertificateViewer = props => {
   const {
     document,
     tabIndex,
+    updateParentHeight,
     updateParentTemplates,
     obfuscateDocument
   } = props;
@@ -25,6 +26,7 @@ const FramelessCertificateViewer = props => {
     <SelectedTemplate
       document={document}
       tabIndex={tabIndex}
+      updateParentHeight={updateParentHeight}
       updateParentTemplates={updateParentTemplates}
       obfuscateDocument={obfuscateDocument}
     />
@@ -34,6 +36,7 @@ const FramelessCertificateViewer = props => {
 FramelessCertificateViewer.propTypes = {
   document: PropTypes.object,
   tabIndex: PropTypes.number,
+  updateParentHeight: PropTypes.func,
   updateParentTemplates: PropTypes.func,
   obfuscateDocument: PropTypes.func
 };

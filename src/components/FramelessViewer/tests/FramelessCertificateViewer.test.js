@@ -34,12 +34,14 @@ it("renders selected template if template key is found", () => {
 it("props are passed correctly to SelectedTemplate", () => {
   const mockCertificate = { $template: "custom" };
   const mockObfuscateDoucment = jest.fn();
+  const mockUpdateParentHeight = jest.fn();
   const mockUpdateParentTemplates = jest.fn();
 
   const component = mount(
     <FramelessCertificateViewer
       document={mockCertificate}
       obfuscateDocument={mockObfuscateDoucment}
+      updateParentHeight={mockUpdateParentHeight}
       updateParentTemplates={mockUpdateParentTemplates}
     />
   );
@@ -47,7 +49,9 @@ it("props are passed correctly to SelectedTemplate", () => {
   expect(component.children().prop("obfuscateDocument")).toEqual(
     mockObfuscateDoucment
   );
-
+  expect(component.children().prop("updateParentHeight")).toEqual(
+    mockUpdateParentHeight
+  );
   expect(component.children().prop("updateParentTemplates")).toEqual(
     mockUpdateParentTemplates
   );

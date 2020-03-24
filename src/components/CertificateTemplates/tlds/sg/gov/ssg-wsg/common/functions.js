@@ -6,8 +6,7 @@ import {
   NICF_LOGO,
   IMG_SSGLOGO,
   NEA_LOGO,
-  CASAS_LOGO,
-  SFA_LOGO
+  CASAS_LOGO
 } from "./images";
 import * as styles from "./style";
 
@@ -158,25 +157,22 @@ export const renderSeal = () => (
 export const switchOperatorFunction = certificate => {
   switch (get(certificate, "additionalData.certCode")) {
     case "SOA_SV_001":
-      return " Service Excellence WSQ Framework";
+      return " Service Excellence";
 
     case "SF_SOA_SV_001":
-      return " Service Excellence WSQ Framework";
+      return " Service Excellence";
 
     case "SF_SOA_MF_01":
-      return " Generic Manufacturing Skills WSQ Framework";
+      return " Generic Manufacturing Skills";
 
     case "SF_SOA_MF_02":
-      return " Generic Manufacturing Skills WSQ Framework";
+      return " Generic Manufacturing Skills";
 
     case "SOA-MF-01":
-      return " Generic Manufacturing Skills WSQ Framework";
-
-    case "SOA-SVCF-001":
-      return " Service Excellence Competency Framework";
+      return " Generic Manufacturing Skills";
 
     default:
-      return " Human Resource WSQ Framework";
+      return " Human Resource";
   }
 };
 
@@ -190,7 +186,7 @@ export const renderSignature = certificate => (
         <p style={{ fontWeight: "bold", color: "#FF0000" }}>Certified Copy</p>
       </div>
     ) : (
-      <div className="col-12" style={{ padding: "5px" }}>
+      <div className="col-lg-4 col-12">
         <img
           style={styles.signatureWidthStyle}
           src={get(certificate, "additionalData.certSignatories[0].signature")}
@@ -301,29 +297,6 @@ export const renderSignatureSOAIT = certificate => (
   </div>
 );
 
-export const switchRewardFunction = certificate => {
-  switch (get(certificate, "additionalData.certCode")) {
-    case "SOA-SVCF-001":
-      return [
-        {
-          name: "Provide Go-the-Extra-Mile Service",
-          courseCode: "SVCF-CS-101C-1"
-        },
-        {
-          name: "Project a Positive and Professional Image",
-          courseCode: "SVCF-CS-102C-1"
-        },
-        {
-          name: "Respond to Service Challenges",
-          courseCode: "SVCF-CS-103C-1"
-        }
-      ];
-
-    default:
-      return certificate.transcript;
-  }
-};
-
 export const renderAwardTextSOAHR = certificate => (
   <div>
     <div
@@ -344,10 +317,10 @@ export const renderAwardTextSOAHR = certificate => (
       <p style={styles.awardTextStyle} className="RobotoMedium">
         for successfully meeting the requirements of the above programme and
         attainment of the competencies in the following modules of the
-        {switchOperatorFunction(certificate)}:
+        {switchOperatorFunction(certificate)} WSQ Framework:
       </p>
     </div>
-    {switchRewardFunction(certificate).map(item => (
+    {certificate.transcript.map(item => (
       <div className="d-flex" key={item.courseCode}>
         <p style={styles.soaTranscriptTextStyle} className="RobotoMedium">
           - {item.name} ({item.courseCode})
@@ -423,16 +396,6 @@ export const renderSignatureSOAHR = certificate => (
   </div>
 );
 
-export const formatAttainmentDate = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if (intDate < 20190401) {
-    return <img style={styles.sfaFooterLogoStyle} src={NEA_LOGO} />;
-  }
-  return <img style={styles.footerLogoStyle} src={SFA_LOGO} />;
-};
-
 export const renderSignaturePartner = certificate => (
   <div
     className="row d-flex justify-content-center"
@@ -470,7 +433,7 @@ export const renderSignaturePartner = certificate => (
         }}
       >
         <div className="col-lg-7 col-8">
-          {formatAttainmentDate(certificate)}
+          <img style={styles.footerLogoStyle} src={NEA_LOGO} />
         </div>
         <div className="col-lg-5 col-6">
           <p style={styles.certCodeStyle}>
@@ -639,7 +602,7 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
   >
     {renderSeal()}
 
-    <div className="col-lg-6">
+    <div className="col-lg-7">
       {renderSignature(certificate)}
       <div style={{ paddingLeft: "0px" }} className="col-lg-5 col-12">
         <img style={styles.footerLogoStyle} src={IMG_SSGLOGO} />
@@ -698,7 +661,7 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
         </div>
       </div>
     </div>
-    <div className="col-lg-4 col-xs-12">
+    <div className="col-lg-3 col-xs-12">
       <div style={{ marginBottom: "70px", marginTop: "60px" }}>
         <p style={styles.printTextStyle} className="RobotoRegular">
           Cert No: {get(certificate, "additionalData.serialNum")}
