@@ -57,6 +57,10 @@ const ptsdBcaa = dynamic(() =>
   import("./ptsd_bcaa" /* webpackChunkName: "TemasekPolytechnicTemplates" */)
 );
 
+const ptsdStlukes = dynamic(() =>
+  import("./ptsd_stlukes" /* webpackChunkName: "TemasekPolytechnicTemplates" */)
+);
+
 const ptdipdpss = dynamic(() =>
   import("./ptdipdpss" /* webpackChunkName: "TemasekPolytechnicTemplates" */)
 );
@@ -434,6 +438,27 @@ const templates = {
   "ptsd_bcaa-2028": ptsdBcaa,
   "ptsd_bcaa-2029": ptsdBcaa,
 
+  "ptsd_stlukes-2010": ptsdStlukes,
+  "ptsd_stlukes-2011": ptsdStlukes,
+  "ptsd_stlukes-2012": ptsdStlukes,
+  "ptsd_stlukes-2013": ptsdStlukes,
+  "ptsd_stlukes-2014": ptsdStlukes,
+  "ptsd_stlukes-2015": ptsdStlukes,
+  "ptsd_stlukes-2016": ptsdStlukes,
+  "ptsd_stlukes-2017": ptsdStlukes,
+  "ptsd_stlukes-2018": ptsdStlukes,
+  "ptsd_stlukes-2019": ptsdStlukes,
+  "ptsd_stlukes-2020": ptsdStlukes,
+  "ptsd_stlukes-2021": ptsdStlukes,
+  "ptsd_stlukes-2022": ptsdStlukes,
+  "ptsd_stlukes-2023": ptsdStlukes,
+  "ptsd_stlukes-2024": ptsdStlukes,
+  "ptsd_stlukes-2025": ptsdStlukes,
+  "ptsd_stlukes-2026": ptsdStlukes,
+  "ptsd_stlukes-2027": ptsdStlukes,
+  "ptsd_stlukes-2028": ptsdStlukes,
+  "ptsd_stlukes-2029": ptsdStlukes,
+  
   "ptdipdpss-2010": ptdipdpss,
   "ptdipdpss-2011": ptdipdpss,
   "ptdipdpss-2012": ptdipdpss,
