@@ -41,7 +41,7 @@ export const formatDatePrefix = dateString => {
   const date = new Date(dateString);
   const day = Number(tz(date, TIMEZONE).format("DD"));
   let daySup = "th";
-  if (day < 10) {
+  if (day < 10 || day > 20) {
     switch (day % 10) {
       case 1:
         daySup = "st";
@@ -114,7 +114,11 @@ export const formatCertName = (certId, certName, meritFlag) => {
 
   switch (certType) {
     case "FT":
-      [certPrefix, certDescr] = ["Diploma", certName];
+      if (certName.startsWith("Diploma")) {
+        [certPrefix, certDescr] = splitStringTo2(certName, " in ");
+      } else {
+        [certPrefix, certDescr] = ["Diploma", certName];
+      }
       break;
     case "PTD":
     case "PDP":
