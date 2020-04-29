@@ -28,6 +28,7 @@ let isDuke;
 let isMedDen;
 let isCDP;
 let isYaleNUS;
+let isNG;
 
 // Yale-NUS specific attributes
 let lastTermYaleNUS;
@@ -62,29 +63,46 @@ class TranscriptProgram {
 
   // render for a program
   renderProgData(data) {
-    this.dataFeeder.push(
-      "ts-prog",
-      <td colSpan="4">
-        <table width="100%">
-          <tr>
-            <td width="30%" valign="top" className={cls("ts-title prog-key")}>
-              PROGRAMME:
-            </td>
-            <td wdith="70%" valign="top" className={cls("ts-title")}>
-              {data.programName.toUpperCase()}
-              <br />
-              {isDuke ? "DUKE-NUS MEDICAL SCHOOL" : null}
-            </td>
-          </tr>
-          <tr>
-            <td className={cls("ts-title prog-key")}>PROGRAMME STATUS:</td>
-            <td className={cls("ts-title")}>
-              {data.statusDescription.toUpperCase()}
-            </td>
-          </tr>
-        </table>
-      </td>
-    );
+    if (isNG)
+      this.dataFeeder.push(
+        "ts-prog",
+        <td colSpan="4">
+          <table width="100%">
+            <tr>
+              <td width="30%" valign="top" className={cls("ts-title prog-key")}>
+                PROGRAMME:
+              </td>
+              <td wdith="70%" valign="top" className={cls("ts-title")}>
+                NON GRADUATING PROGRAMME
+              </td>
+            </tr>
+          </table>
+        </td>
+      );
+    else
+      this.dataFeeder.push(
+        "ts-prog",
+        <td colSpan="4">
+          <table width="100%">
+            <tr>
+              <td width="30%" valign="top" className={cls("ts-title prog-key")}>
+                PROGRAMME:
+              </td>
+              <td wdith="70%" valign="top" className={cls("ts-title")}>
+                {data.programName.toUpperCase()}
+                <br />
+                {isDuke ? "DUKE-NUS MEDICAL SCHOOL" : null}
+              </td>
+            </tr>
+            <tr>
+              <td className={cls("ts-title prog-key")}>PROGRAMME STATUS:</td>
+              <td className={cls("ts-title")}>
+                {data.statusDescription.toUpperCase()}
+              </td>
+            </tr>
+          </table>
+        </td>
+      );
   }
 }
 
@@ -515,16 +533,19 @@ class TranscriptSummary {
     const isLastYNCTerm =
       isYaleNUS && lastTermYaleNUS && lastTermYaleNUS === this.termData.name;
     this.termData.summary.forEach(data => {
-      // degree name
-      if (!isMedDen) this.renderTermDegree(data);
-      // GPA
-      if (data.specialGPA) this.renderSpecialGPA(data);
-      else if (!isMedDen) this.renderGPA(data);
-      // render special remarks for Yale-NUS
-      if (isLastYNCTerm && progNameYaleNUS === data.programName)
-        this.renderYNCRemarks(data);
-      // acad standing
-      if (isMedDen) this.renderAcadStanding(data);
+      if (!isNG) {
+        // not applicable to NGRD
+        // degree name
+        if (!isMedDen) this.renderTermDegree(data);
+        // GPA
+        if (data.specialGPA) this.renderSpecialGPA(data);
+        else if (!isMedDen) this.renderGPA(data);
+        // render special remarks for Yale-NUS
+        if (isLastYNCTerm && progNameYaleNUS === data.programName)
+          this.renderYNCRemarks(data);
+        // acad standing
+        if (isMedDen) this.renderAcadStanding(data);
+      }
       // term honours
       if (data.awards) this.renderTermHonours(data);
     });
@@ -1104,7 +1125,9 @@ class TranscriptMilestone {
     if (this.msData) {
       this.msData.forEach(data => {
         if (data.milestoneTitle) {
-          const descr = `${data.milestoneTitle} ${data.thesisTitle}`;
+          const descr = `${
+            isNG ? "Completed a research project on" : data.milestoneTitle
+          } ${data.thesisTitle}`;
           this.dataFeeder.push(
             "ts-ms",
             <td
@@ -1376,6 +1399,7 @@ const Template = ({ certificate }) => {
           return [true, programData[i].programName];
     return [false, null];
   })(jsonData);
+  isNG = jsonData.additionalData.transcriptType.startsWith("NG");
   // to be used for Yale-NUS last term remarks, only applicable when conferred
   lastTermYaleNUS = (transcriptData => {
     let lastTerm = null;
