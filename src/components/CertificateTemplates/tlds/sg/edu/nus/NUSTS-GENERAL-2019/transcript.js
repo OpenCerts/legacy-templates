@@ -538,7 +538,7 @@ class TranscriptSummary {
       isYaleNUS && lastTermYaleNUS && lastTermYaleNUS === this.termData.name;
     this.termData.summary.forEach(data => {
       if (!isNG) {
-        // not applicable to NGRD
+        // most of term summary not applicable to NGRD
         // degree name
         if (!isMedDen) this.renderTermDegree(data);
         // GPA
