@@ -34,10 +34,6 @@ let isNG;
 let lastTermYaleNUS;
 let progNameYaleNUS;
 
-// Yale-NUS specific attributes
-let lastTermYaleNUS;
-let progNameYaleNUS;
-
 // check whether a term is first term
 const firstTermIdxes = [];
 const isFirstTerm = termIdx => firstTermIdxes.indexOf(termIdx) >= 0;
