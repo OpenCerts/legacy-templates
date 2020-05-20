@@ -9,9 +9,9 @@ const PartTimeExamResults = ({ certificate }) => {
     : 999;
 
   const displayCertName = (value, index) => {
-    if (index !== lastOne) {
+    //if (index !== lastOne) {
       return <span>{value.toUpperCase()}</span>;
-    }
+    //}
     return (
       <b>
         {value.toUpperCase()}
@@ -30,7 +30,7 @@ const PartTimeExamResults = ({ certificate }) => {
   ));
 
   const awardedCertificatesLabel =
-    "Certificate/Diploma Awarded";
+    "Certificate Awarded";
 
   return (
     <div className="container">
