@@ -1395,7 +1395,10 @@ const Template = ({ certificate }) => {
     const programData = transcriptData.additionalData.programData;
     if (programData)
       for (let i = 0; i < programData.length; i += 1)
-        if (programData[i].programCode.substring(1, 3) === "17")
+        if (
+          programData[i].isYNC ||
+          programData[i].programCode.substring(1, 3) === "17"
+        )
           return [true, programData[i].programName];
     return [false, null];
   })(jsonData);
