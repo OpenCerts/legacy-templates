@@ -1399,6 +1399,7 @@ const Template = ({ certificate }) => {
           programData[i].isYNC ||
           programData[i].programCode.substring(1, 3) === "17"
         )
+          // `isYNC` is applicable to NGRD students
           return [true, programData[i].programName];
     return [false, null];
   })(jsonData);
