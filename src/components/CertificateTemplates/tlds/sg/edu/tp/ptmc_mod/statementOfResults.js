@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 import PartTimeRecipient from "./partTimeRecipient";
-import PartTimeExamResults from "../common/partTimeExamResults";
+import PartTimeExamResults from "../common/partTimeExamResultsSOR";
 import PartTimeGradingScheme from "../common/partTimeGradingScheme";
 import ExemptionFootNote from "../common/exemptionFootNote";
 import StatementOfResultsHeader from "./statementOfResultsHeader";
