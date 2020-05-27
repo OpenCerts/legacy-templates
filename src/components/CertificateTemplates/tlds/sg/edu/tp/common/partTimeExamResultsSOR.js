@@ -4,20 +4,9 @@ import ExamResultsStyles from "./examResultsStyles";
 import SubjectGrades from "./partTimeSubjectGrades";
 
 const PartTimeExamResults = ({ certificate }) => {
-  const lastOne = certificate.additionalData.awardedCertificates.length
-    ? certificate.additionalData.awardedCertificates.length - 1
-    : 999;
 
   const displayCertName = (value, index) => {
-    if (index !== lastOne) {
       return <span>{value.toUpperCase()}</span>;
-    }
-    return (
-      <b>
-        {value.toUpperCase()}
-        {certificate.additionalData.isMerit && <span>&nbsp;WITH MERIT</span>}
-      </b>
-    );
   };
 
   const awardedCertificates = _.uniq(
@@ -30,7 +19,7 @@ const PartTimeExamResults = ({ certificate }) => {
   ));
 
   const awardedCertificatesLabel =
-    "Certificate/Diploma Awarded";
+    "Certificate Awarded";
 
   return (
     <div className="container">
