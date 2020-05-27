@@ -1458,7 +1458,7 @@ const Template = ({ certificate }) => {
     <div style={scale}>
       <Transcript
         maxPages="8"
-        maxRows="50"
+        maxRows="40"
         dataFeeder={dataFeeder}
         background={backgroundImg}
         legendPage={legend}

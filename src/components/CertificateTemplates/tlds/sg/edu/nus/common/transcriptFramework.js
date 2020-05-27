@@ -246,9 +246,11 @@ class TranscriptPage extends Component {
     const html = [];
     html.push(setColWidth());
     for (let i = 0; i < this.props.rowsPerCol; i += 1) {
+      // <td> within <tr> will be replaced by ReactDOM.render()
+      // hide <td> to avoid printing issue
       html.push(
         <tr id={`row-${pageIdx}-${colIdx}-${i}`}>
-          <td />
+          <td style={{ display: "none" }} />
         </tr>
       );
     }
