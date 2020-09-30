@@ -569,12 +569,17 @@ class TranscriptSummary {
     let gpa1;
     let gpaName1;
     if (sumData.includeInGPA || isDuke) {
-      gpa = sumData.GPA.toFixed(2);
-      gpaName = sumData.GPAName.toUpperCase();
-      // gpa1 and gpaName1 are only for TDSI programs
-      if (sumData.GPAName1) {
-        gpa1 = sumData.GPA1.toFixed(2);
-        gpaName1 = sumData.GPAName1.toUpperCase();
+      if (sumData.disableGPA) {
+        gpa = "NOT APPLICABLE";
+        gpaName = "CUMULATIVE AVERAGE POINT";
+      } else {
+        gpa = sumData.GPA.toFixed(2);
+        gpaName = sumData.GPAName.toUpperCase();
+        // gpa1 and gpaName1 are only for TDSI programs
+        if (sumData.GPAName1) {
+          gpa1 = sumData.GPA1.toFixed(2);
+          gpaName1 = sumData.GPAName1.toUpperCase();
+        }
       }
     } else {
       gpa = "NOT APPLICABLE";
