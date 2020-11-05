@@ -20,8 +20,8 @@ export const RENDEREXPLANATORYNOTES_O = () => (
           The Singapore Examinations and Assessment Board is authorised by the
           Republic of Singapore to manage national examinations in Singapore.
           The Board, together with the Ministry of Education (MOE), Singapore
-          and the Cambridge Assessment International Education are
-          joint examining authorities for the General Certificate of Education
+          and the Cambridge Assessment International Education are joint
+          examining authorities for the General Certificate of Education
           Ordinary Level (GCE O-Level) Examination.
         </div>
       </div>
@@ -37,8 +37,9 @@ export const RENDEREXPLANATORYNOTES_O = () => (
           3
         </div>
         <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
-          Where a GCE O-Level subject is not MOE/Cambridge International developed, the examining
-          agency for the subject is printed in brackets below the subject title.
+          Where a GCE O-Level subject is not MOE/Cambridge International
+          developed, the examining agency for the subject is printed in brackets
+          below the subject title.
         </div>
       </div>
       <div className="row">

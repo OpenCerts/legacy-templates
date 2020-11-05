@@ -9,12 +9,7 @@ import {
   EXPLANATORY_FONT_SIZE_13
 } from "./style";
 
-import {
-  COMMAN_EXPL_1,
-  COMMAN_EXPL_4,
-  COMMAN_EXPL_5,
-  COMMAN_EXPL_6
-} from "./explnotes";
+import { COMMAN_EXPL_1, COMMAN_EXPL_5, COMMAN_EXPL_6 } from "./explnotes";
 
 export const RENDEREXPLANATORYNOTES_A = () => (
   <div className="row">

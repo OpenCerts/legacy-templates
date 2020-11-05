@@ -55,9 +55,9 @@ export const COMMAN_EXPL_5 = () => (
       The Singapore Examinations and Assessment Board is authorised by the
       Republic of Singapore to manage national examinations in Singapore. The
       Board, together with the Ministry of Education (MOE), Singapore and the
-      Cambridge Assessment International Education are joint
-      examining authorities for the General Certificate of Education Advanced
-      Level (GCE A-Level) Examination.
+      Cambridge Assessment International Education are joint examining
+      authorities for the General Certificate of Education Advanced Level (GCE
+      A-Level) Examination.
     </div>
   </div>
 );

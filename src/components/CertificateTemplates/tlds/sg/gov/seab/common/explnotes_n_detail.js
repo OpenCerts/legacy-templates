@@ -8,11 +8,7 @@ import {
   EXPLANATORY_CONTENT
 } from "./style";
 
-import {
-  COMMAN_EXPL_1,
-  COMMAN_EXPL_2,
-  COMMAN_EXPL_3
-} from "./explnotes";
+import { COMMAN_EXPL_1, COMMAN_EXPL_2, COMMAN_EXPL_3 } from "./explnotes";
 
 export const RENDEREXPLANATORYNOTES_N = () => (
   <div className="row">
@@ -25,9 +21,9 @@ export const RENDEREXPLANATORYNOTES_N = () => (
           The Singapore Examinations and Assessment Board is authorised by the
           Republic of Singapore to manage national examinations in Singapore.
           The Board, together with the Ministry of Education (MOE), Singapore
-          and the Cambridge Assessment International Education are
-          joint examining authorities for the General Certificate of Education
-          Normal Level (GCE N-Level) Examination.
+          and the Cambridge Assessment International Education are joint
+          examining authorities for the General Certificate of Education Normal
+          Level (GCE N-Level) Examination.
         </div>
       </div>
       <div className="row">
