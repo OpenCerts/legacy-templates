@@ -7,7 +7,7 @@ import {
   EXPLANATORY_MARGIN_LEFT
 } from "./style";
 
-import { COMMAN_EXPL_1, COMMAN_EXPL_2, COMMAN_EXPL_4 } from "./explnotes";
+import { COMMAN_EXPL_1, COMMAN_EXPL_2 } from "./explnotes";
 
 export const RENDEREXPLANATORYNOTES_O = () => (
   <div className="row">
@@ -20,7 +20,7 @@ export const RENDEREXPLANATORYNOTES_O = () => (
           The Singapore Examinations and Assessment Board is authorised by the
           Republic of Singapore to manage national examinations in Singapore.
           The Board, together with the Ministry of Education (MOE), Singapore
-          and the University of Cambridge International Examinations (CIE) are
+          and the Cambridge Assessment International Education are
           joint examining authorities for the General Certificate of Education
           Ordinary Level (GCE O-Level) Examination.
         </div>
@@ -37,7 +37,7 @@ export const RENDEREXPLANATORYNOTES_O = () => (
           3
         </div>
         <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
-          Where a GCE O-Level subject is not MOE/CIE developed, the examining
+          Where a GCE O-Level subject is not MOE/Cambridge International developed, the examining
           agency for the subject is printed in brackets below the subject title.
         </div>
       </div>
@@ -111,7 +111,7 @@ export const RENDEREXPLANATORYNOTES_O = () => (
         </div>
         <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
           Performance in the Oral/Aural Examinations in the Mother Tongue
-          subjects is indicated as Distinction, Merit, Pass or Ungraded.
+          subjects is indicated as Distinction (DIST), Merit, Pass or Ungraded.
         </div>
       </div>
       <div className="row">
@@ -143,29 +143,6 @@ export const RENDEREXPLANATORYNOTES_O = () => (
       <div className="row">
         <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
           8
-        </div>
-        <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
-          Abbreviation used in this Statement:
-          <br />
-          DIST
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distinction
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-12">&nbsp;</div>
-      </div>
-      <div className="row">
-        <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
-          9
-        </div>
-        {COMMAN_EXPL_4()}
-      </div>
-      <div className="row">
-        <div className="col-md-12">&nbsp;</div>
-      </div>
-      <div className="row">
-        <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
-          10
         </div>
         <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
           <div style={EXPLANATORY_MARGIN_LEFT}>

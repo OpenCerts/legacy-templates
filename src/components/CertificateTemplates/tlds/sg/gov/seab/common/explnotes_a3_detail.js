@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import {
   EXPLANATORY_CONTENT,
   EXPLANATORY_TABLE_WIDTH100_LEFT,
-  EXPLANATORY_FONT_SIZE_13
+  EXPLANATORY_FONT_SIZE_13,
+  EXPLANATORY_FONT_SIZE_11
 } from "./style";
 
 import {
   COMMAN_EXPL_1,
   COMMAN_EXPL_2,
-  COMMAN_EXPL_4,
   COMMAN_EXPL_5
 } from "./explnotes";
 
@@ -36,7 +36,7 @@ export const RENDEREXPLANATORYNOTES_A3 = () => (
           candidates to pursue a subject or an area of study in greater depth.
           H3 Level subjects may also take different forms, such as a
           university-taught course or an extended research essay. Where an H3
-          Level subject is not MOE/CIE developed, the examining agency and where
+          Level subject is not MOE/Cambridge International developed, the examining agency and where
           applicable, the programme agency for the subject is printed in
           brackets after the subject title.
         </div>
@@ -83,7 +83,7 @@ export const RENDEREXPLANATORYNOTES_A3 = () => (
               </tr>
               <tr style={EXPLANATORY_CONTENT}>
                 <td colSpan="2">
-                  <i>*Mother Tongue B is not an A-Level subject.</i>
+                  <i style={EXPLANATORY_FONT_SIZE_11}>*Mother Tongue B is not an A-Level subject.</i>
                 </td>
               </tr>
             </tbody>
@@ -131,15 +131,6 @@ export const RENDEREXPLANATORYNOTES_A3 = () => (
       <div className="row">
         <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
           8
-        </div>
-        {COMMAN_EXPL_4()}
-      </div>
-      <div className="row">
-        <div className="col-md-12">&nbsp;</div>
-      </div>
-      <div className="row">
-        <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
-          9
         </div>
         <div className="col-md-11" style={EXPLANATORY_CONTENT}>
           For further information or clarification on the GCE A-Level, please

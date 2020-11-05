@@ -207,15 +207,6 @@ export const RENDEREXPLANATORYNOTES_A = () => (
         <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
           8
         </div>
-        {COMMAN_EXPL_4()}
-      </div>
-      <div className="row">
-        <div className="col-md-12">&nbsp;</div>
-      </div>
-      <div className="row">
-        <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
-          9
-        </div>
         <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
           For further information or clarification on the GCE A-Level, please
           visit the website of the Singapore Examinations and Assessment Board

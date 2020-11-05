@@ -11,7 +11,7 @@ export const COMMAN_EXPL_1 = () => (
     </div>
     <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
       The NRIC / Foreign Identification No. refers to the National Registration
-      Identity Card (NRIC) number of Singapore citizens and Permanent Residents.
+      Identity Card (NRIC) number of Singapore Citizens and Permanent Residents.
       For non-Singapore citizens, the NRIC / Foreign Identification No. refers
       to the number on their official identification document, such as a
       passport.
@@ -46,15 +46,6 @@ export const COMMAN_EXPL_3 = () => (
   </div>
 );
 
-export const COMMAN_EXPL_4 = () => (
-  <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
-    This document is issued on condition of your strict compliance with the
-    Examination Instructions and Regulations. You must comply with any direction
-    by the Singapore Examinations and Assessment Board (SEAB) to return this
-    document to SEAB.
-  </div>
-);
-
 export const COMMAN_EXPL_5 = () => (
   <div className="row">
     <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
@@ -64,7 +55,7 @@ export const COMMAN_EXPL_5 = () => (
       The Singapore Examinations and Assessment Board is authorised by the
       Republic of Singapore to manage national examinations in Singapore. The
       Board, together with the Ministry of Education (MOE), Singapore and the
-      University of Cambridge International Examinations (CIE) are joint
+      Cambridge Assessment International Education are joint
       examining authorities for the General Certificate of Education Advanced
       Level (GCE A-Level) Examination.
     </div>
