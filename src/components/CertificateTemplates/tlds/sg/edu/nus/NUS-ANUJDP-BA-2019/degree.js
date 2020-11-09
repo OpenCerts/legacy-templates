@@ -49,7 +49,7 @@ const renderLogos = () => {
 // custom pre-name text
 const constructPreNameText = degreeTitle => {
   if (degreeTitle.toUpperCase() === "Bachelor of Arts".toUpperCase())
-    return "This is to certify that following the completion of\nthe Bachelor of Philosophy (Honours) / Bachelor \nof Arts (Honours) Joint Degree Programme\nof The Australian National University \nand The National University of Singapore";
+    return "This is to certify that following the completion of\nthe Bachelor of Philosophy (Honours) / Bachelor \nof Arts (Honours) Joint Degree Programme\nof the National University of Singapore\nand The Australian National University";
   if (degreeTitle.toUpperCase() === "Bachelor of Science".toUpperCase())
     return "This is to certify that following completion of\nthe Bachelor of Science (Honours) / Bachelor of\nPhilosophy (Honours) Joint Degree Programme\nof the National University of Singapore\nand The Australian National University";
   return "This is to certify that";
