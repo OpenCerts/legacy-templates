@@ -7,8 +7,8 @@ import {
   renderSmallNUSLogo
 } from "../common/degreeScrollFramework";
 import {
-  renderNUSSeal,
   renderImage,
+  renderNUSSeal,
   renderVoid,
   ANU_LOGO,
   ANU_SEAL
