@@ -1,6 +1,7 @@
 import { tz } from "moment-timezone";
 import { get } from "lodash";
 import {
+  NEW_IMG_LOGO,
   IMG_LOGO,
   IMG_SEAL,
   NICF_LOGO,
@@ -84,7 +85,7 @@ export const getSpecialization = additionalData => {
 export const renderLogoWSQ = () => (
   <div className="row d-flex">
     <div className="col-lg-5 col-12" style={{ paddingRight: "0px" }}>
-      <img style={styles.fullWidthStyle} src={IMG_LOGO} />
+      <img style={styles.fullWidthStyle} src={NEW_IMG_LOGO} />
     </div>
     <div className="col-lg-6" />
   </div>
