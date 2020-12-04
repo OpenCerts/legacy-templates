@@ -51,6 +51,7 @@ export const formatCertID = certId => {
   return arrayCertId.length > 0 ? arrayCertId[0] : null;
 };
 
+
 export const getRecipientID = recipient => {
   if (!recipient) return null;
 
