@@ -82,10 +82,10 @@ export const getSpecialization = additionalData => {
   return "";
 };
 
-export const renderLogoWSQ = () => (
+export const renderLogoWSQ = certificate => (
   <div className="row d-flex">
     <div className="col-lg-5 col-12" style={{ paddingRight: "0px" }}>
-      <img style={styles.fullWidthStyle} src={NEW_IMG_LOGO} /> 
+      {effectiveDateForWSQLOGO(certificate)}
     </div>
     <div className="col-lg-6" />
   </div>
@@ -128,10 +128,9 @@ export const renderFooterText = footerTextStyle => (
 
 export const renderAwardedTo = () => (
   <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.awardTextStyle} className="RobotoMedium">
-      is awarded to
-    </p>
+    <p style={styles.awardTextStyle} className="RobotoMedium">is awarded to</p>
   </div>
+    //{effectiveDateForFontColor(certificate)};
 );
 
 export const renderRecipientName = certificate => (
@@ -291,7 +290,7 @@ export const renderSignatureSOAIT = certificate => (
         style={{ alignItems: "center" }}
       >
         <div style={{ margin: "15px" }}>
-          <img style={styles.dualLogoFooter} src={IMG_LOGO} />
+         {effectiveDateForWSQLOGOFooter(certificate)}
           <img style={styles.dualLogoFooter} src={IMG_SSGLOGO} />
         </div>
         <div style={styles.certCodeStyle}>
@@ -301,6 +300,17 @@ export const renderSignatureSOAIT = certificate => (
     </div>
   </div>
 );
+
+export const effectiveDateForWSQLOGOFooter = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+    return <img style={styles.dualLogoFooter} src={IMG_LOGO} />;
+  }
+  return <img style={styles.dualLogoFooter} src={NEW_IMG_LOGO} />;
+};
+
 
 export const switchRewardFunction = certificate => {
   switch (get(certificate, "additionalData.certCode")) {
@@ -432,6 +442,16 @@ export const formatAttainmentDate = certificate => {
     return <img style={styles.sfaFooterLogoStyle} src={NEA_LOGO} />;
   }
   return <img style={styles.footerLogoStyle} src={SFA_LOGO} />;
+};
+
+export const effectiveDateForWSQLOGO = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+    return <img style={styles.fullWidthStyle} src={IMG_LOGO} />;
+  }
+  return <img style={styles.fullWidthStyle} src={NEW_IMG_LOGO} />;
 };
 
 export const renderSignaturePartner = certificate => (
@@ -724,3 +744,14 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
     </div>
   </div>
 );
+
+export const effectiveDateFontColorFunction = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+    awardTextStyle.color=rgb(51,0,114);
+    soaTranscriptTextStyle.color=rgb(51,0,114);
+    soaNameTextStyle.color==rgb(51,0,114);
+  }
+}

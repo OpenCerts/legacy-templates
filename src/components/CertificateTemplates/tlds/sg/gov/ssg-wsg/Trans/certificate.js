@@ -4,7 +4,8 @@ import {
   formatDate,
   formatCertID,
   getRecipientID,
-  getSpecialization
+  getSpecialization,
+  effectiveDateForWSQLOGO
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
@@ -20,10 +21,10 @@ const renderTranscriptItems = certificate =>
     </tr>
   ));
 
-export const renderLogoWSQ = () => (
+export const renderLogoWSQ = (certificate) => (
   <div className="row d-flex">
     <div className="col-lg-4 col-12">
-      <img style={styles.fullWidthStyle} src={IMG_LOGO} />
+     {effectiveDateForWSQLOGO(certificate)}
     </div>
   </div>
 );
@@ -299,7 +300,8 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingBottom:"100px", paddingTop:"100px", fontFamily:"Arial", width:"100%" }}
     >
       {fonts()}
-      {renderLogoWSQ()}
+      {effectiveDateFontColorFunction(certificate)}
+      {renderLogoWSQ(certificate)}
       {renderAwardText(certificate)}
       {renderTranscript(certificate)}
       {certificate.additionalData.certSignatories
