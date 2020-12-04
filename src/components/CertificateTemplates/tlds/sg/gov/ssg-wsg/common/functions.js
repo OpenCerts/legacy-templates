@@ -45,6 +45,7 @@ export const formatCertName = (certName, meritFlag) => {
   );
 };
 
+
 export const formatCertID = certId => {
   if (!certId) return null;
   const arrayCertId = certId.split(":");
