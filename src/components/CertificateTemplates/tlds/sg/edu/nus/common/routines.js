@@ -160,3 +160,34 @@ const defaultSealStyle = {
 export const renderNUSSeal = (names, styles = defaultSealStyle) => (
   <img src={NUS_SEAL} className={names} style={styles} />
 );
+// render watermark upon printing for degree scroll
+export const renderPrintWatermark = (
+  printOnlyClass,
+  top = "50%",
+  marginLeft = "auto"
+) => {
+  const style = {};
+  if (top) style.top = top;
+  if (marginLeft) style.marginLeft = marginLeft;
+  return (
+    <div className={printOnlyClass} style={style}>
+      <p>Printed OpenCerts certificate cannot be verified.</p>
+      <p>Please ask the certificate holder for the .opencert file.</p>
+      <p>Visit opencerts.io for more information.</p>
+    </div>
+  );
+};
+// render watermark upon printing for transcript
+export const renderPrintWatermarkTs = (printOnlyClass, marginLeft = "auto") => {
+  const style = {};
+  if (marginLeft) style.marginLeft = marginLeft;
+  return (
+    <div className={printOnlyClass} style={style}>
+      Printed OpenCerts certificate cannot be verified.
+      <br />
+      Please ask the certificate holder for the .opencert file.
+      <br />
+      Visit opencerts.io for more information.
+    </div>
+  );
+};

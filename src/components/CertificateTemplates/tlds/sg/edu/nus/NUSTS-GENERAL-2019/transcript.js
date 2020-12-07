@@ -28,6 +28,11 @@ let isDuke;
 let isMedDen;
 let isCDP;
 let isYaleNUS;
+let isNG;
+
+// Yale-NUS specific attributes
+let lastTermYaleNUS;
+let progNameYaleNUS;
 
 // check whether a term is first term
 const firstTermIdxes = [];
@@ -58,29 +63,46 @@ class TranscriptProgram {
 
   // render for a program
   renderProgData(data) {
-    this.dataFeeder.push(
-      "ts-prog",
-      <td colSpan="4">
-        <table width="100%">
-          <tr>
-            <td width="30%" valign="top" className={cls("ts-title prog-key")}>
-              PROGRAMME:
-            </td>
-            <td wdith="70%" valign="top" className={cls("ts-title")}>
-              {data.programName.toUpperCase()}
-              <br />
-              {isDuke ? "DUKE-NUS MEDICAL SCHOOL" : null}
-            </td>
-          </tr>
-          <tr>
-            <td className={cls("ts-title prog-key")}>PROGRAMME STATUS:</td>
-            <td className={cls("ts-title")}>
-              {data.statusDescription.toUpperCase()}
-            </td>
-          </tr>
-        </table>
-      </td>
-    );
+    if (isNG)
+      this.dataFeeder.push(
+        "ts-prog",
+        <td colSpan="4">
+          <table width="100%">
+            <tr>
+              <td width="30%" valign="top" className={cls("ts-title prog-key")}>
+                PROGRAMME:
+              </td>
+              <td wdith="70%" valign="top" className={cls("ts-title")}>
+                NON GRADUATING PROGRAMME
+              </td>
+            </tr>
+          </table>
+        </td>
+      );
+    else
+      this.dataFeeder.push(
+        "ts-prog",
+        <td colSpan="4">
+          <table width="100%">
+            <tr>
+              <td width="30%" valign="top" className={cls("ts-title prog-key")}>
+                PROGRAMME:
+              </td>
+              <td wdith="70%" valign="top" className={cls("ts-title")}>
+                {data.programName.toUpperCase()}
+                <br />
+                {isDuke ? "DUKE-NUS MEDICAL SCHOOL" : null}
+              </td>
+            </tr>
+            <tr>
+              <td className={cls("ts-title prog-key")}>PROGRAMME STATUS:</td>
+              <td className={cls("ts-title")}>
+                {data.statusDescription.toUpperCase()}
+              </td>
+            </tr>
+          </table>
+        </td>
+      );
   }
 }
 
@@ -508,14 +530,22 @@ class TranscriptSummary {
 
   // main render
   render() {
+    const isLastYNCTerm =
+      isYaleNUS && lastTermYaleNUS && lastTermYaleNUS === this.termData.name;
     this.termData.summary.forEach(data => {
-      // degree name
-      if (!isMedDen) this.renderTermDegree(data);
-      // GPA
-      if (data.specialGPA) this.renderSpecialGPA(data);
-      else if (!isMedDen) this.renderGPA(data);
-      // acad standing
-      if (isMedDen) this.renderAcadStanding(data);
+      if (!isNG) {
+        // most of term summary not applicable to NGRD
+        // degree name
+        if (!isMedDen) this.renderTermDegree(data);
+        // GPA
+        if (data.specialGPA) this.renderSpecialGPA(data);
+        else if (!isMedDen) this.renderGPA(data);
+        // render special remarks for Yale-NUS
+        if (isLastYNCTerm && progNameYaleNUS === data.programName)
+          this.renderYNCRemarks(data);
+        // acad standing
+        if (isMedDen) this.renderAcadStanding(data);
+      }
       // term honours
       if (data.awards) this.renderTermHonours(data);
     });
@@ -539,11 +569,17 @@ class TranscriptSummary {
     let gpa1;
     let gpaName1;
     if (sumData.includeInGPA || isDuke) {
-      gpa = sumData.GPA.toFixed(2);
-      gpaName = sumData.GPAName.toUpperCase();
-      if (sumData.GPAName1) {
-        gpa1 = sumData.GPA1.toFixed(2);
-        gpaName1 = sumData.GPAName1.toUpperCase();
+      if (sumData.disableGPA) {
+        gpa = "NOT APPLICABLE";
+        gpaName = "CUMULATIVE AVERAGE POINT";
+      } else {
+        gpa = sumData.GPA.toFixed(2);
+        gpaName = sumData.GPAName.toUpperCase();
+        // gpa1 and gpaName1 are only for TDSI programs
+        if (sumData.GPAName1) {
+          gpa1 = sumData.GPA1.toFixed(2);
+          gpaName1 = sumData.GPAName1.toUpperCase();
+        }
       }
     } else {
       gpa = "NOT APPLICABLE";
@@ -564,6 +600,28 @@ class TranscriptSummary {
       );
   }
 
+  // render Yale-NUS remarks
+  renderYNCRemarks = sumData => {
+    if (isYaleNUS && sumData.includeInGPA) {
+      const gpa = sumData.GPA.toFixed(2);
+      let remarks;
+      if (gpa >= 4.5)
+        remarks =
+          "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (HIGHEST DISTINCTION))";
+      else if (gpa >= 4)
+        remarks = "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (DISTINCTION))";
+      else if (gpa >= 3.5)
+        remarks = "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (MERIT))";
+      if (remarks)
+        this.dataFeeder.push(
+          "ts-term-gpa",
+          <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
+            {`${remarks}`}
+          </td>
+        );
+    }
+  };
+
   // render special GPA
   renderSpecialGPA(sumData) {
     sumData.specialGPA.forEach(data => {
@@ -583,7 +641,7 @@ class TranscriptSummary {
       this.dataFeeder.push(
         "ts-term-standing",
         <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
-          {`RESULT : ${sumData.standing}`}
+          {`RESULT : ${sumData.standing.toUpperCase()}`}
         </td>
       );
   }
@@ -859,15 +917,15 @@ class TranscriptTermData {
 
   // render form of study description
   renderFormOfStudy() {
-    if (
-      this.fosPrintArea !== "ND" &&
-      this.termData.fosDescription &&
-      this.termData.organization
-    ) {
+    if (this.fosPrintArea !== "ND" && this.termData.fosDescription) {
       this.dataFeeder.push(
         "ts-term-fos",
         <td colSpan="4" className={cls("ts-termrem")}>
-          {`${this.termData.fosDescription.toUpperCase()} ${this.termData.organization.toUpperCase()}`}
+          {`${this.termData.fosDescription.toUpperCase()} ${
+            this.termData.organization
+              ? this.termData.organization.toUpperCase()
+              : ""
+          }`}
         </td>
       );
     }
@@ -1072,7 +1130,9 @@ class TranscriptMilestone {
     if (this.msData) {
       this.msData.forEach(data => {
         if (data.milestoneTitle) {
-          const descr = `${data.milestoneTitle} ${data.thesisTitle}`;
+          const descr = `${
+            isNG ? "Completed a research project on" : data.milestoneTitle
+          } ${data.thesisTitle}`;
           this.dataFeeder.push(
             "ts-ms",
             <td
@@ -1193,6 +1253,8 @@ class TranscriptData {
     this.dataSource.transcript.forEach((termData, termIdx) => {
       new TranscriptTermData(termData, termIdx, this.dataFeeder).render();
     });
+    // render disciplinary remarks
+    this.renderDisciplinaryRemarks();
     // render LOA data
     new TranscriptLeave(
       this.dataSource.additionalData.leaveData,
@@ -1220,6 +1282,8 @@ class TranscriptData {
       this.dataSource.additionalData.awardData,
       this.dataFeeder
     ).render();
+    // render disciplinary remarks
+    this.renderDismissalRemarks();
     // end of transcript
     this.renderTranscriptEnd();
   }
@@ -1235,6 +1299,56 @@ class TranscriptData {
           CONFERMENT DATE: {date}
         </td>
       );
+    }
+  }
+
+  // render disciplinary remarks
+  renderDisciplinaryRemarks() {
+    const remarksData = this.dataSource.additionalData.disciplinaryRemarks;
+    if (remarksData) {
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4">
+          <hr />
+        </td>
+      );
+      remarksData.forEach(line => {
+        this.dataFeeder.push(
+          "ts-degrem",
+          <td colSpan="4" className={cls("ts-title ts-highlight")}>
+            {line.trim().toUpperCase()}
+          </td>
+        );
+      });
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4" className={cls("ts-title")}>
+          {
+            "(STUDENT RECORDS ARE AVAILABLE UPON REQUEST AND WITH STUDENT'S CONSENT)"
+          }
+        </td>
+      );
+    }
+  }
+
+  // render dismissal remarks
+  renderDismissalRemarks() {
+    const remarksData = this.dataSource.additionalData.dismissalRemarks;
+    if (remarksData) {
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4">
+          <hr />
+        </td>
+      );
+      remarksData.forEach(line => {
+        this.dataFeeder.push(
+          "ts-degrem",
+          <td colSpan="4" className={cls("ts-title ts-highlight")}>
+            {line.trim().toUpperCase()}
+          </td>
+        );
+      });
     }
   }
 
@@ -1282,12 +1396,41 @@ const Template = ({ certificate }) => {
   isMedDen =
     jsonData.additionalData.transcriptType.startsWith("UM") ||
     jsonData.additionalData.transcriptType.startsWith("UD");
-  isYaleNUS = (transcriptData => {
+  [isYaleNUS, progNameYaleNUS] = (transcriptData => {
     const programData = transcriptData.additionalData.programData;
     if (programData)
       for (let i = 0; i < programData.length; i += 1)
-        if (programData[i].programCode.substring(1, 3) === "17") return true;
-    return false;
+        if (
+          programData[i].isYNC ||
+          programData[i].programCode.substring(1, 3) === "17"
+        )
+          // `isYNC` is applicable to NGRD students
+          return [true, programData[i].programName];
+    return [false, null];
+  })(jsonData);
+  isNG = jsonData.additionalData.transcriptType.startsWith("NG");
+  // to be used for Yale-NUS last term remarks, only applicable when conferred
+  lastTermYaleNUS = (transcriptData => {
+    let lastTerm = null;
+    if (isYaleNUS) {
+      let isConferred = false;
+      const degreeData = transcriptData.additionalData.degreeData;
+      // find Yale-NUS program name and last term
+      if (degreeData)
+        for (let i = 0; i < degreeData.length; i += 1)
+          if (degreeData[i].isYNC) {
+            isConferred = true;
+            break;
+          }
+      if (isConferred)
+        transcriptData.additionalData.transcriptGroup.forEach(term => {
+          if (term.summary)
+            term.summary.forEach(summary => {
+              if (summary.programName === progNameYaleNUS) lastTerm = term.name;
+            });
+        });
+    }
+    return lastTerm;
   })(jsonData);
   // prepare data
   const dataFeeder = new TranscriptDataFeeder();
@@ -1320,7 +1463,7 @@ const Template = ({ certificate }) => {
     <div style={scale}>
       <Transcript
         maxPages="8"
-        maxRows="50"
+        maxRows="40"
         dataFeeder={dataFeeder}
         background={backgroundImg}
         legendPage={legend}

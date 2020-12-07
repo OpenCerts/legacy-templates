@@ -102,6 +102,7 @@ $debug: false;
         padding-left: 5pt;
     }
 
+    .ts-student-name,
     .ts-modname {
         text-transform: uppercase;
     }
@@ -151,5 +152,23 @@ $debug: false;
         overflow-x: hidden; 
         overflow-y: hidden; 
         box-sizing: border-box; 
+    }
+
+    .print-only {
+        display: none;
+    }
+    @media only print {
+        .print-only {
+            width: 100%;
+            opacity: 0.6;
+            display: block;
+            font-size: 15px; 
+            font-family: "Time New Roman", Serif; 
+            margin-top: 20px;
+        }
+        .header-unoff {
+            text-align: left; 
+            padding: 5px;
+        }
     }
 }

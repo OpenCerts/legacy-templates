@@ -111,22 +111,6 @@ export const RENDEREXPLANATORYNOTES_A2 = () => (
         </div>
         <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
           <div style={EXPLANATORY_MARGIN_LEFT}>
-            This document is issued on condition of your strict compliance with
-            the Examination Instructions and Regulations. You must comply with
-            any direction by the Singapore Examinations and Assessment Board
-            (SEAB) to return this document to SEAB.
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-12">&nbsp;</div>
-      </div>
-      <div className="row">
-        <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13_LEFT}>
-          11
-        </div>
-        <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
-          <div style={EXPLANATORY_MARGIN_LEFT}>
             For further information or clarification on the GCE A-Level, please
             visit the website of the Singapore Examinations and Assessment Board
             (http://www.seab.gov.sg).

@@ -85,6 +85,18 @@ const NPCET2019MAGES = dynamic(() =>
 const NPCET2019SGINV = dynamic(() =>
   import("./NP-CET2019-SC-SGINV" /* webpackChunkName: "NgeeAnnTemplates" */)
 );
+const NPCET2020SDFT = dynamic(() =>
+  import("./NP-CET2020-SDFT" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPAA2020LDH = dynamic(() =>
+  import("./NP-AA2020-LDH" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPCET2020SDPCN = dynamic(() =>
+  import("./NP-CET2020-SDPCN" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
+const NPAA2004BMSCLT = dynamic(() =>
+  import("./NP-AA2004-BMS(CLT)" /* webpackChunkName: "NgeeAnnTemplates" */)
+);
 const templates = {
   "2018-main": NPAA2018MAIN,
   "2018-option": NPAA2018OPTION,
@@ -113,7 +125,11 @@ const templates = {
   "NP-CET2019-SC-ASMI": NPCET2019ASMI,
   "NP-CET2019-SC-NEA": NPCET2019NEA,
   "NP-CET2019-SC-MAGES": NPCET2019MAGES,
-  "NP-CET2019-SC-SGINV": NPCET2019SGINV
+  "NP-CET2019-SC-SGINV": NPCET2019SGINV,
+  "NP-CET2020-SDFT": NPCET2020SDFT,
+  "NP-AA2020-LDH": NPAA2020LDH,
+  "NP-CET2020-SDPCN": NPCET2020SDPCN,
+  "NP-AA2004-BMS(CLT)": NPAA2004BMSCLT
 };
 
 export default addDirToTemplatePath("np", templates);

@@ -7,6 +7,7 @@ import {
   renderImage,
   renderVoid,
   renderNUSSeal,
+  renderPrintWatermark,
   NUS_YALENUS_LOGO
 } from "../common";
 import scss from "./degree.scss";
@@ -205,6 +206,7 @@ class Degree extends Component {
       <div className={cls("nus-degree")}>
         <div className={cls("a4-landscape")}>
           <article>
+            {renderPrintWatermark(cls("print-only"), "30%")}
             <div style={{ height: "13cm", border: "0px solid" }}>
               {renderVoid("2cm")}
               <table className={cls("cert-header-table")}>
