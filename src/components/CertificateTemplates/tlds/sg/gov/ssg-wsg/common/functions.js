@@ -595,6 +595,7 @@ export const renderSignatureSOACC = certificate => (
   </div>
 );
 
+
 export const renderSignatureSOAES = certificate => (
   <div
     className="row d-flex justify-content-center"
