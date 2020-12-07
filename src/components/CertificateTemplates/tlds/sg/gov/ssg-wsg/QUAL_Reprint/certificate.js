@@ -16,7 +16,7 @@ export default ({ logo }) => ({ certificate }) => (
     >
       {fonts()}
       {effectiveDateFontColorFunction(certificate)}
-      {renderLogoWSQ(certificate)})}
+      {renderLogoWSQ(certificate)}
       {renderAwardTextQUAL(certificate)}
       {renderIssuingDate(certificate)}
       {certificate.additionalData.certSignatories
