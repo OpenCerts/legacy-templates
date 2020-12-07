@@ -29,11 +29,7 @@ const PartTimeExamResults = ({ certificate }) => {
     </span>
   ));
 
-  const awardedCertificatesLabel =
-    certificate.additionalData.awardedCertificates &&
-    certificate.additionalData.awardedCertificates.length > 1
-      ? "Certificate/Diploma Awarded"
-      : "Certificate Awarded";
+  const awardedCertificatesLabel = "Certificate/Diploma Awarded";
 
   return (
     <div className="container">

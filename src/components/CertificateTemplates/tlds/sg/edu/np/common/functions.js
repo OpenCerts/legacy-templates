@@ -40,19 +40,21 @@ export const formatDatePrefix = dateString => {
   if (!dateString) return null;
   const date = new Date(dateString);
   const day = Number(tz(date, TIMEZONE).format("DD"));
-  let daySup = "";
-  switch (day % 10) {
-    case 1:
-      daySup = "st";
-      break;
-    case 2:
-      daySup = "nd";
-      break;
-    case 3:
-      daySup = "rd";
-      break;
-    default:
-      daySup = "th";
+  let daySup = "th";
+  if (day < 10 || day > 20) {
+    switch (day % 10) {
+      case 1:
+        daySup = "st";
+        break;
+      case 2:
+        daySup = "nd";
+        break;
+      case 3:
+        daySup = "rd";
+        break;
+      default:
+        daySup = "th";
+    }
   }
 
   return (
@@ -112,7 +114,11 @@ export const formatCertName = (certId, certName, meritFlag) => {
 
   switch (certType) {
     case "FT":
-      [certPrefix, certDescr] = ["Diploma", certName];
+      if (certName.startsWith("Diploma")) {
+        [certPrefix, certDescr] = splitStringTo2(certName, " in ");
+      } else {
+        [certPrefix, certDescr] = ["Diploma", certName];
+      }
       break;
     case "PTD":
     case "PDP":
