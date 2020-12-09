@@ -1,13 +1,14 @@
 import { get } from "lodash";
 import { IMG_LOGO, IMG_SEAL, DIGIPEN_LOGO } from "../common";
-import { formatDate, getRecipientID } from "../common/functions";
+import { effectiveDateFontColorFunction,formatDate, getRecipientID } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
+import certificate from "../Trans/certificate";
 
 export const renderLogoWSQ = () => (
   <div className="row d-flex" style={{ marginTop: "3rem" }}>
     <div className="col-lg-5 col-12">
-      <img style={styles.fullWidthStyleQual} src={IMG_LOGO} />
+      {effectiveDateForWSQLOGOQual(certificate)}
     </div>
     <div className="col-lg-2 col-12" />
     <div className="col-lg-5 col-12">
@@ -15,6 +16,16 @@ export const renderLogoWSQ = () => (
     </div>
   </div>
 );
+
+export const effectiveDateForWSQLOGOQual = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+    return <img style={styles.fullWidthStyleQual} src={IMG_LOGO} />;
+  }
+  return <img style={styles.fullWidthStyleQual} src={NEW_IMG_LOGO} />;
+};
 
 export const renderSignature = certificate => (
   <div
@@ -125,7 +136,7 @@ export const renderAwardText = certificate => (
       className="d-flex justify-content-center"
       style={{ marginTop: "3rem" }}
     >
-      <p style={styles.awardTextStyle} className="RobotoMedium">
+       <p style={styles.awardTextStyle} className="RobotoMedium">
         is awarded to
       </p>
     </div>
@@ -175,7 +186,8 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingTop:"100px", paddingBottom:"100px", width:"100%", fontFamily:"Arial" }}
     >
       {fonts()}
-      {renderLogoWSQ()}
+      {effectiveDateFontColorFunction(certificate)}
+      {renderLogoWSQ(certificate)}
       {renderAwardText(certificate)}
       {renderIssuingDate(certificate)}
       {certificate.additionalData.certSignatories
