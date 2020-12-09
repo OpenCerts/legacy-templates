@@ -5,7 +5,8 @@ import {
   formatCertID,
   getRecipientID,
   getSpecialization,
-  effectiveDateForWSQLOGO
+  effectiveDateForWSQLOGO,
+  effectiveDateFontColorFunction
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";

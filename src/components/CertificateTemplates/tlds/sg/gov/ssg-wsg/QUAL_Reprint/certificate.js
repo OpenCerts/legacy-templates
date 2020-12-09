@@ -2,7 +2,8 @@ import {
   renderLogoWSQ,
   renderAwardTextQUAL,
   renderSignatureSOAHR,
-  renderIssuingDate
+  renderIssuingDate,
+  effectiveDateFontColorFunction
 } from "../common/functions";
 import fonts from "../common/fonts";
 

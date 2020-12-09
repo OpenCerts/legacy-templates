@@ -1,6 +1,6 @@
 import { get } from "lodash";
 import { IMG_LOGO, IMG_SEAL, DIGIPEN_LOGO } from "../common";
-import { effectiveDateFontColorFunction,formatDate, getRecipientID } from "../common/functions";
+import { effectiveDateFontColorFunction,formatDate, getRecipientID} from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
 import certificate from "../Trans/certificate";
