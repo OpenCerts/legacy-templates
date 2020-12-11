@@ -1,6 +1,6 @@
 import { get } from "lodash";
 import { NICF_LOGO, IMG_LOGO,NEW_IMG_LOGO, IMG_SEAL, IMG_SSGLOGO } from "../common";
-import { renderIssuingDate, renderAwardTextQUAL,effectiveDateForWSQLOGOFooter } from "../common/functions";
+import { renderIssuingDate, renderAwardTextQUAL,effectiveDateForWSQLOGOFooter, effectiveDateFontColorFunction } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
 

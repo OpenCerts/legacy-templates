@@ -3,7 +3,8 @@ import { IMG_SEAL, IMG_SSGLOGO } from "../common";
 import {
   renderLogoWSQ,
   renderIssuingDate,
-  renderAwardTextSOA
+  renderAwardTextSOA,
+  effectiveDateFontColorFunction
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
