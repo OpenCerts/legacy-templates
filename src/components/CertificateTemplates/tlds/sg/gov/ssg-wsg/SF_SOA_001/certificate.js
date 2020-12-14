@@ -4,7 +4,6 @@ import {
   renderLogoWSQ,
   renderIssuingDate,
   renderAwardTextSOA
-  
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
