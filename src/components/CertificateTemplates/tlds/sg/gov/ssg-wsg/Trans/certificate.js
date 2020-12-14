@@ -6,7 +6,7 @@ import {
   getRecipientID,
   getSpecialization,
   effectiveDateForWSQLOGO,
-  effectiveDateFontColorFunction
+  renderAwardTextTrans
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
@@ -65,9 +65,8 @@ export const renderSignature = certificate => (
 export const renderAwardText = certificate => (
   <div>
     <div className="d-flex" style={{ marginTop: "2rem" }}>
-      <p style={styles.headerTextStyle} className="RobotoBold">
-        OFFICIAL TRANSCRIPT
-      </p>
+    {renderAwardTextTrans(certificate)}
+
     </div>
     <div className="row d-flex align-items-end" style={{ marginTop: "1rem" }}>
       <div className="col-lg-10 col-xs-12">
@@ -301,7 +300,7 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingBottom:"100px", paddingTop:"100px", fontFamily:"Arial", width:"100%" }}
     >
       {fonts()}
-      {effectiveDateFontColorFunction(certificate)}
+      
       {renderLogoWSQ(certificate)}
       {renderAwardText(certificate)}
       {renderTranscript(certificate)}

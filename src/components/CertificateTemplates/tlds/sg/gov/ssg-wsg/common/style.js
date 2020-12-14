@@ -35,6 +35,13 @@ export const awardTextStyle = {
   textAlign: "left"
 };
 
+export const awardBlueTextStyle = {
+  fontSize: "22px",
+  color: "rgb(51,0,144)",
+  fontWeight: "bold",
+  textAlign: "left"
+};
+
 export const nameTextStyle = {
   fontSize: "2.3rem",
   textAlign: "left",
@@ -148,9 +155,25 @@ export const soaTranscriptTextStyle = {
   marginBottom: "0px"
 };
 
+export const soaTranscriptTextBlueStyle = {
+  fontWeight: "bold!important",
+  color: "rgb(51,0,144)",
+  fontSize: "24px",
+  marginBottom: "0px"
+};
+
 export const soaNameTextStyle = {
   fontSize: "2.3rem",
   color: "rgb(197,41,155)",
+  wordBreak: "break-word",
+  textAlign: "left",
+  textTransform: "uppercase",
+  fontWeight: "600"
+};
+
+export const soaNameTextBlueStyle = {
+  fontSize: "2.3rem",
+  color: "rgb(51,0,144)",
   wordBreak: "break-word",
   textAlign: "left",
   textTransform: "uppercase",

@@ -3,8 +3,8 @@ import {
   renderLogoWSQ,
   renderIssuingDate,
   renderAwardTextQUAL,
-  renderSignatureQual,
-  effectiveDateFontColorFunction
+  renderSignatureQual
+  
 } from "../common/functions";
 import fonts from "../common/fonts";
 
@@ -17,7 +17,6 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingRight:"6%", paddingLeft:"6%", paddingTop:"100px", paddingBottom:"100px", width:"100%", fontFamily:"Arial" }}
     >
       {fonts()}
-      {effectiveDateFontColorFunction(certificate)}
       {renderLogoWSQ(certificate)}
       {renderAwardTextQUAL(certificate)}
       {renderIssuingDate(certificate)}
