@@ -11,6 +11,7 @@ import {
   SFA_LOGO
 } from "./images";
 import * as styles from "./style";
+import { Certificate } from "crypto";
 
 const TIMEZONE = "Asia/Singapore";
 
@@ -280,9 +281,7 @@ export const renderSignatureSOAIT = certificate => (
         {effectiveDateForWSQLOGOFooter(certificate)}
           <img style={styles.dualLogoFooter} src={IMG_SSGLOGO} />
         </div>
-        <div style={styles.certCodeStyle}>
-          {get(certificate, "additionalData.certCode")}
-        </div>
+        {renderCertCode(certificate)}
       </div>
     </div>
   </div>
@@ -423,13 +422,7 @@ export const renderSignatureSOAHR = certificate => (
         </div>
 
         <div className="col-lg-5 col-5">
-          <p style={styles.certCodeStyle}>
-            {["QUAL_Reprint"].includes(
-              get(certificate, "additionalData.certCode")
-            )
-              ? "QUAL"
-              : get(certificate, "additionalData.certCode")}
-          </p>
+          {rendercertcodeQualReprint(certificate)}
         </div>
       </div>
     </div>
@@ -486,9 +479,7 @@ export const renderSignaturePartner = certificate => (
           {formatAttainmentDate(certificate)}
         </div>
         <div className="col-lg-5 col-6">
-          <p style={styles.certCodeStyle}>
-            {get(certificate, "additionalData.certCode")}
-          </p>
+          {renderCertCodePartner(certificate)}
         </div>
       </div>
     </div>
@@ -571,11 +562,7 @@ export const renderSignatureSOACC = certificate => (
         }}
       >
         <img style={styles.footerLogoStyle} src={IMG_SSGLOGO} />
-        <div style={styles.certCodeStyle}>
-          {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
-            ? "SOA"
-            : get(certificate, "additionalData.certCode")}
-        </div>
+        {renderCertCodeSOARePrint(certificate)}
       </div>
     </div>
   </div>
@@ -633,9 +620,7 @@ export const renderSignatureSOAES = certificate => (
         className="col-lg-2 col-4"
         style={{ display: "block", position: "relative", padding: "0px" }}
       >
-        <p style={styles.soaCertCodeStyle}>
-          {get(certificate, "additionalData.certCode")}
-        </p>
+      {renderSOACertCode(certificate)}
       </div>
     </div>
   </div>
@@ -715,9 +700,7 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
       </div>
       <div style={styles.footerTextStyle}>In partnership with</div>
       <img style={styles.ssgLogoStyle} src={IMG_BOTTOM_LOGO} />
-      <div style={styles.certCodeStyle}>
-        {get(certificate, "additionalData.certCode")}
-      </div>
+      {renderCertCode(certificate)}
       {["SOA-003", "SF_SOA_003"].includes(
         get(certificate, "additionalData.certCode")
       ) ? (
@@ -931,4 +914,108 @@ export const renderlistitemsAwardTextSOAHR = certificate =>{
   }else{
     return renderAwardTextSOAHRBlue(certificate);
   } 
+};
+
+export const  renderCertCode = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+   return <div style={styles.certCodeStyle}>
+   {get(certificate, "additionalData.certCode")}
+ </div>
+  }else{
+    return  <div style={styles.certCodeBlueStyle}>
+    {get(certificate, "additionalData.certCode")}
+  </div>
+  }
+};
+
+
+export const  rendercertcodeQualReprint = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+   return <p style={styles.certCodeStyle}>
+   {["QUAL_Reprint"].includes(
+     get(certificate, "additionalData.certCode")
+   )
+     ? "QUAL"
+     : get(certificate, "additionalData.certCode")}
+ </p>;
+  }else{
+    return  <p style={styles.certCodeBlueStyle}>
+    {["QUAL_Reprint"].includes(
+      get(certificate, "additionalData.certCode")
+    )
+      ? "QUAL"
+      : get(certificate, "additionalData.certCode")}
+  </p>
+  }
+};
+
+export const  renderCertCodePartner = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+   return <p style={styles.certCodeStyle}>
+   {get(certificate, "additionalData.certCode")}
+ </p>;
+  }else{
+    return <p style={styles.certCodeBlueStyle}>
+    {get(certificate, "additionalData.certCode")}
+  </p>;
+  }
+};
+
+export const  renderCertCodeSOARePrint = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+   return <div style={styles.certCodeStyle}>
+   {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
+     ? "SOA"
+     : get(certificate, "additionalData.certCode")}
+ </div>;
+  }else{
+    return <div style={styles.certCodeBlueStyle}>
+    {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
+      ? "SOA"
+      : get(certificate, "additionalData.certCode")}
+  </div>;
+  }
+};
+
+export const  renderSOACertCode = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+   return <p style={styles.soaCertCodeStyle}>
+   {get(certificate, "additionalData.certCode")}
+   </p>;
+  }else{
+    return <p style={styles.soaCertCodeBlueStyle}>
+    {get(certificate, "additionalData.certCode")}
+    </p>;
+  }
+};
+
+
+export const  renderTRAcode = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+   return <div style={styles.certCodeStyle} className="RobotoRegular">
+   TRA
+ </div>;
+  }else{
+    return <div style={styles.certCodeBlueStyle} className="RobotoRegular">
+    TRA
+  </div>;
+  }
 };

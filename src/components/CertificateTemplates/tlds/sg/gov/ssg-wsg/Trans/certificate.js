@@ -6,7 +6,8 @@ import {
   getRecipientID,
   getSpecialization,
   effectiveDateForWSQLOGO,
-  renderAwardTextTrans
+  renderAwardTextTrans,
+  renderTRAcode
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
@@ -55,9 +56,7 @@ export const renderSignature = certificate => (
     <div className="col-lg-2 col-xs-12" />
     <div className="col-lg-3 col-xs-12">
       <img style={styles.transFooterLogoStyle} src={IMG_SSGLOGO} />
-      <div style={styles.certCodeStyle} className="RobotoRegular">
-        TRA
-      </div>
+      {renderTRAcode(certificate)}
     </div>
   </div>
 );

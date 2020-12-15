@@ -1,6 +1,6 @@
 import { get } from "lodash";
 import { NICF_LOGO, IMG_LOGO,NEW_IMG_LOGO, IMG_SEAL, IMG_SSGLOGO } from "../common";
-import { renderIssuingDate, renderAwardTextQUAL,effectiveDateForWSQLOGOFooter } from "../common/functions";
+import { renderIssuingDate, renderAwardTextQUAL,effectiveDateForWSQLOGOFooter, renderCertCode } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
 
@@ -77,9 +77,7 @@ export const renderSignature = certificate => (
           {effectiveDateForWSQLOGOFooter(certificate)}
           <img style={styles.dualLogoFooter} src={IMG_SSGLOGO} />
         </div>
-        <div style={styles.certCodeStyle}>
-          {get(certificate, "additionalData.certCode")}
-        </div>
+          {renderCertCode(certificate)}
       </div>
     </div>
   </div>

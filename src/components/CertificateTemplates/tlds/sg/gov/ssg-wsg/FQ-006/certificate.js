@@ -1,6 +1,6 @@
 import { get } from "lodash";
 import { NEW_IMG_LOGO, IMG_LOGO, IMG_SEAL, DIGIPEN_LOGO } from "../common";
-import { formatDate, getRecipientID, renderAwardedTo, rendersuccessfuToFQ006} from "../common/functions";
+import { renderCertCode,formatDate, getRecipientID, renderAwardedTo, rendersuccessfuToFQ006} from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
 import certificate from "../Trans/certificate";
@@ -107,9 +107,7 @@ export const renderSignature = certificate => (
                 Cert No: {get(certificate, "additionalData.serialNum")}
               </p>
             </div>
-            <div style={styles.certCodeStyle}>
-              {get(certificate, "additionalData.certCode")}
-            </div>
+                {renderCertCode(certificate)}
           </div>
         </div>
       </div>

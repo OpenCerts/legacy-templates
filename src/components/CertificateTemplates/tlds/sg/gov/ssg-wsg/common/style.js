@@ -216,6 +216,17 @@ export const soaCertCodeStyle = {
   bottom: "30px"
 };
 
+export const soaCertCodeBlueStyle = {
+  fontSize: "12px",
+  color: "rgb(51,0,144)",
+  display: "inline-table",
+  transform: "rotate(-90deg)",
+  width: "max-content",
+  position: "absolute",
+  left: "0",
+  bottom: "30px"
+};
+
 export const specTextStyle = {
   fontSize: "2rem",
   wordBreak: "break-word"
@@ -230,4 +241,11 @@ export const fullWidthStyleQual = {
   width: "90%",
   height: "auto",
   marginBottom: "10px"
+};
+
+export const certCodeBlueStyle = {
+  fontSize: "12px",
+  color: "rgb(51,0,144)",
+  display: "inline-block",
+  transform: "rotate(-90deg)"
 };

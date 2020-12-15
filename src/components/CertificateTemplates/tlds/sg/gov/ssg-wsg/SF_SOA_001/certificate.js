@@ -3,8 +3,8 @@ import { IMG_SEAL, IMG_SSGLOGO } from "../common";
 import {
   renderLogoWSQ,
   renderIssuingDate,
-  renderAwardTextSOA
-  
+  renderAwardTextSOA,
+  renderCertCode
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
@@ -56,9 +56,7 @@ export const renderSignatureSFSOA = certificate => (
       </div>
       <div>
         <img style={styles.soaFooterLogoStyle} src={IMG_SSGLOGO} />
-        <div style={styles.certCodeStyle}>
-          {get(certificate, "additionalData.certCode")}
-        </div>
+            {renderCertCode(certificate)}
       </div>
     </div>
   </div>
