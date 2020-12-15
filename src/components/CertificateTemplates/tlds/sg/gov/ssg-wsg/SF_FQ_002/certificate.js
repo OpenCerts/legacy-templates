@@ -4,7 +4,6 @@ import {
   renderIssuingDate,
   renderAwardTextQUAL,
   renderSignatureQual
-  
 } from "../common/functions";
 import fonts from "../common/fonts";
 

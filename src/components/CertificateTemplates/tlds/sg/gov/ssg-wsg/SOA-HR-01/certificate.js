@@ -3,7 +3,6 @@ import {
   renderIssuingDate,
   renderSignatureSOAHR,
   renderlistitemsAwardTextSOAHR
-  
 } from "../common/functions";
 import fonts from "../common/fonts";
 
