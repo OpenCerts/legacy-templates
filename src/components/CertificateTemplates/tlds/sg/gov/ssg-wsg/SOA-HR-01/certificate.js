@@ -1,9 +1,8 @@
 import {
   renderLogoWSQ,
-  renderAwardTextSOAHR,
   renderIssuingDate,
   renderSignatureSOAHR,
-  effectiveDateFontColorFunction
+  renderlistitemsAwardTextSOAHR
 } from "../common/functions";
 import fonts from "../common/fonts";
 
@@ -16,9 +15,9 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingBottom:"100px", paddingTop:"100px", width:"100%", fontFamily:"Arial" }}
     >
       {fonts()}
-      {effectiveDateFontColorFunction(certificate)}
+      
       {renderLogoWSQ(certificate)}
-      {renderAwardTextSOAHR(certificate)}
+      {renderlistitemsAwardTextSOAHR(certificate)}
       {renderIssuingDate(certificate)}
       {certificate.additionalData.certSignatories
         ? renderSignatureSOAHR(certificate)

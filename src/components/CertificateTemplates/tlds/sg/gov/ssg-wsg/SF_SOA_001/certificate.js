@@ -4,7 +4,7 @@ import {
   renderLogoWSQ,
   renderIssuingDate,
   renderAwardTextSOA,
-  effectiveDateFontColorFunction
+  renderCertCode
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
@@ -56,9 +56,7 @@ export const renderSignatureSFSOA = certificate => (
       </div>
       <div>
         <img style={styles.soaFooterLogoStyle} src={IMG_SSGLOGO} />
-        <div style={styles.certCodeStyle}>
-          {get(certificate, "additionalData.certCode")}
-        </div>
+            {renderCertCode(certificate)}
       </div>
     </div>
   </div>
@@ -73,7 +71,7 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingTop:"100px", paddingBottom:"100px", width:"100%", fontFamily:"Arial" }}
     >
       {fonts()}
-      {effectiveDateFontColorFunction(certificate)}
+      
       {renderLogoWSQ(certificate)}
       {renderAwardTextSOA(certificate)}
       {renderIssuingDate(certificate)}
