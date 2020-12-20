@@ -720,52 +720,89 @@ export const effectiveDateForWSQLOGOFooter = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <img style={styles.dualLogoFooter} src={IMG_LOGO} />;
+  }else{
   if (intDate < 20201225) {
     return <img style={styles.dualLogoFooter} src={IMG_LOGO} />;
   }
   return <img style={styles.dualLogoFooter} src={NEW_IMG_LOGO} />;
+ }
 };
 
 export const effectiveDateForWSQLOGO = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10); 
+  if(isNotEffectticeCertCode(certificate)){
+    return <img style={styles.fullWidthStyle} src={IMG_LOGO} />;
+  }else{
   if (intDate < 20201225) {
     return <img style={styles.fullWidthStyle} src={IMG_LOGO} />;
-  }
+  }  
   return <img style={styles.fullWidthStyle} src={NEW_IMG_LOGO} />;
+}
 };
 
-
-
-
-
-
+export const isNotEffectticeCertCode = certificate => {
+  const certcode=certificate.additionalData.certCode;
+  if([
+    "SOA-SV-001",
+    "SF_SOA_003", 
+    "SF_SOA_ES_001",
+    "SF_SOA_HR_01",
+    "SF_SOA_HR_02",
+    "SF_SOA_HR_03",
+    "SF_SOA_HR_04",
+    "SF_SOA_HR_05",
+    "SF_SOA_MF_01",
+    "SF_SOA_MF_02",
+    "SF_SOA_SV_001"
+  ].includes(certcode)){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 export const  renderAwardedTo = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if (intDate < 20201225) {
-   return <div className="d-flex" style={{ marginTop: "3rem" }}>
+  if(isNotEffectticeCertCode(certificate)){
+    return  <div className="d-flex" style={{ marginTop: "3rem" }}>
     <p style={styles.awardTextStyle} className="RobotoMedium">
       is awarded to
     </p>
   </div>;
   }else{
-    return  <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.awardBlueTextStyle} className="RobotoMedium">
-      is awarded to
-    </p>
-  </div>;
+    if (intDate < 20201225) {
+      return <div className="d-flex" style={{ marginTop: "3rem" }}>
+       <p style={styles.awardTextStyle} className="RobotoMedium">
+         is awarded to
+       </p>
+     </div>;
+     }else{
+       return  <div className="d-flex" style={{ marginTop: "3rem" }}>
+       <p style={styles.awardBlueTextStyle} className="RobotoMedium">
+         is awarded to
+       </p>
+     </div>;
+     }
   }
-  
 };
 
 export const  rendersuccessfuTo = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return<p style={styles.awardTextStyle} className="RobotoMedium">
+   for successful attainment of the required
+   <br />
+   industry approved competencies
+ </p>;
+  }else{
   if (intDate < 20201225) {
    return<p style={styles.awardTextStyle} className="RobotoMedium">
    for successful attainment of the required
@@ -779,12 +816,20 @@ export const  rendersuccessfuTo = certificate => {
     industry approved competencies
   </p>;
   }
+}
 };
 
 export const  rendersuccessfuToFQ006 = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return<p style={styles.awardTextStyle} className="col-lg-6 col-12 text-center RobotoMedium">
+   for successful attainment of the required
+   <br />
+   industry approved competencies
+ </p>;
+  }else{
   if (intDate < 20201225) {
    return<p style={styles.awardTextStyle} className="col-lg-6 col-12 text-center RobotoMedium">
    for successful attainment of the required
@@ -798,6 +843,7 @@ export const  rendersuccessfuToFQ006 = certificate => {
     industry approved competencies
   </p>;
   }
+}
 };
 
 
@@ -805,6 +851,13 @@ export const  renderSOABlue = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <div className="d-flex" style={{ marginTop: "3rem" }}>
+    <p style={styles.soaNameTextStyle} className="RobotoMedium">
+      STATEMENT OF ATTAINMENT
+    </p>
+  </div>;
+  }else{
   if (intDate < 20201225) {
    return <div className="d-flex" style={{ marginTop: "3rem" }}>
     <p style={styles.soaNameTextStyle} className="RobotoMedium">
@@ -818,7 +871,7 @@ export const  renderSOABlue = certificate => {
     </p>
   </div>;
   }
-  
+}
 };
 
 
@@ -826,6 +879,17 @@ export const  renderIndustry = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode){
+    return <div className="d-flex" style={{ marginTop: "3rem" }}>
+    <p style={styles.awardTextStyle} className="RobotoMedium">
+        {get(certificate, "additionalData.certCode").includes(
+          "SF_SOA_ES_001"
+        ) || get(certificate, "additionalData.certCode").includes("SOA-ES-001")
+          ? "for successful attainment of the required competencies in"
+          : "for successful attainment of the following industry approved competencies"}
+      </p>
+  </div>;
+  }else{
   if (intDate < 20201225) {
    return <div className="d-flex" style={{ marginTop: "3rem" }}>
     <p style={styles.awardTextStyle} className="RobotoMedium">
@@ -847,13 +911,20 @@ export const  renderIndustry = certificate => {
       </p>
   </div>;
   }
-  
+}
 };
 
 export const  renderAwardTextTrans = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <div className="d-flex" style={{ marginTop: "3rem" }}>
+    <p style={styles.soaNameTextStyle} className="RobotoMedium">
+      OFFICIAL TRANSCRIPT
+    </p>
+  </div>;
+  }else{
   if (intDate < 20201225) {
    return <div className="d-flex" style={{ marginTop: "3rem" }}>
     <p style={styles.soaNameTextStyle} className="RobotoMedium">
@@ -867,13 +938,20 @@ export const  renderAwardTextTrans = certificate => {
     </p>
   </div>;
   }
-  
+}
 };
 
 export const  renderparagraph = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return<p style={styles.awardTextStyle} className="RobotoMedium">
+   for successfully meeting the requirements of the above programme and
+   attainment of the competencies in the following modules of the
+   {switchOperatorFunction(certificate)}:
+ </p>;
+  }else{
   if (intDate < 20201225) {
    return<p style={styles.awardTextStyle} className="RobotoMedium">
    for successfully meeting the requirements of the above programme and
@@ -887,13 +965,18 @@ export const  renderparagraph = certificate => {
     {switchOperatorFunction(certificate)}:
   </p>;
   }
-  
+}
 };
 
 export const  renderHR_Heading = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return<p style={styles.soaNameTextStyle} className="RobotoRegular">
+   {certificate.name}
+ </p>;
+  }else{
   if (intDate < 20201225) {
    return<p style={styles.soaNameTextStyle} className="RobotoRegular">
    {certificate.name}
@@ -903,23 +986,33 @@ export const  renderHR_Heading = certificate => {
     {certificate.name}
   </p>;
   }  
+}
 };
 
 export const renderlistitemsAwardTextSOAHR = certificate =>{
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return renderAwardTextSOAHR(certificate);
+  }else{
   if (intDate < 20201225) {
    return renderAwardTextSOAHR(certificate);
   }else{
     return renderAwardTextSOAHRBlue(certificate);
   } 
+}
 };
 
 export const  renderCertCode = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <div style={styles.certCodeStyle}>
+   {get(certificate, "additionalData.certCode")}
+ </div>
+  }else{
   if (intDate < 20201225) {
    return <div style={styles.certCodeStyle}>
    {get(certificate, "additionalData.certCode")}
@@ -929,6 +1022,7 @@ export const  renderCertCode = certificate => {
     {get(certificate, "additionalData.certCode")}
   </div>
   }
+}
 };
 
 
@@ -936,6 +1030,15 @@ export const  rendercertcodeQualReprint = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <p style={styles.certCodeStyle}>
+   {["QUAL_Reprint"].includes(
+     get(certificate, "additionalData.certCode")
+   )
+     ? "QUAL"
+     : get(certificate, "additionalData.certCode")}
+ </p>;
+  }else{
   if (intDate < 20201225) {
    return <p style={styles.certCodeStyle}>
    {["QUAL_Reprint"].includes(
@@ -953,12 +1056,18 @@ export const  rendercertcodeQualReprint = certificate => {
       : get(certificate, "additionalData.certCode")}
   </p>
   }
+}
 };
 
 export const  renderCertCodePartner = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <p style={styles.certCodeStyle}>
+   {get(certificate, "additionalData.certCode")}
+ </p>;
+  }else{
   if (intDate < 20201225) {
    return <p style={styles.certCodeStyle}>
    {get(certificate, "additionalData.certCode")}
@@ -968,12 +1077,20 @@ export const  renderCertCodePartner = certificate => {
     {get(certificate, "additionalData.certCode")}
   </p>;
   }
+}
 };
 
 export const  renderCertCodeSOARePrint = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <div style={styles.certCodeStyle}>
+   {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
+     ? "SOA"
+     : get(certificate, "additionalData.certCode")}
+ </div>;
+  }else{
   if (intDate < 20201225) {
    return <div style={styles.certCodeStyle}>
    {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
@@ -987,12 +1104,18 @@ export const  renderCertCodeSOARePrint = certificate => {
       : get(certificate, "additionalData.certCode")}
   </div>;
   }
+}
 };
 
 export const  renderSOACertCode = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <p style={styles.soaCertCodeStyle}>
+   {get(certificate, "additionalData.certCode")}
+   </p>;
+  }else{
   if (intDate < 20201225) {
    return <p style={styles.soaCertCodeStyle}>
    {get(certificate, "additionalData.certCode")}
@@ -1002,6 +1125,7 @@ export const  renderSOACertCode = certificate => {
     {get(certificate, "additionalData.certCode")}
     </p>;
   }
+}
 };
 
 
@@ -1009,6 +1133,11 @@ export const  renderTRAcode = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if(isNotEffectticeCertCode(certificate)){
+    return <div style={styles.certCodeStyle} className="RobotoRegular">
+   TRA
+ </div>;
+  }else{
   if (intDate < 20201225) {
    return <div style={styles.certCodeStyle} className="RobotoRegular">
    TRA
@@ -1018,4 +1147,5 @@ export const  renderTRAcode = certificate => {
     TRA
   </div>;
   }
+}
 };
