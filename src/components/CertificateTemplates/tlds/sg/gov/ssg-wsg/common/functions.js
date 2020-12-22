@@ -747,7 +747,7 @@ export const effectiveDateForWSQLOGO = certificate => {
 export const isNotEffectticeCertCode = certificate => {
   const certcode=certificate.additionalData.certCode;
   if([
-    "SOA-SV-001",
+    "SOA_SV_001",
     "SF_SOA_003", 
     "SF_SOA_ES_001",
     "SF_SOA_HR_01",
@@ -879,7 +879,7 @@ export const  renderIndustry = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode){
+  if(isNotEffectticeCertCode(certificate)){
     return <div className="d-flex" style={{ marginTop: "3rem" }}>
     <p style={styles.awardTextStyle} className="RobotoMedium">
         {get(certificate, "additionalData.certCode").includes(
