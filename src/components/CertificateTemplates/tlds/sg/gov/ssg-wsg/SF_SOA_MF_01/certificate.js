@@ -14,8 +14,7 @@ export default ({ logo }) => ({ certificate }) => (
       className="container"
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingTop:"100px", paddingBottom:"100px", width:"100%",paddingLeft:"6%", paddingRight:"6%", fontFamily:"Arial" }}
     >
-      {fonts()}
-      
+      {fonts()}      
       {renderLogoWSQ(certificate)}
       {renderlistitemsAwardTextSOAHR(certificate)}
       {renderIssuingDate(certificate)}
