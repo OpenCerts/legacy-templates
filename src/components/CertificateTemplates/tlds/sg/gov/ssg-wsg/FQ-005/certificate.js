@@ -18,8 +18,8 @@ export const renderSignature = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6">
-      <img style={styles.sealWidthStyle} src={IMG_SEAL} />
+    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+      <img style={{width: "100%", height: "auto", marginTop:"40%"}} src={IMG_SEAL} />
     </div>
     <div className="col-lg-10 col-12 row d-flex justify-content-center">
       <div className="col-lg-8">

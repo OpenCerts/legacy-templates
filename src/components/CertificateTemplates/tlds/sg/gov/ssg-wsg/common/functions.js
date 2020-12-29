@@ -144,7 +144,7 @@ export const renderRecipientID = certificate => (
 );
 
 export const renderSeal = () => (
-  <div className="col-lg-2 col-6">
+  <div className="col-lg-2 col-6" style={{padding:"0px"}}>
     <img style={styles.sealWidthStyle} src={IMG_SEAL} />
   </div>
 );
@@ -245,9 +245,11 @@ export const renderSignatureSOAIT = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    {renderSeal()}
-    <div className="col-lg-10 col-12 row d-flex justify-content-center">
-      <div className="col-lg-8">
+      <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+    <img style={{width: "100%", height: "auto", marginTop:"29%"}} src={IMG_SEAL} />
+     </div>
+    <div className="col-lg-10 col-12 row d-flex justify-content-center" style={{paddingLeft:"8px"}}>
+      <div className="col-lg-8" >
         {renderSignature(certificate)}
         <div style={styles.footerTextStyle} className="RobotoLight">
           The training and assessment of the abovementioned learner are
@@ -379,11 +381,16 @@ export const renderSignatureSOAHR = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    {renderSeal()}
-    <div className="col-lg-6">
+    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+    {["QUAL_Reprint"].includes(get(certificate, "additionalData.certCode"))
+          ? <img style={{width: "100%",  height: "auto",marginTop:"0%"}} src={IMG_SEAL} />
+          : <img style={{width: "100%",  height: "auto",marginTop:"40%"}} src={IMG_SEAL} />}
+    
+    </div>
+    <div className="col-lg-6" style={{paddingLeft: "8px"}}>
       {renderSignature(certificate)}
       <div style={styles.footerTextStyle} className="RobotoLight">
-        The training and assessment of the abovementioned learner are accredited
+        The training and assessment of the abovementioned learner are accredited<br></br>
         in accordance with the Singapore Workforce Skills Qualifications System.
         {[
           "SF_SOA_HR_01",
@@ -444,8 +451,10 @@ export const renderSignaturePartner = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    {renderSeal()}
-    <div className="col-lg-6">
+     <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+    <img style={{width: "100%", height: "auto",marginTop:"40%"}} src={IMG_SEAL} />
+    </div>
+    <div className="col-lg-6" style={{paddingLeft:"8px"}}>
       {renderSignature(certificate)}
       <img style={styles.signatureFooterLogoStyle} src={IMG_SSGLOGO} />
       <div style={styles.minHeightfooterTextStyle} className="RobotoLight">
@@ -525,7 +534,9 @@ export const renderSignatureSOACC = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    {renderSeal()}
+    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+    <img style={{  width: "100%",  height: "auto",marginTop:"6%"}} src={IMG_SEAL} />
+    </div>
     <div className="col-lg-7">
       <div
         className="col-lg-4 col-12"
@@ -542,7 +553,7 @@ export const renderSignatureSOACC = certificate => (
       </div>
       <div style={styles.footerTextStyle} className="RobotoLight">
         The training and assessment of the abovementioned learner are accredited
-        in accordance with the Singapore Workforce Skills Qualifications System.
+        <br></br>in accordance with the Singapore Workforce Skills Qualifications System.
       </div>
       {renderFooterText(styles.footerTextStyle)}
     </div>
@@ -573,8 +584,10 @@ export const renderSignatureSOAES = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    {renderSeal()}
-    <div className="col-lg-6">
+     <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+    <img style={{width: "100%",  height: "auto",marginTop:"40%"}} src={IMG_SEAL} />
+    </div>
+    <div className="col-lg-6" style={{paddingLeft:"5px"}} >
       {renderSignature(certificate)}
       <img style={styles.signatureFooterLogoStyle} src={IMG_SSGLOGO} />
       <div style={styles.minHeightfooterTextStyle} className="RobotoLight">
@@ -631,9 +644,13 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    {renderSeal()}
-
-    <div className="col-lg-6">
+    
+    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+    {["FQ-004","SF_FQ_004"].includes(get(certificate, "additionalData.certCode"))
+          ? <img style={{width: "100%",  height: "auto",marginTop:"46%"}} src={IMG_SEAL} />
+          : <img style={{width: "100%",  height: "auto",marginTop:"28%"}} src={IMG_SEAL} />}
+    </div>
+    <div className="col-lg-6" style={{ paddingLeft: "8px" }} >
       {renderSignature(certificate)}
       <div style={{ paddingLeft: "0px" }} className="col-lg-5 col-12">
         <img style={styles.footerLogoStyle} src={IMG_SSGLOGO} />
