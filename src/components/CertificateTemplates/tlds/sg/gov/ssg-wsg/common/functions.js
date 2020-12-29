@@ -553,7 +553,7 @@ export const renderSignatureSOACC = certificate => (
       </div>
       <div style={styles.footerTextStyle} className="RobotoLight">
         The training and assessment of the abovementioned learner are accredited
-        in accordance with the Singapore Workforce Skills Qualifications System.
+        <br></br>in accordance with the Singapore Workforce Skills Qualifications System.
       </div>
       {renderFooterText(styles.footerTextStyle)}
     </div>
@@ -644,8 +644,11 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
+    
     <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{width: "100%",  height: "auto", marginTop:"28%" }} src={IMG_SEAL} />
+    {["FQ-004","SF_FQ_004"].includes(get(certificate, "additionalData.certCode"))
+          ? <img style={{width: "100%",  height: "auto",marginTop:"46%"}} src={IMG_SEAL} />
+          : <img style={{width: "100%",  height: "auto",marginTop:"28%"}} src={IMG_SEAL} />}
     </div>
     <div className="col-lg-6" style={{ paddingLeft: "8px" }} >
       {renderSignature(certificate)}
