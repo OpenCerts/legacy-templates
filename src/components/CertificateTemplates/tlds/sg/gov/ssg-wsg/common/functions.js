@@ -11,9 +11,54 @@ import {
   SFA_LOGO
 } from "./images";
 import * as styles from "./style";
-import { Certificate } from "crypto";
 
 const TIMEZONE = "Asia/Singapore";
+export const isNotEffectticeCertCode = certificate => {
+  const certcode = certificate.additionalData.certCode;
+  if (
+    [
+      "SOA_SV_001",
+      "SF_SOA_003",
+      "SF_SOA_ES_001",
+      "SF_SOA_HR_01",
+      "SF_SOA_HR_02",
+      "SF_SOA_HR_03",
+      "SF_SOA_HR_04",
+      "SF_SOA_HR_05",
+      "SF_SOA_MF_01",
+      "SF_SOA_MF_02",
+      "SF_SOA_SV_001"
+    ].includes(certcode)
+  ) {
+    return true;
+  }
+  return false;
+};
+export const effectiveDateForWSQLOGO = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return <img style={styles.fullWidthStyle} src={IMG_LOGO} />;
+  }
+  if (intDate < 20201225) {
+    return <img style={styles.fullWidthStyle} src={IMG_LOGO} />;
+  }
+  return <img style={styles.fullWidthStyle} src={NEW_IMG_LOGO} />;
+};
+
+export const effectiveDateForWSQLOGOFooter = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return <img style={styles.dualLogoFooter} src={IMG_LOGO} />;
+  }
+  if (intDate < 20201225) {
+    return <img style={styles.dualLogoFooter} src={IMG_LOGO} />;
+  }
+  return <img style={styles.dualLogoFooter} src={NEW_IMG_LOGO} />;
+};
 
 export const formatDate = dateString => {
   if (!dateString) return null;
@@ -83,7 +128,7 @@ export const getSpecialization = additionalData => {
   return "";
 };
 
-export const renderLogoWSQ = certificate  => (
+export const renderLogoWSQ = certificate => (
   <div className="row d-flex">
     <div className="col-lg-5 col-12" style={{ paddingRight: "0px" }}>
       {effectiveDateForWSQLOGO(certificate)}
@@ -144,7 +189,7 @@ export const renderRecipientID = certificate => (
 );
 
 export const renderSeal = () => (
-  <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+  <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
     <img style={styles.sealWidthStyle} src={IMG_SEAL} />
   </div>
 );
@@ -209,11 +254,115 @@ export const renderSpecialization = certificate => (
   </div>
 );
 
+export const renderSOABlue = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <div className="d-flex" style={{ marginTop: "3rem" }}>
+        <p style={styles.soaNameTextStyle} className="RobotoMedium">
+          STATEMENT OF ATTAINMENT
+        </p>
+      </div>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <div className="d-flex" style={{ marginTop: "3rem" }}>
+        <p style={styles.soaNameTextStyle} className="RobotoMedium">
+          STATEMENT OF ATTAINMENT
+        </p>
+      </div>
+    );
+  }
+  return (
+    <div className="d-flex" style={{ marginTop: "3rem" }}>
+      <p style={styles.soaNameTextBlueStyle} className="RobotoMedium">
+        STATEMENT OF ATTAINMENT
+      </p>
+    </div>
+  );
+};
+export const renderAwardedTo = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <div className="d-flex" style={{ marginTop: "3rem" }}>
+        <p style={styles.awardTextStyle} className="RobotoMedium">
+          is awarded to
+        </p>
+      </div>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <div className="d-flex" style={{ marginTop: "3rem" }}>
+        <p style={styles.awardTextStyle} className="RobotoMedium">
+          is awarded to
+        </p>
+      </div>
+    );
+  }
+  return (
+    <div className="d-flex" style={{ marginTop: "3rem" }}>
+      <p style={styles.awardBlueTextStyle} className="RobotoMedium">
+        is awarded to
+      </p>
+    </div>
+  );
+};
+export const renderIndustry = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <div className="d-flex" style={{ marginTop: "3rem" }}>
+        <p style={styles.awardTextStyle} className="RobotoMedium">
+          {get(certificate, "additionalData.certCode").includes(
+            "SF_SOA_ES_001"
+          ) ||
+          get(certificate, "additionalData.certCode").includes("SOA-ES-001")
+            ? "for successful attainment of the required competencies in"
+            : "for successful attainment of the following industry approved competencies"}
+        </p>
+      </div>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <div className="d-flex" style={{ marginTop: "3rem" }}>
+        <p style={styles.awardTextStyle} className="RobotoMedium">
+          {get(certificate, "additionalData.certCode").includes(
+            "SF_SOA_ES_001"
+          ) ||
+          get(certificate, "additionalData.certCode").includes("SOA-ES-001")
+            ? "for successful attainment of the required competencies in"
+            : "for successful attainment of the following industry approved competencies"}
+        </p>
+      </div>
+    );
+  }
+  return (
+    <div className="d-flex" style={{ marginTop: "3rem" }}>
+      <p style={styles.awardBlueTextStyle} className="RobotoMedium">
+        {get(certificate, "additionalData.certCode").includes(
+          "SF_SOA_ES_001"
+        ) || get(certificate, "additionalData.certCode").includes("SOA-ES-001")
+          ? "for successful attainment of the required competencies in"
+          : "for successful attainment of the following industry approved competencies"}
+      </p>
+    </div>
+  );
+};
+
 export const renderAwardTextSOA = certificate => (
-   <div>
+  <div>
     <div className="d-flex" style={{ marginTop: "2rem" }}>
       {renderSOABlue(certificate)}
-
     </div>
     {renderAwardedTo(certificate)}
     {renderRecipientName(certificate)}
@@ -223,7 +372,6 @@ export const renderAwardTextSOA = certificate => (
       style={{ marginTop: "1rem", marginBottom: "3rem", paddingLeft: "0px" }}
     >
       {renderIndustry(certificate)}
-
     </div>
     {certificate.transcript.map(item => (
       <div className="d-flex" key={item.courseCode}>
@@ -240,16 +388,47 @@ export const renderAwardTextSOA = certificate => (
   </div>
 );
 
+export const renderCertCode = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <div style={styles.certCodeStyle}>
+        {get(certificate, "additionalData.certCode")}
+      </div>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <div style={styles.certCodeStyle}>
+        {get(certificate, "additionalData.certCode")}
+      </div>
+    );
+  }
+  return (
+    <div style={styles.certCodeBlueStyle}>
+      {get(certificate, "additionalData.certCode")}
+    </div>
+  );
+};
+
 export const renderSignatureSOAIT = certificate => (
   <div
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-      <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{width: "100%", height: "auto", marginTop:"29%"}} src={IMG_SEAL} />
-     </div>
-    <div className="col-lg-10 col-12 row d-flex justify-content-center" style={{paddingLeft:"8px"}}>
-      <div className="col-lg-8" >
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "29%" }}
+        src={IMG_SEAL}
+      />
+    </div>
+    <div
+      className="col-lg-10 col-12 row d-flex justify-content-center"
+      style={{ paddingLeft: "8px" }}
+    >
+      <div className="col-lg-8">
         {renderSignature(certificate)}
         <div style={styles.footerTextStyle} className="RobotoLight">
           The training and assessment of the abovementioned learner are
@@ -280,7 +459,7 @@ export const renderSignatureSOAIT = certificate => (
         style={{ alignItems: "center" }}
       >
         <div style={{ margin: "15px" }}>
-        {effectiveDateForWSQLOGOFooter(certificate)}
+          {effectiveDateForWSQLOGOFooter(certificate)}
           <img style={styles.dualLogoFooter} src={IMG_SSGLOGO} />
         </div>
         {renderCertCode(certificate)}
@@ -312,13 +491,69 @@ export const switchRewardFunction = certificate => {
   }
 };
 
+export const renderHRHeading = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <p style={styles.soaNameTextStyle} className="RobotoRegular">
+        {certificate.name}
+      </p>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <p style={styles.soaNameTextStyle} className="RobotoRegular">
+        {certificate.name}
+      </p>
+    );
+  }
+  return (
+    <p style={styles.soaNameTextBlueStyle} className="RobotoRegular">
+      {certificate.name}
+    </p>
+  );
+};
+
+export const renderparagraph = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <p style={styles.awardTextStyle} className="RobotoMedium">
+        for successfully meeting the requirements of the above programme and
+        attainment of the competencies in the following modules of the
+        {switchOperatorFunction(certificate)}:
+      </p>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <p style={styles.awardTextStyle} className="RobotoMedium">
+        for successfully meeting the requirements of the above programme and
+        attainment of the competencies in the following modules of the
+        {switchOperatorFunction(certificate)}:
+      </p>
+    );
+  }
+  return (
+    <p style={styles.awardBlueTextStyle} className="RobotoMedium">
+      for successfully meeting the requirements of the above programme and
+      attainment of the competencies in the following modules of the
+      {switchOperatorFunction(certificate)}:
+    </p>
+  );
+};
+
 export const renderAwardTextSOAHR = certificate => (
   <div>
     <div
       className="d-flex col-lg-9"
       style={{ marginTop: "2rem", padding: "0px" }}
     >
-      {renderHR_Heading(certificate)}
+      {renderHRHeading(certificate)}
     </div>
     {renderAwardedTo(certificate)}
     {renderRecipientName(certificate)}
@@ -327,7 +562,7 @@ export const renderAwardTextSOAHR = certificate => (
       className="d-flex col-lg-9"
       style={{ marginTop: "1rem", padding: "0px" }}
     >
-     {renderparagraph(certificate)}
+      {renderparagraph(certificate)}
     </div>
     {switchRewardFunction(certificate).map(item => (
       <div className="d-flex" key={item.courseCode}>
@@ -350,7 +585,7 @@ export const renderAwardTextSOAHRBlue = certificate => (
       className="d-flex col-lg-9"
       style={{ marginTop: "2rem", padding: "0px" }}
     >
-      {renderHR_Heading(certificate)}
+      {renderHRHeading(certificate)}
     </div>
     {renderAwardedTo(certificate)}
     {renderRecipientName(certificate)}
@@ -359,7 +594,7 @@ export const renderAwardTextSOAHRBlue = certificate => (
       className="d-flex col-lg-9"
       style={{ marginTop: "1rem", padding: "0px" }}
     >
-     {renderparagraph(certificate)}
+      {renderparagraph(certificate)}
     </div>
     {switchRewardFunction(certificate).map(item => (
       <div className="d-flex" key={item.courseCode}>
@@ -375,22 +610,62 @@ export const renderAwardTextSOAHRBlue = certificate => (
     </div>
   </div>
 );
+export const rendercertcodeQualReprint = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <p style={styles.certCodeStyle}>
+        {["QUAL_Reprint"].includes(get(certificate, "additionalData.certCode"))
+          ? "QUAL"
+          : get(certificate, "additionalData.certCode")}
+      </p>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <p style={styles.certCodeStyle}>
+        {["QUAL_Reprint"].includes(get(certificate, "additionalData.certCode"))
+          ? "QUAL"
+          : get(certificate, "additionalData.certCode")}
+      </p>
+    );
+  }
+  return (
+    <p style={styles.certCodeBlueStyle}>
+      {["QUAL_Reprint"].includes(get(certificate, "additionalData.certCode"))
+        ? "QUAL"
+        : get(certificate, "additionalData.certCode")}
+    </p>
+  );
+};
 
 export const renderSignatureSOAHR = certificate => (
   <div
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    {["QUAL_Reprint"].includes(get(certificate, "additionalData.certCode"))
-          ? <img style={{width: "100%",  height: "auto",marginTop:"0%"}} src={IMG_SEAL} />
-          : <img style={{width: "100%",  height: "auto",marginTop:"40%"}} src={IMG_SEAL} />}
-    
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      {["QUAL_Reprint"].includes(
+        get(certificate, "additionalData.certCode")
+      ) ? (
+        <img
+          style={{ width: "100%", height: "auto", marginTop: "0%" }}
+          src={IMG_SEAL}
+        />
+      ) : (
+        <img
+          style={{ width: "100%", height: "auto", marginTop: "40%" }}
+          src={IMG_SEAL}
+        />
+      )}
     </div>
-    <div className="col-lg-6" style={{paddingLeft: "8px"}}>
+    <div className="col-lg-6" style={{ paddingLeft: "8px" }}>
       {renderSignature(certificate)}
       <div style={styles.footerTextStyle} className="RobotoLight">
-        The training and assessment of the abovementioned learner are accredited<br></br>
+        The training and assessment of the abovementioned learner are accredited
+        <br />
         in accordance with the Singapore Workforce Skills Qualifications System.
         {[
           "SF_SOA_HR_01",
@@ -446,15 +721,43 @@ export const formatAttainmentDate = certificate => {
   return <img style={styles.footerLogoStyle} src={SFA_LOGO} />;
 };
 
+export const renderCertCodePartner = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <p style={styles.certCodeStyle}>
+        {get(certificate, "additionalData.certCode")}
+      </p>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <p style={styles.certCodeStyle}>
+        {get(certificate, "additionalData.certCode")}
+      </p>
+    );
+  }
+  return (
+    <p style={styles.certCodeBlueStyle}>
+      {get(certificate, "additionalData.certCode")}
+    </p>
+  );
+};
+
 export const renderSignaturePartner = certificate => (
   <div
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-     <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{width: "100%", height: "auto",marginTop:"40%"}} src={IMG_SEAL} />
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "40%" }}
+        src={IMG_SEAL}
+      />
     </div>
-    <div className="col-lg-6" style={{paddingLeft:"8px"}}>
+    <div className="col-lg-6" style={{ paddingLeft: "8px" }}>
       {renderSignature(certificate)}
       <img style={styles.signatureFooterLogoStyle} src={IMG_SSGLOGO} />
       <div style={styles.minHeightfooterTextStyle} className="RobotoLight">
@@ -494,6 +797,36 @@ export const renderSignaturePartner = certificate => (
     </div>
   </div>
 );
+export const rendersuccessfuTo = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <p style={styles.awardTextStyle} className="RobotoMedium">
+        for successful attainment of the required
+        <br />
+        industry approved competencies
+      </p>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <p style={styles.awardTextStyle} className="RobotoMedium">
+        for successful attainment of the required
+        <br />
+        industry approved competencies
+      </p>
+    );
+  }
+  return (
+    <p style={styles.awardBlueTextStyle} className="RobotoMedium">
+      for successful attainment of the required
+      <br />
+      industry approved competencies
+    </p>
+  );
+};
 
 export const renderAwardTextQUAL = certificate => (
   <div>
@@ -519,7 +852,7 @@ export const renderAwardTextQUAL = certificate => (
       className="d-flex col-lg-6 col-12"
       style={{ marginTop: "1rem", paddingLeft: "0px" }}
     >
-     {rendersuccessfuTo(certificate)}
+      {rendersuccessfuTo(certificate)}
     </div>
     <div className="d-flex" style={{ marginTop: "3rem" }}>
       <p style={styles.issuersTextStyle} className="RobotoRegular">
@@ -528,14 +861,47 @@ export const renderAwardTextQUAL = certificate => (
     </div>
   </div>
 );
+export const renderCertCodeSOARePrint = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <div style={styles.certCodeStyle}>
+        {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
+          ? "SOA"
+          : get(certificate, "additionalData.certCode")}
+      </div>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <div style={styles.certCodeStyle}>
+        {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
+          ? "SOA"
+          : get(certificate, "additionalData.certCode")}
+      </div>
+    );
+  }
+  return (
+    <div style={styles.certCodeBlueStyle}>
+      {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
+        ? "SOA"
+        : get(certificate, "additionalData.certCode")}
+    </div>
+  );
+};
 
 export const renderSignatureSOACC = certificate => (
   <div
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{  width: "100%",  height: "auto",marginTop:"6%"}} src={IMG_SEAL} />
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "6%" }}
+        src={IMG_SEAL}
+      />
     </div>
     <div className="col-lg-7">
       <div
@@ -553,7 +919,8 @@ export const renderSignatureSOACC = certificate => (
       </div>
       <div style={styles.footerTextStyle} className="RobotoLight">
         The training and assessment of the abovementioned learner are accredited
-        <br></br>in accordance with the Singapore Workforce Skills Qualifications System.
+        <br />
+        in accordance with the Singapore Workforce Skills Qualifications System.
       </div>
       {renderFooterText(styles.footerTextStyle)}
     </div>
@@ -578,16 +945,43 @@ export const renderSignatureSOACC = certificate => (
     </div>
   </div>
 );
+export const renderSOACertCode = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <p style={styles.soaCertCodeStyle}>
+        {get(certificate, "additionalData.certCode")}
+      </p>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <p style={styles.soaCertCodeStyle}>
+        {get(certificate, "additionalData.certCode")}
+      </p>
+    );
+  }
+  return (
+    <p style={styles.soaCertCodeBlueStyle}>
+      {get(certificate, "additionalData.certCode")}
+    </p>
+  );
+};
 
 export const renderSignatureSOAES = certificate => (
   <div
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-     <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{width: "100%",  height: "auto",marginTop:"40%"}} src={IMG_SEAL} />
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "40%" }}
+        src={IMG_SEAL}
+      />
     </div>
-    <div className="col-lg-6" style={{paddingLeft:"5px"}} >
+    <div className="col-lg-6" style={{ paddingLeft: "5px" }}>
       {renderSignature(certificate)}
       <img style={styles.signatureFooterLogoStyle} src={IMG_SSGLOGO} />
       <div style={styles.minHeightfooterTextStyle} className="RobotoLight">
@@ -633,7 +1027,7 @@ export const renderSignatureSOAES = certificate => (
         className="col-lg-2 col-4"
         style={{ display: "block", position: "relative", padding: "0px" }}
       >
-      {renderSOACertCode(certificate)}
+        {renderSOACertCode(certificate)}
       </div>
     </div>
   </div>
@@ -644,13 +1038,22 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    {["FQ-004","SF_FQ_004"].includes(get(certificate, "additionalData.certCode"))
-          ? <img style={{width: "100%",  height: "auto",marginTop:"46%"}} src={IMG_SEAL} />
-          : <img style={{width: "100%",  height: "auto",marginTop:"28%"}} src={IMG_SEAL} />}
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      {["FQ-004", "SF_FQ_004"].includes(
+        get(certificate, "additionalData.certCode")
+      ) ? (
+        <img
+          style={{ width: "100%", height: "auto", marginTop: "46%" }}
+          src={IMG_SEAL}
+        />
+      ) : (
+        <img
+          style={{ width: "100%", height: "auto", marginTop: "28%" }}
+          src={IMG_SEAL}
+        />
+      )}
     </div>
-    <div className="col-lg-6" style={{ paddingLeft: "8px" }} >
+    <div className="col-lg-6" style={{ paddingLeft: "8px" }}>
       {renderSignature(certificate)}
       <div style={{ paddingLeft: "0px" }} className="col-lg-5 col-12">
         <img style={styles.footerLogoStyle} src={IMG_SSGLOGO} />
@@ -733,436 +1136,111 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
   </div>
 );
 
-export const effectiveDateForWSQLOGOFooter = certificate => {
+export const rendersuccessfuToFQ006 = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <img style={styles.dualLogoFooter} src={IMG_LOGO} />;
-  }else{
-  if (intDate < 20201225) {
-    return <img style={styles.dualLogoFooter} src={IMG_LOGO} />;
-  }
-  return <img style={styles.dualLogoFooter} src={NEW_IMG_LOGO} />;
- }
-};
-
-export const effectiveDateForWSQLOGO = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10); 
-  if(isNotEffectticeCertCode(certificate)){
-    return <img style={styles.fullWidthStyle} src={IMG_LOGO} />;
-  }else{
-  if (intDate < 20201225) {
-    return <img style={styles.fullWidthStyle} src={IMG_LOGO} />;
-  }  
-  return <img style={styles.fullWidthStyle} src={NEW_IMG_LOGO} />;
-}
-};
-
-export const isNotEffectticeCertCode = certificate => {
-  const certcode=certificate.additionalData.certCode;
-  if([
-    "SOA_SV_001",
-    "SF_SOA_003", 
-    "SF_SOA_ES_001",
-    "SF_SOA_HR_01",
-    "SF_SOA_HR_02",
-    "SF_SOA_HR_03",
-    "SF_SOA_HR_04",
-    "SF_SOA_HR_05",
-    "SF_SOA_MF_01",
-    "SF_SOA_MF_02",
-    "SF_SOA_SV_001"
-  ].includes(certcode)){
-    return true;
-  }else{
-    return false;
-  }
-}
-
-export const  renderAwardedTo = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return  <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.awardTextStyle} className="RobotoMedium">
-      is awarded to
-    </p>
-  </div>;
-  }else{
-    if (intDate < 20201225) {
-      return <div className="d-flex" style={{ marginTop: "3rem" }}>
-       <p style={styles.awardTextStyle} className="RobotoMedium">
-         is awarded to
-       </p>
-     </div>;
-     }else{
-       return  <div className="d-flex" style={{ marginTop: "3rem" }}>
-       <p style={styles.awardBlueTextStyle} className="RobotoMedium">
-         is awarded to
-       </p>
-     </div>;
-     }
-  }
-};
-
-export const  rendersuccessfuTo = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return<p style={styles.awardTextStyle} className="RobotoMedium">
-   for successful attainment of the required
-   <br />
-   industry approved competencies
- </p>;
-  }else{
-  if (intDate < 20201225) {
-   return<p style={styles.awardTextStyle} className="RobotoMedium">
-   for successful attainment of the required
-   <br />
-   industry approved competencies
- </p>;
-  }else{
-    return <p style={styles.awardBlueTextStyle} className="RobotoMedium">
-    for successful attainment of the required
-    <br />
-    industry approved competencies
-  </p>;
-  }
-}
-};
-
-export const  rendersuccessfuToFQ006 = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return<p style={styles.awardTextStyle} className="col-lg-6 col-12 text-center RobotoMedium">
-   for successful attainment of the required
-   <br />
-   industry approved competencies
- </p>;
-  }else{
-  if (intDate < 20201225) {
-   return<p style={styles.awardTextStyle} className="col-lg-6 col-12 text-center RobotoMedium">
-   for successful attainment of the required
-   <br />
-   industry approved competencies
- </p>;
-  }else{
-    return <p style={styles.awardBlueTextStyle} className="col-lg-6 col-12 text-center RobotoMedium">
-    for successful attainment of the required
-    <br />
-    industry approved competencies
-  </p>;
-  }
-}
-};
-
-
-export const  renderSOABlue = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.soaNameTextStyle} className="RobotoMedium">
-      STATEMENT OF ATTAINMENT
-    </p>
-  </div>;
-  }else{
-  if (intDate < 20201225) {
-   return <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.soaNameTextStyle} className="RobotoMedium">
-      STATEMENT OF ATTAINMENT
-    </p>
-  </div>;
-  }else{
-    return  <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.soaNameTextBlueStyle} className="RobotoMedium">
-      STATEMENT OF ATTAINMENT
-    </p>
-  </div>;
-  }
-}
-};
-
-
-export const  renderIndustry = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.awardTextStyle} className="RobotoMedium">
-        {get(certificate, "additionalData.certCode").includes(
-          "SF_SOA_ES_001"
-        ) || get(certificate, "additionalData.certCode").includes("SOA-ES-001")
-          ? "for successful attainment of the required competencies in"
-          : "for successful attainment of the following industry approved competencies"}
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <p
+        style={styles.awardTextStyle}
+        className="col-lg-6 col-12 text-center RobotoMedium"
+      >
+        for successful attainment of the required
+        <br />
+        industry approved competencies
       </p>
-  </div>;
-  }else{
+    );
+  }
   if (intDate < 20201225) {
-   return <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.awardTextStyle} className="RobotoMedium">
-        {get(certificate, "additionalData.certCode").includes(
-          "SF_SOA_ES_001"
-        ) || get(certificate, "additionalData.certCode").includes("SOA-ES-001")
-          ? "for successful attainment of the required competencies in"
-          : "for successful attainment of the following industry approved competencies"}
+    return (
+      <p
+        style={styles.awardTextStyle}
+        className="col-lg-6 col-12 text-center RobotoMedium"
+      >
+        for successful attainment of the required
+        <br />
+        industry approved competencies
       </p>
-  </div>;
-  }else{
-    return  <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.awardBlueTextStyle} className="RobotoMedium">
-        {get(certificate, "additionalData.certCode").includes(
-          "SF_SOA_ES_001"
-        ) || get(certificate, "additionalData.certCode").includes("SOA-ES-001")
-          ? "for successful attainment of the required competencies in"
-          : "for successful attainment of the following industry approved competencies"}
+    );
+  }
+  return (
+    <p
+      style={styles.awardBlueTextStyle}
+      className="col-lg-6 col-12 text-center RobotoMedium"
+    >
+      for successful attainment of the required
+      <br />
+      industry approved competencies
+    </p>
+  );
+};
+
+export const renderAwardTextTrans = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <div className="d-flex" style={{ marginTop: "3rem" }}>
+        <p style={styles.soaNameTextStyle} className="RobotoMedium">
+          OFFICIAL TRANSCRIPT
+        </p>
+      </div>
+    );
+  }
+  if (intDate < 20201225) {
+    return (
+      <div className="d-flex" style={{ marginTop: "3rem" }}>
+        <p style={styles.soaNameTextStyle} className="RobotoMedium">
+          OFFICIAL TRANSCRIPT
+        </p>
+      </div>
+    );
+  }
+  return (
+    <div className="d-flex" style={{ marginTop: "3rem" }}>
+      <p style={styles.soaNameTextBlueStyle} className="RobotoMedium">
+        OFFICIAL TRANSCRIPT
       </p>
-  </div>;
-  }
-}
+    </div>
+  );
 };
 
-export const  renderAwardTextTrans = certificate => {
+export const renderlistitemsAwardTextSOAHR = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.soaNameTextStyle} className="RobotoMedium">
-      OFFICIAL TRANSCRIPT
-    </p>
-  </div>;
-  }else{
-  if (intDate < 20201225) {
-   return <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.soaNameTextStyle} className="RobotoMedium">
-      OFFICIAL TRANSCRIPT
-    </p>
-  </div>;
-  }else{
-    return  <div className="d-flex" style={{ marginTop: "3rem" }}>
-    <p style={styles.soaNameTextBlueStyle} className="RobotoMedium">
-      OFFICIAL TRANSCRIPT
-    </p>
-  </div>;
-  }
-}
-};
-
-export const  renderparagraph = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return<p style={styles.awardTextStyle} className="RobotoMedium">
-   for successfully meeting the requirements of the above programme and
-   attainment of the competencies in the following modules of the
-   {switchOperatorFunction(certificate)}:
- </p>;
-  }else{
-  if (intDate < 20201225) {
-   return<p style={styles.awardTextStyle} className="RobotoMedium">
-   for successfully meeting the requirements of the above programme and
-   attainment of the competencies in the following modules of the
-   {switchOperatorFunction(certificate)}:
- </p>;
-  }else{
-    return  <p style={styles.awardBlueTextStyle} className="RobotoMedium">
-    for successfully meeting the requirements of the above programme and
-    attainment of the competencies in the following modules of the
-    {switchOperatorFunction(certificate)}:
-  </p>;
-  }
-}
-};
-
-export const  renderHR_Heading = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return<p style={styles.soaNameTextStyle} className="RobotoRegular">
-   {certificate.name}
- </p>;
-  }else{
-  if (intDate < 20201225) {
-   return<p style={styles.soaNameTextStyle} className="RobotoRegular">
-   {certificate.name}
- </p>;
-  }else{
-    return<p style={styles.soaNameTextBlueStyle} className="RobotoRegular">
-    {certificate.name}
-  </p>;
-  }  
-}
-};
-
-export const renderlistitemsAwardTextSOAHR = certificate =>{
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
+  if (isNotEffectticeCertCode(certificate)) {
     return renderAwardTextSOAHR(certificate);
-  }else{
+  }
   if (intDate < 20201225) {
-   return renderAwardTextSOAHR(certificate);
-  }else{
-    return renderAwardTextSOAHRBlue(certificate);
-  } 
-}
+    return renderAwardTextSOAHR(certificate);
+  }
+  return renderAwardTextSOAHRBlue(certificate);
 };
 
-export const  renderCertCode = certificate => {
+export const renderTRAcode = certificate => {
   const date = certificate.attainmentDate.split("T");
   const dateSplit = date[0].split("-");
   const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <div style={styles.certCodeStyle}>
-   {get(certificate, "additionalData.certCode")}
- </div>
-  }else{
-  if (intDate < 20201225) {
-   return <div style={styles.certCodeStyle}>
-   {get(certificate, "additionalData.certCode")}
- </div>
-  }else{
-    return  <div style={styles.certCodeBlueStyle}>
-    {get(certificate, "additionalData.certCode")}
-  </div>
+  if (isNotEffectticeCertCode(certificate)) {
+    return (
+      <div style={styles.certCodeStyle} className="RobotoRegular">
+        TRA
+      </div>
+    );
   }
-}
-};
-
-
-export const  rendercertcodeQualReprint = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <p style={styles.certCodeStyle}>
-   {["QUAL_Reprint"].includes(
-     get(certificate, "additionalData.certCode")
-   )
-     ? "QUAL"
-     : get(certificate, "additionalData.certCode")}
- </p>;
-  }else{
   if (intDate < 20201225) {
-   return <p style={styles.certCodeStyle}>
-   {["QUAL_Reprint"].includes(
-     get(certificate, "additionalData.certCode")
-   )
-     ? "QUAL"
-     : get(certificate, "additionalData.certCode")}
- </p>;
-  }else{
-    return  <p style={styles.certCodeBlueStyle}>
-    {["QUAL_Reprint"].includes(
-      get(certificate, "additionalData.certCode")
-    )
-      ? "QUAL"
-      : get(certificate, "additionalData.certCode")}
-  </p>
+    return (
+      <div style={styles.certCodeStyle} className="RobotoRegular">
+        TRA
+      </div>
+    );
   }
-}
-};
-
-export const  renderCertCodePartner = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <p style={styles.certCodeStyle}>
-   {get(certificate, "additionalData.certCode")}
- </p>;
-  }else{
-  if (intDate < 20201225) {
-   return <p style={styles.certCodeStyle}>
-   {get(certificate, "additionalData.certCode")}
- </p>;
-  }else{
-    return <p style={styles.certCodeBlueStyle}>
-    {get(certificate, "additionalData.certCode")}
-  </p>;
-  }
-}
-};
-
-export const  renderCertCodeSOARePrint = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <div style={styles.certCodeStyle}>
-   {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
-     ? "SOA"
-     : get(certificate, "additionalData.certCode")}
- </div>;
-  }else{
-  if (intDate < 20201225) {
-   return <div style={styles.certCodeStyle}>
-   {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
-     ? "SOA"
-     : get(certificate, "additionalData.certCode")}
- </div>;
-  }else{
-    return <div style={styles.certCodeBlueStyle}>
-    {["SOA_Reprint"].includes(get(certificate, "additionalData.certCode"))
-      ? "SOA"
-      : get(certificate, "additionalData.certCode")}
-  </div>;
-  }
-}
-};
-
-export const  renderSOACertCode = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <p style={styles.soaCertCodeStyle}>
-   {get(certificate, "additionalData.certCode")}
-   </p>;
-  }else{
-  if (intDate < 20201225) {
-   return <p style={styles.soaCertCodeStyle}>
-   {get(certificate, "additionalData.certCode")}
-   </p>;
-  }else{
-    return <p style={styles.soaCertCodeBlueStyle}>
-    {get(certificate, "additionalData.certCode")}
-    </p>;
-  }
-}
-};
-
-
-export const  renderTRAcode = certificate => {
-  const date = certificate.attainmentDate.split("T");
-  const dateSplit = date[0].split("-");
-  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
-  if(isNotEffectticeCertCode(certificate)){
-    return <div style={styles.certCodeStyle} className="RobotoRegular">
-   TRA
- </div>;
-  }else{
-  if (intDate < 20201225) {
-   return <div style={styles.certCodeStyle} className="RobotoRegular">
-   TRA
- </div>;
-  }else{
-    return <div style={styles.certCodeBlueStyle} className="RobotoRegular">
-    TRA
-  </div>;
-  }
-}
+  return (
+    <div style={styles.certCodeBlueStyle} className="RobotoRegular">
+      TRA
+    </div>
+  );
 };

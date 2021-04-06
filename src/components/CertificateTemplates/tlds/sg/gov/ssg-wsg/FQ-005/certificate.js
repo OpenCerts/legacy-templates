@@ -1,6 +1,11 @@
 import { get } from "lodash";
-import { NICF_LOGO, IMG_LOGO,NEW_IMG_LOGO, IMG_SEAL, IMG_SSGLOGO } from "../common";
-import { renderIssuingDate, renderAwardTextQUAL,effectiveDateForWSQLOGOFooter, renderCertCode } from "../common/functions";
+import { NICF_LOGO, IMG_SEAL, IMG_SSGLOGO } from "../common";
+import {
+  renderIssuingDate,
+  renderAwardTextQUAL,
+  effectiveDateForWSQLOGOFooter,
+  renderCertCode
+} from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
 
@@ -18,8 +23,11 @@ export const renderSignature = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-      <img style={{width: "100%", height: "auto", marginTop:"40%"}} src={IMG_SEAL} />
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "40%" }}
+        src={IMG_SEAL}
+      />
     </div>
     <div className="col-lg-10 col-12 row d-flex justify-content-center">
       <div className="col-lg-8">
@@ -77,7 +85,7 @@ export const renderSignature = certificate => (
           {effectiveDateForWSQLOGOFooter(certificate)}
           <img style={styles.dualLogoFooter} src={IMG_SSGLOGO} />
         </div>
-          {renderCertCode(certificate)}
+        {renderCertCode(certificate)}
       </div>
     </div>
   </div>
@@ -89,10 +97,20 @@ export default ({ logo }) => ({ certificate }) => (
   <div>
     <div
       className="container"
-      style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingBottom:"100px", paddingTop:"100px", width:"100%", fontFamily:"Arial" }}
+      style={{
+        border: 5,
+        borderColor: "#AAA",
+        borderStyle: "solid",
+        paddingLeft: "6%",
+        paddingRight: "6%",
+        paddingBottom: "100px",
+        paddingTop: "100px",
+        width: "100%",
+        fontFamily: "Arial"
+      }}
     >
       {fonts()}
-      
+
       {renderLogoWSQ(certificate)}
       {renderAwardTextQUAL(certificate)}
       {renderIssuingDate(certificate)}

@@ -14,8 +14,11 @@ export const renderSignatureSFSOA = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-      <img style={{width: "100%", height: "auto",marginTop:"49%"}} src={IMG_SEAL} />
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "49%" }}
+        src={IMG_SEAL}
+      />
     </div>
     <div className="col-lg-7" style={{ paddingLeft: "8px" }}>
       <div className="col-12" style={{ padding: "5px" }}>
@@ -56,7 +59,7 @@ export const renderSignatureSFSOA = certificate => (
       </div>
       <div>
         <img style={styles.soaFooterLogoStyle} src={IMG_SSGLOGO} />
-            {renderCertCode(certificate)}
+        {renderCertCode(certificate)}
       </div>
     </div>
   </div>
