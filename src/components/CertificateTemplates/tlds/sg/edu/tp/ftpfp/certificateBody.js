@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import CertificateBodyStyles from "../common/certificateBodyStyles";
 
-const CertificateBody  = ({ certificate }) => (
+const CertificateBody = ({ certificate }) => (
   <div className="container">
     <CertificateBodyStyles />
 
@@ -41,8 +41,8 @@ const CertificateBody  = ({ certificate }) => (
           month: "long",
           year: "numeric"
         })}
-		{certificate.additionalData.isExempted &&(
-          <span className="recipient-paragraph"> 
+		{certificate.additionalData.isExempted && (
+          <span className="recipient-paragraph">
             <br />* Exempted from satisfying the full range of assessment
             objectives of the programme
           </span>
