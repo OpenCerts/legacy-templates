@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import CertificateBodyStyles from "../common/certificateBodyStyles";
 
-const CertificateBody = ({ certificate }) => (
+const CertificateBody  = ({ certificate }) => (
   <div className="container">
     <CertificateBodyStyles />
 
