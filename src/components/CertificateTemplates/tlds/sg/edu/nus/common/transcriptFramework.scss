@@ -89,6 +89,10 @@ $debug: false;
         font-size: 8pt;
     }
     
+    .ts-blank {
+        font-size: 4pt;
+    }
+
     .ts-highlight {
         font-weight: bold;
     }
@@ -154,6 +158,22 @@ $debug: false;
         box-sizing: border-box; 
     }
 
+    /* revamp 2021 - starts here */
+    .confer-col0 {
+        display: table-cell;
+        width: 5cm;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    
+    .confer-col1 {
+        display: table-cell;
+        width: 8.7cm;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    /* revamp 2021 - ends here */
+    
     .print-only {
         display: none;
     }

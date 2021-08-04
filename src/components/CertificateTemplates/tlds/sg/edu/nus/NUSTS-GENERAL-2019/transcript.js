@@ -2,6 +2,7 @@
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-param-reassign */
+/* eslint no-use-before-define: ["error", { "classes": false }] */
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import {
@@ -23,16 +24,32 @@ import scss from "../common/transcriptFramework.scss";
 // construct class names
 const cls = names => sassClassNames(names, scss);
 
+// cutoff date for revamped transcript format
+const revCutOffDate2021 = "2021-08-10";
+
 // flags to calssify transcript type
+let isUG;
+let isGD;
 let isDuke;
 let isMedDen;
 let isCDP;
 let isYaleNUS;
 let isNG;
+let isOfficial;
+let isConferred;
+let isRev2021;
 
-// Yale-NUS specific attributes
+// Yale-NUS specific attributes and function
 let lastTermYaleNUS;
 let progNameYaleNUS;
+const yncCommensurateRemark = gpa => {
+  if (gpa >= 4.5)
+    return "THIS CAP IS COMMENSURATE WITH NUS' HONOURS (HIGHEST DISTINCTION)";
+  if (gpa >= 4)
+    return "THIS CAP IS COMMENSURATE WITH NUS' HONOURS (DISTINCTION)";
+  if (gpa >= 3.5) return "THIS CAP IS COMMENSURATE WITH NUS' HONOURS (MERIT)";
+  return null;
+};
 
 // check whether a term is first term
 const firstTermIdxes = [];
@@ -541,7 +558,7 @@ class TranscriptSummary {
         if (data.specialGPA) this.renderSpecialGPA(data);
         else if (!isMedDen) this.renderGPA(data);
         // render special remarks for Yale-NUS
-        if (isLastYNCTerm && progNameYaleNUS === data.programName)
+        if (!isRev2021 && isLastYNCTerm && progNameYaleNUS === data.programName)
           this.renderYNCRemarks(data);
         // acad standing
         if (isMedDen) this.renderAcadStanding(data);
@@ -604,19 +621,12 @@ class TranscriptSummary {
   renderYNCRemarks = sumData => {
     if (isYaleNUS && sumData.includeInGPA) {
       const gpa = sumData.GPA.toFixed(2);
-      let remarks;
-      if (gpa >= 4.5)
-        remarks =
-          "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (HIGHEST DISTINCTION))";
-      else if (gpa >= 4)
-        remarks = "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (DISTINCTION))";
-      else if (gpa >= 3.5)
-        remarks = "(THIS CAP IS COMMENSURATE WITH NUS' HONOURS (MERIT))";
+      const remarks = yncCommensurateRemark(gpa);
       if (remarks)
         this.dataFeeder.push(
           "ts-term-gpa",
           <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
-            {`${remarks}`}
+            {`(${remarks})`}
           </td>
         );
     }
@@ -1133,12 +1143,20 @@ class TranscriptMilestone {
           const descr = `${
             isNG ? "Completed a research project on" : data.milestoneTitle
           } ${data.thesisTitle}`;
+          // blank line
+          if (isRev2021)
+            this.dataFeeder.push(
+              "ts-blank",
+              <td colSpan="4" className={cls("ts-blank")}>
+                &nbsp;
+              </td>
+            );
           this.dataFeeder.push(
             "ts-ms",
             <td
               colSpan="4"
               className={cls("ts-title ts-highlight")}
-              style={{ paddingLeft: "20px" }}
+              style={{ paddingLeft: isRev2021 ? "0px" : "20px" }}
             >
               {descr.toUpperCase()}
             </td>
@@ -1164,6 +1182,14 @@ class TranscriptSpclProg {
         if (data.plans)
           data.plans.forEach(planData => {
             if (planData.specialProgram) {
+              // blank line
+              if (isRev2021)
+                this.dataFeeder.push(
+                  "ts-blank",
+                  <td colSpan="4" className={cls("ts-blank")}>
+                    &nbsp;
+                  </td>
+                );
               let descr = planData.transcriptDescr;
               if (planData.planDescr) descr += ` ${planData.planDescr}`;
               this.dataFeeder.push(
@@ -1171,7 +1197,7 @@ class TranscriptSpclProg {
                 <td
                   colSpan="4"
                   className={cls("ts-title ts-highlight")}
-                  style={{ paddingLeft: "10px" }}
+                  style={{ paddingLeft: isRev2021 ? "0px" : "10px" }}
                 >
                   {descr.toUpperCase()}
                 </td>
@@ -1211,6 +1237,9 @@ class TranscriptAward {
   }
 
   renderAwardDetails() {
+    const clsNames = isRev2021
+      ? "ts-title awd-col2"
+      : "ts-title ts-highlight awd-col2";
     this.awardData.forEach(data => {
       this.dataFeeder.push(
         "ts-awd-l1",
@@ -1219,7 +1248,7 @@ class TranscriptAward {
           <div className={cls("ts-title ts-highlight awd-col1")}>
             {`${data.year.toUpperCase()}:`}
           </div>
-          <div colSpan="2" className={cls("ts-title ts-highlight awd-col2")}>
+          <div colSpan="2" className={cls(clsNames)}>
             {data.name.toUpperCase()}
           </div>
         </td>
@@ -1229,7 +1258,7 @@ class TranscriptAward {
         <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
           <div className={cls("awd-col0")} />
           <div className={cls("awd-col1")}>&nbsp;</div>
-          <div colSpan="2" className={cls("ts-title ts-highlight awd-col2")}>
+          <div colSpan="2" className={cls(clsNames)}>
             ({data.basis.toUpperCase()})
           </div>
         </td>
@@ -1260,28 +1289,30 @@ class TranscriptData {
       this.dataSource.additionalData.leaveData,
       this.dataFeeder
     ).render();
-    // render degree data
-    new TranscriptDegree(
-      this.dataSource.additionalData.degreeData,
-      this.dataFeeder
-    ).render();
-    // render milestone data
-    new TranscriptMilestone(
-      this.dataSource.additionalData.milestoneData,
-      this.dataFeeder
-    ).render();
-    // render special program data
-    new TranscriptSpclProg(
-      this.dataSource.additionalData.degreeData,
-      this.dataFeeder
-    ).render();
-    this.renderConferDate();
-    this.renderDegreeRemarks();
-    // render award data
-    new TranscriptAward(
-      this.dataSource.additionalData.awardData,
-      this.dataFeeder
-    ).render();
+    if (!isRev2021) {
+      // render degree data
+      new TranscriptDegree(
+        this.dataSource.additionalData.degreeData,
+        this.dataFeeder
+      ).render();
+      // render milestone data
+      new TranscriptMilestone(
+        this.dataSource.additionalData.milestoneData,
+        this.dataFeeder
+      ).render();
+      // render special program data
+      new TranscriptSpclProg(
+        this.dataSource.additionalData.degreeData,
+        this.dataFeeder
+      ).render();
+      this.renderConferDate();
+      this.renderDegreeRemarks();
+      // render award data
+      new TranscriptAward(
+        this.dataSource.additionalData.awardData,
+        this.dataFeeder
+      ).render();
+    }
     // render disciplinary remarks
     this.renderDismissalRemarks();
     // end of transcript
@@ -1382,6 +1413,281 @@ class TranscriptData {
 }
 
 // ========================================
+// revamp 2021 starts here
+// ========================================
+// transcript content - conferment info introduced for revamped format (2021)
+class TranscriptConfermentRev2021 {
+  constructor(dataSource, dataFeeder) {
+    this.dataSource = dataSource;
+    this.dataFeeder = dataFeeder;
+  }
+
+  // main render
+  render() {
+    // render degree data
+    new TranscriptDegreeRev2021(
+      this.dataSource.additionalData.degreeData,
+      this.dataFeeder
+    ).render();
+    // render milestone
+    new TranscriptMilestone(
+      this.dataSource.additionalData.milestoneData,
+      this.dataFeeder
+    ).render();
+    // render special programs
+    new TranscriptSpclProg(
+      this.dataSource.additionalData.degreeData,
+      this.dataFeeder
+    ).render();
+    // render transcript remarks
+    this.renderDegreeRemarks();
+    // render award data
+    new TranscriptAward(
+      this.dataSource.additionalData.awardData,
+      this.dataFeeder
+    ).render();
+    // line
+    this.dataFeeder.push(
+      "ts-confer-end",
+      <td colSpan="4">
+        <hr />
+      </td>
+    );
+  }
+
+  // render final remarks
+  renderDegreeRemarks() {
+    const remarksData = this.dataSource.additionalData.remarks;
+    if (remarksData) {
+      // blank line
+      this.dataFeeder.push(
+        "ts-blank",
+        <td colSpan="4" className={cls("ts-blank")}>
+          &nbsp;
+        </td>
+      );
+      let text = "";
+      remarksData.forEach(line => {
+        text += `${line.trim()} `;
+      });
+      this.dataFeeder.push(
+        "ts-degrem",
+        <td colSpan="4" className={cls("ts-title ts-highlight")}>
+          {text.toUpperCase()}
+        </td>
+      );
+    }
+  }
+}
+// render degree conferment - revamped 2021
+class TranscriptDegreeRev2021 {
+  // constructor
+  constructor(degreeData, dataFeeder) {
+    this.degreeData = degreeData;
+    this.dataFeeder = dataFeeder;
+  }
+
+  // main render
+  render() {
+    if (this.degreeData) {
+      this.degreeData.forEach((data, idx) => {
+        this.renderDegree(data, idx);
+      });
+    }
+  }
+
+  // render major/minor - revamped 2021
+  renderMajorMinor(data) {
+    if (data.plans) {
+      let planName;
+      let planDescr;
+      data.plans.forEach(planData => {
+        if (!planData.specialProgram) {
+          if (planData.type === "HON") {
+            planName = "MAJOR";
+            planDescr = planData.transcriptDescr;
+          } else {
+            planName = planData.typeName;
+            planDescr = planData.transcriptDescr;
+          }
+          if (planData.type === "JMP" && planData.planDescr)
+            planDescr += ` with ${planData.planDescr}`;
+          this.dataFeeder.push(
+            "ts-deg-plan",
+            <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+              <div
+                colSpan="2"
+                className={cls("ts-title ts-highlight confer-col0")}
+              >
+                {planName.toUpperCase()}:
+              </div>
+              <div colSpan="2" className={cls("ts-title confer-col1")}>
+                {planDescr.toUpperCase()}
+              </div>
+            </td>
+          );
+        }
+      });
+    }
+  }
+
+  // render subplans - revamped 2021
+  renderSubplans(data) {
+    if (data.plans) {
+      data.plans.forEach(planData => {
+        if (planData.subplans)
+          planData.subplans.forEach(subplData => {
+            this.dataFeeder.push(
+              "ts-deg-spln",
+              <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+                <div
+                  colSpan="2"
+                  className={cls("ts-title ts-highlight confer-col0")}
+                >
+                  {subplData.typeName.toUpperCase()}:
+                </div>
+                <div colSpan="2" className={cls("ts-title confer-col1")}>
+                  {subplData.transcriptDescr.toUpperCase()}
+                </div>
+              </td>
+            );
+          });
+      });
+    }
+  }
+
+  // render specializations - revamped 2021
+  renderSpecializations(data) {
+    if (data.specializations) {
+      data.specializations.forEach(splData => {
+        this.dataFeeder.push(
+          "ts-deg-spcl",
+          <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+            <div
+              colSpan="2"
+              className={cls("ts-title ts-highlight confer-col0")}
+            >
+              {splData.typeName.toUpperCase()}:
+            </div>
+            <div colSpan="2" className={cls("ts-title confer-col1")}>
+              {splData.transcriptDescr.toUpperCase()}
+            </div>
+          </td>
+        );
+      });
+    }
+  }
+
+  // render degree - revamped 2021
+  renderDegree(data, idx) {
+    // blank line
+    if (idx > 0)
+      this.dataFeeder.push(
+        "ts-blank",
+        <td colSpan="4" className={cls("ts-blank")}>
+          &nbsp;
+        </td>
+      );
+    let degTitle = data.degreeTitle.toUpperCase();
+    if (data.honours) {
+      if (data.isYNC) degTitle += `, ${data.honours}`;
+      else degTitle += ` with ${data.honours}`;
+    }
+    // degree title
+    this.dataFeeder.push(
+      "ts-deg-title",
+      <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+        <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
+          {data.isDiploma ? "DIPLOMA AWARDED" : "DEGREE CONFERRED:"}
+        </div>
+        <div colSpan="2" className={cls("ts-title confer-col1")}>
+          {degTitle.toUpperCase()}
+        </div>
+      </td>
+    );
+    // CAP
+    this.dataFeeder.push(
+      "ts-deg-cap",
+      <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+        <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
+          {data.GPAName.toUpperCase() === "FINAL CUMULATIVE AVERAGE POINT"
+            ? "FINAL CAP"
+            : data.GPAName.toUpperCase()}
+          :
+        </div>
+        <div colSpan="2" className={cls("ts-title confer-col1")}>
+          {data.includeInGPA && !data.disableGPA
+            ? data.cumGPA.toFixed(2)
+            : "NOT APPLICABLE"}
+        </div>
+      </td>
+    );
+    // YNC commensurate info
+    if (data.isYNC) {
+      const remarks = yncCommensurateRemark(data.cumGPA);
+      if (remarks)
+        this.dataFeeder.push(
+          "ts-deg-yncrem",
+          <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+            <div
+              colSpan="2"
+              className={cls("ts-title ts-highlight confer-col0")}
+            >
+              &nbsp;
+            </div>
+            <div colSpan="2" className={cls("ts-title confer-col1")}>
+              {remarks}
+            </div>
+          </td>
+        );
+    }
+    // cumulative module credits
+    if (data.cumCredits)
+      this.dataFeeder.push(
+        "ts-deg-mc",
+        <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+          <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
+            CUMULATIVE MODULAR CREDITS:
+          </div>
+          <div colSpan="2" className={cls("ts-title confer-col1")}>
+            {data.cumCredits.toFixed(2)}
+          </div>
+        </td>
+      );
+    // admission date
+    this.dataFeeder.push(
+      "ts-deg-admitdt",
+      <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+        <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
+          ADMISSION DATE:
+        </div>
+        <div colSpan="2" className={cls("ts-title confer-col1")}>
+          {isoDateToLocal(data.dateAdmitted)}
+        </div>
+      </td>
+    );
+    // conferment date
+    this.dataFeeder.push(
+      "ts-deg-confdt",
+      <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
+        <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
+          {data.isDiploma ? "AWARD DATE" : "CONFERMENT DATE:"}
+        </div>
+        <div colSpan="2" className={cls("ts-title confer-col1")}>
+          {isoDateToLocal(data.dateConferred)}
+        </div>
+      </td>
+    );
+    this.renderMajorMinor(data);
+    this.renderSubplans(data);
+    this.renderSpecializations(data);
+  }
+}
+// ========================================
+// revamp 2021 ends here
+// ========================================
+
+// ========================================
 // render
 const Template = ({ certificate }) => {
   // JSON data source
@@ -1391,11 +1697,20 @@ const Template = ({ certificate }) => {
     translateTranscriptTermData(jsonData);
   if (firstTermIdxes.length === 0) firstTermIdxes.push(0);
   // to be used in rendering
+  isUG = jsonData.additionalData.transcriptType.startsWith("UG");
+  isGD = jsonData.additionalData.transcriptType.startsWith("GD");
   isDuke = jsonData.additionalData.transcriptType.startsWith("DK");
   isCDP = jsonData.additionalData.transcriptType.startsWith("CDP");
   isMedDen =
     jsonData.additionalData.transcriptType.startsWith("UM") ||
     jsonData.additionalData.transcriptType.startsWith("UD");
+  isOfficial = jsonData.additionalData.transcriptType.endsWith("OF");
+  isConferred = !!jsonData.additionalData.degreeData;
+  isRev2021 =
+    (isUG || isGD) &&
+    isOfficial &&
+    isConferred &&
+    jsonData.issuedOn >= revCutOffDate2021;
   [isYaleNUS, progNameYaleNUS] = (transcriptData => {
     const programData = transcriptData.additionalData.programData;
     if (programData)
@@ -1404,7 +1719,7 @@ const Template = ({ certificate }) => {
           programData[i].isYNC ||
           programData[i].programCode.substring(1, 3) === "17"
         )
-          // `isYNC` is applicable to NGRD students
+          // `isYNC` is applicable to UGRD students
           return [true, programData[i].programName];
     return [false, null];
   })(jsonData);
@@ -1413,16 +1728,16 @@ const Template = ({ certificate }) => {
   lastTermYaleNUS = (transcriptData => {
     let lastTerm = null;
     if (isYaleNUS) {
-      let isConferred = false;
+      let conferredYNC = false;
       const degreeData = transcriptData.additionalData.degreeData;
       // find Yale-NUS program name and last term
       if (degreeData)
         for (let i = 0; i < degreeData.length; i += 1)
           if (degreeData[i].isYNC) {
-            isConferred = true;
+            conferredYNC = true;
             break;
           }
-      if (isConferred)
+      if (conferredYNC)
         transcriptData.additionalData.transcriptGroup.forEach(term => {
           if (term.summary)
             term.summary.forEach(summary => {
@@ -1435,7 +1750,11 @@ const Template = ({ certificate }) => {
   // prepare data
   const dataFeeder = new TranscriptDataFeeder();
   dataFeeder.headerData = renderTranscriptHeaderData(jsonData);
-  new TranscriptProgram(jsonData, dataFeeder).render();
+  if (isRev2021)
+    // revamped format - 2021
+    new TranscriptConfermentRev2021(jsonData, dataFeeder).render();
+  // original format
+  else new TranscriptProgram(jsonData, dataFeeder).render();
   new TranscriptData(jsonData, dataFeeder).render();
   dataFeeder.resetTermRange("ts-term");
   // render data
