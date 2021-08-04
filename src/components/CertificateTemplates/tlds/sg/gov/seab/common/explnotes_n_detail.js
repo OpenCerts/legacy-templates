@@ -8,12 +8,7 @@ import {
   EXPLANATORY_CONTENT
 } from "./style";
 
-import {
-  COMMAN_EXPL_1,
-  COMMAN_EXPL_2,
-  COMMAN_EXPL_3,
-  COMMAN_EXPL_4
-} from "./explnotes";
+import { COMMAN_EXPL_1, COMMAN_EXPL_2, COMMAN_EXPL_3 } from "./explnotes";
 
 export const RENDEREXPLANATORYNOTES_N = () => (
   <div className="row">
@@ -26,9 +21,9 @@ export const RENDEREXPLANATORYNOTES_N = () => (
           The Singapore Examinations and Assessment Board is authorised by the
           Republic of Singapore to manage national examinations in Singapore.
           The Board, together with the Ministry of Education (MOE), Singapore
-          and the University of Cambridge International Examinations (CIE) are
-          joint examining authorities for the General Certificate of Education
-          Normal Level (GCE N-Level) Examination.
+          and the Cambridge Assessment International Education are joint
+          examining authorities for the General Certificate of Education Normal
+          Level (GCE N-Level) Examination.
         </div>
       </div>
       <div className="row">
@@ -122,29 +117,6 @@ export const RENDEREXPLANATORYNOTES_N = () => (
       <div className="row">
         <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
           7
-        </div>
-        <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
-          Abbreviations used in this Statement:
-          <br />
-          DIST
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distinction
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-12">&nbsp;</div>
-      </div>
-      <div className="row">
-        <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
-          8
-        </div>
-        {COMMAN_EXPL_4()}
-      </div>
-      <div className="row">
-        <div className="col-md-12">&nbsp;</div>
-      </div>
-      <div className="row">
-        <div className="col-md-0.5" style={EXPLANATORY_FONT_SIZE_13}>
-          9
         </div>
         <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
           For further information or clarification on the GCE N-Level, please

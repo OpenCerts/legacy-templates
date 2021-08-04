@@ -1,10 +1,13 @@
 import { get } from "lodash";
-import { IMG_LOGO, IMG_SSGLOGO } from "../common";
+import { IMG_SSGLOGO } from "../common";
 import {
   formatDate,
   formatCertID,
   getRecipientID,
-  getSpecialization
+  getSpecialization,
+  effectiveDateForWSQLOGO,
+  renderAwardTextTrans,
+  renderTRAcode
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
@@ -20,10 +23,10 @@ const renderTranscriptItems = certificate =>
     </tr>
   ));
 
-export const renderLogoWSQ = () => (
+export const renderLogoWSQ = certificate => (
   <div className="row d-flex">
     <div className="col-lg-4 col-12">
-      <img style={styles.fullWidthStyle} src={IMG_LOGO} />
+      {effectiveDateForWSQLOGO(certificate)}
     </div>
   </div>
 );
@@ -53,9 +56,7 @@ export const renderSignature = certificate => (
     <div className="col-lg-2 col-xs-12" />
     <div className="col-lg-3 col-xs-12">
       <img style={styles.transFooterLogoStyle} src={IMG_SSGLOGO} />
-      <div style={styles.certCodeStyle} className="RobotoRegular">
-        TRA
-      </div>
+      {renderTRAcode(certificate)}
     </div>
   </div>
 );
@@ -63,9 +64,7 @@ export const renderSignature = certificate => (
 export const renderAwardText = certificate => (
   <div>
     <div className="d-flex" style={{ marginTop: "2rem" }}>
-      <p style={styles.headerTextStyle} className="RobotoBold">
-        OFFICIAL TRANSCRIPT
-      </p>
+      {renderAwardTextTrans(certificate)}
     </div>
     <div className="row d-flex align-items-end" style={{ marginTop: "1rem" }}>
       <div className="col-lg-10 col-xs-12">
@@ -299,14 +298,15 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingBottom:"100px", paddingTop:"100px", fontFamily:"Arial", width:"100%" }}
     >
       {fonts()}
-      {renderLogoWSQ()}
+
+      {renderLogoWSQ(certificate)}
       {renderAwardText(certificate)}
       {renderTranscript(certificate)}
       {certificate.additionalData.certSignatories
         ? renderSignature(certificate)
         : ""}
       {renderCopyright(certificate)}
-      {renderQualificationText(certificate)}  
+      {renderQualificationText(certificate)}
       {renderCopyright(certificate)}
     </div>
   </div>

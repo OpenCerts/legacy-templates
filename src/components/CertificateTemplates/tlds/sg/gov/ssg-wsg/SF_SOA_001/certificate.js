@@ -3,7 +3,8 @@ import { IMG_SEAL, IMG_SSGLOGO } from "../common";
 import {
   renderLogoWSQ,
   renderIssuingDate,
-  renderAwardTextSOA
+  renderAwardTextSOA,
+  renderCertCode
 } from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
@@ -13,10 +14,13 @@ export const renderSignatureSFSOA = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6">
-      <img style={styles.sealWidthStyle} src={IMG_SEAL} />
+    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "49%" }}
+        src={IMG_SEAL}
+      />
     </div>
-    <div className="col-lg-7">
+    <div className="col-lg-7" style={{ paddingLeft: "8px" }}>
       <div className="col-12" style={{ padding: "5px" }}>
         <img
           style={styles.signatureWidthStyle}
@@ -55,9 +59,7 @@ export const renderSignatureSFSOA = certificate => (
       </div>
       <div>
         <img style={styles.soaFooterLogoStyle} src={IMG_SSGLOGO} />
-        <div style={styles.certCodeStyle}>
-          {get(certificate, "additionalData.certCode")}
-        </div>
+        {renderCertCode(certificate)}
       </div>
     </div>
   </div>
@@ -72,7 +74,8 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingTop:"100px", paddingBottom:"100px", width:"100%", fontFamily:"Arial" }}
     >
       {fonts()}
-      {renderLogoWSQ()}
+      
+      {renderLogoWSQ(certificate)}
       {renderAwardTextSOA(certificate)}
       {renderIssuingDate(certificate)}
       {certificate.additionalData.certSignatories
