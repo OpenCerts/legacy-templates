@@ -1,21 +1,14 @@
 import { get } from "lodash";
 import { NEW_IMG_LOGO, IMG_LOGO, IMG_SEAL, DIGIPEN_LOGO } from "../common";
-import { renderCertCode,formatDate, getRecipientID, renderAwardedTo, rendersuccessfuToFQ006} from "../common/functions";
+import {
+  renderCertCode,
+  formatDate,
+  getRecipientID,
+  renderAwardedTo,
+  rendersuccessfuToFQ006
+} from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
-import certificate from "../Trans/certificate";
-
-export const renderLogoWSQ = (certificate) => (
-  <div className="row d-flex" style={{ marginTop: "3rem" }}>
-    <div className="col-lg-5 col-12">
-      {effectiveDateForWSQLOGOQual(certificate)}
-    </div>
-    <div className="col-lg-2 col-12" />
-    <div className="col-lg-5 col-12">
-      <img style={styles.fullWidthStyleQual} src={DIGIPEN_LOGO} />
-    </div>
-  </div>
-);
 
 export const effectiveDateForWSQLOGOQual = certificate => {
   const date = certificate.attainmentDate.split("T");
@@ -27,11 +20,24 @@ export const effectiveDateForWSQLOGOQual = certificate => {
   return <img style={styles.fullWidthStyleQual} src={NEW_IMG_LOGO} />;
 };
 
+export const renderLogoWSQ = certificate => (
+  <div className="row d-flex" style={{ marginTop: "3rem" }}>
+    <div className="col-lg-5 col-12">
+      {effectiveDateForWSQLOGOQual(certificate)}
+    </div>
+    <div className="col-lg-2 col-12" />
+    <div className="col-lg-5 col-12">
+      <img style={styles.fullWidthStyleQual} src={DIGIPEN_LOGO} />
+    </div>
+  </div>
+);
+
 export const renderSignature = certificate => (
   <div
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
+
     <div className="col-lg-2 col-6" style={{padding:"0px"}}>
       <img style={styles.sealWidthStyle} src={IMG_SEAL} />
     </div>
@@ -40,6 +46,7 @@ export const renderSignature = certificate => (
       <div className="row">
         <div className="col-lg-6 col-12">
           <div className="col-12" style={{height: "65%"}}>
+
             <img
               style={styles.signatureWidthStyle}
               src={get(
@@ -57,7 +64,9 @@ export const renderSignature = certificate => (
           </div>
         </div>
         <div className="col-lg-6 col-12">
+
           <div className="col-12" style={{height: "65%"}}>
+
             <img
               style={styles.signatureWidthStyle}
               src={get(
@@ -107,7 +116,7 @@ export const renderSignature = certificate => (
                 Cert No: {get(certificate, "additionalData.serialNum")}
               </p>
             </div>
-                {renderCertCode(certificate)}
+            {renderCertCode(certificate)}
           </div>
         </div>
       </div>
@@ -134,10 +143,7 @@ export const renderAwardText = certificate => (
       className="d-flex justify-content-center"
       style={{ marginTop: "3rem" }}
     >
-      {
-        renderAwardedTo(certificate)
-      }
-        
+      {renderAwardedTo(certificate)}
     </div>
     <div
       className="d-flex justify-content-center"
@@ -156,10 +162,7 @@ export const renderAwardText = certificate => (
       className="d-flex justify-content-center"
       style={{ marginTop: "2rem" }}
     >
-     {
-       rendersuccessfuToFQ006(certificate)
-     } 
-      
+      {rendersuccessfuToFQ006(certificate)}
     </div>
   </div>
 );
@@ -178,10 +181,20 @@ export default ({ logo }) => ({ certificate }) => (
   <div>
     <div
       className="container"
-      style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingTop:"100px", paddingBottom:"100px", width:"100%", fontFamily:"Arial" }}
+      style={{
+        border: 5,
+        borderColor: "#AAA",
+        borderStyle: "solid",
+        paddingLeft: "6%",
+        paddingRight: "6%",
+        paddingTop: "100px",
+        paddingBottom: "100px",
+        width: "100%",
+        fontFamily: "Arial"
+      }}
     >
       {fonts()}
-      
+
       {renderLogoWSQ(certificate)}
       {renderAwardText(certificate)}
       {renderIssuingDate(certificate)}

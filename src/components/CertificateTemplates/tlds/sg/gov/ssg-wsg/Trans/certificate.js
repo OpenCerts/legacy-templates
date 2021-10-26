@@ -1,5 +1,5 @@
 import { get } from "lodash";
-import { IMG_LOGO, IMG_SSGLOGO } from "../common";
+import { IMG_SSGLOGO } from "../common";
 import {
   formatDate,
   formatCertID,
@@ -23,10 +23,10 @@ const renderTranscriptItems = certificate =>
     </tr>
   ));
 
-export const renderLogoWSQ = (certificate) => (
+export const renderLogoWSQ = certificate => (
   <div className="row d-flex">
     <div className="col-lg-4 col-12">
-     {effectiveDateForWSQLOGO(certificate)}
+      {effectiveDateForWSQLOGO(certificate)}
     </div>
   </div>
 );
@@ -64,8 +64,7 @@ export const renderSignature = certificate => (
 export const renderAwardText = certificate => (
   <div>
     <div className="d-flex" style={{ marginTop: "2rem" }}>
-    {renderAwardTextTrans(certificate)}
-
+      {renderAwardTextTrans(certificate)}
     </div>
     <div className="row d-flex align-items-end" style={{ marginTop: "1rem" }}>
       <div className="col-lg-10 col-xs-12">
@@ -299,7 +298,7 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingBottom:"100px", paddingTop:"100px", fontFamily:"Arial", width:"100%" }}
     >
       {fonts()}
-      
+
       {renderLogoWSQ(certificate)}
       {renderAwardText(certificate)}
       {renderTranscript(certificate)}
@@ -307,7 +306,7 @@ export default ({ logo }) => ({ certificate }) => (
         ? renderSignature(certificate)
         : ""}
       {renderCopyright(certificate)}
-      {renderQualificationText(certificate)}  
+      {renderQualificationText(certificate)}
       {renderCopyright(certificate)}
     </div>
   </div>

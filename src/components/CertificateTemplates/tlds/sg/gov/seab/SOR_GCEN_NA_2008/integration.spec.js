@@ -63,6 +63,6 @@ test("sg/gov/seab/SOR_GCEN_NA_2008 is rendered correctly", async t => {
   // Explanatory Notes tab content
   await validateTextContent(t, RenderedCertificate, [
     "EXPLANATORY NOTES",
-    "This document is issued on condition of your strict compliance with the Examination Instructions and Regulations. You must comply with any direction by the Singapore Examinations and Assessment Board (SEAB) to return this document to SEAB."
+    "The Singapore Examinations and Assessment Board is authorised by the Republic of Singapore to manage national examinations in Singapore. The Board, together with the Ministry of Education (MOE), Singapore and the Cambridge Assessment International Education are joint examining authorities for the General Certificate of Education Normal (Academic) Level [GCE N(A)-Level] Examination."
   ]);
 });
