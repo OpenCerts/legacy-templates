@@ -37,14 +37,16 @@ export const renderSignature = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+
+    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
       <img style={styles.sealWidthStyle} src={IMG_SEAL} />
     </div>
 
-    <div className="col-lg-10" style={{ paddingLeft: "8px" }}>
+    <div className="col-lg-10" style={{paddingLeft:"8px"}}>
       <div className="row">
         <div className="col-lg-6 col-12">
-          <div className="col-12" style={{ height: "65%" }}>
+          <div className="col-12" style={{height: "65%"}}>
+
             <img
               style={styles.signatureWidthStyle}
               src={get(
@@ -62,7 +64,9 @@ export const renderSignature = certificate => (
           </div>
         </div>
         <div className="col-lg-6 col-12">
-          <div className="col-12" style={{ height: "65%" }}>
+
+          <div className="col-12" style={{height: "65%"}}>
+
             <img
               style={styles.signatureWidthStyle}
               src={get(
