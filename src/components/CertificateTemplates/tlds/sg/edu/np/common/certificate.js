@@ -26,13 +26,15 @@ export const singaporeTextStyle = {
 
 export const nameTextStyle = {
   fontSize: "3rem",
-  textAlign: "center"
+  textAlign: "center",
+  padding: "0px 20px 0px 20px"
 };
 
 export const titleTextStyle = {
   color: "rgb(30,93,200)",
   fontSize: "3rem",
-  textAlign: "center"
+  textAlign: "center",
+  padding: "0px 20px 0px 20px"
 };
 
 export const renderSingapore = () => (
