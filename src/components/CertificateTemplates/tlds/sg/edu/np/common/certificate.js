@@ -14,7 +14,7 @@ export const fullWidthStyle = {
 
 export const printTextStyle = {
   fontWeight: "500!important",
-  fontWize: "1.2rem",
+  fontWize: "1.6rem",
   color: "#555",
   textAlign: "center"
 };
