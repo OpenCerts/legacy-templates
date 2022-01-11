@@ -13,8 +13,14 @@ const NUSK3MBBS2019 = dynamic(() =>
 const NUSDUKENUS2019 = dynamic(() =>
   import("./NUS-DUKENUS-2019" /* webpackChunkName: "NUSTemplates" */)
 );
+const NUSDUKENUS2020 = dynamic(() =>
+  import("./NUS-DUKENUS-2020" /* webpackChunkName: "NUSTemplates" */)
+);
 const NUSDUKEPHD2019 = dynamic(() =>
   import("./NUS-DUKEPHD-2019" /* webpackChunkName: "NUSTemplates" */)
+);
+const NUSDUKEPHD2020 = dynamic(() =>
+  import("./NUS-DUKEPHD-2020" /* webpackChunkName: "NUSTemplates" */)
 );
 const NUSYALE2019 = dynamic(() =>
   import("./NUS-YALE-2019" /* webpackChunkName: "NUSTemplates" */)
@@ -30,6 +36,12 @@ const NUSMUSIC2019 = dynamic(() =>
 );
 const NUSJHUJDPMUSIC2019 = dynamic(() =>
   import("./NUS-JHUJDP-MUSIC-2019" /* webpackChunkName: "NUSTemplates" */)
+);
+const NUSUNCJDP2019 = dynamic(() =>
+  import("./NUS-UNCJDP-2019" /* webpackChunkName: "NUSTemplates" */)
+);
+const NUSUBASJDP2019 = dynamic(() =>
+  import("./NUS-UBASJDP-2019" /* webpackChunkName: "NUSTemplates" */)
 );
 const NUSUMJDP2019 = dynamic(() =>
   import("./NUS-UMJDP-2019" /* webpackChunkName: "NUSTemplates" */)
@@ -70,11 +82,15 @@ const templates = {
   "NUS-K1NOTS-2019": NUSK1NOTS2019,
   "NUS-K3MBBS-2019": NUSK3MBBS2019,
   "NUS-DUKEPHD-2019": NUSDUKEPHD2019,
+  "NUS-DUKEPHD-2020": NUSDUKEPHD2020,
   "NUS-MUSIC-2019": NUSMUSIC2019,
   "NUS-ICLJDP-2019": NUSICLJDP2019,
   "NUS-JHUJDP-MUSIC-2019": NUSJHUJDPMUSIC2019,
   "NUS-ANUJDP-BA-2019": NUSANUJDPBA2019,
   "NUS-DUKENUS-2019": NUSDUKENUS2019,
+  "NUS-DUKENUS-2020": NUSDUKENUS2020,
+  "NUS-UNCJDP-2019": NUSUNCJDP2019,
+  "NUS-UBASJDP-2019": NUSUBASJDP2019,
   "NUS-YALE-2019": NUSYALE2019,
   "NUS-UMJDP-2019": NUSUMJDP2019,
   "NUS-DTUJDP-2019": NUSDTUJDP2019,

@@ -6,7 +6,7 @@ import {
   Degree,
   renderSmallNUSLogo
 } from "../common/degreeScrollFramework";
-import { renderNUSSeal, renderImage, renderVoid, UOE_LOGO } from "../common";
+import { renderNUSSeal, renderImage, UOE_LOGO } from "../common";
 
 // custom logos
 const renderLogos = () => {
@@ -17,9 +17,6 @@ const renderLogos = () => {
   return (
     <table width="100%">
       <tbody>
-        <tr>
-          <td>{renderVoid("1.2cm")}</td>
-        </tr>
         <tr>
           <td width="50%">{renderSmallNUSLogo()}</td>
           <td width="50%" align="center" valign="top">
@@ -89,7 +86,7 @@ const getDataFeeder = dataSource => {
   dataFeeder.studentName = dataSource.recipient.name.toUpperCase();
   dataFeeder.namePadding = "15px 0 10px";
   dataFeeder.postNameText =
-    "having completed the requirements for\nthe Joint Degree Programme of the National\nUniversity of Singapore and the University\nof Edinburgh was conferred the degree of";
+    "having completed the requirements for\nthe Joint Degree Programme of the National\nUniversity of Singapore and The University\nof Edinburgh was conferred the degree of";
   dataFeeder.degreeCode = dataSource.additionalData.degreeScroll[0].degreeCode;
   dataFeeder.degreeTitle =
     dataSource.additionalData.degreeScroll[0].degreeTitle;

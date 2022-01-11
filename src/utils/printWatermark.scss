@@ -1,0 +1,15 @@
+.watermark {
+  display: none;
+  background-image: url("/static/images/watermark.svg");
+  background-repeat: repeat;
+}
+@media print {
+  .watermark {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+  }
+}

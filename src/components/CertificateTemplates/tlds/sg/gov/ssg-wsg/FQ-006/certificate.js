@@ -1,13 +1,29 @@
 import { get } from "lodash";
-import { IMG_LOGO, IMG_SEAL, DIGIPEN_LOGO } from "../common";
-import { formatDate, getRecipientID } from "../common/functions";
+import { NEW_IMG_LOGO, IMG_LOGO, IMG_SEAL, DIGIPEN_LOGO } from "../common";
+import {
+  renderCertCode,
+  formatDate,
+  getRecipientID,
+  renderAwardedTo,
+  rendersuccessfuToFQ006
+} from "../common/functions";
 import fonts from "../common/fonts";
 import * as styles from "../common/style";
 
-export const renderLogoWSQ = () => (
+export const effectiveDateForWSQLOGOQual = certificate => {
+  const date = certificate.attainmentDate.split("T");
+  const dateSplit = date[0].split("-");
+  const intDate = parseInt(dateSplit[0] + dateSplit[1] + dateSplit[2], 10);
+  if (intDate < 20201225) {
+    return <img style={styles.fullWidthStyleQual} src={IMG_LOGO} />;
+  }
+  return <img style={styles.fullWidthStyleQual} src={NEW_IMG_LOGO} />;
+};
+
+export const renderLogoWSQ = certificate => (
   <div className="row d-flex" style={{ marginTop: "3rem" }}>
     <div className="col-lg-5 col-12">
-      <img style={styles.fullWidthStyleQual} src={IMG_LOGO} />
+      {effectiveDateForWSQLOGOQual(certificate)}
     </div>
     <div className="col-lg-2 col-12" />
     <div className="col-lg-5 col-12">
@@ -21,14 +37,16 @@ export const renderSignature = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6">
+
+    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
       <img style={styles.sealWidthStyle} src={IMG_SEAL} />
     </div>
 
-    <div className="col-lg-10">
+    <div className="col-lg-10" style={{paddingLeft:"8px"}}>
       <div className="row">
         <div className="col-lg-6 col-12">
-          <div className="col-lg-4 col-12">
+          <div className="col-12" style={{height: "65%"}}>
+
             <img
               style={styles.signatureWidthStyle}
               src={get(
@@ -46,7 +64,9 @@ export const renderSignature = certificate => (
           </div>
         </div>
         <div className="col-lg-6 col-12">
-          <div className="col-lg-4 col-12">
+
+          <div className="col-12" style={{height: "65%"}}>
+
             <img
               style={styles.signatureWidthStyle}
               src={get(
@@ -96,9 +116,7 @@ export const renderSignature = certificate => (
                 Cert No: {get(certificate, "additionalData.serialNum")}
               </p>
             </div>
-            <div style={styles.certCodeStyle}>
-              {get(certificate, "additionalData.certCode")}
-            </div>
+            {renderCertCode(certificate)}
           </div>
         </div>
       </div>
@@ -125,9 +143,7 @@ export const renderAwardText = certificate => (
       className="d-flex justify-content-center"
       style={{ marginTop: "3rem" }}
     >
-      <p style={styles.awardTextStyle} className="RobotoMedium">
-        is awarded to
-      </p>
+      {renderAwardedTo(certificate)}
     </div>
     <div
       className="d-flex justify-content-center"
@@ -146,14 +162,7 @@ export const renderAwardText = certificate => (
       className="d-flex justify-content-center"
       style={{ marginTop: "2rem" }}
     >
-      <div
-        className="col-lg-6 col-12 text-center RobotoMedium"
-        style={styles.awardTextStyle}
-      >
-        for successful attainment of the required
-        <br />
-        industry approved competencies
-      </div>
+      {rendersuccessfuToFQ006(certificate)}
     </div>
   </div>
 );
@@ -172,10 +181,21 @@ export default ({ logo }) => ({ certificate }) => (
   <div>
     <div
       className="container"
-      style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingTop:"100px", paddingBottom:"100px", width:"100%", fontFamily:"Arial" }}
+      style={{
+        border: 5,
+        borderColor: "#AAA",
+        borderStyle: "solid",
+        paddingLeft: "6%",
+        paddingRight: "6%",
+        paddingTop: "100px",
+        paddingBottom: "100px",
+        width: "100%",
+        fontFamily: "Arial"
+      }}
     >
       {fonts()}
-      {renderLogoWSQ()}
+
+      {renderLogoWSQ(certificate)}
       {renderAwardText(certificate)}
       {renderIssuingDate(certificate)}
       {certificate.additionalData.certSignatories

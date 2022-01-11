@@ -61,7 +61,7 @@ test("Part-time Modular Certificate of Modular Courses is rendered correctly.", 
     "5.00",
     "Certificate Awarded",
     "DUMMY MODULAR COURSE NAME",
-    "WITH MERIT",
+    // "WITH MERIT",
     "Grading System"
   ]);
 });
