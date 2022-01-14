@@ -17,7 +17,7 @@
     "analyze": "BUNDLE_ANALYZE=browser npm run start",
     "dev-cli": "node -r esm ./scripts/cli.js",
     "serve-static": "http-server out -s -p 3000",
-    "integration": "testcafe chrome src/**/*.spec.js",
+    "integration": "testcafe chrome /home/nebulis/IdeaProjects/legacy-templates/src/components/CertificateTemplates/tlds/sg/gov/seab/SOR_GCEO/integration.spec.js",
     "integration:headless": "testcafe chrome:headless src/**/*.spec.js",
     "integration:watch": "nodemon --exec \"npm run integration\" --watch src"
   },
@@ -65,8 +65,8 @@
     "inquirer": "^6.2.2",
     "jest": "^24.7.1",
     "jest-sonar-reporter": "^2.0.0",
-    "nodemon": "^1.18.10",
     "node-sass": "^4.12.0",
+    "nodemon": "^1.18.10",
     "prettier": "^1.15.3",
     "proxyquire": "^2.1.0",
     "react-test-renderer": "^16.8.6",

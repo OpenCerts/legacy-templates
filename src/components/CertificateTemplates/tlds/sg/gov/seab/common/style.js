@@ -154,3 +154,7 @@ export const SOR_SUBJECT_MARGIN_NUMERICAL = {
 export const SOR_MERIT_MARGIN = {
   marginLeft: "-12px"
 };
+export const EXPLANATORY_FONT_SIZE_11 = {
+  fontSize: "11px",
+  fontFamily: "Arial"
+};

@@ -39,7 +39,7 @@ test("NUS-DUKENUS-2019 certificate is rendered correctly", async t => {
     "NATIONAL",
     "UNIVERSITY",
     "OF SINGAPORE",
-    "A0053942E, NAME",
+    "A0053942E, name",
     "Doctor",
     "Medicine"
   ]);
