@@ -28,9 +28,6 @@ const revCutOffDate2021 = "2021-08-10";
 // cutoff date for displaying dismissal remarks
 const dismissalRemarksCutOffDate = "2019-06-13";
 
-// cutoff date for revamped transcript format
-const revCutOffDate2021 = "2021-08-10";
-
 // flags to calssify transcript type
 let isUG;
 let isGD;
