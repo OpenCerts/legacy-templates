@@ -23,10 +23,8 @@ import scss from "../common/transcriptFramework.scss";
 
 // construct class names
 const cls = names => sassClassNames(names, scss);
-
 // cutoff date for revamped transcript format
 const revCutOffDate2021 = "2021-08-10";
-
 // cutoff date for displaying dismissal remarks
 const dismissalRemarksCutOffDate = "2019-06-13";
 
