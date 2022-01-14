@@ -14,7 +14,7 @@ export const fullWidthStyle = {
 
 export const printTextStyle = {
   fontWeight: "500!important",
-  fontWize: "1.2rem",
+  fontWize: "1.6rem",
   color: "#555",
   textAlign: "center"
 };
@@ -26,13 +26,15 @@ export const singaporeTextStyle = {
 
 export const nameTextStyle = {
   fontSize: "3rem",
-  textAlign: "center"
+  textAlign: "center",
+  padding: "0px 20px 0px 20px"
 };
 
 export const titleTextStyle = {
   color: "rgb(30,93,200)",
   fontSize: "3rem",
-  textAlign: "center"
+  textAlign: "center",
+  padding: "0px 20px 0px 20px"
 };
 
 export const renderSingapore = () => (
