@@ -16,7 +16,8 @@ export default ({ logo }) => ({ certificate }) => (
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid", paddingLeft:"6%", paddingRight:"6%", paddingTop:"100px", paddingBottom:"100px", width:"100%", fontFamily:"Arial" }}
       >
         {fonts()}
-        {renderLogoWSQ()}
+        
+      {renderLogoWSQ(certificate)}
         {renderAwardTextSOA(certificate)}
         {renderIssuingDate(certificate)}
         {certificate.additionalData.certSignatories

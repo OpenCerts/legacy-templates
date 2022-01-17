@@ -9,8 +9,9 @@ export const sealWidthStyle = {
 };
 
 export const signatureWidthStyle = {
-  width: "80%",
-  height: "auto"
+  width: "30%",
+  height: "auto",
+  marginBottom: "1rem"
 };
 
 export const printTextStyle = {
@@ -30,6 +31,13 @@ export const transcriptTextStyle = {
 export const awardTextStyle = {
   fontSize: "22px",
   color: "rgb(197,41,155)",
+  fontWeight: "bold",
+  textAlign: "left"
+};
+
+export const awardBlueTextStyle = {
+  fontSize: "22px",
+  color: "rgb(51,0,144)",
   fontWeight: "bold",
   textAlign: "left"
 };
@@ -90,6 +98,11 @@ export const footerLogoStyle = {
   height: "auto"
 };
 
+export const sfaFooterLogoStyle = {
+  width: "100%",
+  height: "auto"
+};
+
 export const transFooterLogoStyle = {
   width: "80%",
   height: "auto"
@@ -142,9 +155,25 @@ export const soaTranscriptTextStyle = {
   marginBottom: "0px"
 };
 
+export const soaTranscriptTextBlueStyle = {
+  fontWeight: "bold!important",
+  color: "rgb(51,0,144)",
+  fontSize: "24px",
+  marginBottom: "0px"
+};
+
 export const soaNameTextStyle = {
   fontSize: "2.3rem",
   color: "rgb(197,41,155)",
+  wordBreak: "break-word",
+  textAlign: "left",
+  textTransform: "uppercase",
+  fontWeight: "600"
+};
+
+export const soaNameTextBlueStyle = {
+  fontSize: "2.3rem",
+  color: "rgb(51,0,144)",
   wordBreak: "break-word",
   textAlign: "left",
   textTransform: "uppercase",
@@ -187,6 +216,17 @@ export const soaCertCodeStyle = {
   bottom: "30px"
 };
 
+export const soaCertCodeBlueStyle = {
+  fontSize: "12px",
+  color: "rgb(51,0,144)",
+  display: "inline-table",
+  transform: "rotate(-90deg)",
+  width: "max-content",
+  position: "absolute",
+  left: "0",
+  bottom: "30px"
+};
+
 export const specTextStyle = {
   fontSize: "2rem",
   wordBreak: "break-word"
@@ -201,4 +241,11 @@ export const fullWidthStyleQual = {
   width: "90%",
   height: "auto",
   marginBottom: "10px"
+};
+
+export const certCodeBlueStyle = {
+  fontSize: "12px",
+  color: "rgb(51,0,144)",
+  display: "inline-block",
+  transform: "rotate(-90deg)"
 };

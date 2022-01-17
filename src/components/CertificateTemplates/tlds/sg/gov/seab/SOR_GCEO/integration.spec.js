@@ -62,7 +62,6 @@ test("sg/gov/seab/SOR_GCEO is rendered correctly", async t => {
   // Explanatory Notes tab content
   await validateTextContent(t, RenderedCertificate, [
     "EXPLANATORY NOTES",
-    "[GCE O-Level results obtained in and before 1975 are shown in numerical grades only.]",
-    "Abbreviation used in this Statement:"
+    "[GCE O-Level results obtained in and before 1975 are shown in numerical grades only.]"
   ]);
 });

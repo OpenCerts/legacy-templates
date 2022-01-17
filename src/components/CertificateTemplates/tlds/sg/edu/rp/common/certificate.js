@@ -3,7 +3,8 @@ import {
   IMG_LOGO_RP,
   IMG_CERTIFICATE_SEAL,
   IMG_LOGO_ALLPOLY,
-  IMG_LOGO_SUSS
+  IMG_LOGO_SUSS,
+  IMG_LOGO_NP
 } from "./images";
 import {
   formatDDMMMYYYY,
@@ -27,9 +28,16 @@ export const fullWidthStyle = {
   width: "100%",
   height: "auto"
 };
+export const sealWidthStyle = {
+  width: "95%",
+  height: "auto",
+  textAlign: "center"
+};
+
 export const signatureTextStyle = {
   color: "#090",
-  fontSize: "0.8rem"
+  fontWeight: "bold",
+  fontSize: "1.1rem"
 };
 export const printCertStyle = {
   fontFamily: "Old English Text MT",
@@ -135,7 +143,15 @@ export const renderSingapore = () => (
     <p style={singaporeTextStyle} />
   </div>
 );
-
+export const renderLogoRPNP = () => (
+  <div className="row d-flex justify-content-center">
+    <div className="col-2" />
+    <div className="row d-flex justify-content-center">
+      <img style={{ width: "1050px" }} src={IMG_LOGO_NP} />
+    </div>
+    <div className="col-2" />
+  </div>
+);
 export const renderLogoRP = () => (
   <div className="row d-flex justify-content-center">
     <div className="col-2" />
@@ -208,8 +224,8 @@ export const renderACESignatures = certificate => {
     </div>
   );
 };
-// type = 0 - PET, 1 - CET
-export const renderTwoSignatures = certificate => {
+// displayname  = 1 - SD for BIA
+export const renderTwoSignatures = (certificate, displayName) => {
   const certSign = formatSignatoriesPosition(
     get(certificate, "additionalData.certSignatories[0].position")
   );
@@ -229,6 +245,13 @@ export const renderTwoSignatures = certificate => {
           />
         </div>
         <div className="text-center">
+          <span style={signatureTextStyle}>
+            {displayName > 0
+              ? get(certificate, "additionalData.certSignatories[0].name")
+              : null}
+          </span>
+        </div>
+        <div className="text-center">
           <span style={signatureTextStyle}>{certSign[0]}</span>
         </div>
         <div className="text-center">
@@ -237,13 +260,11 @@ export const renderTwoSignatures = certificate => {
           </span>
         </div>
       </div>
-
-      <div className="col-1">&nbsp;</div>
-      <div className="col-2">
-        <img style={fullWidthStyle} src={IMG_CERTIFICATE_SEAL} />
+      <div className="col-4">
+        <div className="px-4">
+          <img style={sealWidthStyle} src={IMG_CERTIFICATE_SEAL} />
+        </div>
       </div>
-      <div className="col-1">&nbsp;</div>
-
       <div className="col-4">
         <div className="px-4">
           <img
@@ -253,6 +274,13 @@ export const renderTwoSignatures = certificate => {
               "additionalData.certSignatories[1].signature"
             )}
           />
+        </div>
+        <div className="text-center">
+          <span style={signatureTextStyle}>
+            {displayName > 0
+              ? get(certificate, "additionalData.certSignatories[1].name")
+              : null}
+          </span>
         </div>
         <div className="text-center">
           <span style={signatureTextStyle}>

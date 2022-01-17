@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import PropTypes from "prop-types";
-import { isoDateToLocal, sassClassNames } from ".";
+import { isoDateToLocal, sassClassNames, renderPrintWatermarkTs } from ".";
 import scss from "./transcriptFramework.scss";
 
 // constants
@@ -171,7 +171,7 @@ class TranscriptHeader extends Component {
           <tbody key="pers-info-tbody">
             <tr key="ts-unoff-title">
               <td colSpan="8" className={cls("header-unoff")}>
-                {/* unofficial transcript name */}
+                {renderPrintWatermarkTs(cls("print-only"))}
                 &nbsp;
               </td>
             </tr>
@@ -183,7 +183,9 @@ class TranscriptHeader extends Component {
             <tr key="pers-info-tr">
               {/* student's personal info */}
               <td className={cls("header-pers-info-key")}>NAME:</td>
-              <td colwidth="26%">{this.headerData.name}</td>
+              <td colwidth="26%" className={cls("ts-student-name")}>
+                {this.headerData.name}
+              </td>
               <td className={cls("header-pers-info-key")}>STUDENT NO:</td>
               <td colwidth="11.5%">{this.headerData.studentId}</td>
               <td className={cls("header-pers-info-key")}>DATE OF BIRTH:</td>
@@ -246,9 +248,11 @@ class TranscriptPage extends Component {
     const html = [];
     html.push(setColWidth());
     for (let i = 0; i < this.props.rowsPerCol; i += 1) {
+      // <td> within <tr> will be replaced by ReactDOM.render()
+      // hide <td> to avoid printing issue
       html.push(
         <tr id={`row-${pageIdx}-${colIdx}-${i}`}>
-          <td />
+          <td style={{ display: "none" }} />
         </tr>
       );
     }
@@ -396,6 +400,9 @@ export class Transcript extends Component {
         child = node.lastElementChild;
       }
     });
+    // must empty redundant array
+    // Otherwise, may see rows missing on switch to another tab and then back
+    this.redundant = [];
   }
 
   // render data into transcript pages

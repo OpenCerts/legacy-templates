@@ -25,9 +25,6 @@ const renderLogos = () => {
     <table width="100%">
       <tbody>
         <tr>
-          <td>{renderVoid("1cm")}</td>
-        </tr>
-        <tr>
           <td width="25%">{renderSmallNUSLogo()}</td>
           <td>
             <img src={ICL_LOGO} style={styleLogo} />
@@ -55,7 +52,8 @@ const renderNameAndText = name => {
     fontStyle: "italic",
     fontWeight: "bold",
     textAlign: "center",
-    padding: "10px 0"
+    padding: "10px 0",
+    lineHeight: "normal"
   };
   return (
     <table width="100%">
@@ -79,7 +77,10 @@ const renderNameAndText = name => {
         </tr>
         <tr>
           <td>
-            <div style={style2}>{name}</div>
+            {/* must set this id for layout be adjusted for long name */}
+            <div id="nus-student-name" style={style2}>
+              {name}
+            </div>
           </td>
         </tr>
         <tr>
@@ -197,6 +198,7 @@ const renderSigs = dataSource => {
 const getDataFeeder = dataSource => {
   // data feeder
   const dataFeeder = new DegreeScrollDataFeeder();
+  dataFeeder.spaceBeforeLogo = "1cm";
   dataFeeder.logo = renderLogos();
   dataFeeder.nameAndText = renderNameAndText(
     dataSource.recipient.name.toUpperCase()

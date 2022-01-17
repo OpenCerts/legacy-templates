@@ -42,6 +42,7 @@
     "chai-expect/no-inner-compare": "error",
     "chai-expect/missing-assertion": "error",
     "chai-expect/terminating-properties": "error",
-    "prefer-destructuring": "off"
+    "prefer-destructuring": "off",
+    "import/prefer-default-export": "off"
     }
 }
