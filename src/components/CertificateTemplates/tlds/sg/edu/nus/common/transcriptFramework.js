@@ -257,7 +257,7 @@ class TranscriptPage extends Component {
       );
     }
     return (
-      <table width="100%">
+      <table className={cls("module-table-column")} width="100%">
         <tbody>{html}</tbody>
       </table>
     );
@@ -540,7 +540,7 @@ export class Transcript extends Component {
           {this.renderPage(i)}
         </div>
       );
-      html.push(<p id={`para-${i}`} />);
+      html.push(<p id={`para-${i}`} className={cls("page-separator")} />);
     }
     if (this.props.legendPage)
       html.push(
