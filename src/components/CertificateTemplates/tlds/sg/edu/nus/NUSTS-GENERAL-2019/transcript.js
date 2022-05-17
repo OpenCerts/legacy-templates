@@ -935,11 +935,10 @@ class TranscriptTermData {
       this.dataFeeder.push(
         "ts-term-fos",
         <td colSpan="4" className={cls("ts-termrem")}>
-          {`${this.termData.fosDescription.toUpperCase()} ${
-            this.termData.organization
+          {`${this.termData.fosDescription.toUpperCase()} ${this.termData.organization
               ? this.termData.organization.toUpperCase()
               : ""
-          }`}
+            }`}
         </td>
       );
     }
@@ -1144,9 +1143,8 @@ class TranscriptMilestone {
     if (this.msData) {
       this.msData.forEach(data => {
         if (data.milestoneTitle) {
-          const descr = `${
-            isNG ? "Completed a research project on" : data.milestoneTitle
-          } ${data.thesisTitle}`;
+          const descr = `${isNG ? "Completed a research project on" : data.milestoneTitle
+            } ${data.thesisTitle}`;
           // blank line
           if (isRev2021)
             this.dataFeeder.push(
@@ -1778,9 +1776,9 @@ const Template = ({ certificate }) => {
   const scale =
     ratio < 1
       ? {
-          transform: `scale(${ratio}, ${ratio})`,
-          transformOrigin: "top left"
-        }
+        transform: `scale(${ratio}, ${ratio})`,
+        transformOrigin: "top left"
+      }
       : null;
   let legend;
   if (isDuke) legend = NUS_TS_LEGEND_DUKE;

@@ -5,108 +5,107 @@
 $debug: false;
 
 .nus-degree {
-
-    @if ($debug) {
-        table td {
-            border: 1px solid blue; 
-        }
-
-        div {
-            border: 1px solid blue; 
-        }
-    }
-    
-    font-family: Arial, Serif; 
-    
-    .a4-portrait { 
-        background: white; 
-        height: 29.7cm; 
-        width: 21cm; 
-        display: block; 
-        margin: 0 auto;
-        padding: 0px 30px;
-        box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5); 
-        overflow-y: hidden; 
-        box-sizing: border-box; 
-    }
-    
-    .cert-header {
-        display: block;
-        font-size: 26pt; 
-        text-align: center; 
-        font-family: "Times New Roman", Serif; 
-        font-weight: bold;
-        /* color: rgb(83, 86, 90); */
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .cert-content { 
-        display: block;
-        font-size: 16pt; 
-        font-family: "Times New Roman", Serif; 
-        font-weight: bold;
-        /* color: rgb(83, 86, 90); */
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .cert-justify {
-        text-align-last: justify;
-    } 
-    .cert-name {
-        display: block;
-        font-size: 23pt; 
-        font-family: "Times New Roman", Serif; 
-        font-style: italic;
-        text-align: center;
-        border: 0px solid;
-        line-height: normal;
-    }
-    
-    .cert-degree {
-        display: block;
-        font-size: 21pt; 
-        font-family: "Times New Roman", Serif; 
-        font-style: normal;
-        text-align: center;
-        color: rgb(203, 92, 82);
-        border: 0px solid;
-        font-variant: small-caps;
-    }
-    
-    .cert-date {
-        display: block;
-        font-size: 15pt; 
-        font-family: "Time New Roman", Serif; 
-        font-style: normal;
-        text-align: center;
-        /* color: rgb(83, 86, 90); */
-        border: 0px solid;
-    }
-    
-    .cert-sig {
-        display: block;
-        /* width: 80%; */
-        margin-right: 60pt;
-        font-size: 12pt; 
-        font-family: "Times New Roman", Serif; 
-        font-style: italic;
-        text-align: right;
-        border: 0px solid;
+  @if ($debug) {
+    table td {
+      border: 1px solid blue;
     }
 
+    div {
+      border: 1px solid blue;
+    }
+  }
+
+  font-family: Arial, Serif;
+
+  .a4-portrait {
+    background: white;
+    height: 29.7cm;
+    width: 21cm;
+    display: block;
+    margin: 0 auto;
+    padding: 0px 30px;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    overflow-y: hidden;
+    box-sizing: border-box;
+  }
+
+  .cert-header {
+    display: block;
+    font-size: 26pt;
+    text-align: center;
+    font-family: "Times New Roman", Serif;
+    font-weight: bold;
+    /* color: rgb(83, 86, 90); */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cert-content {
+    display: block;
+    font-size: 16pt;
+    font-family: "Times New Roman", Serif;
+    font-weight: bold;
+    /* color: rgb(83, 86, 90); */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cert-justify {
+    text-align-last: justify;
+  }
+  .cert-name {
+    display: block;
+    font-size: 23pt;
+    font-family: "Times New Roman", Serif;
+    font-style: italic;
+    text-align: center;
+    border: 0px solid;
+    line-height: normal;
+  }
+
+  .cert-degree {
+    display: block;
+    font-size: 21pt;
+    font-family: "Times New Roman", Serif;
+    font-style: normal;
+    text-align: center;
+    color: rgb(203, 92, 82);
+    border: 0px solid;
+    font-variant: small-caps;
+  }
+
+  .cert-date {
+    display: block;
+    font-size: 15pt;
+    font-family: "Time New Roman", Serif;
+    font-style: normal;
+    text-align: center;
+    /* color: rgb(83, 86, 90); */
+    border: 0px solid;
+  }
+
+  .cert-sig {
+    display: block;
+    /* width: 80%; */
+    margin-right: 60pt;
+    font-size: 12pt;
+    font-family: "Times New Roman", Serif;
+    font-style: italic;
+    text-align: right;
+    border: 0px solid;
+  }
+
+  .print-only {
+    display: none;
+  }
+  @media only print {
     .print-only {
-        display: none;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      opacity: 0.6;
+      display: block;
+      font-size: 15pt;
+      font-family: "Time New Roman", Serif;
     }
-    @media only print {
-        .print-only {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            opacity: 0.6;
-            display: block;
-            font-size: 15pt; 
-            font-family: "Time New Roman", Serif; 
-        }
-   }
+  }
 }
