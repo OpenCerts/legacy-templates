@@ -1,4 +1,5 @@
 import { tz } from "moment-timezone";
+import { get } from "lodash";
 import {
   TIMEZONE,
   formatDateFullMonthProper,
@@ -79,42 +80,54 @@ const renderAwardText = certificate => (
 const renderTwoSignatures = certificate => (
   <div>
     <div
-      className="row d-flex justify-content-center align-items-end"
-      style={{ marginTop: "8rem", marginBottom: "2rem" }}
-    >
-      <div className="col-1" />
-      <div className="col-5">
-        <div className="px-5">
-          <img
-            style={fullWidthStyle}
-            src={certificate.additionalData.certSignatories[0].signature}
-          />
-          <hr />
+        className="row d-flex justify-content-center align-items-end"
+        style={{ marginTop: "8rem", marginBottom: "1rem" }}
+      >
+        <div className="col-1" />
+        <div className="col-5">
+          <div className="px-4">
+            <img
+              style={fullWidthStyle}
+              src={get(certificate, "additionalData.certSignatories[0].signature")}
+            />
+            <hr />
+          </div>
         </div>
-        <div className="text-center">
-          {certificate.additionalData.certSignatories[0].name}
+        <div className="col-5">
+          <div className="px-4">
+            <img
+              style={fullWidthStyle}
+              src={get(certificate, "additionalData.certSignatories[1].signature")}
+            />
+            <hr />
+          </div>
         </div>
-        <div className="text-center">
-          {certificate.additionalData.certSignatories[0].position}
+        <div className="col-1" />
+      </div>  
+
+      <div
+        className="row d-flex justify-content-center align-items-top"
+        style={{ marginTop: "1rem", marginBottom: "2rem" }}
+      >
+        <div className="col-1" />
+        <div className="col-5">
+          <div className="text-center">
+            {get(certificate, "additionalData.certSignatories[0].name")}
+          </div>
+          <div className="text-center">
+            {get(certificate, "additionalData.certSignatories[0].position")}
+          </div>
         </div>
+        <div className="col-5">
+          <div className="text-center">
+            {get(certificate, "additionalData.certSignatories[1].name")}
+          </div>
+          <div className="text-center">
+            {get(certificate, "additionalData.certSignatories[1].position")}
+          </div>
+        </div>
+        <div className="col-1" />
       </div>
-      <div className="col-5">
-        <div className="px-5">
-          <img
-            style={fullWidthStyle}
-            src={certificate.additionalData.certSignatories[1].signature}
-          />
-          <hr />
-        </div>
-        <div className="text-center">
-          {certificate.additionalData.certSignatories[1].name}
-        </div>
-        <div className="text-center">
-          {certificate.additionalData.certSignatories[1].position}
-        </div>
-      </div>
-      <div className="col-1" />
-    </div>
     <div>
       <p>
         {formatDatePrefix(certificate.issuedOn)}{" "}
