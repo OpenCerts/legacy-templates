@@ -101,7 +101,10 @@ export const FORMATDATEPREFIX = dateString => {
 
 export const FORMATYEARPREFIX = dateString => {
   const date = new Date(dateString);
-  const year = date.getFullYear();
+  const year = date.toLocaleDateString("en-SG", {
+    timeZone: "Asia/Singapore",
+    year: "numeric",
+  });
 
   return year;
 };
