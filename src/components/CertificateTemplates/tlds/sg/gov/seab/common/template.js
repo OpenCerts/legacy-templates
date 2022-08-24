@@ -64,24 +64,14 @@ export const EXAM_LVL_TEXT = {
 
 export const FORMATDATEPREFIX = dateString => {
   const date = new Date(dateString);
-  const day = date.toLocaleDateString("en-SG", {
+  const formattedDateString = date.toLocaleDateString("en-SG", {
     timeZone: "Asia/Singapore",
     day: "2-digit",
-  });
-  const month = date.toLocaleDateString("en-SG", {
-    timeZone: "Asia/Singapore",
     month: "2-digit",
-  });
-  const year = date.toLocaleDateString("en-SG", {
-    timeZone: "Asia/Singapore",
     year: "numeric",
   });
 
-  return (
-    <span>
-      {day}/{month}/{year}
-    </span>
-  );
+  return <span>{formattedDateString}</span>;
 };
 
 export const FORMATYEARPREFIX = dateString => {
