@@ -64,37 +64,22 @@ export const EXAM_LVL_TEXT = {
 
 export const FORMATDATEPREFIX = dateString => {
   const date = new Date(dateString);
-  const day = date.getDate();
-  const month = date.getMonth();
-  const year = date.getFullYear();
-
-  let dayValue = "";
-
-  const months = [
-    "01",
-    "02",
-    "03",
-    "04",
-    "05",
-    "06",
-    "07",
-    "08",
-    "09",
-    "10",
-    "11",
-    "12"
-  ];
-
-  const lengthday = day.toString().length;
-  if (lengthday === 1) {
-    dayValue = `0${day}`;
-  } else {
-    dayValue = day;
-  }
+  const day = date.toLocaleDateString("en-SG", {
+    timeZone: "Asia/Singapore",
+    day: "2-digit",
+  });
+  const month = date.toLocaleDateString("en-SG", {
+    timeZone: "Asia/Singapore",
+    month: "2-digit",
+  });
+  const year = date.toLocaleDateString("en-SG", {
+    timeZone: "Asia/Singapore",
+    year: "numeric",
+  });
 
   return (
     <span>
-      {dayValue}/{months[month]}/{year}
+      {day}/{month}/{year}
     </span>
   );
 };
