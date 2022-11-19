@@ -60,7 +60,7 @@ export const RENDEREXPLANATORYNOTES_PSLE = () => (
         <div className="col-sm-10" valign="top" style={EXPLANATORY_CONTENT}>
           <u>1980</u>
           <br />
-          Candidates will be awarded one og the following grades:
+          Candidates will be awarded one of the following grades:
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A,
           B or C (A is the highest and C the lowest).
@@ -76,7 +76,7 @@ export const RENDEREXPLANATORYNOTES_PSLE = () => (
         <div className="col-sm-10" valign="top" style={EXPLANATORY_CONTENT}>
           <u>1981 - 1992</u>
           <br />
-          Candidates will be awarded one og the following grades:
+          Candidates will be awarded one of the following grades:
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A.*,
           A, B or C (A.* is the highest and C the lowest).
