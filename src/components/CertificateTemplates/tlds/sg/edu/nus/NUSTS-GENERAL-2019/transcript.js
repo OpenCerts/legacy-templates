@@ -242,11 +242,11 @@ class TranscriptCreditTransfer {
         let title;
         if (isDuke || isMedDen) {
           title =
-            "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
+            "CREDITS RECOGNISED ON ADMISSION (NUS COURSES COMPLETED PRIOR TO CURRENT PROGRAMME):";
         } else if (!isNUSAPCTest && !isAPC) {
           if (!isCDP || transferData.reportNo === 1)
             title =
-              "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
+              "CREDITS RECOGNISED ON ADMISSION (NUS COURSES COMPLETED PRIOR TO CURRENT PROGRAMME):";
         } else if (isNUSAPCTest) {
           title =
             "AWARDED ADVANCED PLACEMENT CREDITS FOR PASSING THE PLACEMENT TEST(S) CONDUCTED BY NUS";
@@ -286,9 +286,9 @@ class TranscriptCreditTransfer {
       ) {
         let title;
         if (transferData.sourceCareer) {
-          title = `CREDITS RECOGNISED (COMPLETED MODULES FROM ${transferData.sourceCareer.toUpperCase()} CAREER)`;
+          title = `CREDITS RECOGNISED (COMPLETED COURSES FROM ${transferData.sourceCareer.toUpperCase()} CAREER)`;
         } else if (!isMedDen) {
-          title = "CREDITS RECOGNISED (COMPLETED MODULES FROM OTHER PROGRAMME)";
+          title = "CREDITS RECOGNISED (COMPLETED COURSES FROM OTHER PROGRAMME)";
         }
         const credits =
           transferData.creditsNoGPA !== 0 && !isMedDen
@@ -403,7 +403,7 @@ class TranscriptCreditTransfer {
   }
 }
 
-// render individual module enrollment info
+// render individual course enrollment info
 class TranscriptModuleEnroll {
   // constructor
   constructor(data, dataFeeder) {
@@ -441,7 +441,7 @@ class TranscriptModuleEnroll {
   }
 }
 
-// render module enrollment
+// render course enrollment
 class TranscriptEnrollment {
   // constructor
   constructor(termData, dataFeeder) {
@@ -454,13 +454,13 @@ class TranscriptEnrollment {
     this.renderEnrollData();
   }
 
-  // render module enrollment title
+  // render course enrollment title
   renderEnrollTitle() {
     this.dataFeeder.push(
       "ts-term-enl-title",
       <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
         <p />
-        ENROLLED IN THE FOLLOWING NUS MODULES:
+        ENROLLED IN THE FOLLOWING NUS COURSES:
       </td>
     );
   }
@@ -476,27 +476,27 @@ class TranscriptEnrollment {
     );
   }
 
-  // render repeat modules title
+  // render repeat courses title
   renderRepeatModulesTitle() {
     this.dataFeeder.push(
       "ts-term-enl-suptitle",
       <td colSpan="4" className={cls("ts-termrem")}>
-        REPEAT MODULE(S):
+        REPEAT COURSE(S):
       </td>
     );
   }
 
-  // render remediate modules title
+  // render remediate courses title
   renderRemediateModulesTitle() {
     this.dataFeeder.push(
       "ts-term-enl-suptitle",
       <td colSpan="4" className={cls("ts-termrem")}>
-        REMEDIATE MODULE(S):
+        REMEDIATE COURSE(S):
       </td>
     );
   }
 
-  // render module enrollment data
+  // render course enrollment data
   renderEnrollData() {
     if (!this.termData.modules) return;
     if (this.termData.creditTransfer && this.termData.modules) {
@@ -592,7 +592,7 @@ class TranscriptSummary {
     if (sumData.includeInGPA || isDuke) {
       if (sumData.disableGPA) {
         gpa = "NOT APPLICABLE";
-        gpaName = "CUMULATIVE AVERAGE POINT";
+        gpaName = "GRADE POINT AVERAGE";
       } else {
         gpa = sumData.GPA.toFixed(2);
         gpaName = sumData.GPAName.toUpperCase();
@@ -604,7 +604,7 @@ class TranscriptSummary {
       }
     } else {
       gpa = "NOT APPLICABLE";
-      gpaName = "CUMULATIVE AVERAGE POINT";
+      gpaName = "GRADE POINT AVERAGE";
     }
     this.dataFeeder.push(
       "ts-term-gpa",
@@ -720,8 +720,8 @@ class TranscriptTermRemarks {
           this.cache.push(
             "ts-term-rem-ncp",
             <td colSpan="4" className={cls("ts-termrem")}>
-              *{data.moduleCode} - Module was excluded from computation of the
-              final Cumulative Average Points/Marks.
+              *{data.moduleCode} - Course was excluded from computation of the
+              final Grade Point Average/Marks.
             </td>
           );
         }
@@ -752,7 +752,7 @@ class TranscriptTermRemarks {
               "ts-term-rem-trf",
               <td colSpan="4" className={cls("ts-termrem")}>
                 Please refer to the transcript of {transferData.orgName} for
-                details of modules taken and grades/credits obtained.
+                details of courses taken and grades/credits obtained.
               </td>
             );
           }
@@ -776,7 +776,7 @@ class TranscriptTermRemarks {
       this.cache.push(
         "ts-term-rem-fgpa",
         <td colSpan="4" className={cls("ts-termrem")}>
-          The Final Cumulative Average Point takes into account student&rsquo;s
+          The Final Grade Point Average takes into account student&rsquo;s
           academic performance at the Partner University.
         </td>
       );
@@ -801,7 +801,7 @@ class TranscriptTermRemarks {
   }
 }
 
-// translate module information
+// translate course information
 const translateModule = module => {
   const translated = {};
   for (const key in module) {
@@ -847,7 +847,7 @@ const getCreditTransferDetails = (transcriptData, semester, reportNo, seq) => {
   return details;
 };
 
-// traverse transcript data to retrieve enrolment modules
+// traverse transcript data to retrieve enrolment courses
 const getEnrolmentModules = (transcriptData, semester, reportNo) => {
   const modules = [];
   transcriptData.forEach(module => {
@@ -953,7 +953,7 @@ class TranscriptTermData {
     ).render();
   }
 
-  // render module enrollment data
+  // render course enrollment data
   renderEnrollment() {
     new TranscriptEnrollment(this.termData, this.dataFeeder).render();
   }
@@ -1622,7 +1622,7 @@ class TranscriptDegreeRev2021 {
       "ts-deg-cap",
       <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
         <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
-          {data.GPAName.toUpperCase() === "FINAL CUMULATIVE AVERAGE POINT"
+          {data.GPAName.toUpperCase() === "FINAL GRADE POINT AVERAGE"
             ? "FINAL CAP"
             : data.GPAName.toUpperCase()}
           :
@@ -1653,13 +1653,13 @@ class TranscriptDegreeRev2021 {
           </td>
         );
     }
-    // cumulative module credits
+    // cumulative course credits
     if (data.cumCredits)
       this.dataFeeder.push(
         "ts-deg-mc",
         <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
           <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
-            CUMULATIVE MODULAR CREDITS:
+            CUMULATIVE UNITS:
           </div>
           <div colSpan="2" className={cls("ts-title confer-col1")}>
             {data.cumCredits.toFixed(2)}
