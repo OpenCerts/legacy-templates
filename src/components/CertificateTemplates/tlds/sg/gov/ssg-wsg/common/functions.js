@@ -213,6 +213,9 @@ export const switchOperatorFunction = certificate => {
     case "SOA-MF-01":
       return " Generic Manufacturing Skills WSQ Framework";
 
+    case "SOA-MF-02":
+      return " Generic Manufacturing Skills WSQ Framework";
+
     case "SOA_SVCF_001":
       return " Service Excellence Competency Framework";
 
