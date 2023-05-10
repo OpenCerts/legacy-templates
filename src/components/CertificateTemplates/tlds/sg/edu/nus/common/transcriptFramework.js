@@ -10,9 +10,10 @@ const MAX_PAGES = 10;
 const MAX_ROWS_PER_COL = 40;
 // height of transcript page content
 const CONTENT_HEIGHT = 567;
-
+let issuedOnDt;
 // array storing page content bottom of each page
 const contentBottom = [];
+
 // global state
 const onPrintRow = function(nextCol, action) {
   // nextCol defaults to false
@@ -68,19 +69,22 @@ const renderTranscriptLegendPage = (legend, ratio) => {
   return html;
 };
 
+// cut off date for displaying new legend
+const newLegend2023 = "2023-05-01";
+
 // render a term data header
 const renderTranscriptTermHeader = () => {
   const html = (
-    <Fragment>
+      <Fragment>
       <td className={cls("ts-title ts-highlight")}>
-        <u>MODULE</u>
+        {issuedOnDt >= newLegend2023 ? <u>COURSE</u> : <u>MODULE</u>}
       </td>
       <td className={cls("ts-title ts-highlight")}>&nbsp;</td>
       <td className={cls("ts-title ts-highlight")}>
         <u>GRADE</u>
       </td>
       <td className={cls("ts-title ts-highlight")}>
-        <u>CREDITS</u>
+        {issuedOnDt >= newLegend2023 ? <u>UNITS</u> : <u>CREDITS</u>}
       </td>
     </Fragment>
   );
@@ -165,6 +169,7 @@ class TranscriptHeader extends Component {
 
   // main render
   render() {
+    issuedOnDt = this.headerData.issuedOn;
     const html = (
       <div ref={this.myRef}>
         <table className={cls("header-pers-info")} width="100%">
