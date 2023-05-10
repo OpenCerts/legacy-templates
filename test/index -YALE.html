@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iFrame Rendering</title>
+  </head>
+  <script src="https://unpkg.com/penpal@4.1.1/dist/penpal.min.js"></script>
+
+  <body>
+    <button id="render-certificate" onclick="renderDocument(certificate)">
+      Render Certificate
+    </button>
+
+    <div id="template-selectors"></div>
+
+    <iframe
+      title="Rendered Certificate"
+      id="frameless-iframe"
+      src="http://localhost:3000/"
+      style="width: 100%; border: 0px; overflow: hidden;"
+    ></iframe>
+  </body>
+
+  <script type="text/javascript">
+    const iframe = document.getElementById("frameless-iframe");
+    var iframeMethods;
+    selectTemplateTab = function(i) {
+      window.connection.promise.then(frame => frame.selectTemplateTab(i));
+    };
+    updateHeight = function(h) {
+      iframe.height = h;
+    };
+    updateTemplates = function(templates) {
+      if (!templates) return;
+      const templateSelector = document.getElementById("template-selectors");
+      templateSelector.innerHTML = "";
+      templates.forEach((tab, index) => {
+        const btn = document.createElement("button");
+        btn.innerHTML = tab.label;
+        btn.id = `selector-${tab.id}`;
+        btn.onclick = () => selectTemplateTab(index);
+        templateSelector.appendChild(btn);
+      });
+    };
+    window.connection = window.Penpal.connectToChild({
+      iframe,
+      methods: {
+        updateHeight,
+        updateTemplates
+      }
+    });
+    renderDocument = function(cert) {
+      window.connection.promise.then(frame => frame.renderDocument(cert));
+    };
+      const certificate = {
+          "id": "NUSTS-A0170371M-UGRD-0-20230506",
+          "$template": "sg/edu/nus/NUSTS-GENERAL-2019",
+          "issuedOn": "2023-05-06T18:21:48+08:00",
+          "name": "Undergraduate Official Transcript",
+          "issuers": [
+              {
+                  "name": "National University of Singapore",
+                  "uen": "200604346E",
+                  "url": "https://www.nus.edu.sg",
+                  "email": "transcript@nus.edu.sg",
+                  "certificateStore": "0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+              }
+          ],
+          "recipient": {
+              "name": "170371M, NAME",
+              "studentId": "A0170371M",
+              "dateOfBirth": "1905-01-01"
+          },
+          "transcript": [
+              {
+                  "name": "Literature and Humanities 1",
+                  "courseCode": "YCC1111",
+                  "grade": "CS",
+                  "courseCredit": 5,
+                  "gradingBasis": "CSU",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1710"
+              },
+              {
+                  "name": "Philosophy and  Political Thought 1",
+                  "courseCode": "YCC1113",
+                  "grade": "CS",
+                  "courseCredit": 5,
+                  "gradingBasis": "CSU",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1710"
+              },
+              {
+                  "name": "Comparative Social Inquiry",
+                  "courseCode": "YCC1121",
+                  "grade": "CS",
+                  "courseCredit": 5,
+                  "gradingBasis": "CSU",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1710"
+              },
+              {
+                  "name": "Quantitative Reasoning",
+                  "courseCode": "YCC1122",
+                  "grade": "CS",
+                  "courseCredit": 5,
+                  "gradingBasis": "CSU",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1710"
+              },
+              {
+                  "name": "Literature and Humanities 2",
+                  "courseCode": "YCC1112",
+                  "grade": "B+",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "1720"
+              },
+              {
+                  "name": "Philosophy and  Political Thought 2",
+                  "courseCode": "YCC1114",
+                  "grade": "B+",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "1720"
+              },
+              {
+                  "name": "Scientific Inquiry 1",
+                  "courseCode": "YCC1131",
+                  "grade": "A",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "1720"
+              },
+              {
+                  "name": "Genetic Engineering for All: An iGEM team for Yale-NUS?",
+                  "courseCode": "YSC1215",
+                  "grade": "A",
+                  "courseCredit": 2,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "1720"
+              },
+              {
+                  "name": "Understanding Behavior and Cognition",
+                  "courseCode": "YSS2201",
+                  "grade": "S",
+                  "courseCredit": 5,
+                  "gradingBasis": "SNU",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1720"
+              },
+              {
+                  "name": "General Chemistry I",
+                  "courseCode": "CHEMS161",
+                  "grade": "OVS",
+                  "courseCredit": 5,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1740",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "General Chemistry II",
+                  "courseCode": "CHEMS165",
+                  "grade": "OVS",
+                  "courseCredit": 5,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1740",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Modern Social Thought",
+                  "courseCode": "YCC2121",
+                  "grade": "A-",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "1810"
+              },
+              {
+                  "name": "Scientific Inquiry 2",
+                  "courseCode": "YCC2137",
+                  "grade": "A-",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "1810"
+              },
+              {
+                  "name": "Foundations of Neuroscience",
+                  "courseCode": "YSC2231",
+                  "grade": "A-",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "1810"
+              },
+              {
+                  "name": "Human Biology",
+                  "courseCode": "YSC2234",
+                  "grade": "A",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "1810"
+              },
+              {
+                  "name": "Biochemistry and Biophysics",
+                  "courseCode": "BIOL101",
+                  "grade": "OVS",
+                  "courseCredit": 2,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1820",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Cell Bio",
+                  "courseCode": "BIOL102",
+                  "grade": "OVS",
+                  "courseCredit": 3,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1820",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Organic Chemistry",
+                  "courseCode": "CHEM220",
+                  "grade": "OVS",
+                  "courseCredit": 4,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1820",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Lab for Organic Chemistry I",
+                  "courseCode": "CHEM222L",
+                  "grade": "OVS",
+                  "courseCredit": 3,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1820",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Family in Greek Lit and Film TR",
+                  "courseCode": "FILM243",
+                  "grade": "OVS",
+                  "courseCredit": 4,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1820",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Bioethics and Law",
+                  "courseCode": "PLSC257",
+                  "grade": "OVS",
+                  "courseCredit": 4,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1820",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "General Physics Laboratory",
+                  "courseCode": "PHYSS165L",
+                  "grade": "OVS",
+                  "courseCredit": 5,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1840",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "University Physics",
+                  "courseCode": "PHYSS180",
+                  "grade": "OVS",
+                  "courseCredit": 0,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1840",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "University Physics",
+                  "courseCode": "PHYSS180",
+                  "grade": "OVS",
+                  "courseCredit": 3,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1840",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Sickness and Health",
+                  "courseCode": "AFAM170",
+                  "grade": "OVS",
+                  "courseCredit": 5,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1910",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Genetics and Development",
+                  "courseCode": "BIOL103",
+                  "grade": "OVS",
+                  "courseCredit": 3,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1910",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Ecology and Evolutionary Biology",
+                  "courseCode": "BIOL104",
+                  "grade": "OVS",
+                  "courseCredit": 2,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1910",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Public Health in American 1793, to the Present",
+                  "courseCode": "HIST140",
+                  "grade": "OVS",
+                  "courseCredit": 5,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1910",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Biochemistry",
+                  "courseCode": "MB&B200",
+                  "grade": "OVS",
+                  "courseCredit": 5,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1910",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Organic Chemistry of Life Processes",
+                  "courseCode": "CHEM221",
+                  "grade": "OVS",
+                  "courseCredit": 4,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1920",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Systems Biology",
+                  "courseCode": "MCDB461",
+                  "grade": "OVS",
+                  "courseCredit": 5,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1920",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "General Physics Laboratory",
+                  "courseCode": "PHYS166L",
+                  "grade": "OVS",
+                  "courseCredit": 2,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1920",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "University Physics",
+                  "courseCode": "PHYS181",
+                  "grade": "OVS",
+                  "courseCredit": 4,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1920",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Lab for Organic Chemistry II",
+                  "courseCode": "CHEM223L",
+                  "grade": "OVS",
+                  "courseCredit": 5,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1920",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Principles of Ecol and Evolution",
+                  "courseCode": "E&EB223L",
+                  "grade": "",
+                  "courseCredit": 0,
+                  "status": "P",
+                  "includeInGPA": false,
+                  "reportNo": 1,
+                  "semester": "1920",
+                  "transferSeq": 1
+              },
+              {
+                  "name": "Genetics",
+                  "courseCode": "YSC2233",
+                  "grade": "A-",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2010"
+              },
+              {
+                  "name": "The Biology of Ageing",
+                  "courseCode": "YSC3255",
+                  "grade": "A",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2010"
+              },
+              {
+                  "name": "Life Sciences Capstone Project",
+                  "courseCode": "YSC4102",
+                  "grade": "IP",
+                  "courseCredit": 10,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2010"
+              },
+              {
+                  "name": "Medical Anthropology",
+                  "courseCode": "YSS4236",
+                  "grade": "A-",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2010"
+              },
+              {
+                  "name": "Hollywood in the 1930s",
+                  "courseCode": "YHU3312",
+                  "grade": "A-",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2020"
+              },
+              {
+                  "name": "Cell Biology",
+                  "courseCode": "YSC3233",
+                  "grade": "A",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2020"
+              },
+              {
+                  "name": "Computational and Systems Biology",
+                  "courseCode": "YSC3241",
+                  "grade": "A",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2020"
+              },
+              {
+                  "name": "Coral Reef Ecology and Environmental Change",
+                  "courseCode": "YSC3253",
+                  "grade": "A",
+                  "courseCredit": 5,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2020"
+              },
+              {
+                  "name": "Life Sciences Capstone Project",
+                  "courseCode": "YSC4102",
+                  "grade": "A",
+                  "courseCredit": 10,
+                  "gradingBasis": "GRD",
+                  "includeInGPA": true,
+                  "reportNo": 1,
+                  "semester": "2020"
+              }
+          ],
+          "additionalData": {
+              "transcriptType": "UGOF",
+              "transcriptGroup": [
+                  {
+                      "name": "1710",
+                      "term": "2017/2018 Semester 1",
+                      "formOfStudy": "ENRL",
+                      "fosPrintArea": "ND",
+                      "summary": [
+                          {
+                              "programName": "Yale-NUS Bachelor's Program",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 0
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "1720",
+                      "term": "2017/2018 Semester 2",
+                      "formOfStudy": "ENRL",
+                      "fosPrintArea": "ND",
+                      "summary": [
+                          {
+                              "programName": "Yale-NUS Bachelor's Program",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.41
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "1740",
+                      "term": "2017/2018 Special Term\u0028Part 2\u0029",
+                      "formOfStudy": "SWE",
+                      "fosDescription": "Participated in a Summer/Winter Programme at",
+                      "organization": "Yale University",
+                      "fosPrintArea": "EH",
+                      "creditTransfer": [
+                          {
+                              "sourceType": "E",
+                              "creditsNoGPA": 10,
+                              "creditsGPA": 0,
+                              "orgId": "Yale University",
+                              "orgName": "Yale University",
+                              "reportNo": 1,
+                              "transferSeq": 1
+                          }
+                      ],
+                      "summary": [
+                          {
+                              "programName": "Yale-NUS Bachelor's Program",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.41
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "1810",
+                      "term": "2018/2019 Semester 1",
+                      "formOfStudy": "ENRL",
+                      "fosPrintArea": "ND",
+                      "summary": [
+                          {
+                              "programName": "Yale-NUS Bachelor's Program",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.53
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "1820",
+                      "term": "2018/2019 Semester 2",
+                      "formOfStudy": "SEP",
+                      "fosDescription": "Participated in a Student Exchange Programme at",
+                      "organization": "Yale University",
+                      "fosPrintArea": "EH",
+                      "creditTransfer": [
+                          {
+                              "sourceType": "E",
+                              "creditsNoGPA": 20,
+                              "creditsGPA": 0,
+                              "orgId": "Yale University",
+                              "orgName": "Yale University",
+                              "reportNo": 1,
+                              "transferSeq": 1
+                          }
+                      ],
+                      "summary": [
+                          {
+                              "programName": "Yale-NUS Bachelor's Program",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.53
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "1840",
+                      "term": "2018/2019 Special Term\u0028Part 2\u0029",
+                      "formOfStudy": "SWE",
+                      "fosDescription": "Participated in a Summer/Winter Programme at",
+                      "organization": "Yale University",
+                      "fosPrintArea": "EH",
+                      "creditTransfer": [
+                          {
+                              "sourceType": "E",
+                              "creditsNoGPA": 8,
+                              "creditsGPA": 0,
+                              "orgId": "Yale University",
+                              "orgName": "Yale University",
+                              "reportNo": 1,
+                              "transferSeq": 1
+                          }
+                      ],
+                      "summary": [
+                          {
+                              "programName": "Yale-NUS Bachelor's Program",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.53
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "1910",
+                      "term": "2019/2020 Semester 1",
+                      "formOfStudy": "SEP",
+                      "fosDescription": "Participated in a Student Exchange Programme at",
+                      "organization": "Yale University",
+                      "fosPrintArea": "EH",
+                      "creditTransfer": [
+                          {
+                              "sourceType": "E",
+                              "creditsNoGPA": 20,
+                              "creditsGPA": 0,
+                              "orgId": "Yale University",
+                              "orgName": "Yale University",
+                              "reportNo": 1,
+                              "transferSeq": 1
+                          }
+                      ],
+                      "summary": [
+                          {
+                              "programName": "Bachelor of Science with Honours",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.53
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "1920",
+                      "term": "2019/2020 Semester 2",
+                      "formOfStudy": "SEP2",
+                      "fosDescription": "Participated in a Student Exchange Programme at",
+                      "organization": "Yale University",
+                      "fosPrintArea": "EH",
+                      "creditTransfer": [
+                          {
+                              "sourceType": "E",
+                              "creditsNoGPA": 20,
+                              "creditsGPA": 0,
+                              "orgId": "Yale University",
+                              "orgName": "Yale University",
+                              "reportNo": 1,
+                              "transferSeq": 1
+                          }
+                      ],
+                      "summary": [
+                          {
+                              "programName": "Bachelor of Science with Honours",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.53
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "2010",
+                      "term": "2020/2021 Semester 1",
+                      "formOfStudy": "ENRL",
+                      "fosPrintArea": "ND",
+                      "summary": [
+                          {
+                              "programName": "Bachelor of Science with Honours",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.57
+                          }
+                      ],
+                      "reportNo": 1
+                  },
+                  {
+                      "name": "2020",
+                      "term": "2020/2021 Semester 2",
+                      "formOfStudy": "ENRL",
+                      "fosPrintArea": "ND",
+                      "summary": [
+                          {
+                              "programName": "Bachelor of Science with Honours",
+                              "includeInGPA": true,
+                              "disableGPA": false,
+                              "GPAName": "Cumulative Average Point",
+                              "GPA": 4.7
+                          }
+                      ],
+                      "reportNo": 1
+                  }
+              ],
+              "programData": [
+                  {
+                      "programCode": "B1712",
+                      "programName": "Bachelor of Science with Honours",
+                      "statusCode": "CM",
+                      "statusDescription": "Completed Programme",
+                      "effectiveDate": "2021-06-24",
+                      "admitTerm": "1710",
+                      "reportNo": 1
+                  }
+              ],
+              "degreeData": [
+                  {
+                      "degreeTitle": "Bachelor of Science with Honours",
+                      "isYNC": true,
+                      "dateConferred": "2021-06-30",
+                      "dateAdmitted": "2017-08-07",
+                      "GPAName": "Cumulative Average Point",
+                      "includeInGPA": true,
+                      "disableGPA": false,
+                      "cumGPA": 4.7,
+                      "cumCredits": 185,
+                      "honours": "Cum Laude",
+                      "plans": [
+                          {
+                              "specialProgram": false,
+                              "type": "HON",
+                              "typeName": "Honors",
+                              "transcriptDescr": "Life Sciences"
+                          }
+                      ],
+                      "reportNo": 1
+                  }
+              ],
+              "uniqueId": "NUSTS-A0170371M-UGRD-0-R001745469-1-P15229458-20230506"
+          }
+      }
+
+
+;
+  </script>
+</html>

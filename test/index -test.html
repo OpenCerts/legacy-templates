@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iFrame Rendering</title>
+  </head>
+  <script src="https://unpkg.com/penpal@4.1.1/dist/penpal.min.js"></script>
+
+  <body>
+    <button id="render-certificate" onclick="renderDocument(certificate)">
+      Render Certificate
+    </button>
+
+    <div id="template-selectors"></div>
+
+    <iframe
+      title="Rendered Certificate"
+      id="frameless-iframe"
+      src="http://localhost:3000/"
+      style="width: 100%; border: 0px; overflow: hidden;"
+    ></iframe>
+  </body>
+
+  <script type="text/javascript">
+    const iframe = document.getElementById("frameless-iframe");
+    var iframeMethods;
+    selectTemplateTab = function(i) {
+      window.connection.promise.then(frame => frame.selectTemplateTab(i));
+    };
+    updateHeight = function(h) {
+      iframe.height = h;
+    };
+    updateTemplates = function(templates) {
+      if (!templates) return;
+      const templateSelector = document.getElementById("template-selectors");
+      templateSelector.innerHTML = "";
+      templates.forEach((tab, index) => {
+        const btn = document.createElement("button");
+        btn.innerHTML = tab.label;
+        btn.id = `selector-${tab.id}`;
+        btn.onclick = () => selectTemplateTab(index);
+        templateSelector.appendChild(btn);
+      });
+    };
+    window.connection = window.Penpal.connectToChild({
+      iframe,
+      methods: {
+        updateHeight,
+        updateTemplates
+      }
+    });
+    renderDocument = function(cert) {
+      window.connection.promise.then(frame => frame.renderDocument(cert));
+    };
+    const certificate = {
+    "id" : "NUSTS-A0028877M-UGRD-0-20230502",
+    "$template" : "sg/edu/nus/NUSTS-GENERAL-2019",
+    "issuedOn" : "2023-05-06T12:27:05+08:00",
+    "name" : "Undergraduate Official Transcript",
+    "issuers" : [
+        {
+            "name" : "National University of Singapore",
+            "uen" : "200604346E",
+            "url" : "https://www.nus.edu.sg",
+            "email" : "registrar@nus.edu.sg",
+            "certificateStore" : "0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+        }
+    ],
+    "recipient" : {
+        "name" : "NNNNNNNNN NNNNNNNNN NNNNN",
+        "studentId" : "A0028877M",
+        "dateOfBirth" : "1990-04-01"
+    },
+    "transcript" : [
+        {
+            "name" : "English For Academic Purposes \u0028Arts\u0029",
+            "courseCode" : "EA1101",
+            "grade" : "B",
+            "courseCredit" : 0,
+            "gradingBasis" : "NCP",
+            "includeInGPA" : false,
+            "reportNo" : 1,
+            "semester" : "0610"
+        },
+        {
+            "name" : "Introduction to Economic Analysis",
+            "courseCode" : "EC1101E",
+            "grade" : "B+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0610"
+        },
+        {
+            "name" : "Place, Environment and Society",
+            "courseCode" : "GEK1001",
+            "grade" : "A",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0610"
+        },
+        {
+            "name" : "Introduction to Japanese Studies",
+            "courseCode" : "JS1101E",
+            "grade" : "A-",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0610"
+        },
+        {
+            "name" : "Making Sense of Society",
+            "courseCode" : "SC1101E",
+            "grade" : "B",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0610"
+        },
+        {
+            "name" : "Singapore Society",
+            "courseCode" : "SSA1201",
+            "grade" : "B+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0610"
+        },
+        {
+            "name" : "Genes and Society",
+            "courseCode" : "GEK1527",
+            "grade" : "B-",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0620"
+        },
+        {
+            "name" : "Information Systems Applications",
+            "courseCode" : "IT1003",
+            "grade" : "A-",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0620"
+        },
+        {
+            "name" : "Malay 1",
+            "courseCode" : "LAM1201",
+            "grade" : "C+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0620"
+        },
+        {
+            "name" : "New Media and Society",
+            "courseCode" : "NM1101E",
+            "grade" : "A",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0620"
+        },
+        {
+            "name" : "Introduction to Psychology",
+            "courseCode" : "PL1101E",
+            "grade" : "A-",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0620"
+        },
+        {
+            "name" : "Nation-Building in Singapore",
+            "courseCode" : "HY2229",
+            "grade" : "B+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0710"
+        },
+        {
+            "name" : "Research and Statistical Methods I",
+            "courseCode" : "PL2131",
+            "grade" : "B",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0710"
+        },
+        {
+            "name" : "Developmental Psychology",
+            "courseCode" : "PL3234",
+            "grade" : "A",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0710"
+        },
+        {
+            "name" : "Social Psychology",
+            "courseCode" : "PL3235",
+            "grade" : "B+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0710"
+        },
+        {
+            "name" : "Human Development over the Lifespan",
+            "courseCode" : "SW2104",
+            "grade" : "A",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0710"
+        },
+        {
+            "name" : "The Nature of Language",
+            "courseCode" : "EL1101E",
+            "grade" : "A-",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0720"
+        },
+        {
+            "name" : "RESEARCH AND STATISTICAL METHODS II",
+            "courseCode" : "PL2132",
+            "grade" : "B+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0720"
+        },
+        {
+            "name" : "Biological Psychology",
+            "courseCode" : "PL3232",
+            "grade" : "A",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0720"
+        },
+        {
+            "name" : "Cognitive Psychology",
+            "courseCode" : "PL3233",
+            "grade" : "B+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0720"
+        },
+        {
+            "name" : "Introduction to Social Work",
+            "courseCode" : "SW1101E",
+            "grade" : "A+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0720"
+        },
+        {
+            "name" : "Cross-Cultural Communication & Discourse",
+            "courseCode" : "GEK1036",
+            "grade" : "A-",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0810"
+        },
+        {
+            "name" : "Abnormal Psychology",
+            "courseCode" : "PL3236",
+            "grade" : "A",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0810"
+        },
+        {
+            "name" : "Language & Cognitive Processes",
+            "courseCode" : "PL3237",
+            "grade" : "A+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0810"
+        },
+        {
+            "name" : "Adolescent Psychology",
+            "courseCode" : "PL3244",
+            "grade" : "B+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0810"
+        },
+        {
+            "name" : "Lab in Developmental Psychology",
+            "courseCode" : "PL3283",
+            "grade" : "A+",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0810"
+        },
+        {
+            "name" : "Evaluating Claims Related to Health",
+            "courseCode" : "GEK1525",
+            "grade" : "A-",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0820"
+        },
+        {
+            "name" : "Introduction to Electronic Commerce",
+            "courseCode" : "IT1004",
+            "grade" : "A",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0820"
+        },
+        {
+            "name" : "Atypical Development and Language",
+            "courseCode" : "PL3251",
+            "grade" : "B",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0820"
+        },
+        {
+            "name" : "Psychobiological Perspectives on Emotion",
+            "courseCode" : "PL3253",
+            "grade" : "B",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0820"
+        },
+        {
+            "name" : "History and Systems of Psychology",
+            "courseCode" : "PL4202",
+            "grade" : "A-",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0820"
+        },
+        {
+            "name" : "CHINESE CULTURE & SOCIETY",
+            "courseCode" : "UGA2180.",
+            "grade" : "OVS",
+            "courseCredit" : 4,
+            "status" : "P",
+            "includeInGPA" : false,
+            "reportNo" : 1,
+            "semester" : "0840",
+            "transferSeq" : 1
+        },
+        {
+            "name" : "PRINCIPLES OF MANAGEMENT",
+            "courseCode" : "MGT1020.",
+            "grade" : "OVS",
+            "courseCredit" : 4,
+            "status" : "P",
+            "includeInGPA" : false,
+            "reportNo" : 1,
+            "semester" : "0840",
+            "transferSeq" : 1
+        },
+        {
+            "name" : "Social Cognition",
+            "courseCode" : "PL3238",
+            "grade" : "B",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0910"
+        },
+        {
+            "name" : "Social Psychology: Theories and Methods",
+            "courseCode" : "PL4207",
+            "grade" : "A-",
+            "courseCredit" : 5,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0910"
+        },
+        {
+            "name" : "Evolutionary Psychology",
+            "courseCode" : "PL4214",
+            "grade" : "B+",
+            "courseCredit" : 5,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0910"
+        },
+        {
+            "name" : "Psychological Assessment",
+            "courseCode" : "PL4218",
+            "grade" : "B+",
+            "courseCredit" : 5,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0910"
+        },
+        {
+            "name" : "Science of Music",
+            "courseCode" : "GEK1519",
+            "grade" : "W",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0920"
+        },
+        {
+            "name" : "Psychology of Gender",
+            "courseCode" : "PL4225",
+            "grade" : "",
+            "courseCredit" : 5,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0920"
+        },
+        {
+            "name" : "Addictive Behaviours",
+            "courseCode" : "PL4880F",
+            "grade" : "",
+            "courseCredit" : 5,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0920"
+        },
+        {
+            "name" : "Positive Psychology",
+            "courseCode" : "PL4880G",
+            "grade" : "",
+            "courseCredit" : 5,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "0920"
+        }
+    ],
+    "additionalData" : {
+        "transcriptType" : "UGOF",
+        "transcriptGroup" : [
+            {
+                "name" : "0610",
+                "term" : "2006/2007 Semester 1",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Arts",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.2
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "0620",
+                "term" : "2006/2007 Semester 2",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Arts",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.05
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "0710",
+                "term" : "2007/2008 Semester 1",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Arts",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.13
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "0720",
+                "term" : "2007/2008 Semester 2",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Arts",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.23
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "0810",
+                "term" : "2008/2009 Semester 1",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Arts",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.32,
+                        "awards" : [
+                            {
+                                "awardCode" : "DEANL",
+                                "awardName" : "Dean's List"
+                            }
+                        ]
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "0820",
+                "term" : "2008/2009 Semester 2",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Arts",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.3
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "0840",
+                "term" : "2008/2009 Special Term \u0028Part2\u0029",
+                "formOfStudy" : "SWE",
+                "fosDescription" : "Participated in a Summer/Winter Programme at the",
+                "organization" : "Chinese University of Hong Kong",
+                "fosPrintArea" : "EH",
+                "creditTransfer" : [
+                    {
+                        "sourceType" : "E",
+                        "creditsNoGPA" : 8,
+                        "creditsGPA" : 0,
+                        "orgId" : "Chinese University of Hong Kong",
+                        "orgName" : "Chinese University of Hong Kong",
+                        "reportNo" : 1,
+                        "transferSeq" : 1
+                    }
+                ],
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Social Sciences",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.5
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "0910",
+                "term" : "2009/2010 Semester 1",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Social Sciences",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.26
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "0920",
+                "term" : "2009/2010 Semester 2",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Bachelor of Social Sciences",
+                        "includeInGPA" : true,
+                        "disableGPA" : false,
+                        "GPAName" : "Cumulative Average Point",
+                        "GPA" : 4.25
+                    }
+                ],
+                "reportNo" : 1
+            }
+        ],
+        "programData" : [
+            {
+                "programCode" : "B0111",
+                "programName" : "Bachelor of Social Sciences",
+                "statusCode" : "CM",
+                "statusDescription" : "Completed Programme",
+                "effectiveDate" : "2023-04-04",
+                "admitTerm" : "0610",
+                "reportNo" : 1
+            }
+        ],
+        "degreeData" : [
+            {
+                "degreeTitle" : "Bachelor of Social Sciences",
+                "dateConferred" : "2010-06-30",
+                "dateAdmitted" : "2006-08-07",
+                "GPAName" : "Cumulative Average Point",
+                "includeInGPA" : true,
+                "disableGPA" : false,
+                "cumGPA" : 4.25,
+                "cumCredits" : 162,
+                "plans" : [
+                    {
+                        "specialProgram" : false,
+                        "type" : "HON",
+                        "typeName" : "Honours",
+                        "transcriptDescr" : "Psychology"
+                    },
+                    {
+                        "specialProgram" : true,
+                        "type" : "SPL",
+                        "typeName" : "Special Plan",
+                        "transcriptDescr" : "Completed the NUS College Programme",
+                        "planDescr" : "\u0028University Scholars Programme\u0029"
+                    }
+                ],
+                "reportNo" : 1
+            }
+        ],
+        "uniqueId" : "NUSTS-A0028877M-UGRD-0-R000038809-1-P317415-20230502"
+    }
+}
+
+
+;
+  </script>
+</html>

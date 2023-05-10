@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iFrame Rendering</title>
+  </head>
+  <script src="https://unpkg.com/penpal@4.1.1/dist/penpal.min.js"></script>
+
+  <body>
+    <button id="render-certificate" onclick="renderDocument(certificate)">
+      Render Certificate
+    </button>
+
+    <div id="template-selectors"></div>
+
+    <iframe
+      title="Rendered Certificate"
+      id="frameless-iframe"
+      src="http://localhost:3000/"
+      style="width: 100%; border: 0px; overflow: hidden;"
+    ></iframe>
+  </body>
+
+  <script type="text/javascript">
+    const iframe = document.getElementById("frameless-iframe");
+    var iframeMethods;
+    selectTemplateTab = function(i) {
+      window.connection.promise.then(frame => frame.selectTemplateTab(i));
+    };
+    updateHeight = function(h) {
+      iframe.height = h;
+    };
+    updateTemplates = function(templates) {
+      if (!templates) return;
+      const templateSelector = document.getElementById("template-selectors");
+      templateSelector.innerHTML = "";
+      templates.forEach((tab, index) => {
+        const btn = document.createElement("button");
+        btn.innerHTML = tab.label;
+        btn.id = `selector-${tab.id}`;
+        btn.onclick = () => selectTemplateTab(index);
+        templateSelector.appendChild(btn);
+      });
+    };
+    window.connection = window.Penpal.connectToChild({
+      iframe,
+      methods: {
+        updateHeight,
+        updateTemplates
+      }
+    });
+    renderDocument = function(cert) {
+      window.connection.promise.then(frame => frame.renderDocument(cert));
+    };
+      const certificate = {
+    "id" : "NUSTS-A0098237U-DUKE-0-20230508",
+    "$template" : "sg/edu/nus/NUSTS-GENERAL-2019",
+    "issuedOn" : "2023-05-08T01:04:04+08:00",
+    "name" : "Duke Official",
+    "issuers" : [
+        {
+            "name" : "National University of Singapore",
+            "uen" : "200604346E",
+            "url" : "https://www.nus.edu.sg",
+            "email" : "transcript@nus.edu.sg",
+            "certificateStore" : "0xfEbB273495F5C2c4783E23424Fe9773691b57fcB"
+        }
+    ],
+    "recipient" : {
+        "name" : "098237U, NAME",
+        "studentId" : "A0098237U",
+        "dateOfBirth" : "1905-01-01"
+    },
+    "transcript" : [
+        {
+            "name" : "Psychiatry Clerkship",
+            "courseCode" : "GMS6205",
+            "grade" : "HP",
+            "courseCredit" : 4,
+            "status" : "P",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1200",
+            "transferSeq" : 1
+        },
+        {
+            "name" : "Foundations Course",
+            "courseCode" : "GMS6100",
+            "grade" : "P",
+            "courseCredit" : 3,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1200"
+        },
+        {
+            "name" : "Molecules & Cells",
+            "courseCode" : "GMS6101",
+            "grade" : "P",
+            "courseCredit" : 6,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1200"
+        },
+        {
+            "name" : "Normal Body",
+            "courseCode" : "GMS6102",
+            "grade" : "P",
+            "courseCredit" : 12,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1200"
+        },
+        {
+            "name" : "Brain & Behavior",
+            "courseCode" : "GMS6103",
+            "grade" : "P",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1200"
+        },
+        {
+            "name" : "Body & Disease",
+            "courseCode" : "GMS6104",
+            "grade" : "H",
+            "courseCredit" : 20,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1200"
+        },
+        {
+            "name" : "Practice Course 1",
+            "courseCode" : "GMS6105",
+            "grade" : "P",
+            "courseCredit" : 6,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1200"
+        },
+        {
+            "name" : "Investigative Methods & Tools",
+            "courseCode" : "GMS6106",
+            "grade" : "P",
+            "courseCredit" : 1,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1200"
+        },
+        {
+            "name" : "Orientation to Clinical Year",
+            "courseCode" : "GMS6200",
+            "grade" : "P",
+            "courseCredit" : 3,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Medicine Clerkship",
+            "courseCode" : "GMS6201",
+            "grade" : "HP",
+            "courseCredit" : 8,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Surgery Clerkship",
+            "courseCode" : "GMS6202",
+            "grade" : "HP",
+            "courseCredit" : 8,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Pediatrics Clerkship",
+            "courseCode" : "GMS6204",
+            "grade" : "P",
+            "courseCredit" : 8,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Psychiatry Clerkship",
+            "courseCode" : "GMS6205",
+            "grade" : "HP",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Neurology Clerkship",
+            "courseCode" : "GMS6206",
+            "grade" : "HP",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Clinical Core 2",
+            "courseCode" : "GMS6208",
+            "grade" : "P",
+            "courseCredit" : 1,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Oncology, Geri Med & Pall Care Progrm",
+            "courseCode" : "GMS6210",
+            "grade" : "P",
+            "courseCredit" : 1,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Practice Course 2",
+            "courseCode" : "GMS6212",
+            "grade" : "HP",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Anesthesiology Program",
+            "courseCode" : "GMS6215",
+            "grade" : "P",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Obstetrics & Gynecology Clerkship",
+            "courseCode" : "GMS6216",
+            "grade" : "H",
+            "courseCredit" : 6,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Radiology Program",
+            "courseCode" : "GMS6228",
+            "grade" : "P",
+            "courseCredit" : 1,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Cardiology Program",
+            "courseCode" : "GMS6276",
+            "grade" : "HP",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Musculoskeletal Year 2 Program",
+            "courseCode" : "GMS6297",
+            "grade" : "P",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1300"
+        },
+        {
+            "name" : "Practice Course 3",
+            "courseCode" : "GMS6301",
+            "grade" : "P",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1700"
+        },
+        {
+            "name" : "Family Medicine Clerkship",
+            "courseCode" : "GMS6302",
+            "grade" : "HP",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1700"
+        },
+        {
+            "name" : "Research Methods and Analysis",
+            "courseCode" : "GMS6304",
+            "grade" : "OVS",
+            "courseCredit" : 2,
+            "status" : "P",
+            "includeInGPA" : false,
+            "reportNo" : 1,
+            "semester" : "1800",
+            "transferSeq" : 1
+        },
+        {
+            "name" : "Research/Scholarship \u0028Part 1\u0029",
+            "courseCode" : "GMS6311",
+            "grade" : "OVS",
+            "courseCredit" : 17,
+            "status" : "P",
+            "includeInGPA" : false,
+            "reportNo" : 1,
+            "semester" : "1800",
+            "transferSeq" : 1
+        },
+        {
+            "name" : "Research/Scholarship \u0028Part 2\u0029",
+            "courseCode" : "GMS6312",
+            "grade" : "OVS",
+            "courseCredit" : 17,
+            "status" : "P",
+            "includeInGPA" : false,
+            "reportNo" : 1,
+            "semester" : "1800",
+            "transferSeq" : 1
+        },
+        {
+            "name" : "Research/Scholarship Thesis",
+            "courseCode" : "GMS6313",
+            "grade" : "OVS",
+            "courseCredit" : 4,
+            "status" : "P",
+            "includeInGPA" : false,
+            "reportNo" : 1,
+            "semester" : "1800",
+            "transferSeq" : 1
+        },
+        {
+            "name" : "Gastroenterology/Hepatology",
+            "courseCode" : "GMS6266B",
+            "grade" : "P",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Medical Oncology",
+            "courseCode" : "GMS6267B",
+            "grade" : "H",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Advanced Medicine",
+            "courseCode" : "GMS6401",
+            "grade" : "HP",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Advanced Surgery",
+            "courseCode" : "GMS6402",
+            "grade" : "HP",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Critical Care Rotation",
+            "courseCode" : "GMS6403",
+            "grade" : "P",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Musculoskeletal Rotation",
+            "courseCode" : "GMS6404",
+            "grade" : "H",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Advance Clinical Practice",
+            "courseCode" : "GMS6410B",
+            "grade" : "P",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Student as Future Educator",
+            "courseCode" : "GMS6411",
+            "grade" : "P",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Haematology",
+            "courseCode" : "GMS6463B",
+            "grade" : "HP",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Student-In-Practice \u0028Medicine\u0029",
+            "courseCode" : "GMS6495",
+            "grade" : "P",
+            "courseCredit" : 5,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Student-In-Practice \u0028Surgery\u0029",
+            "courseCode" : "GMS6496",
+            "grade" : "P",
+            "courseCredit" : 5,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Capstone",
+            "courseCode" : "GMS6499",
+            "grade" : "P",
+            "courseCredit" : 3,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1800"
+        },
+        {
+            "name" : "Infectious Disease",
+            "courseCode" : "GMS6264B",
+            "grade" : "HP",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1900"
+        },
+        {
+            "name" : "Rheumatology & Immunology",
+            "courseCode" : "GMS6265B",
+            "grade" : "H",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1900"
+        },
+        {
+            "name" : "Respiratory Medicine",
+            "courseCode" : "GMS6273B",
+            "grade" : "HP",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1900"
+        },
+        {
+            "name" : "Emergency Medicine",
+            "courseCode" : "GMS6414",
+            "grade" : "H",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1900"
+        },
+        {
+            "name" : "Paediatric Infectious Diseases",
+            "courseCode" : "GMS6432D",
+            "grade" : "HP",
+            "courseCredit" : 4,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1900"
+        },
+        {
+            "name" : "Dermatology",
+            "courseCode" : "GMS6460",
+            "grade" : "P",
+            "courseCredit" : 2,
+            "gradingBasis" : "GRD",
+            "includeInGPA" : true,
+            "reportNo" : 1,
+            "semester" : "1900"
+        }
+    ],
+    "additionalData" : {
+        "transcriptType" : "DKOF",
+        "transcriptGroup" : [
+            {
+                "name" : "1200",
+                "term" : "2012/2013",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "creditTransfer" : [
+                    {
+                        "sourceType" : "I",
+                        "creditsNoGPA" : 0,
+                        "creditsGPA" : 4,
+                        "orgId" : "National University of Singapore",
+                        "sourceCareer" : "Duke-NUS Graduate Medicine",
+                        "reportNo" : 1,
+                        "transferSeq" : 1
+                    }
+                ],
+                "summary" : [
+                    {
+                        "programName" : "Doctor of Medicine",
+                        "GPAName" : "Cumulative Credits",
+                        "GPA" : 52
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "1300",
+                "term" : "2013/2014",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Doctor of Medicine",
+                        "GPAName" : "Cumulative Credits",
+                        "GPA" : 106
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "1700",
+                "term" : "2017/2018",
+                "formOfStudy" : "DDNF",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Doctor of Medicine",
+                        "GPAName" : "Cumulative Credits",
+                        "GPA" : 112
+                    }
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "1800",
+                "term" : "2018/2019",
+                "formOfStudy" : "DDNF",
+                "fosPrintArea" : "ND",
+                "creditTransfer" : [
+                    {
+                        "sourceType" : "I",
+                        "creditsNoGPA" : 40,
+                        "creditsGPA" : 0,
+                        "orgId" : "National University of Singapore",
+                        "reportNo" : 1,
+                        "transferSeq" : 1
+                    }
+                ],
+                "summary" : [
+                    {
+                        "programName" : "Doctor of Medicine",
+                        "GPAName" : "Cumulative Credits",
+                        "GPA" : 189
+                    }
+                ],
+                "remarks" : [
+                                    "Awarded Credit Transfer \u002840 credits\u0029 for PhD Research Work Completed"
+                ],
+                "reportNo" : 1
+            },
+            {
+                "name" : "1900",
+                "term" : "2019/2020",
+                "formOfStudy" : "ENRL",
+                "fosPrintArea" : "ND",
+                "summary" : [
+                    {
+                        "programName" : "Doctor of Medicine",
+                        "GPAName" : "Cumulative Credits",
+                        "GPA" : 205
+                    }
+                ],
+                "reportNo" : 1
+            }
+        ],
+        "programData" : [
+            {
+                "programCode" : "D1310",
+                "programName" : "Doctor of Medicine",
+                "statusCode" : "CM",
+                "statusDescription" : "Completed Programme",
+                "effectiveDate" : "2019-10-31",
+                "admitTerm" : "1200",
+                "reportNo" : 1
+            }
+        ],
+        "degreeData" : [
+            {
+                "degreeTitle" : "Doctor of Medicine",
+                "dateConferred" : "2019-10-31",
+                "dateAdmitted" : "2012-08-13",
+                "GPAName" : "Cumulative Average Point",
+                "includeInGPA" : false,
+                "disableGPA" : false,
+                "cumCredits" : 205,
+                "plans" : [
+                    {
+                        "specialProgram" : true,
+                        "type" : "JDP",
+                        "typeName" : "Joint Degree Programme",
+                        "transcriptDescr" : "Completed a Joint MD with",
+                        "planDescr" : "Duke University"
+                    }
+                ],
+                "reportNo" : 1
+            }
+        ],
+        "leaveData" : [
+            {
+                "from" : "2014-08-04",
+                "to" : "2017-08-13",
+                "reportNo" : 1
+            }
+        ],
+        "uniqueId" : "NUSTS-A0098237U-DUKE-0-R001482906-1-P13580325-20230508"
+    }
+}
+
+;
+  </script>
+</html>
