@@ -12,7 +12,10 @@ import {
   NUS_TS_BACKIMG_YALE,
   NUS_TS_LEGEND,
   NUS_TS_LEGEND_DUKE,
-  NUS_TS_LEGEND_YALE
+  NUS_TS_LEGEND_YALE,
+  NUS_TS_LEGEND_2023,
+  NUS_TS_LEGEND_DUKE_2023,
+  NUS_TS_LEGEND_YALE_2023
 } from "../common";
 import {
   TranscriptDataFeeder,
@@ -30,6 +33,9 @@ const revCutOffDate2021 = "2021-08-10";
 // cutoff date for displaying dismissal remarks
 const dismissalRemarksCutOffDate = "2019-06-13";
 
+// cut off date for displaying new legend
+const newLegend2023 = new Date("2023-08-01");
+
 // flags to calssify transcript type
 let isUG;
 let isGD;
@@ -42,16 +48,28 @@ let isOfficial;
 let isConferred;
 let isRev2021;
 let toDisplayDismissalRemarks;
+let issuedOnDt = new Date();
+let CAPtoGPAlong;
+let CAPtoGPA;
+let moduletoCourse;
+let modcreditstoUnits;
+let creditsTounits;
+
+CAPtoGPA = issuedOnDt >= newLegend2023 ? `GPA` : `CAP`;
+CAPtoGPAlong = issuedOnDt >= newLegend2023 ? `Grade Point Average` : `Cumulative Average Point`;
+moduletoCourse = issuedOnDt >= newLegend2023 ? `COURSE` : `MODULE`;
+modcreditstoUnits = issuedOnDt >= newLegend2023 ? `UNITS` : `MODULAR CREDITS`;
+creditsTounits = issuedOnDt >= newLegend2023 ? `units` : `credits`;
 
 // Yale-NUS specific attributes and function
 let lastTermYaleNUS;
 let progNameYaleNUS;
 const yncCommensurateRemark = gpa => {
   if (gpa >= 4.5)
-    return "THIS CAP IS COMMENSURATE WITH NUS' HONOURS (HIGHEST DISTINCTION)";
+    return `THIS ${CAPtoGPA} IS COMMENSURATE WITH NUS' HONOURS (HIGHEST DISTINCTION)`;
   if (gpa >= 4)
-    return "THIS CAP IS COMMENSURATE WITH NUS' HONOURS (DISTINCTION)";
-  if (gpa >= 3.5) return "THIS CAP IS COMMENSURATE WITH NUS' HONOURS (MERIT)";
+    return `THIS ${CAPtoGPA} IS COMMENSURATE WITH NUS' HONOURS (DISTINCTION)`;
+  if (gpa >= 3.5) return `THIS ${CAPtoGPA} IS COMMENSURATE WITH NUS' HONOURS (MERIT)`;
   return null;
 };
 
@@ -242,11 +260,11 @@ class TranscriptCreditTransfer {
         let title;
         if (isDuke || isMedDen) {
           title =
-            "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
+            "CREDITS RECOGNISED ON ADMISSION (NUS ${moduletoCourse}S COMPLETED PRIOR TO CURRENT PROGRAMME):";
         } else if (!isNUSAPCTest && !isAPC) {
           if (!isCDP || transferData.reportNo === 1)
             title =
-              "CREDITS RECOGNISED ON ADMISSION (NUS MODULES COMPLETED PRIOR TO CURRENT PROGRAMME):";
+              "CREDITS RECOGNISED ON ADMISSION (NUS ${moduletoCourse}S COMPLETED PRIOR TO CURRENT PROGRAMME):";
         } else if (isNUSAPCTest) {
           title =
             "AWARDED ADVANCED PLACEMENT CREDITS FOR PASSING THE PLACEMENT TEST(S) CONDUCTED BY NUS";
@@ -286,9 +304,9 @@ class TranscriptCreditTransfer {
       ) {
         let title;
         if (transferData.sourceCareer) {
-          title = `CREDITS RECOGNISED (COMPLETED MODULES FROM ${transferData.sourceCareer.toUpperCase()} CAREER)`;
+          title = `CREDITS RECOGNISED (COMPLETED ${moduletoCourse}S FROM ${transferData.sourceCareer.toUpperCase()} CAREER)`;
         } else if (!isMedDen) {
-          title = "CREDITS RECOGNISED (COMPLETED MODULES FROM OTHER PROGRAMME)";
+          title = "CREDITS RECOGNISED (COMPLETED ${moduletoCourse}S FROM OTHER PROGRAMME)";
         }
         const credits =
           transferData.creditsNoGPA !== 0 && !isMedDen
@@ -460,7 +478,7 @@ class TranscriptEnrollment {
       "ts-term-enl-title",
       <td colSpan="4" className={cls("ts-termrem ts-highlight")}>
         <p />
-        ENROLLED IN THE FOLLOWING NUS MODULES:
+        ENROLLED IN THE FOLLOWING NUS {moduletoCourse.toUpperCase()}S:
       </td>
     );
   }
@@ -481,7 +499,7 @@ class TranscriptEnrollment {
     this.dataFeeder.push(
       "ts-term-enl-suptitle",
       <td colSpan="4" className={cls("ts-termrem")}>
-        REPEAT MODULE(S):
+        REPEAT {moduletoCourse.toUpperCase()}(S):
       </td>
     );
   }
@@ -491,7 +509,7 @@ class TranscriptEnrollment {
     this.dataFeeder.push(
       "ts-term-enl-suptitle",
       <td colSpan="4" className={cls("ts-termrem")}>
-        REMEDIATE MODULE(S):
+        REMEDIATE {moduletoCourse.toUpperCase()}(S):
       </td>
     );
   }
@@ -592,7 +610,7 @@ class TranscriptSummary {
     if (sumData.includeInGPA || isDuke) {
       if (sumData.disableGPA) {
         gpa = "NOT APPLICABLE";
-        gpaName = "CUMULATIVE AVERAGE POINT";
+        gpaName = `${CAPtoGPAlong.toUpperCase()}`;
       } else {
         gpa = sumData.GPA.toFixed(2);
         gpaName = sumData.GPAName.toUpperCase();
@@ -604,7 +622,7 @@ class TranscriptSummary {
       }
     } else {
       gpa = "NOT APPLICABLE";
-      gpaName = "CUMULATIVE AVERAGE POINT";
+      gpaName = `${CAPtoGPAlong.toUpperCase()}`;
     }
     this.dataFeeder.push(
       "ts-term-gpa",
@@ -720,8 +738,8 @@ class TranscriptTermRemarks {
           this.cache.push(
             "ts-term-rem-ncp",
             <td colSpan="4" className={cls("ts-termrem")}>
-              *{data.moduleCode} - Module was excluded from computation of the
-              final Cumulative Average Points/Marks.
+              *{data.moduleCode} - {moduletoCourse.toLowerCase()} was excluded from computation of the
+              final {CAPtoGPAlong}/Marks.
             </td>
           );
         }
@@ -752,7 +770,7 @@ class TranscriptTermRemarks {
               "ts-term-rem-trf",
               <td colSpan="4" className={cls("ts-termrem")}>
                 Please refer to the transcript of {transferData.orgName} for
-                details of modules taken and grades/credits obtained.
+                details of {moduletoCourse.toLowerCase()}s taken and grades/{creditsTounits} obtained.
               </td>
             );
           }
@@ -776,7 +794,7 @@ class TranscriptTermRemarks {
       this.cache.push(
         "ts-term-rem-fgpa",
         <td colSpan="4" className={cls("ts-termrem")}>
-          The Final Cumulative Average Point takes into account student&rsquo;s
+          The Final {CAPtoGPAlong} takes into account student&rsquo;s
           academic performance at the Partner University.
         </td>
       );
@@ -1622,8 +1640,8 @@ class TranscriptDegreeRev2021 {
       "ts-deg-cap",
       <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
         <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
-          {data.GPAName.toUpperCase() === "FINAL CUMULATIVE AVERAGE POINT"
-            ? "FINAL CAP"
+          {data.GPAName.toUpperCase() === ${CAPtoGPAlong.toUpperCase()}`
+            ? `FINAL ${CAPtoGPA}`
             : data.GPAName.toUpperCase()}
           :
         </div>
@@ -1659,7 +1677,7 @@ class TranscriptDegreeRev2021 {
         "ts-deg-mc",
         <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
           <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
-            CUMULATIVE MODULAR CREDITS:
+            CUMULATIVE {modcreditstoUnits}:
           </div>
           <div colSpan="2" className={cls("ts-title confer-col1")}>
             {data.cumCredits.toFixed(2)}
@@ -1781,9 +1799,15 @@ const Template = ({ certificate }) => {
       }
       : null;
   let legend;
-  if (isDuke) legend = NUS_TS_LEGEND_DUKE;
-  else if (isYaleNUS) legend = NUS_TS_LEGEND_YALE;
-  else legend = NUS_TS_LEGEND;
+  if (new Date(jsonData.issuedOn) >= newLegend2023) {
+        if (isDuke) legend = NUS_TS_LEGEND_DUKE_2023;
+        else if (isYaleNUS) legend = NUS_TS_LEGEND_YALE_2023;
+        else legend = NUS_TS_LEGEND_2023;
+    } else {
+        if (isDuke) legend = NUS_TS_LEGEND_DUKE;
+        else if (isYaleNUS) legend = NUS_TS_LEGEND_YALE;
+        else legend = NUS_TS_LEGEND;
+    }
   const backImgUrl = `url(${isYaleNUS ? NUS_TS_BACKIMG_YALE : NUS_TS_BACKIMG})`;
   const backgroundImg = {
     backgroundImage: backImgUrl,
