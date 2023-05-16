@@ -70,21 +70,21 @@ const renderTranscriptLegendPage = (legend, ratio) => {
 };
 
 // cut off date for displaying new legend
-const newLegend2023 = "2023-05-01";
+const termsChangeCutoffDate2023 = "2023-05-19";
 
 // render a term data header
 const renderTranscriptTermHeader = () => {
   const html = (
       <Fragment>
       <td className={cls("ts-title ts-highlight")}>
-        {issuedOnDt >= newLegend2023 ? <u>COURSE</u> : <u>MODULE</u>}
+        {issuedOnDt >= termsChangeCutoffDate2023 ? <u>COURSE</u> : <u>MODULE</u>}
       </td>
       <td className={cls("ts-title ts-highlight")}>&nbsp;</td>
       <td className={cls("ts-title ts-highlight")}>
         <u>GRADE</u>
       </td>
       <td className={cls("ts-title ts-highlight")}>
-        {issuedOnDt >= newLegend2023 ? <u>UNITS</u> : <u>CREDITS</u>}
+        {issuedOnDt >= termsChangeCutoffDate2023 ? <u>UNITS</u> : <u>CREDITS</u>}
       </td>
     </Fragment>
   );

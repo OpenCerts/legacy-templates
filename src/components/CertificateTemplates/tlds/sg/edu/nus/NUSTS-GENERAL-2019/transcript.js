@@ -34,7 +34,7 @@ const revCutOffDate2021 = "2021-08-10";
 const dismissalRemarksCutOffDate = "2019-06-13";
 
 // cut off date for displaying new legend
-const newLegend2023 = new Date("2023-08-01");
+const termsChangeCutoffDate2023 = new Date("2023-05-19");
 
 // flags to calssify transcript type
 let isUG;
@@ -55,11 +55,11 @@ let moduletoCourse;
 let modcreditstoUnits;
 let creditsTounits;
 
-CAPtoGPA = issuedOnDt >= newLegend2023 ? `GPA` : `CAP`;
-CAPtoGPAlong = issuedOnDt >= newLegend2023 ? `Grade Point Average` : `Cumulative Average Point`;
-moduletoCourse = issuedOnDt >= newLegend2023 ? `COURSE` : `MODULE`;
-modcreditstoUnits = issuedOnDt >= newLegend2023 ? `UNITS` : `MODULAR CREDITS`;
-creditsTounits = issuedOnDt >= newLegend2023 ? `units` : `credits`;
+CAPtoGPA = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `GPA` : `CAP`;
+CAPtoGPAlong = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `Grade Point Average` : `Cumulative Average Point`;
+moduletoCourse = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `Course` : `Module`;
+modcreditstoUnits = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `UNITS` : `MODULAR CREDITS`;
+creditsTounits = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `units` : `credits`;
 
 // Yale-NUS specific attributes and function
 let lastTermYaleNUS;
@@ -260,11 +260,11 @@ class TranscriptCreditTransfer {
         let title;
         if (isDuke || isMedDen) {
           title =
-            "CREDITS RECOGNISED ON ADMISSION (NUS ${moduletoCourse}S COMPLETED PRIOR TO CURRENT PROGRAMME):";
+            `CREDITS RECOGNISED ON ADMISSION (NUS ${moduletoCourse.toUpperCase()}S COMPLETED PRIOR TO CURRENT PROGRAMME):`;
         } else if (!isNUSAPCTest && !isAPC) {
           if (!isCDP || transferData.reportNo === 1)
             title =
-              "CREDITS RECOGNISED ON ADMISSION (NUS ${moduletoCourse}S COMPLETED PRIOR TO CURRENT PROGRAMME):";
+              `CREDITS RECOGNISED ON ADMISSION (NUS ${moduletoCourse.toUpperCase()}S COMPLETED PRIOR TO CURRENT PROGRAMME):`;
         } else if (isNUSAPCTest) {
           title =
             "AWARDED ADVANCED PLACEMENT CREDITS FOR PASSING THE PLACEMENT TEST(S) CONDUCTED BY NUS";
@@ -304,9 +304,9 @@ class TranscriptCreditTransfer {
       ) {
         let title;
         if (transferData.sourceCareer) {
-          title = `CREDITS RECOGNISED (COMPLETED ${moduletoCourse}S FROM ${transferData.sourceCareer.toUpperCase()} CAREER)`;
+          title = `CREDITS RECOGNISED (COMPLETED ${moduletoCourse.toUpperCase()}S FROM ${transferData.sourceCareer.toUpperCase()} CAREER)`;
         } else if (!isMedDen) {
-          title = "CREDITS RECOGNISED (COMPLETED ${moduletoCourse}S FROM OTHER PROGRAMME)";
+          title = `CREDITS RECOGNISED (COMPLETED ${moduletoCourse.toUpperCase()}S FROM OTHER PROGRAMME)`;
         }
         const credits =
           transferData.creditsNoGPA !== 0 && !isMedDen
@@ -738,7 +738,7 @@ class TranscriptTermRemarks {
           this.cache.push(
             "ts-term-rem-ncp",
             <td colSpan="4" className={cls("ts-termrem")}>
-              *{data.moduleCode} - {moduletoCourse.toLowerCase()} was excluded from computation of the
+              *{data.moduleCode} - {moduletoCourse} was excluded from computation of the
               final {CAPtoGPAlong}/Marks.
             </td>
           );
@@ -1640,7 +1640,7 @@ class TranscriptDegreeRev2021 {
       "ts-deg-cap",
       <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
         <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
-          {data.GPAName.toUpperCase() === ${CAPtoGPAlong.toUpperCase()}`
+          {data.GPAName.toUpperCase() === `${CAPtoGPAlong.toUpperCase()}`
             ? `FINAL ${CAPtoGPA}`
             : data.GPAName.toUpperCase()}
           :
@@ -1722,6 +1722,7 @@ class TranscriptDegreeRev2021 {
 const Template = ({ certificate }) => {
   // JSON data source
   const jsonData = certificate;
+  issuedOnDt = jsonData.issuedOn;
   // translate
   if (jsonData.additionalData.transcriptGroup)
     translateTranscriptTermData(jsonData);
@@ -1799,7 +1800,7 @@ const Template = ({ certificate }) => {
       }
       : null;
   let legend;
-  if (new Date(jsonData.issuedOn) >= newLegend2023) {
+  if (new Date(jsonData.issuedOn) >= termsChangeCutoffDate2023) {
         if (isDuke) legend = NUS_TS_LEGEND_DUKE_2023;
         else if (isYaleNUS) legend = NUS_TS_LEGEND_YALE_2023;
         else legend = NUS_TS_LEGEND_2023;
