@@ -1633,7 +1633,7 @@ class TranscriptDegreeRev2021 {
       "ts-deg-cap",
       <td colSpan="4" style={{ paddingTop: "0", paddingBottom: "0" }}>
         <div colSpan="2" className={cls("ts-title ts-highlight confer-col0")}>
-          {data.GPAName.toUpperCase() === `${CAPtoGPAlong.toUpperCase()}`
+          {data.GPAName.toUpperCase() === `FINAL ${CAPtoGPAlong.toUpperCase()}`
             ? `FINAL ${CAPtoGPA}`
             : data.GPAName.toUpperCase()}
           :
