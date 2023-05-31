@@ -34,7 +34,7 @@ const revCutOffDate2021 = "2021-08-10";
 const dismissalRemarksCutOffDate = "2019-06-13";
 
 // cut off date for displaying new legend
-const termsChangeCutoffDate2023 = new Date("2023-05-19");
+const termsChangeCutoffDate2023 = "2023-08-01";
 
 // flags to calssify transcript type
 let isUG;
@@ -48,18 +48,11 @@ let isOfficial;
 let isConferred;
 let isRev2021;
 let toDisplayDismissalRemarks;
-let issuedOnDt = new Date();
 let CAPtoGPAlong;
 let CAPtoGPA;
 let moduletoCourse;
 let modcreditstoUnits;
 let creditsTounits;
-
-CAPtoGPA = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `GPA` : `CAP`;
-CAPtoGPAlong = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `Grade Point Average` : `Cumulative Average Point`;
-moduletoCourse = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `Course` : `Module`;
-modcreditstoUnits = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `UNITS` : `MODULAR CREDITS`;
-creditsTounits = {issuedOnDt} >= {termsChangeCutoffDate2023} ? `units` : `credits`;
 
 // Yale-NUS specific attributes and function
 let lastTermYaleNUS;
@@ -1722,7 +1715,13 @@ class TranscriptDegreeRev2021 {
 const Template = ({ certificate }) => {
   // JSON data source
   const jsonData = certificate;
-  issuedOnDt = jsonData.issuedOn;
+  //Terminology Change wef Aug 2023
+    CAPtoGPA = jsonData.issuedOn >= termsChangeCutoffDate2023 ? `GPA` : `CAP`;
+    CAPtoGPAlong = jsonData.issuedOn >= termsChangeCutoffDate2023 ? `Grade Point Average` : `Cumulative Average Point`;
+    moduletoCourse = jsonData.issuedOn >= termsChangeCutoffDate2023 ? `Course` : `Module`;
+    modcreditstoUnits = jsonData.issuedOn >= termsChangeCutoffDate2023 ? `UNITS` : `MODULAR CREDITS`;
+    creditsTounits = jsonData.issuedOn >= termsChangeCutoffDate2023 ? `units` : `credits`;
+
   // translate
   if (jsonData.additionalData.transcriptGroup)
     translateTranscriptTermData(jsonData);
@@ -1800,7 +1799,7 @@ const Template = ({ certificate }) => {
       }
       : null;
   let legend;
-  if (new Date(jsonData.issuedOn) >= termsChangeCutoffDate2023) {
+  if (jsonData.issuedOn >= termsChangeCutoffDate2023) {
         if (isDuke) legend = NUS_TS_LEGEND_DUKE_2023;
         else if (isYaleNUS) legend = NUS_TS_LEGEND_YALE_2023;
         else legend = NUS_TS_LEGEND_2023;

@@ -70,7 +70,7 @@ const renderTranscriptLegendPage = (legend, ratio) => {
 };
 
 // cut off date for displaying new legend
-const termsChangeCutoffDate2023 = "2023-05-19";
+const termsChangeCutoffDate2023 = "2023-08-01";
 
 // render a term data header
 const renderTranscriptTermHeader = () => {
