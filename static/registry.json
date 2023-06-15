@@ -25,7 +25,18 @@
       "email": "asknp@np.edu.sg",
       "phone": "+65 6466 6555",
       "logo": "/static/images/NP_logo.svg",
-      "id": "np-registry"
+      "id": "np-registry",
+      "group": "np-registry"
+    },
+    "0x828dB5254a44e8630068107A2536219e0C84cacA": {
+      "name": "Ngee Ann Polytechnic CET Academy",
+      "displayCard": true,
+      "website": "https://www.np.edu.sg",
+      "email": "enquiryCET@np.edu.sg",
+      "phone": "+65 6460 6353",
+      "logo": "/static/images/NP_logo.svg",
+      "id": "np-registry-academy",
+      "group": "np-registry"
     },
     "0xE4a94Ef9C26904A02Cd6735F7D4De1D840146a0f": {
       "name": "Singapore Examinations and Assessment Board",
@@ -66,7 +77,7 @@
     "0x0CE38eBEa3B943Ee6DA24163710b25Ef8654f39E": {
       "name": "Institute of Technical Education",
       "displayCard": true,
-      "website": "https://ite.edu.sg",
+      "website": "https://www.ite.edu.sg",
       "email": "training@ite.edu.sg",
       "phone": "1800-2222 111",
       "logo": "/static/images/ITE_logo.png",
@@ -85,6 +96,192 @@
       "name": "ROPSTEN: Nanyang Polytechnic",
       "displayCard": false
     },
+    "0x96a7bEefb0A7fb6B9d2101B0A27a734fA97E7221": {
+      "name": "Singapore University of Technology and Design",
+      "displayCard": true,
+      "website": "https://sutd.edu.sg",
+      "email": "opencert@sutd.edu.sg",
+      "phone": "+65 6499 8922",
+      "logo": "/static/images/SUTD_logo.png",
+      "id": "sutd-registry"
+    },
+    "0x16E949FcDC655765959Ac085CA7B1aE353D6Ca35": {
+      "name": "Nanyang Technological University",
+      "displayCard": true,
+      "website": "https://www.ntu.edu.sg",
+      "email": "deg_verify@ntu.edu.sg",
+      "phone": "+65 6592 2448",
+      "logo": "/static/images/NTU_logo.png",
+      "id": "ntu-registry"
+    },
+    "0x61783202d023fd08dcc7d7ca8a196697c46c9d57": {
+      "name": "Nanyang Technological University",
+      "displayCard": true,
+      "website": "https://www.ntu.edu.sg",
+      "email": "deg_verify@ntu.edu.sg",
+      "phone": "+65 6592 2448",
+      "logo": "/static/images/NTU_logo.png",
+      "id": "ntu-registry"
+    },
+    "0xCFa2B7Fc3FdD5CA55715581e34420268CCcd3039": {
+      "name": "Singapore Management University",
+      "displayCard": true,
+      "website": "https://www.smu.edu.sg",
+      "email": "digitalcert@smu.edu.sg",
+      "phone": "+65 6828 0583 / +65 6808 5264 / +65 6808 5138",
+      "logo": "/static/images/SMU_logo.png",
+      "id": "smu-registry",
+      "group": "smu-registry"
+    },
+    "0x6c806e3E0Ea393eC7E8b7E7fa62eF92Fcd039404": {
+      "name": "Singapore Management University Academy",
+      "displayCard": true,
+      "website": "https://academy.smu.edu.sg",
+      "email": "academy@smu.edu.sg",
+      "phone": "+65 6828 9688",
+      "logo": "/static/images/SMU_logo.png",
+      "id": "smu-registry-academy",
+      "group": "smu-registry"
+    },
+    "0x38c8d4cbc63a23739abfe9c280a3c533a8dbebf5": {
+      "name": "Singapore Management University School of Accountancy",
+      "displayCard": true,
+      "website": "https://accountancy.smu.edu.sg",
+      "email": "accountancy@smu.edu.sg",
+      "phone": "+65 6828 0632",
+      "logo": "/static/images/SMU_logo.png",
+      "id": "smu-registry-accountancy",
+      "group": "smu-registry"
+    },
+    "0x6a8899bbe8bb1535e60cf9237fc6806c26066dee": {
+      "name": "Singapore Management University School of Economics",
+      "displayCard": true,
+      "website": "https://economics.smu.edu.sg",
+      "email": "economics_enquiries@smu.edu.sg",
+      "phone": "+65 6808 5108",
+      "logo": "/static/images/SMU_logo.png",
+      "id": "smu-registry-economics",
+      "group": "smu-registry"
+    },
+    "0x94cbba4b50d2c29d247221a7cc2dda356054078b": {
+      "name": "Singapore Management University School of Computing and Information Systems",
+      "displayCard": true,
+      "website": "https://scis.smu.edu.sg",
+      "email": "enquiries@scis.smu.edu.sg",
+      "phone": "+65 6808 5108",
+      "logo": "/static/images/SMU_logo.png",
+      "id": "smu-registry-sis",
+      "group": "smu-registry"
+    },
+    "0x5a8027a5fa187d495546c4041966703bf9018a11": {
+      "name": "Singapore Management University Lee Kong Chian School of Business",
+      "displayCard": true,
+      "website": "https://business.smu.edu.sg",
+      "email": "bschool@smu.edu.sg",
+      "phone": "+65 6828 0549",
+      "logo": "/static/images/SMU_logo.png",
+      "id": "smu-registry-business",
+      "group": "smu-registry"
+    },
+    "0x86e7e573a18df76ed840d6ae2af11785c1453911": {
+      "name": "Singapore Management University School of Law",
+      "displayCard": true,
+      "website": "https://law.smu.edu.sg",
+      "email": "law@smu.edu.sg",
+      "phone": "+65 6828 0502",
+      "logo": "/static/images/SMU_logo.png",
+      "id": "smu-registry-law",
+      "group": "smu-registry"
+    },
+    "0x5b3e03ec154629c67ad5d32e34048aac3fb0ddbe": {
+      "name": "Singapore Management University Institute of Service Excellence",
+      "displayCard": true,
+      "website": "https://ise.smu.edu.sg",
+      "email": "ise@smu.edu.sg",
+      "phone": "+65 6828 0111",
+      "logo": "/static/images/SMU_logo.png",
+      "id": "smu-registry-excellence",
+      "group": "smu-registry"
+    },
+    "0xA204F16717fbF580d6A0535b58063fB4fce969fF": {
+      "name": "National University of Singapore",
+      "displayCard": true,
+      "website": "http://www.nus.edu.sg/",
+      "email": "transcript@nus.edu.sg",
+      "phone": "+65 6516 2304",
+      "logo": "/static/images/NUS_logo.svg",
+      "id": "nus-registry"
+    },
+    "0x66671988ee465b5c23Ef18838B32b1666d0EC8d6": {
+      "name": "National University of Singapore",
+      "displayCard": true,
+      "website": "http://www.nus.edu.sg/",
+      "email": "transcript@nus.edu.sg",
+      "phone": "+65 6516 2304",
+      "logo": "/static/images/NUS_logo.svg",
+      "id": "nus-registry"
+    },
+    "0x69Ec8cA1A2A19566128F4157Dca6249d89046F1F": {
+      "name": "Singapore Polytechnic",
+      "displayCard": true,
+      "website": "https://www.sp.edu.sg",
+      "email": "contactus@sp.edu.sg",
+      "phone": "+65 6775 1133",
+      "logo": "/static/images/SP_logo.svg",
+      "id": "sp-registry"
+    },
+    "0x45b04D7EFdfA1B25296e5BC9eC88E3ae3C53CE9f": {
+      "name": "Singapore University of Social Sciences",
+      "displayCard": true,
+      "website": "https://www.suss.edu.sg/",
+      "email": "alumni@suss.edu.sg",
+      "phone": "+65 6248 9215",
+      "logo": "/static/images/SUSS_logo.png",
+      "id": "suss-registry"
+    },
+    "0x9cf976dc45bb5a9336238759e89051E7b09e016b": {
+      "name": "National Institute of Early Childhood Development",
+      "displayCard": true,
+      "website": "https://www.niec.edu.sg/",
+      "email": "aa@niec.edu.sg",
+      "phone": "+65 6332 0668",
+      "logo": "/static/images/NIEC_logo.png",
+      "id": "niec-registry"
+    },
+    "0xa53C84A422D9cCc5C4aDA9fa65B03e2Bb25E2D03": {
+      "name": "Lasalle College of the Arts",
+      "displayCard": true,
+      "website": "https://www.lasalle.edu.sg/",
+      "email": "academic.admin@lasalle.edu.sg",
+      "phone": "+65 6496 5200",
+      "logo": "/static/images/LASALLE_logo.png",
+      "id": "lasalle-registry"
+    },
+    "0x5af87c7C799FdD24418f436ccc5d0ef00a1D755B": {
+      "name": "Nanyang Academy of Fine Arts",
+      "displayCard": true,
+      "website": "https://www.nafa.edu.sg/",
+      "email": "nafacerts@nafa.edu.sg",
+      "phone": "+65 6512 4000",
+      "logo": "/static/images/NAFA_Arts_logo.png",
+      "id": "nanyang-art-registry"
+    },
+    "0xb3c1404732585ddEB837Af28eBdAec504ed8Ba04": {
+      "name": "ROPSTEN: Singapore Management University",
+      "displayCard": false
+    },
+    "0x58ae2F4D8A1A32e1BBf3B60B226150eD5cd6d028": {
+      "name": "GOERLI: Singapore Management University",
+      "displayCard": false
+    },
+    "0x3FFB6b913E9874c7ddabD564d85676Bc5cAd16d4": {
+      "name": "ROPSTEN: Nanyang Technological University",
+      "displayCard": false
+    },
+    "0xDcb5bCe006f5F369579854EC32eC6fa53ba915Be": {
+      "name": "GOERLI: Nanyang Polytechnic",
+      "displayCard": false
+    },
     "0xfEbB273495F5C2c4783E23424Fe9773691b57fcB": {
       "name": "ROPSTEN: National University of Singapore",
       "displayCard": false
@@ -97,8 +294,16 @@
       "name": "ROPSTEN: Ngee Ann Polytechnic",
       "displayCard": false
     },
+    "0x5414FEfD05e9C18EcB5440299A26021eDbAd2950": {
+      "name": "GOERLI: Ngee Ann Polytechnic",
+      "displayCard": false
+    },
     "0xeDe1B6Fc03f1a9C6905C93a2fceb06E19624a55E": {
       "name": "ROPSTEN: Singapore Examinations and Assessment Board",
+      "displayCard": false
+    },
+    "0x1f8A474e7D62Cd64F27B5037bd3541886441981B": {
+      "name": "GOERLI: Singapore Examinations and Assessment Board",
       "displayCard": false
     },
     "0x897E224a6a8b72535D67940B3B8CE53f9B596800": {
@@ -117,16 +322,68 @@
       "name": "ROPSTEN: Temasek Polytechnic",
       "displayCard": false
     },
+    "0x2668F220D6AfaFaFFDC3130d821695231EeE18f4": {
+      "name": "GOERLI: Temasek Polytechnic",
+      "displayCard": false
+    },
     "0xE5c693015460868F817799CAFb363EEDb4F9E446": {
       "name": "ROPSTEN: Institute of Technical Education",
+      "displayCard": false
+    },
+    "0x5D6A1E68878b88eCac50E80Ab83cCe7ec9caAc01": {
+      "name": "GOERLI: Institute of Technical Education",
       "displayCard": false
     },
     "0xdcA6Eea7024151c270b50FcA9E67161119B06BAD": {
       "name": "ROPSTEN: Government Technology Agency of Singapore (GovTech)",
       "displayCard": false
     },
+    "0x532C9Ff853CA54370D7492cD84040F9f8099f11B": {
+      "name": "ROPSTEN: Government Technology Agency of Singapore (GovTech)",
+      "displayCard": false
+    },
     "0x061aFcFF60b90E0F633F8ef157e01BaB9b2FfDD3": {
-      "name:": "ROPSTEN: Republic Polytechnic",
+      "name": "ROPSTEN: Republic Polytechnic",
+      "displayCard": false
+    },
+    "0x5AA6bF8F748cD2D8f1949eD328B2bEa61CE2B6d7": {
+      "name": "GOERLI: Republic Polytechnic",
+      "displayCard": false
+    },
+    "0x8b1ee9507681fea227d78ef9377d0f054856b774": {
+      "name": "GOERLI: Singapore Polytechnic",
+      "displayCard": false
+    },
+    "0x2456FC81C1342fB79D7C58A4682F031208A44d7F": {
+      "name": "ROPSTEN: Singapore University of Technology and Design",
+      "displayCard": false
+    },
+    "0x46cf931c320ce7277753dbb15567dD684404e36C": {
+      "name": "ROPSTEN: Singapore University of Social Sciences",
+      "displayCard": false
+    },
+    "0x146d1e1938dc0f5fbb2179727c2fa61522cd1834": {
+      "name": "ROPSTEN: National Institute of Early Childhood Development",
+      "displayCard": false
+    },
+    "0xb02bcBb4865d0301F6e4A5f46043498f7c348E03": {
+      "name": "ROPSTEN: Lasalle College of the Arts",
+      "displayCard": false
+    },
+    "0x7Ee2B9a0043Bda975398477695ba5c2361acC50C": {
+      "name": "RINKEBY: Government Technology Agency of Singapore (GovTech)",
+      "displayCard": false
+    },
+    "0xb3db78c0cc3622e078622C8395095a7B95415Acf": {
+      "name": "GOERLI: Government Technology Agency of Singapore (GovTech)",
+      "displayCard": false
+    },
+    "0x49b2969bF0E4aa822023a9eA2293b24E4518C1DD": {
+      "name": "GOERLI: Government Technology Agency of Singapore (GovTech)",
+      "displayCard": false
+    },
+    "0x80732bF5CA47A85e599f3ac9572F602c249C8A28": {
+      "name": "MUMBAI: Government Technology Agency of Singapore (GovTech)",
       "displayCard": false
     }
   }
