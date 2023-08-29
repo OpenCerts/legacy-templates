@@ -35,7 +35,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "redux": "^4.0.0"
+    "redux": "^4.2.1"
   },
   "license": "ISC",
   "devDependencies": {
