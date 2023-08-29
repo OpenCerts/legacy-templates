@@ -28,7 +28,7 @@
     "date-fns": "^1.29.0",
     "debug": "^4.1.0",
     "lodash": "^4.17.15",
-    "moment-timezone": "^0.5.23",
+    "moment-timezone": "^0.5.43",
     "next": "^9.0.4",
     "number-to-words": "^1.2.4",
     "penpal": "^4.0.0",
