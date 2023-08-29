@@ -22,7 +22,7 @@
     "integration:watch": "nodemon --exec \"npm run integration\" --watch src"
   },
   "dependencies": {
-    "@govtechsg/open-attestation": "^1.1.30",
+    "@govtechsg/open-attestation": "^1.1.42",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-sass": "^1.0.1",
     "date-fns": "^1.29.0",
