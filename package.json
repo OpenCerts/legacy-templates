@@ -27,7 +27,7 @@
     "@zeit/next-sass": "^1.0.1",
     "date-fns": "^1.29.0",
     "debug": "^4.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "moment-timezone": "^0.5.23",
     "next": "^9.0.4",
     "number-to-words": "^1.2.4",
