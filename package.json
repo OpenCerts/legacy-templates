@@ -29,7 +29,7 @@
     "debug": "^4.3.4",
     "lodash": "^4.17.21",
     "moment-timezone": "^0.5.43",
-    "next": "^9.0.4",
+    "next": "^10.0.6",
     "number-to-words": "^1.2.4",
     "penpal": "^4.0.0",
     "prop-types": "^15.6.1",
@@ -67,11 +67,13 @@
     "jest-sonar-reporter": "^2.0.0",
     "node-sass": "^4.12.0",
     "nodemon": "^1.18.10",
+    "postcss": "^8.4.31",
     "prettier": "^1.15.3",
     "proxyquire": "^2.1.0",
     "react-test-renderer": "^16.8.6",
     "sinon": "^7.1.1",
-    "testcafe": "^1.1.0"
+    "testcafe": "^1.1.0",
+    "webpack": "^4.44.2"
   },
   "jest": {
     "testResultsProcessor": "jest-sonar-reporter"
