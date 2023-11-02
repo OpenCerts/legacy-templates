@@ -5,9 +5,14 @@ import FramelessCertificateViewer from "../FramelessCertificateViewer";
 
 jest.mock("../FramelessViewerPageContainer.js", () => jest.fn());
 
-jest.mock("../../CertificateTemplates/", () => ({
-  default: () => <div>Default</div>,
-  custom: () => <div>Custom</div>
+// jest.mock("../../CertificateTemplates/", () => ({
+//   default: () => <div>Default</div>,
+//   custom: () => <div>Custom</div>
+// }));
+
+jest.mock("../../CertificateTemplates", () => ({
+  default: () => "Default",
+  custom: () => "Custom"
 }));
 
 it("renders default template if no other templates are specified", () => {
