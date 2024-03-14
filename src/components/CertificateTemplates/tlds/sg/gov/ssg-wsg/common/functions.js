@@ -895,12 +895,14 @@ export const renderSignatureSOACC = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{  width: "100%",  height: "auto",marginTop:"6%"}} src={IMG_SEAL} />
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "6%" }}
+        src={IMG_SEAL}
+      />
     </div>
 
-    <div className="col-lg-7">
+    <div className="col-md-7">
       <div
         className="col-lg-4 col-12"
         style={{ paddingLeft: "0px", fontSize: "1.5rem" }}
@@ -922,7 +924,7 @@ export const renderSignatureSOACC = certificate => (
       </div>
       {renderFooterText(styles.footerTextStyle)}
     </div>
-    <div className="col-lg-3 col-xs-12">
+    <div className="col-md-3 col-xs-12">
       <div style={{ marginBottom: "70px", marginTop: "60px" }}>
         <p style={styles.printTextStyle} className="RobotoRegular">
           Cert No: {get(certificate, "additionalData.serialNum")}
