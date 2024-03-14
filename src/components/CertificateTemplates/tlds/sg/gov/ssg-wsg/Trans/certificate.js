@@ -157,7 +157,7 @@ export const renderCopyright = () => (
 
 export const renderQualificationText = certificate => (
   <div>
-    <div className="d-flex" style={{ marginTop: "3rem" }}>
+    <div className="d-flex" style={{ paddingTop: "3rem" }}>
       <p style={styles.printTextStyle} className="RobotoRegular">
         A qualification is awarded to an individual in recognition of his/her
         attainment of the required industry validated competencies under the
