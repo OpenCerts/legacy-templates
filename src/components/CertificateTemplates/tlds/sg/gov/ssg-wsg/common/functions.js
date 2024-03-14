@@ -130,7 +130,7 @@ export const getSpecialization = additionalData => {
 
 export const renderLogoWSQ = certificate => (
   <div className="row d-flex">
-    <div className="col-lg-5 col-12" style={{ paddingRight: "0px" }}>
+    <div className="col-md-5 col-12" style={{ paddingRight: "0px" }}>
       {effectiveDateForWSQLOGO(certificate)}
     </div>
     <div className="col-lg-6" />
