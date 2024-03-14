@@ -147,10 +147,10 @@ export const renderIssuingDate = certificate => (
 
 export const renderLogoNICF = () => (
   <div className="row d-flex">
-    <div className="col-lg-4 col-12">
+    <div className="col-md-4 col-12">
       <img style={styles.fullWidthStyle} src={NICF_LOGO} />
     </div>
-    <div className="col-lg-6" />
+    <div className="col-md-6" />
   </div>
 );
 
@@ -421,11 +421,17 @@ export const renderSignatureSOAIT = certificate => (
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
 
-      <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{width: "100%", height: "auto", marginTop:"29%"}} src={IMG_SEAL} />
-     </div>
-    <div className="col-lg-10 col-12 row d-flex justify-content-center" style={{paddingLeft:"8px"}}>
-      <div className="col-lg-8" >
+<div className="col-md-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "29%" }}
+        src={IMG_SEAL}
+      />
+    </div>
+    <div
+      className="col-md-10 col-12 row d-flex justify-content-center"
+      style={{ paddingLeft: "8px" }}
+    >
+      <div className="col-md-8">
         {renderSignature(certificate)}
         <div style={styles.footerTextStyle} className="RobotoLight">
           The training and assessment of the abovementioned learner are
@@ -441,18 +447,18 @@ export const renderSignatureSOAIT = certificate => (
             : ""}
         </div>
       </div>
-      <div className="col-lg-4 col-xs-12">
+      <div className="col-md-4 col-xs-12">
         <div style={{ marginBottom: "70px", marginTop: "60px" }}>
           <p style={styles.printTextStyle} className="RobotoRegular">
             Cert No: {get(certificate, "additionalData.serialNum")}
           </p>
         </div>
       </div>
-      <div className="col-lg-5 col-12">
+      <div className="col-md-5 col-12">
         {renderFooterText(styles.footerAboutTextStyle)}
       </div>
       <div
-        className="col-lg-7 col-12 d-flex justify-content-center"
+        className="col-md-7 col-12 d-flex justify-content-center"
         style={{ alignItems: "center" }}
       >
         <div style={{ margin: "15px" }}>
