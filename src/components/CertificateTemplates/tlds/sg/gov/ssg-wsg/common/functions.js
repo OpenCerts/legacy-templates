@@ -646,7 +646,7 @@ export const renderSignatureSOAHR = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
       {["QUAL_Reprint"].includes(
         get(certificate, "additionalData.certCode")
       ) ? (
@@ -661,7 +661,7 @@ export const renderSignatureSOAHR = certificate => (
         />
       )}
     </div>
-    <div className="col-lg-6" style={{ paddingLeft: "8px" }}>
+    <div className="col-md-6" style={{ paddingLeft: "8px" }}>
       {renderSignature(certificate)}
       <div style={styles.footerTextStyle} className="RobotoLight">
         The training and assessment of the abovementioned learner are accredited
@@ -683,7 +683,7 @@ export const renderSignatureSOAHR = certificate => (
       {renderFooterText(styles.footerTextStyle)}
     </div>
     <div
-      className="col-lg-4 col-xs-12 d-flex"
+      className="col-md-4 col-xs-12 d-flex"
       style={{ flexDirection: "column" }}
     >
       <div style={{ flex: "1", marginTop: "30px" }}>
