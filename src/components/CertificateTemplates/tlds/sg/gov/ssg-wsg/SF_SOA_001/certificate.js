@@ -14,12 +14,13 @@ export const renderSignatureSFSOA = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-      <img style={{width: "100%", height: "auto",marginTop:"49%"}} src={IMG_SEAL} />
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "49%" }}
+        src={IMG_SEAL}
+      />
     </div>
-
-    <div className="col-lg-7" style={{ paddingLeft: "8px" }}>
+    <div className="col-md-7" style={{ paddingLeft: "8px" }}>
       <div className="col-12" style={{ padding: "5px" }}>
         <img
           style={styles.signatureWidthStyle}
@@ -50,7 +51,7 @@ export const renderSignatureSFSOA = certificate => (
         https://myskillsfuture.sg/verify_eCert.html
       </div>
     </div>
-    <div className="col-lg-3 col-xs-12">
+    <div className="col-md-3 col-xs-12">
       <div style={{ marginBottom: "70px", marginTop: "60px" }}>
         <p style={styles.printTextStyle} className="RobotoRegular">
           Cert No: {get(certificate, "additionalData.serialNum")}

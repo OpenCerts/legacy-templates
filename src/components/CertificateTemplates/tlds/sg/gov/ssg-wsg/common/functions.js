@@ -130,10 +130,10 @@ export const getSpecialization = additionalData => {
 
 export const renderLogoWSQ = certificate => (
   <div className="row d-flex">
-    <div className="col-lg-5 col-12" style={{ paddingRight: "0px" }}>
+    <div className="col-md-5 col-12" style={{ paddingRight: "0px" }}>
       {effectiveDateForWSQLOGO(certificate)}
     </div>
-    <div className="col-lg-6" />
+    <div className="col-md-6" />
   </div>
 );
 
@@ -147,10 +147,10 @@ export const renderIssuingDate = certificate => (
 
 export const renderLogoNICF = () => (
   <div className="row d-flex">
-    <div className="col-lg-4 col-12">
+    <div className="col-md-4 col-12">
       <img style={styles.fullWidthStyle} src={NICF_LOGO} />
     </div>
-    <div className="col-lg-6" />
+    <div className="col-md-6" />
   </div>
 );
 
@@ -189,9 +189,7 @@ export const renderRecipientID = certificate => (
 );
 
 export const renderSeal = () => (
-
   <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
-
     <img style={styles.sealWidthStyle} src={IMG_SEAL} />
   </div>
 );
@@ -227,10 +225,7 @@ export const switchOperatorFunction = certificate => {
 export const renderSignature = certificate => (
   <div>
     {["QUAL_Reprint"].includes(get(certificate, "additionalData.certCode")) ? (
-      <div
-        className="col-lg-5 col-12"
-        style={{ paddingLeft: "0px", fontSize: "1.5rem" }}
-      >
+      <div style={{ paddingLeft: "0px", fontSize: "1.5rem" }}>
         <p style={{ fontWeight: "bold", color: "#FF0000" }}>Certified Copy</p>
       </div>
     ) : (
@@ -424,11 +419,17 @@ export const renderSignatureSOAIT = certificate => (
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
 
-      <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{width: "100%", height: "auto", marginTop:"29%"}} src={IMG_SEAL} />
-     </div>
-    <div className="col-lg-10 col-12 row d-flex justify-content-center" style={{paddingLeft:"8px"}}>
-      <div className="col-lg-8" >
+<div className="col-md-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "29%" }}
+        src={IMG_SEAL}
+      />
+    </div>
+    <div
+      className="col-md-10 col-12 row d-flex justify-content-center"
+      style={{ paddingLeft: "8px" }}
+    >
+      <div className="col-md-8">
         {renderSignature(certificate)}
         <div style={styles.footerTextStyle} className="RobotoLight">
           The training and assessment of the abovementioned learner are
@@ -444,18 +445,18 @@ export const renderSignatureSOAIT = certificate => (
             : ""}
         </div>
       </div>
-      <div className="col-lg-4 col-xs-12">
+      <div className="col-md-4 col-xs-12">
         <div style={{ marginBottom: "70px", marginTop: "60px" }}>
           <p style={styles.printTextStyle} className="RobotoRegular">
             Cert No: {get(certificate, "additionalData.serialNum")}
           </p>
         </div>
       </div>
-      <div className="col-lg-5 col-12">
+      <div className="col-md-5 col-12">
         {renderFooterText(styles.footerAboutTextStyle)}
       </div>
       <div
-        className="col-lg-7 col-12 d-flex justify-content-center"
+        className="col-md-7 col-12 d-flex justify-content-center"
         style={{ alignItems: "center" }}
       >
         <div style={{ margin: "15px" }}>
@@ -646,7 +647,7 @@ export const renderSignatureSOAHR = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-2 col-6" style={{ padding: "0px" }}>
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
       {["QUAL_Reprint"].includes(
         get(certificate, "additionalData.certCode")
       ) ? (
@@ -661,7 +662,7 @@ export const renderSignatureSOAHR = certificate => (
         />
       )}
     </div>
-    <div className="col-lg-6" style={{ paddingLeft: "8px" }}>
+    <div className="col-md-6" style={{ paddingLeft: "8px" }}>
       {renderSignature(certificate)}
       <div style={styles.footerTextStyle} className="RobotoLight">
         The training and assessment of the abovementioned learner are accredited
@@ -683,7 +684,7 @@ export const renderSignatureSOAHR = certificate => (
       {renderFooterText(styles.footerTextStyle)}
     </div>
     <div
-      className="col-lg-4 col-xs-12 d-flex"
+      className="col-md-4 col-xs-12 d-flex"
       style={{ flexDirection: "column" }}
     >
       <div style={{ flex: "1", marginTop: "30px" }}>
@@ -751,11 +752,13 @@ export const renderSignaturePartner = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-
-     <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{width: "100%", height: "auto",marginTop:"40%"}} src={IMG_SEAL} />
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "40%" }}
+        src={IMG_SEAL}
+      />
     </div>
-    <div className="col-lg-6" style={{paddingLeft:"8px"}}>
+    <div className="col-md-6" style={{ paddingLeft: "8px" }}>
       {renderSignature(certificate)}
       <img style={styles.signatureFooterLogoStyle} src={IMG_SSGLOGO} />
       <div style={styles.minHeightfooterTextStyle} className="RobotoLight">
@@ -766,7 +769,7 @@ export const renderSignaturePartner = certificate => (
       {renderFooterText(styles.footerTextStyle)}
     </div>
     <div
-      className="col-lg-4 col-xs-12 d-flex"
+      className="col-md-4 col-xs-12 d-flex"
       style={{ flexDirection: "column" }}
     >
       <div style={{ flex: "1", marginTop: "60px" }}>
@@ -895,16 +898,15 @@ export const renderSignatureSOACC = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{  width: "100%",  height: "auto",marginTop:"6%"}} src={IMG_SEAL} />
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "6%" }}
+        src={IMG_SEAL}
+      />
     </div>
 
-    <div className="col-lg-7">
-      <div
-        className="col-lg-4 col-12"
-        style={{ paddingLeft: "0px", fontSize: "1.5rem" }}
-      >
+    <div className="col-md-7">
+      <div style={{ paddingLeft: "0px", fontSize: "1.5rem" }}>
         <p style={{ fontWeight: "bold", color: "#FF0000" }}>Certified Copy</p>
       </div>
       <div style={styles.designationTextStyle} className="RobotoBold">
@@ -922,7 +924,7 @@ export const renderSignatureSOACC = certificate => (
       </div>
       {renderFooterText(styles.footerTextStyle)}
     </div>
-    <div className="col-lg-3 col-xs-12">
+    <div className="col-md-3 col-xs-12">
       <div style={{ marginBottom: "70px", marginTop: "60px" }}>
         <p style={styles.printTextStyle} className="RobotoRegular">
           Cert No: {get(certificate, "additionalData.serialNum")}
@@ -973,11 +975,13 @@ export const renderSignatureSOAES = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-
-     <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    <img style={{width: "100%",  height: "auto",marginTop:"40%"}} src={IMG_SEAL} />
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
+      <img
+        style={{ width: "100%", height: "auto", marginTop: "40%" }}
+        src={IMG_SEAL}
+      />
     </div>
-    <div className="col-lg-6" style={{paddingLeft:"5px"}} >
+    <div className="col-md-6" style={{ paddingLeft: "5px" }}>
       {renderSignature(certificate)}
       <img style={styles.signatureFooterLogoStyle} src={IMG_SSGLOGO} />
       <div style={styles.minHeightfooterTextStyle} className="RobotoLight">
@@ -991,7 +995,7 @@ export const renderSignatureSOAES = certificate => (
       </div>
       {renderFooterText(styles.footerTextStyle)}
     </div>
-    <div className="col-lg-4 col-xs-12 d-flex">
+    <div className="col-md-4 col-xs-12 d-flex">
       <div
         className="col-lg-10 col-8"
         style={{ textAlign: "right", alignSelf: "flex-end", padding: "0px" }}
@@ -1034,13 +1038,22 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
- 
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
-    {["FQ-004","SF_FQ_004"].includes(get(certificate, "additionalData.certCode"))
-          ? <img style={{width: "100%",  height: "auto",marginTop:"46%"}} src={IMG_SEAL} />
-          : <img style={{width: "100%",  height: "auto",marginTop:"28%"}} src={IMG_SEAL} />}
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
+      {["FQ-004", "SF_FQ_004"].includes(
+        get(certificate, "additionalData.certCode")
+      ) ? (
+        <img
+          style={{ width: "100%", height: "auto", marginTop: "46%" }}
+          src={IMG_SEAL}
+        />
+      ) : (
+        <img
+          style={{ width: "100%", height: "auto", marginTop: "28%" }}
+          src={IMG_SEAL}
+        />
+      )}
     </div>
-    <div className="col-lg-6" style={{ paddingLeft: "8px" }} >
+    <div className="col-md-6" style={{ paddingLeft: "8px" }} >
       {renderSignature(certificate)}
       <div style={{ paddingLeft: "0px" }} className="col-lg-5 col-12">
         <img style={styles.footerLogoStyle} src={IMG_SSGLOGO} />
@@ -1099,7 +1112,7 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
         </div>
       </div>
     </div>
-    <div className="col-lg-4 col-xs-12">
+    <div className="col-md-4 col-xs-12">
       <div style={{ marginBottom: "70px", marginTop: "60px" }}>
         <p style={styles.printTextStyle} className="RobotoRegular">
           Cert No: {get(certificate, "additionalData.serialNum")}
