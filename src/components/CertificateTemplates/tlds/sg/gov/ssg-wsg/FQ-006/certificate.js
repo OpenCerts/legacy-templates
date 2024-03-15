@@ -22,11 +22,11 @@ export const effectiveDateForWSQLOGOQual = certificate => {
 
 export const renderLogoWSQ = certificate => (
   <div className="row d-flex" style={{ marginTop: "3rem" }}>
-    <div className="col-lg-5 col-12">
+    <div className="col-md-5 col-12">
       {effectiveDateForWSQLOGOQual(certificate)}
     </div>
-    <div className="col-lg-2 col-12" />
-    <div className="col-lg-5 col-12">
+    <div className="col-md-2 col-12" />
+    <div className="col-md-5 col-12">
       <img style={styles.fullWidthStyleQual} src={DIGIPEN_LOGO} />
     </div>
   </div>
@@ -38,13 +38,13 @@ export const renderSignature = certificate => (
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
 
-    <div className="col-lg-2 col-6" style={{padding:"0px"}}>
+    <div className="col-md-2 col-6" style={{padding:"0px"}}>
       <img style={styles.sealWidthStyle} src={IMG_SEAL} />
     </div>
 
-    <div className="col-lg-10" style={{paddingLeft:"8px"}}>
+    <div className="col-md-10" style={{paddingLeft:"8px"}}>
       <div className="row">
-        <div className="col-lg-6 col-12">
+        <div className="col-md-6 col-12">
           <div className="col-12" style={{height: "65%"}}>
 
             <img
@@ -63,7 +63,7 @@ export const renderSignature = certificate => (
             {get(certificate, "additionalData.certSignatories[0].organisation")}
           </div>
         </div>
-        <div className="col-lg-6 col-12">
+        <div className="col-md-6 col-12">
 
           <div className="col-12" style={{height: "65%"}}>
 
@@ -85,7 +85,7 @@ export const renderSignature = certificate => (
         </div>
       </div>
       <div className="row">
-        <div className="col-lg-7 col-12">
+        <div className="col-md-7 col-12">
           <div style={styles.footerTextStyle} className="RobotoLight">
             The training and assessment of the abovementioned learner are
             accredited
@@ -107,7 +107,7 @@ export const renderSignature = certificate => (
             </a>
           </div>
         </div>
-        <div className="col-lg-5 col-12">
+        <div className="col-md-5 col-12">
           <div
             style={{ marginBottom: "70px", marginTop: "60px", display: "flex" }}
           >
