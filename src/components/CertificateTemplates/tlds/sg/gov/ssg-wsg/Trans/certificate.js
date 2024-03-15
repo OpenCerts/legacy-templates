@@ -147,7 +147,7 @@ export const renderFooter = certificate => (
 
 export const renderCopyright = () => (
   <div>
-    <div className="d-flex mt-5">
+    <div className="d-flex" style={{ marginTop: "3rem" }}>
       <p style={styles.copyrightStyle} className="RobotoLight">
         Copyright @ 2016 All Rights Reserved SkillsFuture Singapore Agency
       </p>
