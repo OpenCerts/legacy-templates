@@ -6,7 +6,7 @@
     "test:watch": "jest --watchAll",
     "test:update": "jest -u",
     "dev": "next",
-    "lint": "eslint ./src ./pages --ext .js --max-warnings 0",
+    "lint-check": "eslint ./src ./pages --ext .js --max-warnings 0",
     "lint:fix": "eslint ./src ./pages --ext .js --fix",
     "build": "next build",
     "build:static": "next build && next export",
