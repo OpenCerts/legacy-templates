@@ -25,7 +25,7 @@ const renderTranscriptItems = certificate =>
 
 export const renderLogoWSQ = certificate => (
   <div className="row d-flex">
-    <div className="col-lg-4 col-12">
+    <div className="col-md-4 col-12">
       {effectiveDateForWSQLOGO(certificate)}
     </div>
   </div>
@@ -36,7 +36,7 @@ export const renderSignature = certificate => (
     className="row d-flex justify-content-center align-items-end"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-    <div className="col-lg-7 col-xs-12">
+    <div className="col-md-7 col-xs-12">
       <div style={styles.designationTextStyle} className="RobotoLight">
         {get(certificate, "additionalData.certSignatories[0].position")}
       </div>
@@ -53,8 +53,8 @@ export const renderSignature = certificate => (
         </a>
       </div>
     </div>
-    <div className="col-lg-2 col-xs-12" />
-    <div className="col-lg-3 col-xs-12">
+    <div className="col-md-2 col-xs-12" />
+    <div className="col-md-3 col-xs-12">
       <img style={styles.transFooterLogoStyle} src={IMG_SSGLOGO} />
       {renderTRAcode(certificate)}
     </div>
@@ -67,12 +67,12 @@ export const renderAwardText = certificate => (
       {renderAwardTextTrans(certificate)}
     </div>
     <div className="row d-flex align-items-end" style={{ marginTop: "1rem" }}>
-      <div className="col-lg-10 col-xs-12">
+      <div className="col-md-10 col-xs-12">
         <span style={styles.transNameTextStyle} className="RobotoMedium">
           Name: {certificate.recipient.name}
         </span>
       </div>
-      <div className="col-lg-2 col-xs-12">
+      <div className="col-md-2 col-xs-12">
         <span>{get(certificate, "additionalData.serialNum")}</span>
       </div>
     </div>
@@ -147,7 +147,7 @@ export const renderFooter = certificate => (
 
 export const renderCopyright = () => (
   <div>
-    <div className="d-flex" style={{ marginTop: "15rem" }}>
+    <div className="d-flex" style={{ marginTop: "3rem" }}>
       <p style={styles.copyrightStyle} className="RobotoLight">
         Copyright @ 2016 All Rights Reserved SkillsFuture Singapore Agency
       </p>
@@ -157,7 +157,7 @@ export const renderCopyright = () => (
 
 export const renderQualificationText = certificate => (
   <div>
-    <div className="d-flex" style={{ marginTop: "3rem" }}>
+    <div className="d-flex" style={{ paddingTop: "3rem" }}>
       <p style={styles.printTextStyle} className="RobotoRegular">
         A qualification is awarded to an individual in recognition of his/her
         attainment of the required industry validated competencies under the
