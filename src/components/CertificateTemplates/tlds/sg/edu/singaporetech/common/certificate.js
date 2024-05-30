@@ -3,7 +3,7 @@ import { SIT_CERT_LOGO } from "./images";
 import {
   arial18PtRed,
   arial18PtRedBold,
-  garamondItalic18Pt,
+  serifItalic18Pt,
   timesNewRoman18Pt,
   timesNewRoman18PtRed,
   sitLogoImgStyle
@@ -29,16 +29,16 @@ export const renderAdditionalData = certificate => (
       className="row d-flex justify-content-center"
       style={{ marginTop: "1rem" }}
     >
-      <span style={garamondItalic18Pt}>{certificate.additionalData.cert}</span>
+      <span style={serifItalic18Pt}>{certificate.additionalData.cert}</span>
     </div>
     <div className="row d-flex justify-content-center">
       <span style={timesNewRoman18Pt}>{certificate.recipient.name}</span>
     </div>
     <div className="row d-flex justify-content-center">
-      <span style={garamondItalic18Pt}>{certificate.additionalData.univ}</span>
+      <span style={serifItalic18Pt}>{certificate.additionalData.univ}</span>
     </div>
     <div className="row d-flex justify-content-center">
-      <span style={garamondItalic18Pt}>
+      <span style={serifItalic18Pt}>
         {certificate.additionalData.joinUniv}
       </span>
     </div>
@@ -52,13 +52,13 @@ export const renderAdditionalData = certificate => (
     </div>
     <div className="row d-flex justify-content-center">
       {certificate.additionalData.major.length > 0 && (
-        <span style={garamondItalic18Pt}>
+        <span style={serifItalic18Pt}>
           {certificate.additionalData.major}
         </span>
       )}
     </div>
     <div className="row d-flex justify-content-center">
-      <p style={garamondItalic18Pt}>{certificate.additionalData.confDate}</p>
+      <p style={serifItalic18Pt}>{certificate.additionalData.confDate}</p>
     </div>
     <div className="row d-flex justify-content-center">
       {certificate.additionalData.program.length === 0 && (

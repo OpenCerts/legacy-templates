@@ -5,17 +5,6 @@
  $debug: false;
 
  .nus-degree {
-
-    @import url(//db.onlinewebfonts.com/c/e188d2a6128820510835218603bb8309?family=Garamond+Narrow);
-    @font-face {font-family: "Garamond Narrow";
-        src: url("//db.onlinewebfonts.com/t/e188d2a6128820510835218603bb8309.eot");
-        src: url("//db.onlinewebfonts.com/t/e188d2a6128820510835218603bb8309.eot?#iefix") format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/e188d2a6128820510835218603bb8309.woff2") format("woff2"),
-        url("//db.onlinewebfonts.com/t/e188d2a6128820510835218603bb8309.woff") format("woff"),
-        url("//db.onlinewebfonts.com/t/e188d2a6128820510835218603bb8309.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/e188d2a6128820510835218603bb8309.svg#Garamond Narrow") format("svg");
-    }
-
     @if ($debug) {
         table td {
             border: 1px solid blue;
@@ -55,7 +44,7 @@
     .cert-tagline {
         display: inline-block;
         text-transform: uppercase;
-        font-family: 'Garamond Narrow', Garamond, 'Times New Roman', Times, serif;
+        font-family: 'Times New Roman', Times, serif;
         text-align: justify;
         font-size: 20pt;
         font-weight: bold;
@@ -65,7 +54,7 @@
     .cert-content-table {
         display: float;
         font-size: 17pt;
-        font-family: Garamond, 'Times New Roman', Times, serif;
+        font-family: 'Times New Roman', Times, serif;
         color: rgb(83, 86, 90);
         margin-left: auto;
         margin-right: auto;
@@ -76,7 +65,7 @@
     .cert-content-name {
         display: float;
         font-size: 23pt;
-        font-family: Garamond, 'Times New Roman', Times, serif;
+        font-family: 'Times New Roman', Times, serif;
         text-align: center;
         line-height: normal;
     }
@@ -84,7 +73,7 @@
     .cert-degree-title {
         display: float;
         font-size: 20pt;
-        font-family: 'Garamond Narrow', Garamond, 'Times New Roman', Times, serif;
+        font-family: 'Times New Roman', Times, serif;
         font-variant: small-caps;
         font-feature-settings: smcp;
         font-weight: bold;
@@ -99,7 +88,7 @@
         display: float;
         width: 100%;
         font-size: 9pt;
-        font-family: Garamond, 'Times New Roman', Times, serif;
+        font-family: 'Times New Roman', Times, serif;
         font-weight: 500;
         text-transform: uppercase;
         color: rgb(83, 86, 90);

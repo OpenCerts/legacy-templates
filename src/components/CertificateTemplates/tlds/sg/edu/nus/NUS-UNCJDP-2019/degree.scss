@@ -5,26 +5,6 @@
 $debug: false;
 
 .nus-degree {
-    @import url(//db.onlinewebfonts.com/c/f6f417eff058b8412968a2b018c6e725?family=BeneScriptine);
-    @font-face {font-family: "BeneScriptine"; 
-        src: url("//db.onlinewebfonts.com/t/f6f417eff058b8412968a2b018c6e725.eot"); 
-        src: url("//db.onlinewebfonts.com/t/f6f417eff058b8412968a2b018c6e725.eot?#iefix") format("embedded-opentype"), 
-             url("//db.onlinewebfonts.com/t/f6f417eff058b8412968a2b018c6e725.woff2") format("woff2"), 
-             url("//db.onlinewebfonts.com/t/f6f417eff058b8412968a2b018c6e725.woff") format("woff"), 
-             url("//db.onlinewebfonts.com/t/f6f417eff058b8412968a2b018c6e725.ttf") format("truetype"), 
-             url("//db.onlinewebfonts.com/t/f6f417eff058b8412968a2b018c6e725.svg#BeneScriptine") format("svg"); 
-    } 
-
-    @import url(//db.onlinewebfonts.com/c/a0f33b8a3febb69aa498dba7d9e8cab2?family=Old+English+Text+MT+Std);
-    @font-face {font-family: "Old English Text MT Std";
-        src: url("//db.onlinewebfonts.com/t/a0f33b8a3febb69aa498dba7d9e8cab2.eot");
-        src: url("//db.onlinewebfonts.com/t/a0f33b8a3febb69aa498dba7d9e8cab2.eot?#iefix") format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/a0f33b8a3febb69aa498dba7d9e8cab2.woff2") format("woff2"),
-        url("//db.onlinewebfonts.com/t/a0f33b8a3febb69aa498dba7d9e8cab2.woff") format("woff"),
-        url("//db.onlinewebfonts.com/t/a0f33b8a3febb69aa498dba7d9e8cab2.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/a0f33b8a3febb69aa498dba7d9e8cab2.svg#Old English Text MT Std") format("svg");
-    }
-
     @if ($debug) {
         table td {
             border: 1px solid blue;
@@ -55,21 +35,21 @@ $debug: false;
         width: 100%;
         text-align: center;
         font-size: 36px;
-        font-family: "BeneScriptine", "Old English Text MT", fantasy, serif;
+        font-family:  serif;
     }
 
     .cert-header-name {
         display: float;
         font-size: 38pt;
         text-align: center;
-        font-family: "BeneScriptine", "Old English Text MT", fantasy, serif;
+        font-family:  serif;
         line-height: 1em;
     }
 
     .cert-content-table {
         display: float;
         font-size: 24pt;
-        font-family: "BeneScriptine", "Old English Text MT", fantasy, serif;
+        font-family:  serif;
         color: black;
         margin-left: auto;
         margin-right: auto;
@@ -84,7 +64,7 @@ $debug: false;
     .cert-content-name {
         display: float;
         font-size: 48pt;
-        font-family: "BeneScriptine", "Old English Text MT", fantasy, serif;
+        font-family:  serif;
         color: black;
         text-transform: capitalize;
         word-spacing: normal;
@@ -99,13 +79,13 @@ $debug: false;
     .cert-content-date {
         text-align-last: center;
         font-weight: normal;
-        font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+        font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
     }
 
     .cert-degree-title {
         display: float;
         font-size: 29pt;
-        font-family: "BeneScriptine", "Old English Text MT", fantasy, serif;
+        font-family:  serif;
         font-feature-settings: smcp;
         font-weight: normal;
         color: black;
@@ -115,7 +95,7 @@ $debug: false;
     .cert-degree-major {
         display: float;
         font-size: 29pt;
-        font-family: "BeneScriptine", "Old English Text MT", fantasy, serif;
+        font-family:  serif;
         font-feature-settings: smcp;
         font-weight: normal;
         color: black;
@@ -143,7 +123,7 @@ $debug: false;
         display: float;
         width: 100%;
         font-size: 11pt;
-        font-family: "BeneScriptine", "Old English Text MT", fantasy, serif;
+        font-family:  serif;
         text-align: center;
         border: 0px solid;
     }
