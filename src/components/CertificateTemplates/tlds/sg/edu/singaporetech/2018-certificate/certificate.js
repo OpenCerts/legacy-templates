@@ -6,8 +6,8 @@ import {
   SIT_CERT_SEAL
 } from "./images";
 
-const garamondItalic18Pt = {
-  fontFamily: "Garamond",
+const serifItalic18Pt = {
+  fontFamily: "Serif",
   fontSize: "24px",
   fontStyle: "italic",
   textAlign: "center",
@@ -100,13 +100,13 @@ const Template = ({ certificate }) => (
         className="row d-flex justify-content-center"
         style={{ marginTop: "2rem" }}
       >
-        <span style={garamondItalic18Pt}>This is to certify that</span>
+        <span style={serifItalic18Pt}>This is to certify that</span>
       </div>
       <div className="row d-flex justify-content-center">
         <span style={timesNewRoman18Pt}>{certificate.recipient.name}</span>
       </div>
       <div className="row d-flex justify-content-center">
-        <span style={garamondItalic18Pt}>
+        <span style={serifItalic18Pt}>
           having fulfilled the requirements of the University was conferred the
           degree of
         </span>
@@ -123,7 +123,7 @@ const Template = ({ certificate }) => (
         </span>
       </div>
       <div className="row d-flex justify-content-center">
-        <p style={garamondItalic18Pt}>
+        <p style={serifItalic18Pt}>
           {certificate.additionalData.degreeName3}
           <br />
           {certificate.additionalData.confDate}

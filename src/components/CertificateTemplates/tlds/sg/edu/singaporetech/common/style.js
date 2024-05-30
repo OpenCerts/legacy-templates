@@ -15,8 +15,8 @@ export const arial18PtRedBold = {
   color: "red"
 };
 
-export const garamondItalic18Pt = {
-  fontFamily: "Garamond",
+export const serifItalic18Pt = {
+  fontFamily: "Serif",
   fontSize: "24px",
   fontStyle: "italic",
   textAlign: "center",
