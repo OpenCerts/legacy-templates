@@ -5,6 +5,16 @@
  $debug: false;
 
  .nus-degree {
+
+    @import url(//fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap);
+    @font-face {
+          font-family: 'Old Standard TT';
+          font-style: normal;
+          font-weight: 400;
+          src: url(https://fonts.gstatic.com/s/oldstandardtt/v20/MwQubh3o1vLImiwAVvYawgcf2eVep1q4dHc.woff2) format('woff2');
+          unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
     @if ($debug) {
         table td {
             border: 1px solid blue;
@@ -44,11 +54,11 @@
     .cert-tagline {
         display: inline-block;
         text-transform: uppercase;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: 'Old Standard TT', 'Times New Roman', Times, serif;
         text-align: justify;
-        font-size: 20pt;
+        font-size: 17pt;
         font-weight: bold;
-        letter-spacing: 2pt;
+        letter-spacing: 1pt;
     }
 
     .cert-content-table {
@@ -72,8 +82,8 @@
 
     .cert-degree-title {
         display: float;
-        font-size: 20pt;
-        font-family: 'Times New Roman', Times, serif;
+        font-size: 17pt;
+        font-family: 'Old Standard TT', 'Times New Roman', Times, serif;
         font-variant: small-caps;
         font-feature-settings: smcp;
         font-weight: bold;
