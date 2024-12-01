@@ -120,3 +120,76 @@ export const COMMAN_EXPL_6 = () => (
     </div>
   </div>
 );
+
+export const COMMAN_EXPL_7 = () => (
+  <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
+    Where appropriate, subjects are annotated with the following symbols:
+    <br />
+    <br />
+    <b># Exemption Symbol</b>
+    <br />
+    The candidate was exempted from satisfying the full range of assessment
+    objectives in the papers sat for this subject.
+    <br />
+    <br />
+    <b>+Access Arrangement Symbol</b>
+    <br />
+    The candidate sat for the paper under access arrangements.
+  </div>
+);
+
+export const COMMAN_EXPL_8 = () => (
+  <div className="row">
+    <div className="col-md-11" valign="top" style={EXPLANATORY_CONTENT}>
+      Results in AO-Level are indicated by grades 1 to 9 (Grade 1 is the highest
+      and Grade 9 the lowest). The alphabetical equivalence of the numerical
+      grades is as follows:
+      <br />
+      <br />
+      <table border="1" align="center" style={EXPLANATORY_TABLE_WIDTH70_CENTER}>
+        <tbody>
+          <tr>
+            <td colSpan="2">GRADE</td>
+            <td>REMARKS</td>
+          </tr>
+          <tr>
+            <td>Numerical</td>
+            <td>Alphanetical</td>
+            <td rowSpan="4">GCE O-Level Pass</td>
+          </tr>
+          <tr>
+            <td>
+              1<br />2
+            </td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>
+              3<br />4
+            </td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>
+              5<br />6
+            </td>
+            <td>C</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>D</td>
+            <td rowSpan="3">Fail</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>E</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>No Alphabetical Grades</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+);
