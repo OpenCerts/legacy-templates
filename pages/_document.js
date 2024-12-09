@@ -1,11 +1,11 @@
 /* eslint-disable class-methods-use-this */
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { BootstrapCss, BootstrapJs } from "../src/components/Layout/Bootstrap";
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <html>
+      <Html>
         <Head>
           <link
             rel="icon"
@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
 
           <BootstrapJs />
         </body>
-      </html>
+      </Html>
     );
   }
 }
