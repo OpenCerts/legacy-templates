@@ -1,0 +1,56 @@
+.page {
+  margin: 20px auto;
+  padding: 18mm 15mm;
+  width: 210mm;
+  min-height: 297mm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  font-family: "Arial";
+}
+
+.footer {
+  display: grid;
+  column-gap: 15px;
+  row-gap: 15px;
+  grid-template-columns: min-content auto max-content;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "left middle-upper right-upper"
+    "left middle-lower right-lower";
+}
+
+.footer-left {
+  grid-area: left;
+  align-self: center;
+}
+
+.footer-middle-upper {
+  grid-area: middle-upper;
+}
+
+.footer-middle-lower {
+  grid-area: middle-lower;
+}
+
+.footer-right-upper {
+  grid-area: right-upper;
+  align-self: end;
+}
+
+.footer-right-lower {
+  grid-area: right-lower;
+}
+
+@page {
+  size: A4;
+}
+
+@media print {
+  body {
+    min-width: initial !important; // This is required to undo the min-width set by Bootstrap during printing
+  }
+
+  .page {
+    margin: initial;
+    box-shadow: initial;
+  }
+}
