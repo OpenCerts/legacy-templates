@@ -1,11 +1,11 @@
 /* eslint-disable class-methods-use-this */
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { BootstrapCss, BootstrapJs } from "../src/components/Layout/Bootstrap";
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <html>
+      <Html>
         <Head>
           <link
             rel="icon"
@@ -19,7 +19,6 @@ export default class MyDocument extends Document {
             href="/static/images/favicon/favicon-16x16.png"
             sizes="16x16"
           />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
 
           <link
@@ -46,7 +45,7 @@ export default class MyDocument extends Document {
 
           <BootstrapJs />
         </body>
-      </html>
+      </Html>
     );
   }
 }

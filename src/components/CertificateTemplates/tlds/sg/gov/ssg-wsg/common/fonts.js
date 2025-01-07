@@ -1,11 +1,11 @@
+import Head from "next/head";
+
 const fonts = () => (
-  <div>
-    <head>
-      <link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600"
-        rel="stylesheet"
-      />
-    </head>
+  <Head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600"
+      rel="stylesheet"
+    />
     <style>{`
       .RobotoLight {
         font-family: Roboto, sans-serif;
@@ -24,7 +24,7 @@ const fonts = () => (
         font-weight: 600;
       }
     `}</style>
-  </div>
+  </Head>
 );
 
 export default fonts;

@@ -40,7 +40,7 @@ export const signatureTextStyle = {
   fontSize: "1.1rem"
 };
 export const printCertStyle = {
-  fontFamily: "Old English Text MT",
+  fontFamily: "Serif",
   fontWeight: "bold",
   fontSize: "3rem",
   color: "#555",
@@ -48,7 +48,7 @@ export const printCertStyle = {
 };
 
 export const printSCCertStyle = {
-  fontFamily: "Old English Text MT",
+  fontFamily: "Self",
   fontWeight: "bold",
   fontSize: "3.5rem",
   color: "#000",

@@ -1,15 +1,18 @@
 import Head from "next/head";
 import FramelessViewerPageContainer from "../src/components/FramelessViewer/FramelessViewerPageContainer";
-import { PrintWatermark } from "../src/utils/PrintWatermark";
+import { WatermarkProvider } from "../src/utils/PrintWatermark";
 
-const FramelessViewerPage = () => (
-  <div style={{ position: "relative" }}>
-    <Head>
-      <title>OpenCerts - Frameless Certificate Viewer</title>
-    </Head>
-    <PrintWatermark />
-    <FramelessViewerPageContainer />
-  </div>
-);
+const FramelessViewerPage = () => {
+  return (
+    <div style={{ position: "relative" }}>
+      <Head>
+        <title>OpenCerts - Frameless Certificate Viewer</title>
+      </Head>
+      <WatermarkProvider>
+        <FramelessViewerPageContainer />
+      </WatermarkProvider>
+    </div>
+  );
+};
 
 export default FramelessViewerPage;
