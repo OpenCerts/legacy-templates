@@ -40,6 +40,18 @@ import { RENDEREXPLANATORYNOTES_A3 } from "./explnotes_a3_detail";
 
 import { RENDEREXPLANATORYNOTES_PSLE } from "./explnotes_psle_detail";
 
+import { RENDEREXPLANATORYNOTES_O_2021 } from "./explnotes_o_2021_detail";
+
+import { RENDEREXPLANATORYNOTES_NA_2021 } from "./explnotes_na_2021_detail";
+
+import { RENDEREXPLANATORYNOTES_NT_2021 } from "./explnotes_nt_2021_detail";
+
+import { RENDEREXPLANATORYNOTES_A2_2021 } from "./explnotes_a2_2021_detail";
+
+import { RENDEREXPLANATORYNOTES_A3_2021 } from "./explnotes_a3_2021_detail";
+
+import { RENDEREXPLANATORYNOTES_PSLE_2021 } from "./explnotes_psle_2021_detail";
+
 export const SOR_TRANSCRIPT_FONT_SIZE_12 = {
   fontSize: "12px",
   fontFamily: "Arial"
@@ -113,10 +125,22 @@ export const GETEXPLANATORYNOTES = examlvl => {
     explanatorynotes = RENDEREXPLANATORYNOTES_A();
   } else if (examlvl === "GCEA2") {
     explanatorynotes = RENDEREXPLANATORYNOTES_A2();
+  } else if (examlvl === "GCEA2_2021") {
+    explanatorynotes = RENDEREXPLANATORYNOTES_A2_2021();
   } else if (examlvl === "GCEA3") {
     explanatorynotes = RENDEREXPLANATORYNOTES_A3();
+  } else if (examlvl === "GCEA3_2021") {
+    explanatorynotes = RENDEREXPLANATORYNOTES_A3_2021();
   } else if (examlvl === "PSLE") {
     explanatorynotes = RENDEREXPLANATORYNOTES_PSLE();
+  } else if (examlvl === "GCEO_2021") {
+    explanatorynotes = RENDEREXPLANATORYNOTES_O_2021();
+  } else if (examlvl === "GCENNA_2021") {
+    explanatorynotes = RENDEREXPLANATORYNOTES_NA_2021();
+  } else if (examlvl === "GCENNT_2021") {
+    explanatorynotes = RENDEREXPLANATORYNOTES_NT_2021();
+  } else if (examlvl === "PSLE_2021") {
+    explanatorynotes = RENDEREXPLANATORYNOTES_PSLE_2021();
   }
 
   return explanatorynotes;
@@ -618,6 +642,15 @@ export const EXAMGRADEHEADER = (examlvltype, examyr) => {
       </div>
     );
   }
+  if (examlvltype === "PSLE2021") {
+    return (
+      <div className="row" style={SOR_BOLD_TEXT}>
+        <div className="col-md-1" />
+        <div className="col-md-5">SUBJECT</div>
+        <div className="col-md-2">ACHIEVEMENT LEVEL</div>
+      </div>
+    );
+  }
   if (examlvltype === "PSLE1979") {
     return <span />;
   }
@@ -663,6 +696,7 @@ export const EXAMGRADESTAR = (examlvltype, examyr) => {
     examlvltype === "PSLE19821992" ||
     examlvltype === "PSLE19932012" ||
     examlvltype === "PSLE2013" ||
+    examlvltype === "PSLE2021" ||
     examlvltype === "PSLE1979"
   ) {
     return <span />;
@@ -728,7 +762,11 @@ export const SUBJECTGRADE = (
       </div>
     );
   }
-  if (examlvltype === "PSLE19932012" || examlvltype === "PSLE2013") {
+  if (
+    examlvltype === "PSLE19932012" ||
+    examlvltype === "PSLE2013" ||
+    examlvltype === "PSLE2021"
+  ) {
     return (
       <div className="row">
         <div className="col-md-3" />
@@ -910,6 +948,26 @@ export const ADDITIONALINFO = (
           <div className="col-md-1" />
           <div className="col-md-3">
             <strong>AGGREGATE SCORE</strong>
+          </div>
+          <div className="col-md-3">: &nbsp;&nbsp;&nbsp;{aggregatescore}</div>
+        </div>
+        <div className="row">
+          <div className="col-md-1" />
+          <div className="col-md-3">
+            <strong>STREAM ELIGIBLE FOR</strong>
+          </div>
+          <div className="col-md-3">: &nbsp;&nbsp;&nbsp;{streameligible}</div>
+        </div>
+      </span>
+    );
+  }
+  if (examlvltype === "PSLE2021") {
+    return (
+      <span>
+        <div className="row">
+          <div className="col-md-1" />
+          <div className="col-md-3">
+            <strong>PSLE SCORE</strong>
           </div>
           <div className="col-md-3">: &nbsp;&nbsp;&nbsp;{aggregatescore}</div>
         </div>
