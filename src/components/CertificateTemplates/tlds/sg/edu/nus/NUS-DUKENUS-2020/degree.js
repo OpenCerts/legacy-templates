@@ -92,7 +92,8 @@ class Degree extends Component {
           <tr>
             <td>
               {/* This is to certify that following the completion of */}
-              <div className={cls("cert-content")} style={style1}>
+              {/*<div className={cls("cert-content")} style={style1}> */}
+              <div className={cls("cert-content1")}>
                 have conferred on
               </div>
             </td>
