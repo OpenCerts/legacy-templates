@@ -5,6 +5,20 @@
 $debug: false;
 
 .nus-degree {
+
+    @import url(//db.onlinewebfonts.com/c/95b505026728bca7b241bd68c6b5bd4e?family=Old+London); 
+    @font-face {
+        font-family: 'Old London';
+        font-style: normal;
+        font-weight: normal;
+        src: url("//db.onlinewebfonts.com/t/95b505026728bca7b241bd68c6b5bd4e.eot");
+        src: url("//db.onlinewebfonts.com/t/95b505026728bca7b241bd68c6b5bd4e.eot?#iefix")format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/95b505026728bca7b241bd68c6b5bd4e.woff2")format("woff2"),
+        url("//db.onlinewebfonts.com/t/95b505026728bca7b241bd68c6b5bd4e.woff")format("woff"),
+        url("//db.onlinewebfonts.com/t/95b505026728bca7b241bd68c6b5bd4e.ttf")format("truetype"),
+        url("//db.onlinewebfonts.com/t/95b505026728bca7b241bd68c6b5bd4e.svg#Old London")format("svg");
+    }
+
     @if ($debug) {
         table td {
             border: 1px solid blue; 
@@ -72,7 +86,7 @@ $debug: false;
     .cert-content { 
         display: block;
         font-size: 13pt; 
-        font-family: Serif; 
+        font-family: "Old London", Serif; 
         font-weight: bold;
         color: rgb(74, 75, 76);
         margin-left: auto;
@@ -83,8 +97,8 @@ $debug: false;
     .cert-content1 { 
         display: block;
         font-size: 13pt; 
-        font-family: Serif; 
-        font-weight: bold;
+        font-family: "Old London", Serif; 
+        font-weight: normal;
         margin-top: 15px;
         margin-bottom: 10px;
         line-height: 1px;
@@ -103,7 +117,7 @@ $debug: false;
     .cert-name {
         display: block;
         font-size: 18pt; 
-        font-family: Serif; 
+        font-family: "Old London", Serif; 
         font-weight: bold;
         text-align: center;
         padding: 3px 0;
@@ -113,7 +127,7 @@ $debug: false;
     .cert-degree {
         display: block;
         font-size: 18pt; 
-        font-family: Serif;
+        font-family: "Old London", Serif;
         font-feature-settings: smcp;
         text-align: center; 
         text-shadow: 1px 0 #888888; 
@@ -125,7 +139,7 @@ $debug: false;
     .cert-date {
         display: block;
         font-size: 15pt;
-        font-family: Serif;
+        font-family: "Old London", Serif;
         font-style: normal;
         text-align: center;
         color: rgb(74, 75, 76);
@@ -135,10 +149,10 @@ $debug: false;
         display: block;
         width: 100%;
         font-size: 10pt; 
-        font-family: Serif; 
+        font-family: "Old London", Serif; 
         text-align: left;
         border: 0px solid;
-        font-weight: bold;
+        font-weight: normal;
         margin-left: 0.9cm;
     }
     .cert-table1 {
@@ -165,7 +179,7 @@ $debug: false;
     .cert-td32{
         text-align: center;
         font-size: 24pt;
-        font-family: Serif;
+        font-family: "Old London", Serif;
         display: inline !important;
         line-height:70px;
     }
@@ -197,7 +211,7 @@ $debug: false;
     .cert-td7{
          text-align: center;
          font-size: 24pt;
-         font-family: Serif;
+         font-family: "Old London", Serif;
          display: inline !important;
          line-height:70px;
     }

@@ -92,7 +92,8 @@ class Degree extends Component {
           <tr>
             <td>
               {/* This is to certify that following the completion of */}
-              <div className={cls("cert-content")} style={style1}>
+              {/*<div className={cls("cert-content")} style={style1}> */}
+              <div className={cls("cert-content1")}>
                 have conferred on
               </div>
             </td>
@@ -262,21 +263,15 @@ class Degree extends Component {
             <td className={cls("cert-td3")}>
               <div className={cls("cert-td31")}>
                 <br />
-                <strong>
                   The Faculty and Trustees of Duke University and <br />
-                </strong>
               </div>
               <div className={cls("cert-td31")}>
-                <strong>
                   the Chancellor of the National University of Singapore,
                   <br />
-                </strong>
               </div>
               <div className={cls("cert-td31")}>
-                <strong>
                   in recognition of the successful completion of the course of
                   study required by the <br />
-                </strong>
               </div>
               <div className={cls("cert-td32")}>
                 <strong>Duke-NUS Medical School</strong>
