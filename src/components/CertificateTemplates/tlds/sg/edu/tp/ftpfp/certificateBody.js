@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import CertificateBodyStyles from "../common/certificateBodyStyles";
 
-const CertificateBody =  ({ certificate }) => (
+const CertificateBody = ({ certificate }) => (
   <div className="container">
     <CertificateBodyStyles />
 
@@ -24,10 +24,9 @@ const CertificateBody =  ({ certificate }) => (
           Polytechnic
           <br />
           Foundation Programme{" "}
-		  {certificate.additionalData.isExempted && (
-          <span className="recipient-paragraph">* 
-          </span>
-        )}
+          {certificate.additionalData.isExempted && (
+            <span className="recipient-paragraph">*</span>
+          )}
         </div>
         <div className="academic-year">
           Academic Year {new Date(certificate.admissionDate).getFullYear()}/
@@ -41,7 +40,7 @@ const CertificateBody =  ({ certificate }) => (
           month: "long",
           year: "numeric"
         })}
-		{certificate.additionalData.isExempted && (
+        {certificate.additionalData.isExempted && (
           <span className="recipient-paragraph">
             <br />* Exempted from satisfying the full range of assessment
             objectives of the programme

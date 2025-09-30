@@ -31,12 +31,10 @@ test("Part-time Joint Diploma with Singapore Police Force is rendered correctly.
   const container = Selector("#rendered-certificate .container");
   await container(); // wait for document to be rendered
   const templates = await t.eval(() => window.opencerts.getTemplates());
-  await t
-    .expect(templates)
-    .eql([
-      { id: "certificate", label: "Certificate", template: undefined },
-      { id: "transcript", label: "Transcript", template: undefined }
-    ]);
+  await t.expect(templates).eql([
+    { id: "certificate", label: "Certificate", template: undefined },
+    { id: "transcript", label: "Transcript", template: undefined }
+  ]);
 
   await t.expect(TpLogo.exists).ok();
   await t.expect(SpfLogo.exists).ok();

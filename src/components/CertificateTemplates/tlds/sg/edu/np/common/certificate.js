@@ -88,7 +88,10 @@ export const renderFourSignatures = certificate => (
             <div className="px-4">
               <img
                 style={fullWidthStyle}
-                src={get(certificate, "additionalData.certSignatories[0].signature")}
+                src={get(
+                  certificate,
+                  "additionalData.certSignatories[0].signature"
+                )}
               />
               <hr />
             </div>
@@ -97,12 +100,15 @@ export const renderFourSignatures = certificate => (
             <div className="px-4">
               <img
                 style={fullWidthStyle}
-                src={get(certificate, "additionalData.certSignatories[1].signature")}
+                src={get(
+                  certificate,
+                  "additionalData.certSignatories[1].signature"
+                )}
               />
               <hr />
             </div>
           </div>
-        </div>  
+        </div>
 
         <div
           className="row d-flex justify-content-center align-items-top"
@@ -116,7 +122,10 @@ export const renderFourSignatures = certificate => (
               {get(certificate, "additionalData.certSignatories[0].position")}
             </div>
             <div className="text-center">
-              {get(certificate, "additionalData.certSignatories[0].organisation")}
+              {get(
+                certificate,
+                "additionalData.certSignatories[0].organisation"
+              )}
             </div>
           </div>
           <div className="col-6">
@@ -127,11 +136,14 @@ export const renderFourSignatures = certificate => (
               {get(certificate, "additionalData.certSignatories[1].position")}
             </div>
             <div className="text-center">
-              {get(certificate, "additionalData.certSignatories[1].organisation")}
+              {get(
+                certificate,
+                "additionalData.certSignatories[1].organisation"
+              )}
             </div>
           </div>
         </div>
-      </div>    
+      </div>
     </div>
     <div
       className="row d-flex justify-content-center align-items-center"
@@ -150,7 +162,10 @@ export const renderFourSignatures = certificate => (
             <div className="px-4">
               <img
                 style={fullWidthStyle}
-                src={get(certificate, "additionalData.certSignatories[2].signature")}
+                src={get(
+                  certificate,
+                  "additionalData.certSignatories[2].signature"
+                )}
               />
               <hr />
             </div>
@@ -159,12 +174,15 @@ export const renderFourSignatures = certificate => (
             <div className="px-4">
               <img
                 style={fullWidthStyle}
-                src={get(certificate, "additionalData.certSignatories[3].signature")}
+                src={get(
+                  certificate,
+                  "additionalData.certSignatories[3].signature"
+                )}
               />
               <hr />
             </div>
           </div>
-        </div>  
+        </div>
 
         <div
           className="row d-flex justify-content-center align-items-top"
@@ -178,7 +196,10 @@ export const renderFourSignatures = certificate => (
               {get(certificate, "additionalData.certSignatories[2].position")}
             </div>
             <div className="text-center">
-              {get(certificate, "additionalData.certSignatories[2].organisation")}
+              {get(
+                certificate,
+                "additionalData.certSignatories[2].organisation"
+              )}
             </div>
           </div>
           <div className="col-6">
@@ -189,11 +210,14 @@ export const renderFourSignatures = certificate => (
               {get(certificate, "additionalData.certSignatories[3].position")}
             </div>
             <div className="text-center">
-              {get(certificate, "additionalData.certSignatories[3].organisation")}
+              {get(
+                certificate,
+                "additionalData.certSignatories[3].organisation"
+              )}
             </div>
           </div>
         </div>
-      </div>    
+      </div>
     </div>
   </div>
 );
@@ -245,7 +269,10 @@ export const renderThreeSignatures = certificate => (
             <div className="px-4">
               <img
                 style={fullWidthStyle}
-                src={get(certificate, "additionalData.certSignatories[1].signature")}
+                src={get(
+                  certificate,
+                  "additionalData.certSignatories[1].signature"
+                )}
               />
               <hr />
             </div>
@@ -254,12 +281,15 @@ export const renderThreeSignatures = certificate => (
             <div className="px-4">
               <img
                 style={fullWidthStyle}
-                src={get(certificate, "additionalData.certSignatories[2].signature")}
+                src={get(
+                  certificate,
+                  "additionalData.certSignatories[2].signature"
+                )}
               />
               <hr />
             </div>
           </div>
-        </div>  
+        </div>
 
         <div
           className="row d-flex justify-content-center align-items-top"
@@ -273,7 +303,10 @@ export const renderThreeSignatures = certificate => (
               {get(certificate, "additionalData.certSignatories[1].position")}
             </div>
             <div className="text-center">
-              {get(certificate, "additionalData.certSignatories[1].organisation")}
+              {get(
+                certificate,
+                "additionalData.certSignatories[1].organisation"
+              )}
             </div>
           </div>
           <div className="col-6">
@@ -284,11 +317,14 @@ export const renderThreeSignatures = certificate => (
               {get(certificate, "additionalData.certSignatories[2].position")}
             </div>
             <div className="text-center">
-              {get(certificate, "additionalData.certSignatories[2].organisation")}
+              {get(
+                certificate,
+                "additionalData.certSignatories[2].organisation"
+              )}
             </div>
           </div>
         </div>
-      </div>    
+      </div>
     </div>
   </div>
 );
@@ -311,7 +347,10 @@ export const renderTwoSignatures = certificate => (
           <div className="px-4">
             <img
               style={fullWidthStyle}
-              src={get(certificate, "additionalData.certSignatories[0].signature")}
+              src={get(
+                certificate,
+                "additionalData.certSignatories[0].signature"
+              )}
             />
             <hr />
           </div>
@@ -320,12 +359,15 @@ export const renderTwoSignatures = certificate => (
           <div className="px-4">
             <img
               style={fullWidthStyle}
-              src={get(certificate, "additionalData.certSignatories[1].signature")}
+              src={get(
+                certificate,
+                "additionalData.certSignatories[1].signature"
+              )}
             />
             <hr />
           </div>
         </div>
-      </div>  
+      </div>
 
       <div
         className="row d-flex justify-content-center align-items-top"
@@ -354,7 +396,7 @@ export const renderTwoSignatures = certificate => (
           </div>
         </div>
       </div>
-    </div>    
+    </div>
   </div>
 );
 

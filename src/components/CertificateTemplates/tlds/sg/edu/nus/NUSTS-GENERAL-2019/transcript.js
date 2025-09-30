@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
@@ -314,7 +315,8 @@ class TranscriptCreditTransfer {
           if (
             detail.status === "P" &&
             (detail.includeInGPA ||
-              (detail.grade === "S" || detail.grade === "CS") ||
+              detail.grade === "S" ||
+              detail.grade === "CS" ||
               isMedDen)
           ) {
             let credits = "";
@@ -374,7 +376,8 @@ class TranscriptCreditTransfer {
           if (
             detail.status === "P" &&
             (detail.includeInGPA ||
-              (detail.grade === "S" || detail.grade === "CS"))
+              detail.grade === "S" ||
+              detail.grade === "CS")
           ) {
             let credits = "";
             if (!isMedDen)

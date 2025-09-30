@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import PropTypes from "prop-types";
 
 import { EXPLANATORY_FONT_SIZE_13, EXPLANATORY_CONTENT } from "./style";

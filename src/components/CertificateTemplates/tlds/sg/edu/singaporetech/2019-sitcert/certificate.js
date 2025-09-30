@@ -28,17 +28,13 @@ const Template = ({ certificate }) => (
         className="row d-flex justify-content-center"
         style={{ marginTop: "2rem" }}
       >
-        <span style={serifItalic18Pt}>
-          {certificate.additionalData.cert}
-        </span>
+        <span style={serifItalic18Pt}>{certificate.additionalData.cert}</span>
       </div>
       <div className="row d-flex justify-content-center">
         <span style={timesNewRoman18Pt}>{certificate.recipient.name}</span>
       </div>
       <div className="row d-flex justify-content-center">
-        <span style={serifItalic18Pt}>
-          {certificate.additionalData.univ}
-        </span>
+        <span style={serifItalic18Pt}>{certificate.additionalData.univ}</span>
       </div>
       <div className="row d-flex justify-content-center">
         <span style={arial18PtRedBold}>

@@ -28,14 +28,14 @@ const ExemptionFootNote = ({ certificate }) => {
           following symbols:
           {isPartiallyExempted && (
             <span>
-              <br /> # Granted partial exemption from the
-              assessment objectives of this subject.
+              <br /> # Granted partial exemption from the assessment objectives
+              of this subject.
             </span>
           )}
           {isFullyExempted && (
             <span>
-              <br /> * Granted full exemption from the
-              assessment objectives of this subject.
+              <br /> * Granted full exemption from the assessment objectives of
+              this subject.
             </span>
           )}
         </div>

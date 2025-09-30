@@ -28,12 +28,10 @@ test("Part-time Modular Certificate of Modular Courses is rendered correctly.", 
   const container = Selector("#rendered-certificate .container");
   await container(); // wait for document to be rendered
   const templates = await t.eval(() => window.opencerts.getTemplates());
-  await t
-    .expect(templates)
-    .eql([
-      { id: "certificate", label: "Certificate", template: undefined },
-      { id: "transcript", label: "Statement of Results", template: undefined }
-    ]);
+  await t.expect(templates).eql([
+    { id: "certificate", label: "Certificate", template: undefined },
+    { id: "transcript", label: "Statement of Results", template: undefined }
+  ]);
 
   await t.expect(TpLogo.exists).ok();
 

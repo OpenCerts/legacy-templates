@@ -6,7 +6,7 @@ import {
   getRecipientID,
   isNotEffectticeCertCode,
   renderCertCode,
-  renderSignature as renderFooterSignature,
+  renderSignature as renderFooterSignature
 } from "../common/functions";
 import fonts from "../common/fonts";
 import { DisablePrintWatermark } from "../../../../../../../utils/PrintWatermark";

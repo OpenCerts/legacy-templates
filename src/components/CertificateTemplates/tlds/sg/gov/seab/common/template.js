@@ -68,7 +68,7 @@ export const FORMATDATEPREFIX = dateString => {
     timeZone: "Asia/Singapore",
     day: "2-digit",
     month: "2-digit",
-    year: "numeric",
+    year: "numeric"
   });
 
   return <span>{formattedDateString}</span>;
@@ -78,7 +78,7 @@ export const FORMATYEARPREFIX = dateString => {
   const date = new Date(dateString);
   const year = date.toLocaleDateString("en-SG", {
     timeZone: "Asia/Singapore",
-    year: "numeric",
+    year: "numeric"
   });
 
   return year;
@@ -301,10 +301,7 @@ export const GETSUBJGRADE = (subjgrade, examyr, examlvltype) => {
   ) {
     alphaRender = "MERIT";
     numericRender = "-";
-  } else if (
-    subjgrade === "MERIT" &&
-    (examlvltype === "O" && examyr !== 2001)
-  ) {
+  } else if (subjgrade === "MERIT" && examlvltype === "O" && examyr !== 2001) {
     alphaRender = "-";
     numericRender = "MERIT";
   } else if (
@@ -316,7 +313,7 @@ export const GETSUBJGRADE = (subjgrade, examyr, examlvltype) => {
   ) {
     alphaRender = "PASS";
     numericRender = "-";
-  } else if (subjgrade === "PASS" && (examlvltype === "O" && examyr !== 2001)) {
+  } else if (subjgrade === "PASS" && examlvltype === "O" && examyr !== 2001) {
     alphaRender = "-";
     numericRender = "PASS";
   } else if (
@@ -497,7 +494,7 @@ export const EXAMININGAUTHORITYANDLANGUAGEMEDIUMHEADER = (
   examyr
 ) => {
   if (
-    (examlvltype === "A" && (examyr >= 2002 && examyr <= 2005)) ||
+    (examlvltype === "A" && examyr >= 2002 && examyr <= 2005) ||
     examlvltype === "A2"
   ) {
     return (
@@ -538,7 +535,7 @@ export const EXAMININGAUTHORITYANDLANGUAGEMEDIUMSTAR = (
   examyr
 ) => {
   if (
-    (examlvltype === "A" && (examyr >= 2002 && examyr <= 2005)) ||
+    (examlvltype === "A" && examyr >= 2002 && examyr <= 2005) ||
     examlvltype === "A2" ||
     examlvltype === "A3"
   ) {
@@ -563,7 +560,7 @@ export const EXAMININGAUTHORITYANDLANGUAGEMEDIUMDATA = (
   examiningauthority
 ) => {
   if (
-    (examlvltype === "A" && (examyr >= 2002 && examyr <= 2005)) ||
+    (examlvltype === "A" && examyr >= 2002 && examyr <= 2005) ||
     examlvltype === "A2" ||
     examlvltype === "PSLE19801981" ||
     examlvltype === "PSLE19821992"
