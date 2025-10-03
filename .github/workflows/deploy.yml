@@ -2,7 +2,7 @@ name: Build and Deploy to S3
 
 on:
   push:
-    branches: [ imda ]
+    branches: [ master ]
 
 env:
   NODE_VERSION: '14'
@@ -35,7 +35,7 @@ jobs:
     name: Build and Deploy to S3
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/heads/imda'
+    if: github.ref == 'refs/heads/master'
     
     steps:
     - name: Checkout code
