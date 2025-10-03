@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import {
   EXPLANATORY_FONT_SIZE_13,
   EXPLANATORY_TABLE_WIDTH70_CENTER,

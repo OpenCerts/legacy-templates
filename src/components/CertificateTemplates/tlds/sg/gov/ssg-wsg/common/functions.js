@@ -418,8 +418,7 @@ export const renderSignatureSOAIT = certificate => (
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "1rem" }}
   >
-
-<div className="col-md-2 col-6" style={{ padding: "0px" }}>
+    <div className="col-md-2 col-6" style={{ padding: "0px" }}>
       <img
         style={{ width: "100%", height: "auto", marginTop: "29%" }}
         src={IMG_SEAL}
@@ -918,7 +917,6 @@ export const renderSignatureSOACC = certificate => (
       </div>
       <div style={styles.footerTextStyle} className="RobotoLight">
         The training and assessment of the abovementioned learner are accredited
-
         <br />
         in accordance with the Singapore Workforce Skills Qualifications System.
       </div>
@@ -1053,7 +1051,7 @@ export const renderSignatureQual = (certificate, IMG_BOTTOM_LOGO) => (
         />
       )}
     </div>
-    <div className="col-md-6" style={{ paddingLeft: "8px" }} >
+    <div className="col-md-6" style={{ paddingLeft: "8px" }}>
       {renderSignature(certificate)}
       <div style={{ paddingLeft: "0px" }} className="col-lg-5 col-12">
         <img style={styles.footerLogoStyle} src={IMG_SSGLOGO} />

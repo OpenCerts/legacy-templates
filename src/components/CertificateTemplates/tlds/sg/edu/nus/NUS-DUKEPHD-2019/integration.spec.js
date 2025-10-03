@@ -28,12 +28,10 @@ test("NUS-DUKEPHD-2019 certificate is rendered correctly", async t => {
   const container = Selector("#rendered-certificate .container");
   await container(); // wait for document to be rendered
   const templates = await t.eval(() => window.opencerts.getTemplates());
-  await t
-    .expect(templates)
-    .eql([
-      { id: "degree", label: "Certificate", template: undefined },
-      { id: "transcript", label: "Transcript", template: undefined }
-    ]);
+  await t.expect(templates).eql([
+    { id: "degree", label: "Certificate", template: undefined },
+    { id: "transcript", label: "Transcript", template: undefined }
+  ]);
 
   await validateTextContent(t, RenderedCertificate, [
     "NATIONAL",

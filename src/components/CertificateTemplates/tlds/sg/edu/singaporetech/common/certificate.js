@@ -38,9 +38,7 @@ export const renderAdditionalData = certificate => (
       <span style={serifItalic18Pt}>{certificate.additionalData.univ}</span>
     </div>
     <div className="row d-flex justify-content-center">
-      <span style={serifItalic18Pt}>
-        {certificate.additionalData.joinUniv}
-      </span>
+      <span style={serifItalic18Pt}>{certificate.additionalData.joinUniv}</span>
     </div>
     <div className="row d-flex justify-content-center">
       <span style={arial18PtRedBold}>{certificate.additionalData.degree}</span>
@@ -52,9 +50,7 @@ export const renderAdditionalData = certificate => (
     </div>
     <div className="row d-flex justify-content-center">
       {certificate.additionalData.major.length > 0 && (
-        <span style={serifItalic18Pt}>
-          {certificate.additionalData.major}
-        </span>
+        <span style={serifItalic18Pt}>{certificate.additionalData.major}</span>
       )}
     </div>
     <div className="row d-flex justify-content-center">

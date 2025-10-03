@@ -16,9 +16,7 @@ const renderContent = () => (
   <div className={`container-fluid`}>
     <div className={`${style.container}`}>
       <div
-        className={`d-flex flex-column justify-content-center ${
-          style["inner-container"]
-        }`}
+        className={`d-flex flex-column justify-content-center ${style["inner-container"]}`}
       >
         <div className="d-flex flex-column justify-content-center align-items-center text-red">
           <div>

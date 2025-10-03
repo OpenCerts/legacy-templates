@@ -28,12 +28,10 @@ test("sg/gov/seab/SOR_GCEO is rendered correctly", async t => {
   const container = Selector("#rendered-certificate .container");
   await container(); // wait for document to be rendered
   const templates = await t.eval(() => window.opencerts.getTemplates());
-  await t
-    .expect(templates)
-    .eql([
-      { id: "sor", label: "Statement of Results", template: undefined },
-      { id: "explanatorydtl", label: "Explanatory Notes", template: undefined }
-    ]);
+  await t.expect(templates).eql([
+    { id: "sor", label: "Statement of Results", template: undefined },
+    { id: "explanatorydtl", label: "Explanatory Notes", template: undefined }
+  ]);
 
   // SOR tab content
   await validateTextContent(t, RenderedCertificate, [

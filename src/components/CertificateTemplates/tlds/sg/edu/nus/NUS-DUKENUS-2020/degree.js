@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import {
@@ -79,12 +80,12 @@ class Degree extends Component {
 
   // render content
   renderContent() {
-    const style1 = {
-      width: "13.4cm",
-      height: "0.8cm",
-      textAlign: "center",
-      border: "0px solid"
-    };
+    // const style1 = {
+    //   width: "13.4cm",
+    //   height: "0.8cm",
+    //   textAlign: "center",
+    //   border: "0px solid"
+    // };
     const degreeData = this.dataSource.additionalData.degreeScroll[0];
     const html = (
       <table width="100%">
@@ -92,10 +93,8 @@ class Degree extends Component {
           <tr>
             <td>
               {/* This is to certify that following the completion of */}
-              {/*<div className={cls("cert-content")} style={style1}> */}
-              <div className={cls("cert-content1")}>
-                have conferred on
-              </div>
+              {/* <div className={cls("cert-content")} style={style1}> */}
+              <div className={cls("cert-content1")}>have conferred on</div>
             </td>
           </tr>
 
@@ -263,15 +262,15 @@ class Degree extends Component {
             <td className={cls("cert-td3")}>
               <div className={cls("cert-td31")}>
                 <br />
-                  The Faculty and Trustees of Duke University and <br />
+                The Faculty and Trustees of Duke University and <br />
               </div>
               <div className={cls("cert-td31")}>
-                  the Chancellor of the National University of Singapore,
-                  <br />
+                the Chancellor of the National University of Singapore,
+                <br />
               </div>
               <div className={cls("cert-td31")}>
-                  in recognition of the successful completion of the course of
-                  study required by the <br />
+                in recognition of the successful completion of the course of
+                study required by the <br />
               </div>
               <div className={cls("cert-td32")}>
                 <strong>Duke-NUS Medical School</strong>

@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import style from "./printWatermark.scss";
 
 const WATERMARK_ENABLED_BY_DEFAULT = true; // Print watermark is enabled by default
 
 export const WatermarkContext = createContext({
   isWatermarkEnabled: WATERMARK_ENABLED_BY_DEFAULT,
-  setWatermarkEnabled: () => {},
+  setWatermarkEnabled: () => {}
 });
 
 export const WatermarkProvider = ({ children }) => {
@@ -21,6 +22,10 @@ export const WatermarkProvider = ({ children }) => {
       {children}
     </WatermarkContext.Provider>
   );
+};
+
+WatermarkProvider.propTypes = {
+  children: PropTypes.node.isRequired
 };
 
 export const DisablePrintWatermark = () => {

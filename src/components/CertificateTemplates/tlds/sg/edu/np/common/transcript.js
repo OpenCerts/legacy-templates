@@ -568,56 +568,67 @@ export const renderFinalStatement = certificate => {
 
 export const renderTwoSignature = certificate => (
   <div>
-  <div
-        className="row d-flex justify-content-center align-items-end"
-        style={{ marginTop: "8rem", marginBottom: "1rem" }}
-      >
-        <div className="col-1" />
-        <div className="col-5">
-          <div className="px-4">
-            <img
-              style={fullWidthStyle}
-              src={get(certificate, "additionalData.transcriptSignatories[0].signature")}
-            />
-            <hr />
-          </div>
+    <div
+      className="row d-flex justify-content-center align-items-end"
+      style={{ marginTop: "8rem", marginBottom: "1rem" }}
+    >
+      <div className="col-1" />
+      <div className="col-5">
+        <div className="px-4">
+          <img
+            style={fullWidthStyle}
+            src={get(
+              certificate,
+              "additionalData.transcriptSignatories[0].signature"
+            )}
+          />
+          <hr />
         </div>
-        <div className="col-5">
-          <div className="px-4">
-            <img
-              style={fullWidthStyle}
-              src={get(certificate, "additionalData.transcriptSignatories[1].signature")}
-            />
-            <hr />
-          </div>
-        </div>
-        <div className="col-1" />
-      </div>  
-
-      <div
-        className="row d-flex justify-content-center align-items-top"
-        style={{ marginTop: "1rem", marginBottom: "2rem" }}
-      >
-        <div className="col-1" />
-        <div className="col-5">
-          <div className="text-center">
-            {get(certificate, "additionalData.transcriptSignatories[0].position")}
-          </div>
-          <div className="text-center">
-            {get(certificate, "additionalData.transcriptSignatories[0].organisation")}
-          </div>
-        </div>
-        <div className="col-5">
-          <div className="text-center">
-            {get(certificate, "additionalData.transcriptSignatories[1].position")}
-          </div>
-          <div className="text-center">
-            {get(certificate, "additionalData.transcriptSignatories[1].organisation")}
-          </div>
-        </div>
-        <div className="col-1" />
       </div>
+      <div className="col-5">
+        <div className="px-4">
+          <img
+            style={fullWidthStyle}
+            src={get(
+              certificate,
+              "additionalData.transcriptSignatories[1].signature"
+            )}
+          />
+          <hr />
+        </div>
+      </div>
+      <div className="col-1" />
+    </div>
 
+    <div
+      className="row d-flex justify-content-center align-items-top"
+      style={{ marginTop: "1rem", marginBottom: "2rem" }}
+    >
+      <div className="col-1" />
+      <div className="col-5">
+        <div className="text-center">
+          {get(certificate, "additionalData.transcriptSignatories[0].position")}
+        </div>
+        <div className="text-center">
+          {get(
+            certificate,
+            "additionalData.transcriptSignatories[0].organisation"
+          )}
+        </div>
+      </div>
+      <div className="col-5">
+        <div className="text-center">
+          {get(certificate, "additionalData.transcriptSignatories[1].position")}
+        </div>
+        <div className="text-center">
+          {get(
+            certificate,
+            "additionalData.transcriptSignatories[1].organisation"
+          )}
+        </div>
+      </div>
+      <div className="col-1" />
+    </div>
   </div>
 );
 

@@ -29,12 +29,10 @@ test("Part-time Joint Specialist Diploma with MHA is rendered correctly.", async
   const container = Selector("#rendered-certificate .container");
   await container(); // wait for document to be rendered
   const templates = await t.eval(() => window.opencerts.getTemplates());
-  await t
-    .expect(templates)
-    .eql([
-      { id: "certificate", label: "Certificate", template: undefined },
-      { id: "transcript", label: "Transcript", template: undefined }
-    ]);
+  await t.expect(templates).eql([
+    { id: "certificate", label: "Certificate", template: undefined },
+    { id: "transcript", label: "Transcript", template: undefined }
+  ]);
 
   await t.expect(TpLogo.exists).ok();
   await t.expect(MhaLogo.exists).ok();

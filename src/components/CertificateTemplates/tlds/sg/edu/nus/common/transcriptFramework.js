@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/no-deprecated */
 import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
