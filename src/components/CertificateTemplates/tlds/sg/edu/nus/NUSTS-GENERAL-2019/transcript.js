@@ -24,9 +24,10 @@ import scss from "../common/transcriptFramework.scss";
 
 // construct class names
 const cls = names => sassClassNames(names, scss);
-
 // cutoff date for revamped transcript format
 const revCutOffDate2021 = "2021-08-10";
+// cutoff date for displaying dismissal remarks
+const dismissalRemarksCutOffDate = "2019-06-13";
 
 // flags to calssify transcript type
 let isUG;
@@ -39,6 +40,7 @@ let isNG;
 let isOfficial;
 let isConferred;
 let isRev2021;
+let toDisplayDismissalRemarks;
 
 // Yale-NUS specific attributes and function
 let lastTermYaleNUS;
@@ -1383,6 +1385,16 @@ class TranscriptData {
           </td>
         );
       });
+      if (toDisplayDismissalRemarks) {
+        this.dataFeeder.push(
+          "ts-degrem",
+          <td colSpan="4" className={cls("ts-title")}>
+            {
+              "(STUDENT RECORDS ARE AVAILABLE UPON REQUEST AND WITH STUDENT'S CONSENT)"
+            }
+          </td>
+        );
+      }
     }
   }
 
@@ -1714,6 +1726,7 @@ const Template = ({ certificate }) => {
     isOfficial &&
     isConferred &&
     jsonData.issuedOn >= revCutOffDate2021;
+  toDisplayDismissalRemarks = jsonData.issuedOn >= dismissalRemarksCutOffDate;
   [isYaleNUS, progNameYaleNUS] = (transcriptData => {
     const programData = transcriptData.additionalData.programData;
     if (programData)
