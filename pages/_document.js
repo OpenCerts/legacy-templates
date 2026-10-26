@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { BootstrapCss, BootstrapJs } from "../src/components/Layout/Bootstrap";
+import { BootstrapCss } from "../src/components/Layout/Bootstrap";
 
 export default class MyDocument extends Document {
   render() {
@@ -42,8 +42,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
-          <BootstrapJs />
         </body>
       </Html>
     );
